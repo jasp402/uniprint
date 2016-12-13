@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/almacenes" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/produccion" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/reportes" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/stock" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/parametros" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/productos" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules/pdfs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/js/views" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/config" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/application/modules" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

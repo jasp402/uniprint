@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-ExtraLight.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-BoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/res/broken_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_01.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_02.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_04.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_05.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/arrow_06.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/css2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/dompdf_simple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/h_bar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/left_arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/logo.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/php5-power-micro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/small_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/star_01.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/star_02.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/star_03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/star_04.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/star_05.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/title.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/v_bar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/images/xhtml10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test1.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16bf555.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16bf555.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16bf565.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test16bf565.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test24.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32bf.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32bf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32bfv4.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32bfv4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32v5.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test32v5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test4.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test4os2v2.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test4os2v2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test8.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test8os2.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/test8os2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/testcompress4.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/testcompress4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/testcompress8.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/testcompress8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/trans.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/bmp/trans.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/cmyk_test2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/dokuwiki-128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/dompdf_simple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/goldengate.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/green.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/grid-36.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/no_extension" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/php.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray16a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray16a_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray16b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray16b_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray8a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray8a_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray8b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/gray8b_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/pal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/pal_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/pal_bk_notrns.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/palb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_16ns.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_1trns.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_bla.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_dith.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_gra.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_mag.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_magthr1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_nsbug.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_ok.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_oprbug.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_thr1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_thr128.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_thr255.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_whi.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_yel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/result_yelthr1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_bla.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_bug.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_mag.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_moz2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_ok.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_whi.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultb_yel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultg_bla.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultg_dgr.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultg_lgr.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultg_no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultga.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultgb.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultgb_dgr.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultgb_no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/resultpb_no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgb16_t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgb16_t_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgb8_t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgb8_t_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgba16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgba16_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgba8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/rgba8_bk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/png/stripe.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/smiley.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/unknown_extension.foo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/vblank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/images/what_ordered.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ftpquota" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SysUniprint.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/cache/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/cache/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/constants.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/doctypes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/foreign_chars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/hooks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/migration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/mimes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/profiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/smileys.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/user_agents.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/welcome.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/core/MY_Loader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/core/MY_Router.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/core/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/errors/error_404.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/errors/error_db.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/errors/error_general.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/errors/error_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/errors/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/LICENSE.LGPL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/docblox.dist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/dompdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/dompdf_config.custom.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/dompdf_config.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/absolute_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/abstract_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/attribute_translator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/autoload.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/block_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/block_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/block_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/block_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/cached_pdf_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/canvas.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/canvas_factory.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/cellmap.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/cpdf_adapter.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/css_color.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/dompdf.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/dompdf_exception.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/dompdf_image_exception.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/file.skel" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/fixed_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/font_metrics.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/frame.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/frame_factory.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/frame_tree.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/functions.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/gd_adapter.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/image_cache.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/image_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/image_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/image_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/inline_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/inline_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/inline_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/inline_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/javascript_embedder.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/line_box.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/list_bullet_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/list_bullet_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/list_bullet_image_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/list_bullet_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/list_bullet_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/null_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/null_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/null_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/page_cache.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/page_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/page_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/pdflib_adapter.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/php_evaluator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/style.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/stylesheet.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_cell_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_cell_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_cell_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_cell_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_group_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_group_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_group_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/table_row_positioner.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/tcpdf_adapter.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/text_frame_decorator.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/text_frame_reflower.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/include/text_renderer.cls.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/class.pdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Courier-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Courier-BoldOblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Courier-Oblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Courier.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-BoldOblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-ExtraLight.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans-Oblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSans.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-BoldOblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed-Oblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansCondensed.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono-Oblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSansMono.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif-Italic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerif.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-BoldItalic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed-Italic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/DejaVuSerifCondensed.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Helvetica-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Helvetica-BoldOblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Helvetica-Oblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Helvetica.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Symbol.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Times-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Times-BoldItalic.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Times-Italic.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Times-Roman.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/ZapfDingbats.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/dompdf_font_family_cache.dist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/mustRead.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/Data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/InputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/Tokenizer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/TreeBuilder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/html5lib/named-character-references.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/AdobeFontMetrics.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Autoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/BinaryStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/EOT/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/EOT/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/EncodingMap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Exception/FontNotFoundException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Glyph/Outline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Glyph/OutlineComponent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Glyph/OutlineComposite.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Glyph/OutlineSimple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/OpenType/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/OpenType/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/DirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/cmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/glyf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/head.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/hhea.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/hmtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/kern.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/loca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/maxp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/name.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/nameRecord.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/os2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/Table/Type/post.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/TrueType/Collection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/TrueType/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/TrueType/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/TrueType/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/WOFF/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/WOFF/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/php-font-lib/classes/WOFF/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/res/html.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/load_font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/cssSandpaper/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/cssSandpaper/js/EventHelpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/cssSandpaper/js/cssQuery-p.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/cssSandpaper/js/cssSandpaper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/cssSandpaper/js/jcoglan.com/sylvester.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/debugger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/demo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/examples.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/foot.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/functions.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/head.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/jquery-1.4.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/setup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/backgroundcolor_fontdecoration_pageborder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/importabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/importall.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/importdisplay.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/importprint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/importsub.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/linkall.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/linkdefault.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/linkdisplay.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/linkprint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css/print_static.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_2d_transforms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_at_font_face.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_baseline.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_border.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_color_cmyk.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_float.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_font_selection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_important_flag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_letter_spacing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_line_height.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_margin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_media.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_multiple_class.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_nth_child.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_opacity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_outline.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_overflow_hidden.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_position_absolute.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_position_all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_position_fixed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_selectors.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_table_height.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_text_align.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_vertical_align.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_vertical_align_w3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_whitespace.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_word_wrap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/css_z_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/demo_01.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_anchor_link.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_br.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_large_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_long_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_nbsp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_nested_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_ol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_simple_ul.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_table_image.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/dom_ul.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_entities.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_latin1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_special.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_symbols.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_unicode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_unicode_wrapping.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_utf-8.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_utf-8_all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/encoding_utf-8_w3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_background.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_bmp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_datauri.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_dimensions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_gif.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_remote.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_transparent_gif.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_transparent_png.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/image_variants.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/page_pages.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/quirks_center_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/quirks_font_tag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/quirks_html_attributes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/script_javascript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/www/test/script_php.php" />
+    </list>
+    <ignored path="SysUniprint.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="SysUniprint" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="traslados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6052">
+              <caret line="356" column="90" selection-start-line="356" selection-start-column="76" selection-end-line="356" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entrada.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/views/entrada.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="0" selection-end-line="386" selection-end-column="1" />
+              <folding>
+                <element signature="e#156#325#0" expanded="false" />
+                <element signature="e#382#523#0" expanded="false" />
+                <element signature="e#562#704#0" expanded="false" />
+                <element signature="e#778#908#0" expanded="false" />
+                <element signature="n#!!block;n#Save#0" expanded="false" />
+                <element signature="e#1220#1285#0" expanded="false" />
+                <element signature="e#1289#1372#0" expanded="false" />
+                <element signature="e#1384#1649#0" expanded="false" />
+                <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
+                <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
+                <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+                <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+                <element signature="e#3407#3616#0" expanded="false" />
+                <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+                <element signature="n#!!block;n#loadProducto#0" expanded="false" />
+                <element signature="n#!!block;n#suma#0" expanded="false" />
+                <element signature="n#!!block;n#AgregarCampos#0" expanded="false" />
+                <element signature="n#!!block;n#elimCamp#0" expanded="false" />
+                <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
+                <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
+                <element signature="e#10251#10495#0" expanded="false" />
+                <element signature="e#10499#10520#0" expanded="false" />
+                <element signature="e#10570#10788#0" expanded="false" />
+                <element signature="e#10792#10813#0" expanded="false" />
+                <element signature="e#10865#11085#0" expanded="false" />
+                <element signature="e#11089#11110#0" expanded="false" />
+                <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+                <element signature="e#11293#11513#0" expanded="false" />
+                <element signature="e#11517#11538#0" expanded="false" />
+                <element signature="e#11590#11806#0" expanded="false" />
+                <element signature="e#11810#11831#0" expanded="false" />
+                <element signature="e#11859#12066#0" expanded="false" />
+                <element signature="e#12070#12091#0" expanded="false" />
+                <element signature="e#12123#12343#0" expanded="false" />
+                <element signature="e#12392#12612#0" expanded="false" />
+                <element signature="e#12616#13134#0" expanded="false" />
+                <element signature="e#12694#12844#0" expanded="false" />
+                <element signature="e#12896#13095#0" expanded="false" />
+                <element signature="e#13099#13128#0" expanded="false" />
+                <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
+                <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+                <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
+                <element signature="e#13810#14666#0" expanded="false" />
+                <element signature="n#!!block;n#Contenedor#0" expanded="false" />
+                <element signature="e#15079#20809#0" expanded="false" />
+                <element signature="e#15384#15523#0" expanded="false" />
+                <element signature="e#15924#16014#0" expanded="false" />
+                <element signature="e#17099#17199#0" expanded="false" />
+                <element signature="e#17269#20124#0" expanded="false" />
+                <element signature="e#20811#20855#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="almacen.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+              <folding>
+                <element signature="n#index#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#getDataTable#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#searchAllByWhere#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#save#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#edit#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#delete#0;n#Almacen#0;n#!!top" expanded="false" />
+                <element signature="n#deleteSelect#0;n#Almacen#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="almacen_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacen_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traslados.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/views/traslados.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#381#522#0" expanded="false" />
+                <element signature="e#561#703#0" expanded="false" />
+                <element signature="e#767#897#0" expanded="false" />
+                <element signature="n#!!block;n#Save#0" expanded="false" />
+                <element signature="e#1209#1274#0" expanded="false" />
+                <element signature="e#1278#1361#0" expanded="false" />
+                <element signature="e#1373#1634#0" expanded="false" />
+                <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
+                <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
+                <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+                <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+                <element signature="e#3364#3573#0" expanded="false" />
+                <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+                <element signature="n#!!block;n#loadProducto#0" expanded="false" />
+                <element signature="n#!!block;n#suma#0" expanded="false" />
+                <element signature="n#!!block;n#AgregarCampos#0" expanded="false" />
+                <element signature="n#!!block;n#elimCamp#0" expanded="false" />
+                <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
+                <element signature="e#10422#10443#0" expanded="false" />
+                <element signature="e#10493#10711#0" expanded="false" />
+                <element signature="e#10715#10736#0" expanded="false" />
+                <element signature="e#10788#11008#0" expanded="false" />
+                <element signature="e#11012#11033#0" expanded="false" />
+                <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+                <element signature="e#11216#11436#0" expanded="false" />
+                <element signature="e#11440#11461#0" expanded="false" />
+                <element signature="e#11513#11729#0" expanded="false" />
+                <element signature="e#11733#11754#0" expanded="false" />
+                <element signature="e#11782#11989#0" expanded="false" />
+                <element signature="e#11993#12014#0" expanded="false" />
+                <element signature="e#12046#12266#0" expanded="false" />
+                <element signature="e#12315#12535#0" expanded="false" />
+                <element signature="e#12539#13057#0" expanded="false" />
+                <element signature="e#12617#12767#0" expanded="false" />
+                <element signature="e#12819#13018#0" expanded="false" />
+                <element signature="e#13022#13051#0" expanded="false" />
+                <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
+                <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+                <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
+                <element signature="e#13732#14588#0" expanded="false" />
+                <element signature="n#!!block;n#Contenedor#0" expanded="false" />
+                <element signature="n#!!block;n#SetDestino#0" expanded="false" />
+                <element signature="e#15692#21422#0" expanded="false" />
+                <element signature="e#15997#16136#0" expanded="false" />
+                <element signature="e#16537#16627#0" expanded="false" />
+                <element signature="e#17712#17812#0" expanded="false" />
+                <element signature="e#17882#20737#0" expanded="false" />
+                <element signature="e#21424#21468#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/modules/parametros/models/vehiculo_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/views/choferes.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/controllers/vehiculos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/views/categorias.php" />
+        <option value="$PROJECT_DIR$/application/modules/almacenes/views/almacen.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/models/proveedor_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/controllers/proveedor.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/models/impresor_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/controllers/impresor.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/views/contenedor.php" />
+        <option value="$PROJECT_DIR$/application/modules/almacenes/models/almacen_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/tratamientoespecial.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/views/proveedor.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/views/proyectos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/models/tipos_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/views/vehiculos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/views/tipos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/views/productos.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/models/productos_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/models/tratamientoespecial_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/models/entrada_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" />
+        <option value="$PROJECT_DIR$/application/modules/dashboard/models/ajustes_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/models/choferes_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/models/vehiculos_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.js" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/views/tratamientoespecial.php" />
+        <option value="$PROJECT_DIR$/assets/js/global_jp.js" />
+        <option value="$PROJECT_DIR$/assets/js/views/s.js" />
+        <option value="$PROJECT_DIR$/../comedor/application/modules/configuracion/views/alumnos.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/views/impresor.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/inventario.js" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/views/header.php" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/entrada.js" />
+        <option value="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/traslados.js" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniprint" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="global_views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="global_views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="assets">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="stock">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="stock">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="almacenes">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="almacenes">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="almacenes">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controllers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="uniprint">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\uniprint\application\modules\stock\controllers" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\stock\views" />
+      <recent name="C:\wamp64\www\uniprint\assets\js" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\pdfs" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\stock\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\uniprint\assets\js\views" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\stock\views" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\stock\controllers" />
+      <recent name="C:\wamp64\www\uniprint\assets\js\ace" />
+      <recent name="C:\wamp64\www\uniprint\application\modules\productos\controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="" />
+      <created>1479217680764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1479217680764</updated>
+      <workItem from="1479217682719" duration="395000" />
+      <workItem from="1479218129812" duration="1247000" />
+      <workItem from="1479329427531" duration="1618000" />
+      <workItem from="1479363313330" duration="8081000" />
+      <workItem from="1479428666795" duration="32817000" />
+      <workItem from="1479492118518" duration="7060000" />
+      <workItem from="1479514181612" duration="24824000" />
+      <workItem from="1479732928922" duration="15120000" />
+      <workItem from="1479769053943" duration="23193000" />
+      <workItem from="1479860862551" duration="19687000" />
+      <workItem from="1479945980629" duration="497000" />
+      <workItem from="1479946509019" duration="8737000" />
+      <workItem from="1480097600979" duration="1995000" />
+      <workItem from="1480176876606" duration="114000" />
+      <workItem from="1480177041157" duration="569000" />
+      <workItem from="1480192032600" duration="7702000" />
+      <workItem from="1480265533116" duration="17795000" />
+      <workItem from="1480384407034" duration="14198000" />
+      <workItem from="1480447996403" duration="42487000" />
+      <workItem from="1480582540006" duration="23327000" />
+      <workItem from="1480641489261" duration="13495000" />
+      <workItem from="1480769403545" duration="95793000" />
+      <workItem from="1481112486620" duration="60137000" />
+      <workItem from="1481378958675" duration="36364000" />
+      <workItem from="1481590131706" duration="5934000" />
+      <workItem from="1481631196867" duration="1772000" />
+      <workItem from="1481637119983" duration="104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="465062000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="71" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/modules/dashboard/controllers/ajustes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="63" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/dashboard/models/ajustes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/models/vehiculos_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/dashboard/views/ajustes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1645">
+          <caret line="316" column="174" selection-start-line="316" selection-start-column="164" selection-end-line="316" selection-end-column="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/models/proveedor_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ace/elements.onpage-help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="609" column="4" selection-start-line="609" selection-start-column="4" selection-end-line="613" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/libraries/javascript/Jquery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6029">
+          <caret line="806" column="18" selection-start-line="806" selection-start-column="13" selection-end-line="806" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/jqGrid/jquery.jqGrid.src.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5795" column="9" selection-start-line="5795" selection-start-column="9" selection-end-line="5795" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/views/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/tratamientoespecial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="203" column="19" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/models/choferes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/exoneracion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2635">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/s.js" />
+    <entry file="file://$PROJECT_DIR$/assets/js/global_jp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/productos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="552" column="8" selection-start-line="552" selection-start-column="8" selection-end-line="575" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/contenedor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../comedor/application/modules/configuracion/views/alumnos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="263" column="10" selection-start-line="263" selection-start-column="10" selection-end-line="263" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/models/productos_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1312">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/views/impresor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="321" column="0" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-424">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/footer_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/inventario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/views/choferes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/proveedor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1184">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/vehiculos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/categorias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/proyectos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-649">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/tipos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/unidades.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1605">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-981">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/exoneracion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="99" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/tratamientoespecial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="98" column="31" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-694">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacen_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+          <folding>
+            <element signature="n#index#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#getDataTable#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#searchAllByWhere#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#save#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#edit#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#Almacen#0;n#!!top" expanded="false" />
+            <element signature="n#deleteSelect#0;n#Almacen#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/entrada.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="0" selection-end-line="386" selection-end-column="1" />
+          <folding>
+            <element signature="e#156#325#0" expanded="false" />
+            <element signature="e#382#523#0" expanded="false" />
+            <element signature="e#562#704#0" expanded="false" />
+            <element signature="e#778#908#0" expanded="false" />
+            <element signature="n#!!block;n#Save#0" expanded="false" />
+            <element signature="e#1220#1285#0" expanded="false" />
+            <element signature="e#1289#1372#0" expanded="false" />
+            <element signature="e#1384#1649#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
+            <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+            <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+            <element signature="e#3407#3616#0" expanded="false" />
+            <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+            <element signature="n#!!block;n#loadProducto#0" expanded="false" />
+            <element signature="n#!!block;n#suma#0" expanded="false" />
+            <element signature="n#!!block;n#AgregarCampos#0" expanded="false" />
+            <element signature="n#!!block;n#elimCamp#0" expanded="false" />
+            <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
+            <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
+            <element signature="e#10251#10495#0" expanded="false" />
+            <element signature="e#10499#10520#0" expanded="false" />
+            <element signature="e#10570#10788#0" expanded="false" />
+            <element signature="e#10792#10813#0" expanded="false" />
+            <element signature="e#10865#11085#0" expanded="false" />
+            <element signature="e#11089#11110#0" expanded="false" />
+            <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+            <element signature="e#11293#11513#0" expanded="false" />
+            <element signature="e#11517#11538#0" expanded="false" />
+            <element signature="e#11590#11806#0" expanded="false" />
+            <element signature="e#11810#11831#0" expanded="false" />
+            <element signature="e#11859#12066#0" expanded="false" />
+            <element signature="e#12070#12091#0" expanded="false" />
+            <element signature="e#12123#12343#0" expanded="false" />
+            <element signature="e#12392#12612#0" expanded="false" />
+            <element signature="e#12616#13134#0" expanded="false" />
+            <element signature="e#12694#12844#0" expanded="false" />
+            <element signature="e#12896#13095#0" expanded="false" />
+            <element signature="e#13099#13128#0" expanded="false" />
+            <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
+            <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+            <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
+            <element signature="e#13810#14666#0" expanded="false" />
+            <element signature="n#!!block;n#Contenedor#0" expanded="false" />
+            <element signature="e#15079#20809#0" expanded="false" />
+            <element signature="e#15384#15523#0" expanded="false" />
+            <element signature="e#15924#16014#0" expanded="false" />
+            <element signature="e#17099#17199#0" expanded="false" />
+            <element signature="e#17269#20124#0" expanded="false" />
+            <element signature="e#20811#20855#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/traslados.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#381#522#0" expanded="false" />
+            <element signature="e#561#703#0" expanded="false" />
+            <element signature="e#767#897#0" expanded="false" />
+            <element signature="n#!!block;n#Save#0" expanded="false" />
+            <element signature="e#1209#1274#0" expanded="false" />
+            <element signature="e#1278#1361#0" expanded="false" />
+            <element signature="e#1373#1634#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
+            <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+            <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+            <element signature="e#3364#3573#0" expanded="false" />
+            <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+            <element signature="n#!!block;n#loadProducto#0" expanded="false" />
+            <element signature="n#!!block;n#suma#0" expanded="false" />
+            <element signature="n#!!block;n#AgregarCampos#0" expanded="false" />
+            <element signature="n#!!block;n#elimCamp#0" expanded="false" />
+            <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
+            <element signature="e#10422#10443#0" expanded="false" />
+            <element signature="e#10493#10711#0" expanded="false" />
+            <element signature="e#10715#10736#0" expanded="false" />
+            <element signature="e#10788#11008#0" expanded="false" />
+            <element signature="e#11012#11033#0" expanded="false" />
+            <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+            <element signature="e#11216#11436#0" expanded="false" />
+            <element signature="e#11440#11461#0" expanded="false" />
+            <element signature="e#11513#11729#0" expanded="false" />
+            <element signature="e#11733#11754#0" expanded="false" />
+            <element signature="e#11782#11989#0" expanded="false" />
+            <element signature="e#11993#12014#0" expanded="false" />
+            <element signature="e#12046#12266#0" expanded="false" />
+            <element signature="e#12315#12535#0" expanded="false" />
+            <element signature="e#12539#13057#0" expanded="false" />
+            <element signature="e#12617#12767#0" expanded="false" />
+            <element signature="e#12819#13018#0" expanded="false" />
+            <element signature="e#13022#13051#0" expanded="false" />
+            <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
+            <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+            <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
+            <element signature="e#13732#14588#0" expanded="false" />
+            <element signature="n#!!block;n#Contenedor#0" expanded="false" />
+            <element signature="n#!!block;n#SetDestino#0" expanded="false" />
+            <element signature="e#15692#21422#0" expanded="false" />
+            <element signature="e#15997#16136#0" expanded="false" />
+            <element signature="e#16537#16627#0" expanded="false" />
+            <element signature="e#17712#17812#0" expanded="false" />
+            <element signature="e#17882#20737#0" expanded="false" />
+            <element signature="e#21424#21468#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6052">
+          <caret line="356" column="90" selection-start-line="356" selection-start-column="76" selection-end-line="356" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
