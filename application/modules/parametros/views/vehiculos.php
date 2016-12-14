@@ -16,6 +16,16 @@
         $('form').submit(function (event) {
             event.preventDefault();
         });
+        $( ".open-event" ).tooltip({
+            show: null,
+            position: {
+                my: "left top",
+                at: "left bottom"
+            },
+            open: function( event, ui ) {
+                ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+            }
+        });
     });
     function div_form_create(text) {
         $('#titulo_div').html(text);
@@ -136,8 +146,16 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-12">
-        <div class="infobox infobox-blue">
+    <div class="col-sm-3">
+        <div class="widget-box transparent">
+        <div class="widget-header widget-header-small header-color-blue2">
+            <h4 class="widget-title smaller">
+                <i class="ace-icon fa fa-gears bigger-120"></i>
+                Opciones
+            </h4>
+        </div>
+            <div class="space-4"></div>
+        <div class="infobox infobox-blue padding-16">
             <div class="infobox-icon">
                 <i class="ace-icon fa fa-truck"></i>
             </div>
@@ -153,6 +171,72 @@
                 </div>
             </div>
         </div>
+            <div class="space-12"></div>
+            <div class="space-12"></div>
+            <div class="hr hr-32"></div>
+            </div>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="widget-box transparent">
+            <div class="widget-header widget-header-small header-color-blue2">
+                <h4 class="widget-title smaller">
+                    <i class="ace-icon fa fa-info-circle bigger-120"></i>
+                    Estadisticas
+                </h4>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main padding-16">
+                    <div class="clearfix">
+                        <div class="grid3 center">
+                            <span class="badge badge-success" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_success']?></span>
+                            <div class="center easy-pie-chart percentage" data-percent=" <?=$statisct['success']?>" data-color="#59A84B" style="height: 72px; width: 72px; line-height: 71px; color: rgb(89, 168, 75);">
+                                <span class="percent"> <?=$statisct['success'] ?></span>%
+                                <canvas height="72" width="72"></canvas></div>
+
+                            <div class="space-2"></div>
+                            Registros Aceptables
+                            <a class="blue open-event" href="#" title="(Marca, modelo, Tipo, color y placa)">
+                                <i class="ace-icon fa fa-exclamation-circle"></i>
+                            </a>
+                        </div>
+
+                        <div class="grid3 center">
+                            <!-- #section:plugins/charts.easypiechart -->
+                            <span class="badge badge-info" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_regular']?></span>
+                            <div class="easy-pie-chart percentage" data-percent="<?=$statisct['regular']?>" data-color="#6BA2CA" style="height: 72px; width: 72px; line-height: 71px; color: rgb(107, 162, 202);">
+                                <span class="percent"><?=$statisct['regular']?></span>%
+                                <canvas height="72" width="72"></canvas></div>
+
+                            <!-- /section:plugins/charts.easypiechart -->
+                            <div class="space-2"></div>
+                            Registros Parciales
+                            <a class="blue open-event" href="#" title="(Marca y placa)">
+                                <i class="ace-icon fa fa-exclamation-circle"></i>
+                            </a>
+                        </div>
+
+                        <div class="grid3 center">
+                            <span class="badge badge-danger" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_fail']?></span>
+                            <div class="center easy-pie-chart percentage" data-percent="<?=$statisct['fail']?>" data-color="#CA5952" style="height: 72px; width: 72px; line-height: 71px; color: rgb(149, 133, 191);">
+                               <span class="percent"><?=$statisct['fail']?></span>%
+                                <canvas height="72" width="72"></canvas></div>
+                            <div class="space-2"></div>
+                            Registros Incompletos
+                            <a class="blue open-event" href="#" title="(Placa)">
+                                <i class="ace-icon fa fa-exclamation-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hr hr-16"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+
 
         <div class="space-6"></div>
 
@@ -176,6 +260,7 @@
             </table>
         </div>
     </div>
+
 </div>
 
 <div id="modal-table_categoria" class="modal fade" tabindex="-3">

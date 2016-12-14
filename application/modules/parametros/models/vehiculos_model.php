@@ -28,6 +28,59 @@ class Vehiculos_model extends CI_Model
         }
     }
 
+    public function statisct(){
+        $this->db->select('*');
+        $this->db->from($this->tabla);
+        $this->db->WHERE('marca', '---');
+        $query = $this->db->get();
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $g3 = array();
+            foreach ($query->result() as $key) {
+                $g3[] = $key;
+            }
+        }
+        $this->db->select('*');
+        $this->db->from($this->tabla);
+        $this->db->WHERE('modelo', '');
+        $this->db->WHERE('color', '');
+        $query = $this->db->get();
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $g2 = array();
+            foreach ($query->result() as $key) {
+                $g2[] = $key;
+            }
+        }
+        $this->db->select('*');
+        $this->db->from($this->tabla);
+        $this->db->order_by('placa');
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            $g1 = array();
+            foreach ($query->result() as $key) {
+                $g1[] = $key;
+            }
+        }
+        bcscale(1);
+        $prom1 = (count($g1)-count($g3));
+        $success = bcdiv(($prom1*100),count($g1));
+        //----------------------------
+        $prom2 = count($g2);
+        $regular = bcdiv(($prom2*100),count($g1));
+        //----------------------------
+        $prom3 = count($g3);
+        $fail = bcdiv(($prom3*100),count($g1));
+        //----------------------------
+            return array("fail"=>$fail,
+                         "regular"=>$regular,
+                         "success"=>$success,
+                        'count_fail'=>count($g3),
+                        'count_regular'=>count($g2),
+                        'count_success'=>$prom1,
+                );
+    }
+
     public function getDataTable()
     {
         $this->db->select('*');

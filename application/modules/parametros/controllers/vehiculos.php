@@ -25,6 +25,7 @@ class Vehiculos extends MX_Controller {
                 if (in_array($xValCi, $xValMeNu)) {
                     $items = array(
                         'getAll'  => $this->models->getAll(),
+                        'statisct'  => $this->models->statisct(),
                         'getAllChoferes'  => $this->modelsChoferes->getAll(),
                     );
                     $this->load->view('vehiculos',$items);
