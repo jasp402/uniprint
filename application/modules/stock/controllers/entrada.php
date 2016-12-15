@@ -109,8 +109,9 @@ class Entrada extends MX_Controller {
         $id_chofer      =$this->input->post('id_chofer');
         $id_vehiculo    =$this->input->post('id_vehiculo');
         $destino        =$this->input->post('destino');
-        $operacion        ='+';
-        $comentario    =$this->input->post('comentario');
+        $operacion      ='+';
+        $lote           =$this->input->post('lote');
+        $comentario     =$this->input->post('comentario');
         $documento      =$this->input->post('documento');
         $fecha          =new DateTime($this->input->post('fecha'));
         $StaticDate[0] = array(
@@ -119,11 +120,11 @@ class Entrada extends MX_Controller {
             'id_chofer' =>$id_chofer,
             'id_vehiculo' =>$id_vehiculo,
             'destino' =>$destino,
-            //'id_proyecto' =>$id_proyecto,
             'documento' =>$documento,
             'fecha' =>$fecha->format('Y-m-d'),
             'operacion' =>$operacion,
-            'comentario' => $comentario
+            'comentario' => $comentario,
+            'lote' => $lote
         );
 
         //Dinamic Date
@@ -133,13 +134,14 @@ class Entrada extends MX_Controller {
             $id_producto    =$this->input->post('id_producto');
             $cant_lote      =$this->input->post('cant_lote');
             $cant_unidades  =$this->input->post('cant_unidades');
+            $total          =$this->input->post('total');
 
         for($i=0;$i<$items; $i++){
             $DinamicDate[$i]= array(
                 'id_producto'=>$id_producto[$i],
                 'cant_lote'=>$cant_lote[$i],
                 'cant_unidades'=>$cant_unidades[$i],
-                'total'=>($cant_lote[$i]*$cant_unidades[$i])
+                'total'=>$total[$i]
             );
             $data[$i] = array_merge($StaticDate[0], $DinamicDate[$i], $this->auditoria);
         }
@@ -147,7 +149,8 @@ class Entrada extends MX_Controller {
         //$data = array_splice($data, 1);
 
         $this->models->createMultiple($data);
-        $this->models->create_details($data);
+        if($lote=='si'){$this->models->create_details($data);}
+
     }
 
     public function edit(){

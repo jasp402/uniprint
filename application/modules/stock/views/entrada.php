@@ -22,6 +22,9 @@
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
+
+
+<!--// (Modal) Editar        //-->
 <div id="modal-table" class="modal fade" tabindex="-1">
     <div class="modal-dialog" style="width:80% !important;">
         <div class="modal-content">
@@ -75,7 +78,9 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
-<!-- CABECERA -->
+
+
+<!--//  Titulo Cabecera     //-->
 <div class="page-header">
     <h1>
         <i class="fa fa-cubes grey"></i>
@@ -86,6 +91,9 @@
         </small>
     </h1>
 </div>
+
+
+<!--//  Ultimos registros   //-->
 <div class="row">
     <div class="col-sm-12">
         <div class="widget-box collapsed">
@@ -244,6 +252,9 @@
         </div><!-- /.widget-box -->
     </div><!-- /.col -->
 </div>
+
+
+<!--//  Procesar entrada    //-->
 <div class="widget-box">
     <div class="widget-header widget-header-blue widget-header-flat">
         <h4 class="widget-title lighter">
@@ -292,7 +303,7 @@
                         <div class="form-group has-info">
                             <label for="inputWarning" class="col-sm-3 control-label no-padding-right">Proveedor / Impresor</label>
 
-                            <div class="col-sm-5">
+                            <div class=" col-sm-5">
                                 <div class="btn-group pull-left">
                                     <button class="btn btn-yellow" data-toggle="dropdown" style="
     width: 158px;
@@ -368,7 +379,6 @@
                         <div class="form-group has-info">
                             <label class="col-xs-12 col-sm-3 control-label no-padding-right inline">
                                 <small class="muted">Cod. Contenedor:</small>
-
                                 <input id="id-pills-stacked" type="checkbox" value="1" class="ace ace-switch ace-switch-5" onclick="Contenedor()">
                                 <span class="lbl middle"></span>
                             </label>
@@ -383,8 +393,20 @@
                     <!-- #section:data-step="2" -->
                     <div class="step-pane" data-step="2">
                         <h3 class="lighter block green">Datos del Producto</h3>
-                        <div class="form-group has-success">
-                            <div class="col-sm-3">
+                        <div class="form-group has-info">
+                            <div class="col-sm-1">
+
+                                <label class="col-sm-12 control-label no-padding-right inline">
+                                    <small>Granel</small>
+                                    <a class="info open-event" href="#" title="¿Productos a granel?" style="text-decoration:none">
+                                        <i class="ace-icon fa fa-exclamation-circle"></i>
+                                    </a>
+                                    <div class="space-4"></div>
+                                    <input id="id-pills-stacked-granel" type="checkbox" value="1" class="ace ace-switch ace-switch-5" onclick="granel()">
+                                    <span class="lbl middle"></span>
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
                                     <span>
                                         <label for="inputWarning" class="control-label no-padding-right pull-right">Almacén de Destino</label>
 												<select class="form-control" name="destino" id="destino"
@@ -420,10 +442,14 @@
                                     </span>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover">
+                        <table id="thead_lote" class="table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th style="width:30px!important;"><span role="link" onclick="AgregarCampos()"><i class="fa fa-plus blue" aria-hidden="true"></i></span></th>
+                                <th style="width:30px!important;">
+                                    <span role="link" onclick="AgregarCampos_lote()">
+                                        <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                    </span>
+                                </th>
                                 <th>#</th>
                                 <th>categoria</th>
                                 <th>Tipo</th>
@@ -433,10 +459,31 @@
                                 <th>Total de Unidades</th>
                             </tr>
                             </thead>
-                            <tbody id="campos">
+                            <tbody id="campos_lote">
                             <!-- // function addfields() // -->
                             </tbody>
                         </table>
+                        <table id="thead_serie" class="table table-striped table-bordered table-hover" style="display: none;">
+                            <thead>
+                            <tr>
+                                <th style="width:30px!important;">
+                                    <span role="link" onclick="AgregarCampos_serie()">
+                                        <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                    </span>
+                                </th>
+                                <th>#</th>
+                                <th>categoria</th>
+                                <th>Tipo</th>
+                                <th width="40%">Producto</th>
+                                <th width="20%">Total de Unidades</th>
+                            </tr>
+                            </thead>
+                            <tbody id="campos_serie">
+                            <!-- // function addfields() // -->
+                            </tbody>
+                        </table>
+
+
                         <textarea id="comentario" name="comentario" class="form-control" placeholder="Agregar comentario" style="width: 100%"></textarea>
                     </div>
                     <!-- #section:data-step="4" -->
@@ -539,8 +586,8 @@
                                                         <th>categoria</th>
                                                         <th>Tipo</th>
                                                         <th>Producto</th>
-                                                        <th>Cant. paletas</th>
-                                                        <th>Unidades x Paletas</th>
+                                                        <th id="th_invoice_pltas">Cant. paletas</th>
+                                                        <th id="th_invoice_unds">Unidades x Paletas</th>
                                                         <th>Total de Unidades</th>
                                                     </tr>
                                                     </thead>
@@ -603,16 +650,5 @@
     </div><!-- /.widget-body -->
 </div>
 
-
-
-
-
-
-
-
-<script type="text/javascript">
-        //inline scripts related to this page
-
-</script>
 
 <?php $this->load->view('global_views/footer_dashboard'); ?>

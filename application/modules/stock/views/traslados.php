@@ -22,6 +22,9 @@
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
+
+
+<!--// (Modal) Editar        //-->
 <div id="modal-table" class="modal fade" tabindex="-1">
     <div class="modal-dialog" style="width:80% !important;">
         <div class="modal-content">
@@ -75,7 +78,9 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
-<!-- CABECERA -->
+
+
+<!--//  Titulo Cabecera     //-->
 <div class="page-header">
     <h1>
         <i class="fa fa-cubes grey"></i>
@@ -86,6 +91,56 @@
         </small>
     </h1>
 </div>
+
+<!--//  estatus / Almacenes //-->
+<div class="row">
+    <div class="col-sm-12">
+        <!-- #section:elements.tab -->
+        <div class="tabbable">
+
+            <ul class="nav nav-tabs" id="myTab">
+                <?php if ($getAllAlmacenes): ?>
+                    <?php $c = count($getAllAlmacenes->getAll());
+                    for ($i = 0; $i < $c; $i++): ?>
+                        <?php if ($getAllAlmacenes->getAll()[$i]->id_ubicacion == 1): ?>
+                            <li class="active">
+                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="true">
+                                    <i class="blue ace-icon fa fa-home bigger-120"></i>
+                                    <?=$getAllAlmacenes->getAll()[$i]->nombre;?>
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <li class="">
+                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="false">
+                                    <i class="orange ace-icon fa fa-home bigger-120"></i>
+                                    <?=$getAllAlmacenes->getAll()[$i]->nombre;?>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                <?php endif; ?>
+            </ul>
+
+            <div class="tab-content">
+                <?php for($j = 0; $j < count($getAllAlmacenes->getAll()); $j++): ?>
+                    <?php if ($getAllAlmacenes->getAll()[$j]->id_ubicacion == 1): ?>
+                        <div id="almacen<?=$j;?>" class="tab-pane fade active in">
+                            <p><?=$getAllAlmacenes->getAll()[$j]->nombre;?></p></div>
+                    <?php else: ?>
+                        <div id="almacen<?=$j;?>" class="tab-pane fade">
+                            <p><?=$getAllAlmacenes->getAll()[$j]->nombre;?> </p>
+                        </div>
+                    <?php endif; ?>
+                <?php endfor; ?>
+            </div>
+        </div>
+
+        <!-- /section:elements.tab -->
+        <div class="space-4"></div>
+    </div>
+</div>
+
+<!--//  Ultimos registros   //-->
 <div class="row">
     <div class="col-sm-12">
         <div class="widget-box collapsed">
@@ -244,6 +299,8 @@
         </div><!-- /.widget-box -->
     </div><!-- /.col -->
 </div>
+
+<!--//  Procesar entrada    //-->
 <div class="widget-box">
     <div class="widget-header widget-header-blue widget-header-flat">
         <h4 class="widget-title lighter">
@@ -344,21 +401,6 @@
                                 <i class="ace-icon fa fa-truck"></i>
                             </a>
                         </div>
-
-                        <div class="form-group has-info">
-                            <label class="col-xs-12 col-sm-3 control-label no-padding-right inline">
-                                <small class="muted">Cod. Contenedor:</small>
-
-                                <input id="id-pills-stacked" type="checkbox" value="1" class="ace ace-switch ace-switch-5" onclick="Contenedor()">
-                                <span class="lbl middle"></span>
-                            </label>
-                            <div class="col-xs-12 col-sm-5">
-											<span class="block input-icon input-icon-right">
-												<input type="textbox" name="cod_contenedor" id="cod_contenedor" class="form-control" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-											</span>
-                            </div>
-                        </div>
-
                     </div>
                     <!-- #section:data-step="2" -->
                     <div class="step-pane" data-step="2">
@@ -576,16 +618,5 @@
     </div><!-- /.widget-body -->
 </div>
 
-
-
-
-
-
-
-
-<script type="text/javascript">
-        //inline scripts related to this page
-
-</script>
 
 <?php $this->load->view('global_views/footer_dashboard'); ?>

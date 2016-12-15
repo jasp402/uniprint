@@ -27,6 +27,7 @@ class Inventario_model extends CI_Model
             return $items;
         }
     }
+
     public function getAllLast()
     {
         $this->db->select('*');

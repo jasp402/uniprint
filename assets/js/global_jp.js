@@ -1,3 +1,15 @@
+$(document).ready(function () {
+	$( ".open-event" ).tooltip({
+		show: null,
+		position: {
+			my: "left top",
+			at: "left bottom"
+		},
+		open: function( event, ui ) {
+			ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+		}
+	});
+});
 function disa_form(id){
 	var id_form = id.toString();
 	$("#"+id_form+" input").prop( "disabled", true );

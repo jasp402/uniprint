@@ -1,3 +1,10 @@
+/**
+ * Impoortante: SERIE: YES || SERIE: NO
+ * var lote = NO => (Serie YES)
+ * var lote = SI => (Serie NO)
+ *
+ * **/
+
 
 $(document).ready(function (){
     $('form').submit(function (event) {
@@ -34,7 +41,26 @@ $(document).ready(function (){
     $("#cod_contenedor").attr('disabled', 'disabled');
 });
 var nextinput = 0;
+var lote='si';
+function granel(){
+    //Aqui iniciamos el contador de celdas para ambas tablas
+     nextinput = 0;
+    $("#campos_lote").html('');
+    $("#campos_serie").html('');
+    if ($("#id-pills-stacked-granel:checked").val() == 1) {
+        lote = 'no'; //<--Default ||    Serie 'SI'
+        // #Ocultar el <th> de la tabla y mostrar el de a granel
+        $("#thead_lote").hide();
+        $("#thead_serie").fadeIn();
+    }
+    else {
+        lote = 'si'; //<--------- ||    Serie 'NO'
+        $("#thead_lote").fadeIn();
+        $("#thead_serie").hide();
+    }
+}
 var origen;
+
 function Save(){
     var f = toDateString($("#fecha").val());
     var impresor = $("#id_impresor").find(":selected").val();
@@ -44,13 +70,13 @@ function Save(){
     }else{
         if(impresor != ''){ origen = impresor; }else{ origen = proveedor; }
     }
-    $.ajax({
+        $.ajax({
         url: 'entrada/save',
         type: 'POST',
         dataType: 'json',
-        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f,
+        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f+'&lote='+lote,
         success: function (data) {
-                message_box(data.success, data.times, data.closes);
+            message_box(data.success, data.times, data.closes);
         }
     });
 }
@@ -66,29 +92,30 @@ function show_form_select2(){
     $('#select1').hide();
 }
 
-function loadAllSelect(){
+function loadAllSelect() {
     var id = $("#id_proyecto").find(":selected").val();
     $.ajax({
         type: 'POST',
         url: '../productos/categorias/searchAllByWhere',
         data: {'id': id, 'field': 'id_proyecto'},
-        success:function (data) {
-        var obj = jQuery.parseJSON(data);
-        var c = obj.result;
-            for(var i=1; i<=nextinput; i++){
-                    $("#id_categoria"+i).empty();
-                    $("#id_categoria"+i).append(
-                        $("<option></option>").attr("value", '').text('Seleccione...')
+        success: function (data) {
+            var obj = jQuery.parseJSON(data);
+            var c = obj.result;
+            for (var i = 1; i <= nextinput; i++) {
+                $("#id_categoria" + i).empty();
+                $("#id_categoria" + i).append(
+                    $("<option></option>").attr("value", '').text('Seleccione...')
+                );
+                $.each(c, function (indice, valor) {
+                    $("#id_categoria" + i).append(
+                        $("<option></option>").attr("value", valor[indice].id_categoria).text(valor[indice].nombre)
                     );
-                    $.each(c, function (indice, valor) {
-                        $("#id_categoria"+i).append(
-                            $("<option></option>").attr("value", valor[indice].id_categoria).text(valor[indice].nombre)
-                        );
-                    });
-                }
-    }
+                });
+            }
+        }
     });
 }
+
 function loadCategoria(i) {
     var id = $("#id_proyecto").find(":selected").val();
     if(id>0){
@@ -182,7 +209,7 @@ function suma() {
         }
     }
 }
-function AgregarCampos(){
+function AgregarCampos_lote(){
     nextinput++;
 
     campo = '<tr id="campo'+nextinput+'">'+
@@ -205,9 +232,9 @@ function AgregarCampos(){
         '</td>'+
         '<td> <input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control" required> </td>'+
         '<td> <input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onchange="suma()"></td>'+
-        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" disabled></td>' +
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" readonly></td>' +
         '</tr>';
-    $("#campos").append(campo);
+    $("#campos_lote").append(campo);
     loadCategoria(nextinput);
 }
 function elimCamp(id) {
@@ -231,9 +258,9 @@ function loadInvoice() {
     $("#invoice_total").empty(); //cant Productos
     $("#invoice_comentario").empty(); //comentario
     //Asignacion de datos en Invoice
-    if(origen =='Impresor'){
+    if (origen == 'Impresor') {
         $("#invoice_origen").append($("#id_impresor option:selected").text());
-    }else{
+    } else {
         $("#invoice_origen").append($("#id_proveedor option:selected").text());
     }
     $("#invoice_documento").append($('#documento').val());
@@ -243,30 +270,50 @@ function loadInvoice() {
     $("#invoice_vehiculo").append($("#id_vehiculo option:selected").text());
     $("#invoice_destino").append($("#destino option:selected").text());
     $("#invoice_proyecto").append($("#id_proyecto option:selected").text());
-    if($('#comentario').val()==''){
+    if ($('#comentario').val() == '') {
         $("#invoice_comentario").html('NO TIENE COMENTARIOS...');
-    }else{
+    } else {
         $("#invoice_comentario").html($('#comentario').val());
     }
 
 
     //crear tabla Invoce
 
-    var j=1;
+    var j = 1;
     var total_global = 0;
-    for(j; j<=nextinput;j++){
-        datos ='<tr>'+
-            '<td class="center">'+j+'</td>'+
-            '<td>'+$("#id_categoria"+j+" option:selected").text()+'</td>'+
-            '<td>'+$("#id_tipo"+j+" option:selected").text()+'</td>'+
-            '<td>'+$("#id_producto"+j+" option:selected").text()+'</td>'+
-            '<td>'+$("#cant_lote"+j).val()+'</td>'+
-            '<td>'+$("#cant_unidades"+j).val()+'</td>'+
-            '<td>'+$("#total"+j).val()+'</td>'+
-            '</tr>';
-        $("#invoice_result").append(datos);
-        total_global = (Number($('#total'+j+'').val())+Number(total_global));
+    if (nextinput > 0) {
+        if(lote=='si'){
+            for (j; j <= nextinput; j++) {
+                datos = '<tr>' +
+                    '<td class="center">' + j + '</td>' +
+                    '<td>' + $("#id_categoria" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#id_tipo" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#id_producto" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#cant_lote" + j).val() + '</td>' +
+                    '<td>' + $("#cant_unidades" + j).val() + '</td>' +
+                    '<td>' + $("#total" + j).val() + '</td>' +
+                    '</tr>';
+                $("#invoice_result").append(datos);
+                total_global = (Number($('#total' + j + '').val()) + Number(total_global));
+            }
+        }else{
+            $('#th_invoice_pltas').remove();
+            $('#th_invoice_unds').remove();
+            for (j; j <= nextinput; j++) {
+                datos = '<tr>' +
+                    '<td class="center">' + j + '</td>' +
+                    '<td>' + $("#id_categoria" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#id_tipo" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#id_producto" + j + " option:selected").text() + '</td>' +
+                    '<td>' + $("#total" + j).val() + '</td>' +
+                    '</tr>';
+                $("#invoice_result").append(datos);
+                total_global = (Number($('#total' + j + '').val()) + Number(total_global));
+            }
+        }
+
     }
+
     number = parseInt(total_global);
     $('#invoice_total').text(number.toLocaleString('es-ES'));
 }
@@ -394,6 +441,45 @@ function Contenedor(){
         $("#cod_contenedor").val('');
         $("#cod_contenedor").attr('disabled', 'disabled');
     }
+}
+
+
+
+function AgregarCampos_serie(){
+    nextinput++;
+
+    campo_serie = '<tr id="campo'+nextinput+'">'+
+        '<td  class="align-middle"><a href="#" onclick="elimCamp_serie('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
+        '<td  class="align-middle">'+nextinput+'</td>'+
+        '<td>' +
+        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>' +
+        '</td>'+
+
+        '<td>'+
+        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>'+
+        '</td>'+
+        '<td>'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
+        '</select>'+
+        '</td>'+
+        '<td style="display:none"><input type="hidden" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" value="0"> </td>'+
+        '<td style="display:none"><input type="hidden" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" value="0"></td>'+
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control"></td>' +
+
+        '</tr>';
+    $("#campos_serie").append(campo_serie);
+    loadCategoria(nextinput);
+}
+function elimCamp_serie(id) {
+    bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
+        if(r) {
+            $('#campo'+id+'').remove();
+        }
+    });
 }
 //footer
 jQuery(function($) {
@@ -587,6 +673,6 @@ jQuery(function($) {
     $('[data-rel=tooltip]').tooltip();
     $('[data-rel=popover]').popover({html:true});
 })
-/**
+/******
  * Created by Jasp402 on 07/12/2016.
- */
+ ******/

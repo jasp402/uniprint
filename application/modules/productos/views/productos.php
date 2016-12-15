@@ -242,7 +242,7 @@
                     <th>id_producto</th>
                     <th>Categoria</th>
                     <th>Tipo</th>
-                    <th>Codigo</th>
+                    <th width="8%" style="width: 8%!important;" >Codigo</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Detalles</th>

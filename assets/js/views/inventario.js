@@ -185,7 +185,7 @@ function loadInfo(id) {
             message_load('Procesando...', 'info', 'clock-o', '_load','_profile');
         },
         success: function (data) {
-            console.log(data.result[0][0]);
+            //console.log(data.result[0][0]);
             $('#widget-title').text('Detalles del Documento #'+data.result[0][0].documento+'');
             $('#_documento').text(data.result[0][0].documento);
             $('#_origen').text(data.result[0][0].origen);

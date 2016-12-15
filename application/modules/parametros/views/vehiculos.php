@@ -16,16 +16,6 @@
         $('form').submit(function (event) {
             event.preventDefault();
         });
-        $( ".open-event" ).tooltip({
-            show: null,
-            position: {
-                my: "left top",
-                at: "left bottom"
-            },
-            open: function( event, ui ) {
-                ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
-            }
-        });
     });
     function div_form_create(text) {
         $('#titulo_div').html(text);
