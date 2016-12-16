@@ -1,3 +1,10 @@
+/**
+ * Impoortante: SERIE: YES || SERIE: NO
+ * var lote = NO => (Serie YES)
+ * var lote = SI => (Serie NO)
+ *
+ * **/
+
 $(document).ready(function (){
     $('form').submit(function (event) {
         event.preventDefault();
@@ -42,8 +49,29 @@ $(document).ready(function (){
         }
     });
 });
+
 var nextinput = 0;
+var lote='si';
 var origen;
+function granel(){
+    //Aqui iniciamos el contador de celdas para ambas tablas
+    nextinput = 0;
+    $("#campos_lote").html('');
+    $("#campos_serie").html('');
+    if ($("#id-pills-stacked-granel:checked").val() == 1) {
+        lote = 'no'; //<--Default ||    Serie 'SI'
+        // #Ocultar el <th> de la tabla y mostrar el de a granel
+        $('#table_lote_total_serie').html('Total de Unidades');
+        $("#thead_lote").hide();
+        $("#thead_serie").fadeIn();
+    }
+    else {
+        lote = 'si'; //<--------- ||    Serie 'NO'
+        $('#table_lote_total').html('Total de Unidades');
+        $("#thead_lote").fadeIn();
+        $("#thead_serie").hide();
+    }
+}
 function Save(){
     var f = toDateString($("#fecha").val());
     var impresor = $("#id_impresor").find(":selected").val();
@@ -54,25 +82,14 @@ function Save(){
         if(impresor != ''){ origen = impresor; }else{ origen = proveedor; }
     }
     $.ajax({
-        url: 'entrada/save',
+        url: 'traslados/save',
         type: 'POST',
         dataType: 'json',
-        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f,
+        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f+'&lote='+lote,
         success: function (data) {
             message_box(data.success, data.times, data.closes);
         }
     });
-}
-
-function show_form_select1(){
-    origen = 'Impresor';
-    $('#select1').show(300);
-    $('#select2').hide();
-}
-function show_form_select2(){
-    origen = 'Proveedor';
-    $('#select2').show(300);
-    $('#select1').hide();
 }
 
 function loadAllSelect(){
@@ -191,11 +208,104 @@ function suma() {
         }
     }
 }
-function AgregarCampos(){
-    nextinput++;
+function sumaTotales() {
+    var j;
+    var total=0;
+    if(nextinput>0){
+        for(j=1; j<=nextinput; j++){
+            total = (parseInt($('#total'+j).val())+parseInt(total));
+        }
+        $('#table_lote_total').html(total.toLocaleString('es-ES'));
+        $('#table_lote_total_serie').html(total.toLocaleString('es-ES'));
+    }
+}
+function disponible(index) {
+    var pro = $("#id_producto" + index).find(":selected").val();
+    var des = $("#origen").find(":selected").val();
+    console.log(pro);
+    console.log(des);
+    $.ajax({
+        type: 'POST',
+        url: '../stock/inventario/searchAllByWhereTwo',
+        data: {'id1': pro, 'field1': 'id_producto', 'id2': des, 'field2': 'destino'},
+        success: function (data) {
 
+            var obj = jQuery.parseJSON(data);
+            if(obj.success){
+                var r = obj.result;
+                if (r.length > 0) {
+                    var sumaProducto = 0;
+                    $.each(r, function (indice, valor) {
+                        sumaProducto = parseInt(valor[indice].total) + parseInt(sumaProducto);
+                    });
+                    $("#disponible" + index).val(sumaProducto);
+                    $('#disponible' + index).val(($('#disponible' + index).val() - $('#total' + index).val()));
+                    if($('#disponible' + index).val()<0){alert('Te volviste loco! no puedes enviar mas porque no tienes!')}
+                }
+            }else{
+                $("#disponible" + index).val(0);
+            }
+
+        }
+    });
+}
+//----------------------------------//
+function AgregarCampos_lote(){
+    nextinput++;
     campo = '<tr id="campo'+nextinput+'">'+
         '<td  class="align-middle"><a href="#" onclick="elimCamp('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
+        '<td  class="align-middle">'+nextinput+'</td>'+
+        '<td>' +
+        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'" onchange="loadTipo('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>' +
+        '</td>'+
+
+        '<td>'+
+        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'" onchange="loadProducto('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>'+
+        '</td>'+
+        '<td>'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'" onchange="disponible('+nextinput+')">'+
+        '</select>'+
+        '</td>'+
+        '<td>' +
+        '<span class="block input-icon input-icon-right">'+
+        '<input type="number" id="disponible'+nextinput+'" class="form-control" readonly>'+
+        '<i class="ace-icon fa fa-info-circle open-event2" title="Unides disponibles"></i>'+
+        '</span>'+
+        '</td>'+
+        '<td><input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control"></td>'+
+        '<td><input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onchange="suma();sumaTotales();disponible('+nextinput+')"></td>'+
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" readonly></td>' +
+        '</tr>';
+    $("#campos_lote").append(campo);
+    loadCategoria(nextinput);
+    $(".open-event2").tooltip({
+        show: null,
+        position: {
+            my: "left top",
+            at: "left bottom"
+        },
+        open: function( event, ui ) {
+            ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+        }
+    });
+}  //
+function elimCamp(id) {
+    bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
+        if(r) {
+            $('#campo'+id+'').remove();
+        }
+    });
+}         //
+//----------------------------------//
+function AgregarCampos_serie(){
+    nextinput++;
+
+    campo_serie = '<tr id="campo'+nextinput+'">'+
+        '<td  class="align-middle"><a href="#" onclick="elimCamp_serie('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
         '<td  class="align-middle">'+nextinput+'</td>'+
         '<td>' +
         '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
@@ -209,23 +319,42 @@ function AgregarCampos(){
         '</select>'+
         '</td>'+
         '<td>'+
-        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'" onchange="disponible('+nextinput+')">'+
         '</select>'+
         '</td>'+
-        '<td> <input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control" required> </td>'+
-        '<td> <input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onchange="suma()"></td>'+
-        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" disabled></td>' +
+        '<td>' +
+        '<span class="block input-icon input-icon-right">'+
+        '<input type="number" id="disponible'+nextinput+'" class="form-control" readonly>'+
+        '<i class="ace-icon fa fa-info-circle open-event2" title="Unides disponibles"></i>'+
+        '</span>'+
+        '</td>'+
+        '<td style="display:none"><input type="hidden" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" value="0"> </td>'+
+        '<td style="display:none"><input type="hidden" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" value="0"></td>'+
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control" onkeyup="sumaTotales();disponible('+nextinput+')"></td>' +
         '</tr>';
-    $("#campos").append(campo);
+    $("#campos_serie").append(campo_serie);
     loadCategoria(nextinput);
-}
-function elimCamp(id) {
+    $(".open-event2").tooltip({
+        show: null,
+        position: {
+            my: "left top",
+            at: "left bottom"
+        },
+        open: function( event, ui ) {
+            ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+        }
+    });
+
+} //
+function elimCamp_serie(id) {
     bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
         if(r) {
             $('#campo'+id+'').remove();
         }
     });
-}
+}   //
+//----------------------------------//
+
 //invoice
 function loadInvoice() {
     $("#invoice_documento").empty(); //Nota de entrega
@@ -357,7 +486,6 @@ function limpiarTabla() {
 function elimDoc(){
     $("#documento").val('');
 }
-
 function validarDocumento() {
     id = $('#documento').val();
     $("#modal-doc").text(id);
@@ -394,15 +522,6 @@ function validarDocumento() {
         }
     });
 }
-function Contenedor(){
-    if ($("#id-pills-stacked:checked").val() == 1) {
-        $("#cod_contenedor").removeAttr("disabled");
-    }
-    else {
-        $("#cod_contenedor").val('');
-        $("#cod_contenedor").attr('disabled', 'disabled');
-    }
-}
 function SetDestino(val) {
     var id = val;
     if(id>0){
@@ -428,6 +547,8 @@ function SetDestino(val) {
     }
 
 }
+
+
 jQuery(function($) {
 
     $('[data-rel=tooltip]').tooltip();

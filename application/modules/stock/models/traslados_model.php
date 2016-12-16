@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Inventario_model extends CI_Model
+class Traslados_model extends CI_Model
 {
     private $tabla;
     private $primary_key;
@@ -9,9 +9,9 @@ class Inventario_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $this->tabla = 'sys_inventario';
-        $this->tabla_detalle = 'sys_inventario_detalle';
-        $this->primary_key = 'id_inventario';
+        $this->tabla = 'sys_traslados';
+        //$this->tabla_detalle = 'sys_inventario_detalle';
+        $this->primary_key = 'id_traslados';
     }
 
     public function getAll()
@@ -169,13 +169,14 @@ class Inventario_model extends CI_Model
         $this->db->where($field1, $id1);
         $this->db->where($field2, $id2);
         $query = $this->db->get();
-        //echo $this->db->last_query();
+        echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
             return FALSE;
         }
     }
+
 
     public function create_details($data){
         for($i=0,$c=count($data); $i<$c; $i++) {
@@ -281,7 +282,4 @@ class Inventario_model extends CI_Model
         $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
         detail_message($items, 'UPDATE');
     }
-
-
-
 }

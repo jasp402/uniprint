@@ -8,23 +8,12 @@
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 <script src="<?=base_url()?>assets/js/bootbox.js"></script>
 
-
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
 <script>
     $(document).ready(function () {
         $('form').submit(function (event) {
             event.preventDefault();
-        });
-        $( ".open-event" ).tooltip({
-            show: null,
-            position: {
-                my: "left top",
-                at: "left bottom"
-            },
-            open: function( event, ui ) {
-                ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
-            }
         });
     });
     function div_form_create(text) {
@@ -49,17 +38,17 @@
                 $.each(r, function(indice, valor) {
                     $("#"+indice).val(valor);
                 });
-                SelectAjaxRefresh(r.id_proyecto,'selectlive_1');
+                //SelectAjaxRefresh(r.id_proyecto,'selectlive_1');
             }
         });
     }
     function Save() {
-        var cod = $('#marca').val().trim();
+        var cod = $('#nombre').val().trim();
         if (cod == "" ) {
             bootbox.alert("complete todos campo");
         } else {
             $.ajax({
-                url: 'vehiculos/save',
+                url: 'almacen/save',
                 type: 'POST',
                 dataType: 'json',
                 data: $('#form').serialize(),
@@ -79,9 +68,28 @@
             });
         }
     }
+    function div_form_edit(id,text,models) {
+        $('#titulo_div').html(text);
+        $('#div_btn_save').hide();
+        $('#div_btn_edit').show();
+
+        $.ajax({
+            url: models+'/searchAllById',
+            type: 'POST',
+            dataType: 'json',
+            data: {id: id},
+            success: function(data) {
+                var r = data.result[0];
+                $.each(r, function(indice, valor) {
+                    $("#"+indice).val(valor);
+                });
+                //SelectAjaxRefresh(r.id_ubicacion,'selectlive_1');
+            }
+        });
+    }
     function Edit() {
         $.ajax({
-            url: 'vehiculos/edit',
+            url: 'almacen/edit',
             type: 'POST',
             dataType: 'json',
             data: $('#form').serialize(),
@@ -100,12 +108,13 @@
             }
         });
     }
+
     function Delete(id) {
         $('#div_textbox').hide(500);
         bootbox.confirm("Estas seguro que deseas eliminar este registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
             if (result) {
                 $.ajax({
-                    url: 'vehiculos/delete',
+                    url: 'almacen/delete',
                     type: 'POST',
                     dataType: 'json',
                     data: {id: id},
@@ -120,7 +129,7 @@
         bootbox.confirm("Estas seguro que deseas eliminar "+ ids.length+" registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
             if (result) {
                 $.ajax({
-                    url: 'vehiculos/deleteSelect',
+                    url: 'almacen/deleteSelect',
                     type: 'POST',
                     dataType: 'json',
                     data: {id: ids},
@@ -136,109 +145,80 @@
 <!-- CABECERA -->
 <div class="page-header">
     <h1>
-        <i class="fa fa-sliders grey"></i>
-        Parametros
+        <i class="fa fa-industry grey"></i>
+        Almacén
         <small>
             <i class="fa fa-angle-double-right"></i>
-            Gestionar Vehiculos
+            Consultar movimientos y saldos entre almacenes
         </small>
     </h1>
 </div>
 
+<!--//  estatus / Almacenes //-->
 <div class="row">
-    <div class="col-sm-3">
-        <div class="widget-box transparent">
-        <div class="widget-header widget-header-small header-color-blue2">
-            <h4 class="widget-title smaller">
-                <i class="ace-icon fa fa-gears bigger-120"></i>
-                Opciones
-            </h4>
+    <div class="col-sm-12">
+        <!-- #section:elements.tab -->
+        <div class="tabbable">
+
+            <ul class="nav nav-tabs" id="myTab">
+                <?php if ($getAll): ?>
+                    <?php $c = count($getAll->getAll());
+                    for ($i = 0; $i < $c; $i++): ?>
+                        <?php if ($getAll->getAll()[$i]->id_ubicacion == 1): ?>
+                            <li class="active">
+                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="true">
+                                    <i class="blue ace-icon fa fa-home bigger-120"></i>
+                                    <?=$getAll->getAll()[$i]->nombre;?>
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <li class="">
+                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="false">
+                                    <i class="orange ace-icon fa fa-home bigger-120"></i>
+                                    <?=$getAll->getAll()[$i]->nombre;?>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                <?php endif; ?>
+            </ul>
+
+            <div class="tab-content">
+                <?php for($j = 0; $j < count($getAll->getAll()); $j++): ?>
+                    <?php if ($getAll->getAll()[$j]->id_ubicacion == 1): ?>
+                        <div id="almacen<?=$j;?>" class="tab-pane fade active in">
+                            <p><?=$getAll->getAll()[$j]->nombre;?></p></div>
+                    <?php else: ?>
+                        <div id="almacen<?=$j;?>" class="tab-pane fade">
+                            <p><?=$getAll->getAll()[$j]->nombre;?> </p>
+                        </div>
+                    <?php endif; ?>
+                <?php endfor; ?>
+            </div>
         </div>
-            <div class="space-4"></div>
-        <div class="infobox infobox-blue padding-16">
+
+        <!-- /section:elements.tab -->
+        <div class="space-4"></div>
+    </div>
+</div>
+
+<div class="row"><div class="col-sm-12">
+        <div class="infobox infobox-green">
             <div class="infobox-icon">
-                <i class="ace-icon fa fa-truck"></i>
+                <i class="ace-icon fa fa-font-awesome"></i>
             </div>
 
             <div class="infobox-data">
                 <span class="infobox-data-number"><?=count($getAll)?></span>
                 <div class="infobox-content">
-                    <a href="#modal-table_categoria" role="button" data-toggle="modal"
-                       onclick="javascript:div_form_create('Agregar Vehiculo');">
+                    <a href="#modal-table" role="button" data-toggle="modal" onclick="javascript:div_form_create('Agregar Almacén');">
                         <i class="ace-icon fa fa-external-link"></i>
-                        Registrar Vehiculo
+                        Registrar Almacén
                     </a>
                 </div>
             </div>
         </div>
-            <div class="space-12"></div>
-            <div class="space-12"></div>
-            <div class="hr hr-32"></div>
-            </div>
-    </div>
 
-    <div class="col-sm-9">
-        <div class="widget-box transparent">
-            <div class="widget-header widget-header-small header-color-blue2">
-                <h4 class="widget-title smaller">
-                    <i class="ace-icon fa fa-info-circle bigger-120"></i>
-                    Estadisticas de Registros
-                </h4>
-            </div>
-
-            <div class="widget-body">
-                <div class="widget-main padding-16">
-                    <div class="clearfix">
-                        <div class="grid3 center">
-                            <span class="badge badge-success" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_success']?></span>
-                            <div class="center easy-pie-chart percentage" data-percent=" <?=$statisct['success']?>" data-color="#59A84B" style="height: 72px; width: 72px; line-height: 71px; color: rgb(89, 168, 75);">
-                                <span class="percent"> <?=$statisct['success'] ?></span>%
-                                <canvas height="72" width="72"></canvas></div>
-
-                            <div class="space-2"></div>
-                            Registros Aceptables
-                            <a class="blue open-event" href="#" title="(Marca, modelo, Tipo, color y placa)">
-                                <i class="ace-icon fa fa-exclamation-circle"></i>
-                            </a>
-                        </div>
-
-                        <div class="grid3 center">
-                            <!-- #section:plugins/charts.easypiechart -->
-                            <span class="badge badge-info" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_regular']?></span>
-                            <div class="easy-pie-chart percentage" data-percent="<?=$statisct['regular']?>" data-color="#6BA2CA" style="height: 72px; width: 72px; line-height: 71px; color: rgb(107, 162, 202);">
-                                <span class="percent"><?=$statisct['regular']?></span>%
-                                <canvas height="72" width="72"></canvas></div>
-
-                            <!-- /section:plugins/charts.easypiechart -->
-                            <div class="space-2"></div>
-                            Registros Parciales
-                            <a class="blue open-event" href="#" title="(Marca y placa)">
-                                <i class="ace-icon fa fa-exclamation-circle"></i>
-                            </a>
-                        </div>
-
-                        <div class="grid3 center">
-                            <span class="badge badge-danger" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_fail']?></span>
-                            <div class="center easy-pie-chart percentage" data-percent="<?=$statisct['fail']?>" data-color="#CA5952" style="height: 72px; width: 72px; line-height: 71px; color: rgb(149, 133, 191);">
-                               <span class="percent"><?=$statisct['fail']?></span>%
-                                <canvas height="72" width="72"></canvas></div>
-                            <div class="space-2"></div>
-                            Registros Incompletos
-                            <a class="blue open-event" href="#" title="(Placa)">
-                                <i class="ace-icon fa fa-exclamation-circle"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hr hr-16"></div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12">
-
-
-        <div class="space-6"></div>
 
         <div class="clearfix">
             <div class="pull-right tableTools-container"></div>
@@ -248,22 +228,20 @@
                 <thead>
                 <tr>
                     <th><input type="checkbox"></th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Tipo</th>
-                    <th>Color</th>
-                    <th>Placa</th>
-                    <th>Placa Batea</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Telefono</th>
+                    <th>Mtrs <sup>2</sup></th>
                     <th>funciones</th>
                 </tr>
                 </thead>
             </table>
         </div>
     </div>
-
 </div>
 
-<div id="modal-table_categoria" class="modal fade" tabindex="-3">
+<div id="modal-table" class="modal fade" tabindex="-3">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header no-padding">
@@ -276,91 +254,67 @@
             </div>
 
             <div class="modal-body no-padding">
-                <!-- FORMULARIO DE CRUD -->
                 <div class="row" id="form_categorias">
                     <div id="mensaje_crud_apoderado"></div>
                     <div class="hr hr-18 dotted"></div>
 
                     <div class="col-sm-12">
                         <?php echo form_open('', "id='form' class='form-horizontal' "); ?>
-                        <input type="hidden"  name="<?=$this->models->primary_key?>" id="<?=$this->models->primary_key?>">
+                        <input type="hidden"  name="id_ubicacion" id="id_ubicacion">
                         <div class="col-sm-12">
 
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Marca: </label>
+                                <label class="col-sm-4 control-label no-padding-right">codigo: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <input class="form-control" type="textbox" name="marca" id="marca" required>
+                                        <input class="form-control" type="textbox" name="label" id="label" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Modelo: </label>
+                                <label class="col-sm-4 control-label no-padding-right">Nombre: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <input class="form-control" type="textbox" name="modelo" id="modelo" required>
+                                        <input class="form-control" type="textbox" name="nombre" id="nombre" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Tipo: </label>
+                                <label class="col-sm-4 control-label no-padding-right">Dirección: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <select name="tipo" id="tipo" class="form-control">
-                                            <option value="">--Seleccione--</option>
-                                            <option value="350">Camión 350</option>
-                                            <option value="600">Camión 600</option>
-                                            <option value="750">Camión 750</option>
-                                            <option value="NPR">NPR</option>
-                                            <option value="800">Camión 800</option>
-                                            <option value="800">Camión 800</option>
-                                            <option value="815">Camión 815</option>
-                                            <option value="8000">Camión 8000</option>
-                                            <option value="Toronto">Toronto</option>
-                                            <option value="Gandola">Gandola</option>
-                                        </select>
+                                        <input class="form-control" type="email" name="direccion" id="direccion" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Color: </label>
+                                <label class="col-sm-4 control-label no-padding-right">telefono: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <input class="form-control" type="textbox" name="color" id="color" required>
+                                        <input class="form-control" type="tel" name="telefono" id="telefono" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Placa: </label>
-                                <div class="col-sm-8">
+                                <label class="col-sm-4 control-label no-padding-right">Mtrs<sup>2</sup>: </label>
+                                <div class="col-sm-4">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <input class="form-control" type="textbox" name="placa" id="placa" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Batea: </label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                        <input class="form-control" type="textbox" name="placa_batea" id="placa_batea" required>
+                                        <input class="form-control" type="number" name="mtrs2" id="mtrs2" required>
                                     </div>
                                 </div>
                             </div>
@@ -388,9 +342,10 @@
                     </button>
                 </div>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+    </div>
 </div>
+
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?=base_url();?>assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 </script>
@@ -407,31 +362,30 @@
                 .dataTable({
                     bAutoWidth: false,
                     "ajax": {
-                        "url": 'vehiculos/getDataTable'
+                        "url": 'almacen/getDataTable'
                     },
                     "columns": [
                         {
                             "data": null,
                             render: function (data, type, row) {
-                                return '<input type=\"checkbox\" name=\"<?=$this->models->primary_key?>[]\" value='+data.<?=$this->models->primary_key?> +'>';
+                                return '<input type=\"checkbox\" name=\"id_ubicacion[]\" value='+data.id_ubicacion +'>';
                             }
                         },
-                        {"data": "marca"},
-                        {"data": "modelo"},
-                        {"data": "tipo"},
-                        {"data": "color"},
-                        {"data": "placa"},
-                        {"data": "placa_batea"},
+                        {"data": "label"},
+                        {"data": "nombre"},
+                        {"data": "direccion"},
+                        {"data": "telefono"},
+                        {"data": "mtrs2"},
                         {
                             "data": null,
                             render: function (data, type, row) {
                                 return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
-                                    '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.<?=$this->models->primary_key?> +', \'Editar Vehiculo\', \'vehiculos\')">' +
+                                    '<a href="#modal-table" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_ubicacion +', \'Editar Almacen\', \'almacen\')">' +
                                     '<span class=\"green\">' +
                                     '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
                                     '</span>' +
                                     '</a>'+
-                                    '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.<?=$this->models->primary_key?> +')">' +
+                                    '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_ubicacion +')">' +
                                     '<span class="red">' +
                                     '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
                                     '</span>' +
@@ -527,7 +481,7 @@
                     "sButtonClass": "btn btn-white btn-primary  btn-bold",
                     "fnClick": function (nButton, oConfig, oFlash) {
                         var checkboxValues =  new Array();
-                        $('input[name="<?=$this->models->primary_key?>[]"]:checked').each(function() {
+                        $('input[name="id_ubicacion[]"]:checked').each(function() {
 //                            checkboxValues += $(this).val() + ",";
                             checkboxValues.push($(this).val());
                         });

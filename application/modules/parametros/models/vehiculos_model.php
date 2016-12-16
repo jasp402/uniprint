@@ -63,7 +63,7 @@ class Vehiculos_model extends CI_Model
             }
         }
         bcscale(1);
-        $prom1 = (count($g1)-count($g3));
+        $prom1 = (count($g1)-count($g3)-count($g2));
         $success = bcdiv(($prom1*100),count($g1));
         //----------------------------
         $prom2 = count($g2);

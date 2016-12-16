@@ -8,7 +8,7 @@ class Traslados extends MX_Controller {
         $this->idus = $this->encrypt->decode($this->session->userdata('codigo_usuario'));
 
         //Local Models
-        $this->models               = $this->load->model('inventario_model'); //Entrada ()
+        $this->models               = $this->load->model('traslados_model'); //Entrada ()
         $this->modelsChoferes       = $this->load->model('parametros/choferes_model');  //Choferes
         $this->modelsVehiculos      = $this->load->model('parametros/vehiculos_model'); //vehiculos
         $this->modelsProyectos      = $this->load->model('productos/proyectos_model');  //Productos
@@ -85,11 +85,12 @@ class Traslados extends MX_Controller {
             echo json_encode($data);
         }
     }
-
-    public function  searchAllByWhere(){
-        $id         = $this->input->post('id');
-        $field      = $this->input->post('field');
-        $query      =  $this->models->getAllByWhere($id,$field);
+    public function searchAllByWhere(){
+        $id1         = $this->input->post('id1');
+        $field1      = $this->input->post('field1');
+        $id2         = $this->input->post('id2');
+        $field2      = $this->input->post('field2');
+        $query      =  $this->models->getAllByWhere($id1,$field1,$id2,$field2);
         if ($query) {
             foreach ($query as $key => $value) {
                 $result[] = array($key => $value);

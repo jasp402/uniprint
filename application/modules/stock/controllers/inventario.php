@@ -86,10 +86,28 @@ class Inventario extends MX_Controller {
         }
     }
 
-    public function  searchAllByWhere(){
+    public function searchAllByWhere(){
         $id         = $this->input->post('id');
         $field      = $this->input->post('field');
         $query      =  $this->models->getAllByWhere($id,$field);
+        if ($query) {
+            foreach ($query as $key => $value) {
+                $result[] = array($key => $value);
+            }
+            $data = array('success' => true, 'result' => $result);
+            echo json_encode($data);
+        }else{
+            $data = array('success' => false);
+            echo json_encode($data);
+        }
+    }
+
+    public function searchAllByWhereTwo(){
+        $id1         = $this->input->post('id1');
+        $field1      = $this->input->post('field1');
+        $id2         = $this->input->post('id2');
+        $field2      = $this->input->post('field2');
+        $query      =  $this->models->getAllByWhereTwo($id1,$field1,$id2,$field2);
         if ($query) {
             foreach ($query as $key => $value) {
                 $result[] = array($key => $value);

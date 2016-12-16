@@ -92,53 +92,6 @@
     </h1>
 </div>
 
-<!--//  estatus / Almacenes //-->
-<div class="row">
-    <div class="col-sm-12">
-        <!-- #section:elements.tab -->
-        <div class="tabbable">
-
-            <ul class="nav nav-tabs" id="myTab">
-                <?php if ($getAllAlmacenes): ?>
-                    <?php $c = count($getAllAlmacenes->getAll());
-                    for ($i = 0; $i < $c; $i++): ?>
-                        <?php if ($getAllAlmacenes->getAll()[$i]->id_ubicacion == 1): ?>
-                            <li class="active">
-                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="true">
-                                    <i class="blue ace-icon fa fa-home bigger-120"></i>
-                                    <?=$getAllAlmacenes->getAll()[$i]->nombre;?>
-                                </a>
-                            </li>
-                        <?php else: ?>
-                            <li class="">
-                                <a data-toggle="tab" href="#almacen<?=$i;?>" aria-expanded="false">
-                                    <i class="orange ace-icon fa fa-home bigger-120"></i>
-                                    <?=$getAllAlmacenes->getAll()[$i]->nombre;?>
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                    <?php endfor; ?>
-                <?php endif; ?>
-            </ul>
-
-            <div class="tab-content">
-                <?php for($j = 0; $j < count($getAllAlmacenes->getAll()); $j++): ?>
-                    <?php if ($getAllAlmacenes->getAll()[$j]->id_ubicacion == 1): ?>
-                        <div id="almacen<?=$j;?>" class="tab-pane fade active in">
-                            <p><?=$getAllAlmacenes->getAll()[$j]->nombre;?></p></div>
-                    <?php else: ?>
-                        <div id="almacen<?=$j;?>" class="tab-pane fade">
-                            <p><?=$getAllAlmacenes->getAll()[$j]->nombre;?> </p>
-                        </div>
-                    <?php endif; ?>
-                <?php endfor; ?>
-            </div>
-        </div>
-
-        <!-- /section:elements.tab -->
-        <div class="space-4"></div>
-    </div>
-</div>
 
 <!--//  Ultimos registros   //-->
 <div class="row">
@@ -147,7 +100,7 @@
             <div class="widget-header widget-header-blue widget-header-flat">
                 <h4 class="widget-title lighter">
                     <i class="ace-icon fa fa-paperclip orange"></i>
-                    Ultima Entrada Registrada
+                    Ultima Traslado Registrada
                 </h4>
 
                 <div class="widget-toolbar">
@@ -305,7 +258,7 @@
     <div class="widget-header widget-header-blue widget-header-flat">
         <h4 class="widget-title lighter">
             <i class="ace-icon fa fa-paperclip orange"></i>
-            Procesar Entrada
+            Procesar Traslado
         </h4>
     </div>
     <div class="widget-body">
@@ -406,12 +359,20 @@
                     <div class="step-pane" data-step="2">
                         <h3 class="lighter block green">Datos del Producto</h3>
                         <div class="form-group has-success">
-                            <div class="col-sm-3">
-                                    <span>
-                                        <label for="inputWarning" class="control-label no-padding-right pull-right">Almacén de Destino</label>
-											</span>
+                            <div class="col-sm-1">
+
+                                <label class="col-sm-12 control-label no-padding-right inline">
+                                    <small>Granel</small>
+                                    <a class="info open-event" href="#" title="¿Productos a granel?" style="text-decoration:none">
+                                        <i class="ace-icon fa fa-exclamation-circle"></i>
+                                    </a>
+                                    <div class="space-4"></div>
+                                    <input id="id-pills-stacked-granel" type="checkbox" value="1" class="ace ace-switch ace-switch-5" onclick="granel()">
+                                    <span class="lbl middle"></span>
+                                </label>
                             </div>
-                            <div class="col-sm-2">
+
+                            <div class="col-sm-4">
                                     <span>
                                         <label for="inputWarning" class="control-label no-padding-right pull-right">Proyecto</label>
 												  <select class="form-control" name="id_proyecto" id="id_proyecto"  data-live-search="true" onchange="loadAllSelect()">
@@ -435,22 +396,63 @@
                                     </span>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover">
+                        <table id="thead_lote" class="table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th style="width:30px!important;"><span role="link" onclick="AgregarCampos()"><i class="fa fa-plus blue" aria-hidden="true"></i></span></th>
+                                <th style="width:30px!important;">
+                                    <span href="#" role="button" onclick="AgregarCampos_lote()" style="cursor: pointer">
+                                        <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                    </span>
+                                </th>
                                 <th>#</th>
                                 <th>categoria</th>
                                 <th>Tipo</th>
                                 <th>Producto</th>
+                                <th>Disponible</th>
                                 <th>Cant. paletas</th>
                                 <th>Unidades x Paletas</th>
                                 <th>Total de Unidades</th>
                             </tr>
                             </thead>
-                            <tbody id="campos">
+                            <tbody id="campos_lote">
                             <!-- // function addfields() // -->
                             </tbody>
+                            <tfoot class="text-mute">
+                            <th colspan="8" style="width:30px!important;">
+                                <span id="footRows" role="button" onclick="AgregarCampos_lote()" style="cursor:pointer;">
+                                    <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                </span>
+                            </th>
+                            <th id="table_lote_total">Total de Unidades</th>
+                            </tfoot>
+                        </table>
+                        <table id="thead_serie" class="table table-striped table-bordered table-hover" style="display: none;">
+                            <thead>
+                            <tr>
+                                <th style="width:30px!important;">
+                                    <span role="link" onclick="AgregarCampos_serie()" style="cursor: pointer">
+                                        <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                    </span>
+                                </th>
+                                <th>#</th>
+                                <th>categoria</th>
+                                <th>Tipo</th>
+                                <th width="40%">Producto</th>
+                                <th>Disponible</th>
+                                <th width="20%">Total de Unidades</th>
+                            </tr>
+                            </thead>
+                            <tbody id="campos_serie">
+                            <!-- // function addfields() // -->
+                            </tbody>
+                            <tfoot class="text-mute">
+                            <th colspan="6" style="width:30px!important;">
+                                <span id="footRows" role="button" onclick="AgregarCampos_serie()" style="cursor:pointer;">
+                                    <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                </span>
+                            </th>
+                            <th id="table_lote_total_serie">Total de Unidades</th>
+                            </tfoot>
                         </table>
                         <textarea id="comentario" name="comentario" class="form-control" placeholder="Agregar comentario" style="width: 100%"></textarea>
                     </div>

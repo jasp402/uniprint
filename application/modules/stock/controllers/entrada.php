@@ -8,16 +8,16 @@ class Entrada extends MX_Controller {
         $this->idus = $this->encrypt->decode($this->session->userdata('codigo_usuario'));
 
         //Local Models
-        $this->models               = $this->load->model('inventario_model'); //Entrada ()
-        $this->modelsChoferes       = $this->load->model('parametros/choferes_model');  //Choferes
-        $this->modelsVehiculos      = $this->load->model('parametros/vehiculos_model'); //vehiculos
-        $this->modelsProyectos      = $this->load->model('productos/proyectos_model');  //Productos
-        $this->modelsCategorias     = $this->load->model('productos/Categorias_model');  //Productos
-        $this->modelsTipos          = $this->load->model('productos/Tipos_model');  //Productos
-        $this->modelsProductos      = $this->load->model('productos/productos_model');  //Productos
-        $this->modelsAlmacen        = $this->load->model('almacenes/almacen_model'); //vehiculos
-        $this->modelsImpresores     = $this->load->model('parametros/impresor_model');  //Impresores
-        $this->modelsProveedores    = $this->load->model('parametros/proveedor_model'); //Proveedores
+        $this->models               = $this->load->model('inventario_model');               //Entrada ()
+        $this->modelsChoferes       = $this->load->model('parametros/choferes_model');      //Choferes
+        $this->modelsVehiculos      = $this->load->model('parametros/vehiculos_model');     //vehiculos
+        $this->modelsProyectos      = $this->load->model('productos/proyectos_model');      //Productos
+        $this->modelsCategorias     = $this->load->model('productos/Categorias_model');     //Productos
+        $this->modelsTipos          = $this->load->model('productos/Tipos_model');          //Productos
+        $this->modelsProductos      = $this->load->model('productos/productos_model');      //Productos
+        $this->modelsAlmacen        = $this->load->model('almacenes/almacen_model');        //vehiculos
+        $this->modelsImpresores     = $this->load->model('parametros/impresor_model');      //Impresores
+        $this->modelsProveedores    = $this->load->model('parametros/proveedor_model');     //Proveedores
 
         //Datos de Auditoria
         $this->fecha_actual = date('Y-m-d h:m:i');
@@ -109,7 +109,6 @@ class Entrada extends MX_Controller {
         $id_chofer      =$this->input->post('id_chofer');
         $id_vehiculo    =$this->input->post('id_vehiculo');
         $destino        =$this->input->post('destino');
-        $operacion      ='+';
         $lote           =$this->input->post('lote');
         $comentario     =$this->input->post('comentario');
         $documento      =$this->input->post('documento');
@@ -122,7 +121,6 @@ class Entrada extends MX_Controller {
             'destino' =>$destino,
             'documento' =>$documento,
             'fecha' =>$fecha->format('Y-m-d'),
-            'operacion' =>$operacion,
             'comentario' => $comentario,
             'lote' => $lote
         );
@@ -145,9 +143,6 @@ class Entrada extends MX_Controller {
             );
             $data[$i] = array_merge($StaticDate[0], $DinamicDate[$i], $this->auditoria);
         }
-        //$data = $this->input->post();
-        //$data = array_splice($data, 1);
-
         $this->models->createMultiple($data);
         if($lote=='si'){$this->models->create_details($data);}
 

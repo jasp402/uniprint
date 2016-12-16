@@ -163,7 +163,7 @@
             <div class="infobox-data">
                 <span class="infobox-data-number"><?=count($getAll)?></span>
                 <div class="infobox-content">
-                    <a href="#modal-table" role="button" data-toggle="modal" onclick="javascript:div_form_create('Agregar Categorias de Productos');">
+                    <a href="#modal-table" role="button" data-toggle="modal" onclick="javascript:div_form_create('Agregar Almacén');">
                         <i class="ace-icon fa fa-external-link"></i>
                         Registrar Almacén
                     </a>

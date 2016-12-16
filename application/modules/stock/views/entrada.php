@@ -446,7 +446,7 @@
                             <thead>
                             <tr>
                                 <th style="width:30px!important;">
-                                    <span role="link" onclick="AgregarCampos_lote()">
+                                    <span href="#" role="button" onclick="AgregarCampos_lote()" style="cursor: pointer">
                                         <i class="fa fa-plus blue" aria-hidden="true"></i>
                                     </span>
                                 </th>
@@ -462,12 +462,20 @@
                             <tbody id="campos_lote">
                             <!-- // function addfields() // -->
                             </tbody>
+                            <tfoot class="text-mute">
+                            <th colspan="7" style="width:30px!important;">
+                                <span id="footRows" role="button" onclick="AgregarCampos_lote()" style="cursor:pointer;">
+                                    <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                </span>
+                            </th>
+                            <th id="table_lote_total">Total de Unidades</th>
+                            </tfoot>
                         </table>
                         <table id="thead_serie" class="table table-striped table-bordered table-hover" style="display: none;">
                             <thead>
                             <tr>
                                 <th style="width:30px!important;">
-                                    <span role="link" onclick="AgregarCampos_serie()">
+                                    <span role="link" onclick="AgregarCampos_serie()" style="cursor: pointer">
                                         <i class="fa fa-plus blue" aria-hidden="true"></i>
                                     </span>
                                 </th>
@@ -481,6 +489,14 @@
                             <tbody id="campos_serie">
                             <!-- // function addfields() // -->
                             </tbody>
+                            <tfoot class="text-mute">
+                            <th colspan="5" style="width:30px!important;">
+                                <span id="footRows" role="button" onclick="AgregarCampos_serie()" style="cursor:pointer;">
+                                    <i class="fa fa-plus blue" aria-hidden="true"></i>
+                                </span>
+                            </th>
+                            <th id="table_lote_total_serie">Total de Unidades</th>
+                            </tfoot>
                         </table>
 
 
@@ -531,7 +547,7 @@
                                                     <div>
                                                         <ul class="list-unstyled spaced">
                                                             <li>
-                                                                <i class="ace-icon fa fa-caret-right blue"></i><span id="invoice_origenSelect" class="bolder"></span>, <spam id="invoice_origen"></spam>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i><span id="invoice_origenSelect" class="bolder"></span>, <span id="invoice_origen"></span>
                                                             </li>
 
                                                             <li>

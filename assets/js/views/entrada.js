@@ -4,7 +4,6 @@
  * var lote = SI => (Serie NO)
  *
  * **/
-
 $(document).ready(function (){
     $('form').submit(function (event) {
         event.preventDefault();
@@ -59,11 +58,13 @@ function granel(){
     if ($("#id-pills-stacked-granel:checked").val() == 1) {
         lote = 'no'; //<--Default ||    Serie 'SI'
         // #Ocultar el <th> de la tabla y mostrar el de a granel
+        $('#table_lote_total_serie').html('Total de Unidades');
         $("#thead_lote").hide();
         $("#thead_serie").fadeIn();
     }
     else {
         lote = 'si'; //<--------- ||    Serie 'NO'
+        $('#table_lote_total').html('Total de Unidades');
         $("#thead_lote").fadeIn();
         $("#thead_serie").hide();
     }
@@ -218,6 +219,18 @@ function suma() {
         }
     }
 }
+function sumaTotales() {
+    var j;
+    var total=0;
+    if(nextinput>0){
+        for(j=1; j<=nextinput; j++){
+            total = (parseInt($('#total'+j).val())+parseInt(total));
+        }
+        $('#table_lote_total').html(total.toLocaleString('es-ES'));
+        $('#table_lote_total_serie').html(total.toLocaleString('es-ES'));
+    }
+}
+//----------------------------------//
 function AgregarCampos_lote(){
     nextinput++;
 
@@ -240,19 +253,57 @@ function AgregarCampos_lote(){
         '</select>'+
         '</td>'+
         '<td> <input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control" required> </td>'+
-        '<td> <input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onchange="suma()"></td>'+
+        '<td> <input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onkeyup="suma();sumaTotales()"></td>'+
         '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" readonly></td>' +
         '</tr>';
     $("#campos_lote").append(campo);
     loadCategoria(nextinput);
-}
+}  //
 function elimCamp(id) {
     bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
         if(r) {
             $('#campo'+id+'').remove();
         }
     });
-}
+}         //
+//----------------------------------//
+function AgregarCampos_serie(){
+    nextinput++;
+
+    campo_serie = '<tr id="campo'+nextinput+'">'+
+        '<td  class="align-middle"><a href="#" onclick="elimCamp_serie('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
+        '<td  class="align-middle">'+nextinput+'</td>'+
+        '<td>' +
+        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>' +
+        '</td>'+
+
+        '<td>'+
+        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
+        '<option value="">Seleccione un proyecto</option>'+
+        '</select>'+
+        '</td>'+
+        '<td>'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
+        '</select>'+
+        '</td>'+
+        '<td style="display:none"><input type="hidden" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" value="0"> </td>'+
+        '<td style="display:none"><input type="hidden" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" value="0"></td>'+
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control" onkeyup="sumaTotales()"></td>' +
+
+        '</tr>';
+    $("#campos_serie").append(campo_serie);
+    loadCategoria(nextinput);
+} //
+function elimCamp_serie(id) {
+    bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
+        if(r) {
+            $('#campo'+id+'').remove();
+        }
+    });
+}   //
+//----------------------------------//
 //invoice
 function loadInvoice() {
     $("#invoice_documento").empty(); //Nota de entrega
@@ -454,42 +505,7 @@ function Contenedor(){
 
 
 
-function AgregarCampos_serie(){
-    nextinput++;
 
-    campo_serie = '<tr id="campo'+nextinput+'">'+
-        '<td  class="align-middle"><a href="#" onclick="elimCamp_serie('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
-        '<td  class="align-middle">'+nextinput+'</td>'+
-        '<td>' +
-        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
-        '<option value="">Seleccione un proyecto</option>'+
-        '</select>' +
-        '</td>'+
-
-        '<td>'+
-        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
-        '<option value="">Seleccione un proyecto</option>'+
-        '</select>'+
-        '</td>'+
-        '<td>'+
-        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
-        '</select>'+
-        '</td>'+
-        '<td style="display:none"><input type="hidden" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" value="0"> </td>'+
-        '<td style="display:none"><input type="hidden" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" value="0"></td>'+
-        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control"></td>' +
-
-        '</tr>';
-    $("#campos_serie").append(campo_serie);
-    loadCategoria(nextinput);
-}
-function elimCamp_serie(id) {
-    bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
-        if(r) {
-            $('#campo'+id+'').remove();
-        }
-    });
-}
 //footer
 jQuery(function($) {
 
