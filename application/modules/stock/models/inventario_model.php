@@ -90,6 +90,8 @@ class Inventario_model extends CI_Model
         $this->db->SELECT('sys_inventario.total');
         $this->db->SELECT('sys_inventario.operacion');
         $this->db->SELECT('sys_inventario.id_producto');
+        $this->db->SELECT('sys_inventario.log_user');
+        $this->db->SELECT('sys_inventario.log_date');
         $this->db->FROM('sys_inventario');
         $this->db->JOIN('sys_ubicacion ',' sys_inventario.origen = sys_ubicacion.id_ubicacion');
         $this->db->JOIN('sys_productos ',' sys_inventario.id_producto = sys_productos.id_producto');
@@ -99,7 +101,7 @@ class Inventario_model extends CI_Model
         //$this->db->ORDER_BY('fecha', 'DESC');
 
         $query = $this->db->get();
-        //echo $this->db->last_query();
+//        echo $this->db->last_query();
         $result = array(
             "draw"=>1,
             "recordsTotal"=> $query->num_rows(),

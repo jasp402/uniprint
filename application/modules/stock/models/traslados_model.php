@@ -99,7 +99,7 @@ class Traslados_model extends CI_Model
         //$this->db->ORDER_BY('fecha', 'DESC');
 
         $query = $this->db->get();
-        //echo $this->db->last_query();
+//        echo $this->db->last_query(); break;
         $result = array(
             "draw"=>1,
             "recordsTotal"=> $query->num_rows(),

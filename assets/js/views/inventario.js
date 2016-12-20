@@ -19,6 +19,149 @@ $(document).ready(function () {
             ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
         }
     });
+    /*
+    $('#dynamic-table_3 tfoot th').each(function () {
+        var i = $(this).index();
+        var title = $('#sample_3 thead th').eq($(this).index()).text();
+        $(this).html('<input type="text" placeholder="Buscar... ' + title + '"  class="input-mini"/>');
+    });
+    */
+    // DataTable
+    var table =  $('#dynamic-table_3').DataTable({
+            "initComplete": function () {
+                this.api().columns().every( function () {
+                    var i = this.index();
+                    console.log(i);
+                    var column = this;
+                        if(i!=10 && i!=9 &&  i!=8 && i!=0){
+
+                            var select = $('<select id=\'select'+i+'\' data-style="btn-primary input-sm" data-width="10px" data-size="auto"><option value=""></option></select>')
+                                .appendTo( $(column.footer()).empty() )
+                                .on( 'change', function () {
+                                    var val = $.fn.dataTable.util.escapeRegex(
+                                        $(this).val()
+                                    );
+
+                                    column
+                                        .search( val ? '^'+val+'$' : '', true, false )
+                                        .draw();
+                                } );
+
+                            column.data().unique().sort().each( function ( d, j ) {
+                                select.append( '<option value="'+d+'">'+d+'</option>' )
+                            } );
+                            $('#select'+i+'').selectpicker({
+                                liveSearch: true,
+                                maxOptions: 1,
+                                liveSearchPlaceholder: 'Busca...',
+                                title: ''
+                            });
+                        }
+
+                } );
+            },
+            // scrollY:        true,
+            // scrollCollapse: false,
+            bAutoWidth: false,
+            "ajax": {
+                "url": 'inventario/getDataTable'
+            },
+            "columns": [
+                /** ### Btn Eliminar Multiple - CheckedBottom
+                 {
+                     "data": null,
+                     render: function (data, type, row) {
+                         return '<input type=\"checkbox\" name=\"id_producto[]\" value='+data.id_producto +'>';
+                     }
+                 },
+                 **/
+                {"data": "cod_inventario"},
+                {"data": "fecha"},
+                {"data": "origen"},
+                {"data": "documento"},
+                {"data": "proyecto"},
+                {"data": "categoria"},
+                {"data": "tipo"},
+                {"data": "producto"},
+                {"data": "cant_lote","class":"align-center"},
+                {"data": "cant_unidades","class":"align-right",
+                    render: function (data, type, row) {
+                        number = parseInt(data);
+                        return number.toLocaleString('es-ES');
+                    }},
+                {"data": "total","class":"align-right bolder",
+                    render: function (data, type, row) {
+                        number = parseInt(data);
+                        return number.toLocaleString('es-ES');
+                    }
+                },
+                {"data": "log_user",
+                    render: function (data, type, row) {
+                        return "<small><i> "+data+"</i></small>";
+                    }
+                },
+                {"data": "log_date",
+                    render: function (data, type, row) {
+                        return "<small><i class=\"text-muted\"> "+data+"</i></small>";
+                    }
+                },                {
+                    "data": null,
+                    render: function (data, type, row) {
+                        return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
+                            '<a href="#modal-table" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_inventario+',\'Editar Inventario\', \'inventario\')">' +
+                            '<span class=\"green\">' +
+                            '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
+                            '</span>' +
+                            '</a>'+
+                            '</div>'
+                    }
+                }
+
+            ],
+            "order": [[1, 'desc']],
+            "columnDefs": [
+                {
+                    "targets": [4],
+                    "visible": false,
+                    "searchable": false
+                }],
+            "drawCallback": function ( settings ) {
+                var api = this.api();
+                var rows = api.rows().nodes();
+                var last=null;
+
+                api.column(0).data().each( function ( group, i ) {
+                    id = api.column(0).data(); //cod_inventario
+                    ne = api.column(3).data();
+                    if ( last !== group ) {
+                        $(rows).eq( i ).before(
+                            '<tr class="group info"><td colspan="13"><a href="#" onclick="loadInfo('+id[i]+')">' +
+                            '<span class="label label-success arrowed-right arrowed-in">Entrada</span>' +
+                            '  Nota de Entrega <b>#'+ne[i]+'</b></a> </td></tr>'
+                        );
+
+                        last = group;
+                    }
+                } );
+            }
+        });
+
+    // Apply the filter
+    /*
+    table.columns().eq(0).each(function (colIdx) {
+
+     $('input', table.column(colIdx).footer()).on('keyup change', function () {
+
+     table
+     .column(colIdx)
+     .search(this.value)
+     .draw();
+     });
+     });
+     */
+
+
+
 });
 
 function loadCategoria() {
@@ -263,80 +406,7 @@ jQuery(function ($) {
     //initiate dataTables plugin
     var oTable1 =
         $('#dynamic-table_3')
-            .dataTable({
-                bAutoWidth: false,
-                "ajax": {
-                    "url": 'inventario/getDataTable'
-                },
-                "columns": [
-                    /** ### Btn Eliminar Multiple - CheckedBottom
-                     {
-                         "data": null,
-                         render: function (data, type, row) {
-                             return '<input type=\"checkbox\" name=\"id_producto[]\" value='+data.id_producto +'>';
-                         }
-                     },
-                     **/
-                    {"data": "cod_inventario"},
-                    {"data": "fecha"},
-                    {"data": "origen"},
-                    {"data": "documento"},
-                    {"data": "proyecto"},
-                    {"data": "categoria"},
-                    {"data": "tipo"},
-                    {"data": "producto"},
-                    {"data": "cant_lote","class":"align-center"},
-                    {"data": "cant_unidades","class":"align-right",
-                        render: function (data, type, row) {
-                            number = parseInt(data);
-                            return number.toLocaleString('es-ES');
-                        }},
-                    {"data": "total","class":"align-right bolder",
-                        render: function (data, type, row) {
-                            number = parseInt(data);
-                            return number.toLocaleString('es-ES');
-                        }
-                    },
-                    {
-                        "data": null,
-                        render: function (data, type, row) {
-                            return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
-                                '<a href="#modal-table" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_inventario+',\'Editar Inventario\', \'inventario\')">' +
-                                '<span class=\"green\">' +
-                                '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
-                                '</span>' +
-                                '</a>'+
-                                '</div>'
-                        }
-                    }
-                ],
-                "order": [[1, 'desc']],
-                "columnDefs": [
-                    {
-                        "targets": [4],
-                        "visible": false,
-                        "searchable": false
-                    }],
-                "drawCallback": function ( settings ) {
-                    var api = this.api();
-                    var rows = api.rows().nodes();
-                    var last=null;
-
-                    api.column(0).data().each( function ( group, i ) {
-                        id = api.column(0).data(); //cod_inventario
-                        ne = api.column(3).data();
-                        if ( last !== group ) {
-                            $(rows).eq( i ).before(
-                                '<tr class="group info"><td colspan="12"><a href="#" onclick="loadInfo('+id[i]+')">' +
-                                '<span class="label label-success arrowed-right arrowed-in">Entrada</span>' +
-                                '  Nota de Entrega <b>#'+ne[i]+'</b></a> </td></tr>'
-                            );
-
-                            last = group;
-                        }
-                    } );
-                }
-            });
+            .dataTable();
 
     //TableTools settings
     TableTools.classes.container = "btn-group btn-overlap";
@@ -539,7 +609,7 @@ jQuery(function ($) {
         return 'left';
     }
 
-})
+});
 
 /**
  * Created by Jasp402 on 08/12/2016.

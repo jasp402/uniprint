@@ -194,21 +194,40 @@
             <table id="dynamic-table_3" class="table table-bordered table-hover table-responsive">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>fecha</th>
-                    <th>origen</th>
-                    <th>documento</th>
-                    <th>proyecto</th>
-                    <th>categoria</th>
-                    <th>tipo</th>
-                    <th>producto</th>
-                    <th>Pltas</th>
-                    <th>cant. x Pltas</th>
-                    <th>total </th>
-                    <th>Funciones</th>
-
+                    <th class="align-middle align-center">#</th>
+                    <th class="align-middle align-center">fecha</th>
+                    <th class="align-middle align-center">origen</th>
+                    <th class="align-middle align-center">documento</th>
+                    <th class="align-middle align-center">proyecto</th>
+                    <th class="align-middle align-center">categoria</th>
+                    <th class="align-middle align-center">tipo</th>
+                    <th class="align-middle align-center">producto</th>
+                    <th class="align-middle align-center">Pltas</th>
+                    <th class="align-middle align-center">cant. x Pltas</th>
+                    <th class="align-middle align-center">total </th>
+                    <th class="align-middle align-center"><i class="ace-icon fa fa-user-o bigger-110"></i> Usuario</th>
+                    <th class="align-middle align-center"><i class="ace-icon fa fa-calendar-check-o bigger-110"></i> Registro</th>
+                    <th class="align-middle align-center">Funciones</th>
                 </tr>
                 </thead>
+                <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </tfoot>
+                <tbody></tbody>
             </table>
         </div>
     </div>
@@ -272,85 +291,6 @@
                             </div>
                         </div>
                     </div>
-<!-- /**
-                    <div class="col-sm-12">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right">Proyectos: </label>
-                                <div class="col-sm-10">
-                                    <select class="form-control" name="id_proyecto" id="id_proyecto"
-                                            data-live-search="true" onchange="loadCategoria()">
-                                        <option value="">Seleccione...</option>
-                                        <?php foreach ($getAllProyectos as $keyList): ?>
-                                            <option value="<?= $keyList->id_proyecto; ?>"><?= $keyList->id_proyecto; ?>
-                                                - <?= $keyList->nombre; ?></option>
-                                        <?php endforeach ?>
-                                    </select>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Nombre: </label>
-                                <div class="col-sm-8">
-                                    <input class="form-control" type="textbox" name="nombre" id="nombre" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Detalle 1: </label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                        <input class="form-control" type="textbox" name="detalle_1" id="detalle_1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Detalle 2: </label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                        <input class="form-control" type="textbox" name="detalle_2" id="detalle_2">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Detalle 3: </label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                        <input class="form-control" type="textbox" name="detalle_3" id="detalle_3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right">Descripción</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" name="descripcion" id="descripcion"
-                                              maxlength="500"></textarea>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    **/ -->
                     </form>
                 </div>
             </div>
