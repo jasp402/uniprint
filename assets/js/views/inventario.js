@@ -393,7 +393,7 @@ function SetSumaPaletas(id) {
 }
 
 
-var module = 'Modulo de Unidad';
+var module = 'Registro de Inventario';
 var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
 var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
 var f = new Date();
