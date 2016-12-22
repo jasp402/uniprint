@@ -33,9 +33,9 @@ $(document).ready(function () {
                     var i = this.index();
                     console.log(i);
                     var column = this;
-                        if(i!=10 && i!=9 &&  i!=8 && i!=0){
+                        if(i!=10 && i!=9 &&  i!=8 && i!=12 && i!=0){
 
-                            var select = $('<select id=\'select'+i+'\' data-style="btn-primary input-sm" data-width="10px" data-size="auto"><option value=""></option></select>')
+                            var select = $('<select id=\'select'+i+'\' data-style="btn-info input-sm" data-width="80px"  data-size="auto"><option value="" data-icon="glyphicon-remove">Delete Filter</option></select>')
                                 .appendTo( $(column.footer()).empty() )
                                 .on( 'change', function () {
                                     var val = $.fn.dataTable.util.escapeRegex(
@@ -95,11 +95,7 @@ $(document).ready(function () {
                         return number.toLocaleString('es-ES');
                     }
                 },
-                {"data": "log_user",
-                    render: function (data, type, row) {
-                        return "<small><i> "+data+"</i></small>";
-                    }
-                },
+                {"data": "log_user","class":"text-mute"},
                 {"data": "log_date",
                     render: function (data, type, row) {
                         return "<small><i class=\"text-muted\"> "+data+"</i></small>";
@@ -121,7 +117,7 @@ $(document).ready(function () {
             "order": [[1, 'desc']],
             "columnDefs": [
                 {
-                    "targets": [4],
+                    "targets": [4,13],
                     "visible": false,
                     "searchable": false
                 }],

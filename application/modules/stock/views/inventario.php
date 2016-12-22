@@ -48,15 +48,13 @@
 
                         <div id="_load"></div>
                         <div class="profile-user-info profile-user-info-striped" id="_profile">
-                            <div class="col-sm-8">
+                            <div class="col-sm-9">
                                 <div class="profile-info-row" >
                                     <div class="profile-info-name" style="width:150px"> Nota de Entrega </div>
-
                                     <div class="profile-info-value">
                                         <span class="editable" id="_documento"><?= $this->models->getAllLast()[0]->documento; ?></span>
                                     </div>
                                     <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
-
                                     <div class="profile-info-value">
                                         <span class="editable" id="_cod_inventario"><?= $this->models->getAllLast()[0]->cod_inventario; ?></span>
                                     </div>
@@ -131,51 +129,57 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-2">
-                                <div class="widget-box widget-color-green">
-                                    <div class="widget-header">
-                                        <h5 class="widget-title bigger lighter">Etiquetas</h5>
+                            <div class="no-padding no-margin">
+                                <!-- #section:pages/dashboard.infobox -->
+                                <div class="infobox infobox-green">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-qrcode"></i>
                                     </div>
 
-                                    <div class="widget-body">
-                                        <div class="widget-main align-center">
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" id="_etiqueta"><i class="fa fa-barcode bigger-300"></i>
-                                                <h6>Generar Etiqueta</h6>
+                                    <div class="infobox-data">
+                                        <span class="infobox-text">Etiquetas</span>
+                                        <div class="infobox-content">
+                                            <a  class="grey" href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" id="_etiqueta">
+                                                <i class="ace-icon fa fa-print"></i>
                                             </a>
-                                        </div>
 
-                                        <div>
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" id="_etiquetaBtn" class="btn btn-block btn-success">
-                                                <i class="ace-icon fa fa-print bigger-110"></i>
-                                                <span>Imprimir</span>
-                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-blue">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-file-text-o"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-text">Habladores</span>
+                                        <div class="infobox-content">
+                                            <i class="ace-icon fa fa-print"></i>
+                                            |
+                                            <i class="ace-icon fa fa-file-pdf-o"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-orange">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-file-text"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-text">Documentos</span>
+                                        <div class="infobox-content">
+                                            <i class="ace-icon fa fa-print"></i>
+                                            |
+                                            <i class="ace-icon fa fa-file-pdf-o"></i>
+                                            |
+                                            <i class="ace-icon fa fa-envelope-o"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-2">
-                                <div class="widget-box widget-color-blue">
-                                    <div class="widget-header">
-                                        <h5 class="widget-title bigger lighter">Habladores</h5>
-                                    </div>
-
-                                    <div class="widget-body">
-                                        <div class="widget-main align-center">
-                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')"><i class="fa fa-fw fa-file-o bigger-300"></i>
-                                                <h6>Generar Habladores</h6>
-                                            </a>
-                                        </div>
-
-                                        <div>
-                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-primary">
-                                                <i class="ace-icon fa fa-print bigger-110"></i>
-                                                <span>Imprimir</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                         <div class="space-12"><br></div>
@@ -191,7 +195,7 @@
             <div class="pull-right tableTools-container"></div>
         </div>
         <div>
-            <table id="dynamic-table_3" class="table table-bordered table-hover table-responsive">
+            <table id="dynamic-table_3" class="table table-bordered table-hover table-responsive small">
                 <thead>
                 <tr>
                     <th class="align-middle align-center">#</th>
