@@ -52,7 +52,7 @@ $(document).ready(function (){
 
 var nextinput = 0;
 var lote='si';
-var origen;
+
 function granel(){
     //Aqui iniciamos el contador de celdas para ambas tablas
     nextinput = 0;
@@ -76,16 +76,11 @@ function Save(){
     var f = toDateString($("#fecha").val());
     var impresor = $("#id_impresor").find(":selected").val();
     var proveedor = $("#id_proveedor").find(":selected").val();
-    if(!impresor && !proveedor){
-        bootbox.alert('Falta cargar el campo de Origen');
-    }else{
-        if(impresor != ''){ origen = impresor; }else{ origen = proveedor; }
-    }
     $.ajax({
         url: 'traslados/save',
         type: 'POST',
         dataType: 'json',
-        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f+'&lote='+lote,
+        data: $('#form').serialize()+'&fecha='+f+'&lote='+lote,
         success: function (data) {
             message_box(data.success, data.times, data.closes);
         }
@@ -376,7 +371,7 @@ function loadInvoice() {
     }
     $("#invoice_documento").append($('#documento').val());
     $("#invoice_fecha").append($('#fecha').val());
-    $("#invoice_origenSelect").append(origen);
+    $("#invoice_origenSelect").append($("#origen option:selected").text());
     $("#invoice_chofer").append($("#id_chofer option:selected").text());
     $("#invoice_vehiculo").append($("#id_vehiculo option:selected").text());
     $("#invoice_destino").append($("#destino option:selected").text());

@@ -105,17 +105,16 @@ class Traslados extends MX_Controller {
 
     public function save(){
         //Static Date
-        $cod_inventario = ($this->models->getLastCode('cod_inventario','sys_inventario') + 1);
+        $cod_inventario = ($this->models->getLastCode('cod_traslado','sys_traslados') + 1);
         $origen         =$this->input->post('origen');
         $id_chofer      =$this->input->post('id_chofer');
         $id_vehiculo    =$this->input->post('id_vehiculo');
         $destino        =$this->input->post('destino');
-        $operacion        ='+';
         $comentario    =$this->input->post('comentario');
         $documento      =$this->input->post('documento');
         $fecha          =new DateTime($this->input->post('fecha'));
         $StaticDate[0] = array(
-            'cod_inventario'=>$cod_inventario,
+            'cod_traslado'=>$cod_inventario,
             'origen' =>$origen,
             'id_chofer' =>$id_chofer,
             'id_vehiculo' =>$id_vehiculo,
@@ -123,7 +122,6 @@ class Traslados extends MX_Controller {
             //'id_proyecto' =>$id_proyecto,
             'documento' =>$documento,
             'fecha' =>$fecha->format('Y-m-d'),
-            'operacion' =>$operacion,
             'comentario' => $comentario
         );
 
@@ -148,7 +146,7 @@ class Traslados extends MX_Controller {
         //$data = array_splice($data, 1);
 
         $this->models->createMultiple($data);
-        $this->models->create_details($data);
+        //$this->models->create_details($data);
     }
 
     public function edit(){

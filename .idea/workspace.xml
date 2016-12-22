@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" afterPath="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" afterPath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.js" afterPath="$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/inventario.js" afterPath="$PROJECT_DIR$/assets/js/views/inventario.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/traslados.js" afterPath="$PROJECT_DIR$/assets/js/views/traslados.js" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,24 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inventario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
+      <file leaf-file-name="traslados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="196" column="57" selection-start-line="196" selection-start-column="57" selection-end-line="196" selection-end-column="57" />
-              <caret line="197" column="57" selection-start-line="197" selection-start-column="57" selection-end-line="197" selection-end-column="57" />
-              <caret line="198" column="57" selection-start-line="198" selection-start-column="57" selection-end-line="198" selection-end-column="57" />
-              <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
-              <caret line="200" column="57" selection-start-line="200" selection-start-column="57" selection-end-line="200" selection-end-column="57" />
-              <caret line="201" column="57" selection-start-line="201" selection-start-column="57" selection-end-line="201" selection-end-column="57" />
-              <caret line="202" column="57" selection-start-line="202" selection-start-column="57" selection-end-line="202" selection-end-column="57" />
-              <caret line="203" column="57" selection-start-line="203" selection-start-column="57" selection-end-line="203" selection-end-column="57" />
-              <caret line="204" column="57" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
-              <caret line="205" column="57" selection-start-line="205" selection-start-column="57" selection-end-line="205" selection-end-column="57" />
-              <caret line="206" column="57" selection-start-line="206" selection-start-column="57" selection-end-line="206" selection-end-column="57" />
-              <caret line="207" column="57" selection-start-line="207" selection-start-column="57" selection-end-line="207" selection-end-column="57" />
-              <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
-              <caret line="209" column="57" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
+            <state relative-caret-position="3400">
+              <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="221" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -55,16 +42,16 @@
       <file leaf-file-name="inventario.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/views/inventario.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2057">
-              <caret line="37" column="117" selection-start-line="37" selection-start-column="117" selection-end-line="37" selection-end-column="121" />
+            <state relative-caret-position="306">
+              <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
               <folding>
                 <element signature="e#148#278#0" expanded="false" />
                 <element signature="e#311#557#0" expanded="false" />
                 <element signature="e#564#844#0" expanded="false" />
-                <element signature="e#2585#2649#0" expanded="false" />
-                <element signature="e#3407#3646#0" expanded="false" />
-                <element signature="e#3664#3919#0" expanded="false" />
-                <element signature="e#6173#6405#0" expanded="false" />
+                <element signature="e#2634#2698#0" expanded="false" />
+                <element signature="e#3456#3695#0" expanded="false" />
+                <element signature="e#3713#3968#0" expanded="false" />
+                <element signature="e#6082#6314#0" expanded="false" />
                 <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
                 <element signature="n#!!block;n#loadTipo#0" expanded="false" />
                 <element signature="n#!!block;n#div_form_create#0" expanded="false" />
@@ -77,52 +64,157 @@
                 <element signature="n#!!block;n#SetByIdDestino#0" expanded="false" />
                 <element signature="n#!!block;n#SetSumaUnid#0" expanded="false" />
                 <element signature="n#!!block;n#SetSumaPaletas#0" expanded="false" />
-                <marker date="1482264531711" expanded="false" signature="619:835" ph="{...}" />
-                <marker date="1482264531711" expanded="true" signature="17763:17889" ph="..." />
+                <marker date="1482331209792" expanded="false" signature="619:835" ph="{...}" />
+                <marker date="1482331209792" expanded="true" signature="17672:17798" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entrada.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/views/entrada.js">
+      <file leaf-file-name="inventario.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="264" column="28" selection-start-line="264" selection-start-column="14" selection-end-line="264" selection-end-column="28" />
+            <state relative-caret-position="2397">
+              <caret line="141" column="59" selection-start-line="141" selection-start-column="59" selection-end-line="141" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traslados_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3655">
+              <caret line="267" column="39" selection-start-line="267" selection-start-column="39" selection-end-line="267" selection-end-column="39" />
               <folding>
-                <element signature="e#146#1363#0" expanded="false" />
-                <element signature="e#186#225#0" expanded="false" />
-                <element signature="e#498#639#0" expanded="false" />
-                <element signature="e#678#820#0" expanded="false" />
-                <element signature="e#894#1024#0" expanded="false" />
-                <element signature="e#1113#1359#0" expanded="false" />
+                <element signature="n#getAllByWhere#0;n#Traslados_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllByWhereTwo#0;n#Traslados_model#0;n#!!top" expanded="false" />
+                <marker date="1482322930619" expanded="true" signature="1744:1771" ph="SELECT * FRO... sys_ubicacion" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inventario_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#__construct#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAll#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllLast#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getLastCode#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllUbicacion#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getDataTable#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllByWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#getAllByWhereTwo#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#create_details#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#create#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#createMultiple#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#editById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#deleteById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#deleteSelect#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#sumarPaletas#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#sumarTotal#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <element signature="n#editByIdWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
+                <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entrada.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
+              <folding>
+                <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
+                <element signature="n#getDataTable#0;n#Entrada#0;n#!!top" expanded="false" />
+                <element signature="n#searchAllById#0;n#Entrada#0;n#!!top" expanded="false" />
+                <element signature="n#searchAllByWhere#0;n#Entrada#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traslados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <folding>
+                <element signature="n#__construct#0;n#Traslados#0;n#!!top" expanded="false" />
+                <element signature="n#index#0;n#Traslados#0;n#!!top" expanded="false" />
+                <element signature="n#searchAllByWhere#0;n#Traslados#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traslados.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/views/traslados.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="e#147#1354#0" expanded="false" />
+                <element signature="e#187#226#0" expanded="false" />
+                <element signature="e#273#442#0" expanded="false" />
+                <element signature="e#499#640#0" expanded="false" />
+                <element signature="e#679#821#0" expanded="false" />
+                <element signature="e#885#1015#0" expanded="false" />
+                <element signature="e#1104#1350#0" expanded="false" />
                 <element signature="n#!!block;n#granel#0" expanded="false" />
-                <element signature="n#!!block;n#Save#0" expanded="false" />
-                <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
-                <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
                 <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
                 <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+                <element signature="e#4031#4240#0" expanded="false" />
                 <element signature="n#!!block;n#loadTipo#0" expanded="false" />
                 <element signature="n#!!block;n#loadProducto#0" expanded="false" />
                 <element signature="n#!!block;n#suma#0" expanded="false" />
                 <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
+                <element signature="n#!!block;n#disponible#0" expanded="false" />
+                <element signature="n#!!block;n#AgregarCampos_lote#0" expanded="false" />
+                <element signature="e#10215#10461#0" expanded="false" />
+                <element signature="n#!!block;n#elimCamp#0" expanded="false" />
                 <element signature="n#!!block;n#AgregarCampos_serie#0" expanded="false" />
+                <element signature="e#12634#12880#0" expanded="false" />
                 <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
                 <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
-                <element signature="e#12838#13588#0" expanded="false" />
                 <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
+                <element signature="e#15736#15757#0" expanded="false" />
+                <element signature="e#15807#16025#0" expanded="false" />
+                <element signature="e#16029#16050#0" expanded="false" />
+                <element signature="e#16102#16322#0" expanded="false" />
+                <element signature="e#16326#16347#0" expanded="false" />
                 <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+                <element signature="e#16530#16750#0" expanded="false" />
+                <element signature="e#16754#16775#0" expanded="false" />
+                <element signature="e#16827#17043#0" expanded="false" />
+                <element signature="e#17047#17068#0" expanded="false" />
+                <element signature="e#17096#17303#0" expanded="false" />
+                <element signature="e#17307#17328#0" expanded="false" />
+                <element signature="e#17360#17580#0" expanded="false" />
+                <element signature="e#17629#17849#0" expanded="false" />
+                <element signature="e#17853#18371#0" expanded="false" />
+                <element signature="e#17931#18081#0" expanded="false" />
+                <element signature="e#18133#18332#0" expanded="false" />
+                <element signature="e#18336#18365#0" expanded="false" />
                 <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
                 <element signature="n#!!block;n#elimDoc#0" expanded="false" />
                 <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
-                <element signature="n#!!block;n#Contenedor#0" expanded="false" />
-                <element signature="e#19302#19406#0" expanded="false" />
-                <element signature="e#19746#19885#0" expanded="false" />
-                <element signature="e#19944#20130#0" expanded="false" />
-                <element signature="e#20178#20388#0" expanded="false" />
-                <element signature="e#20427#20512#0" expanded="false" />
-                <marker date="1481846637575" expanded="true" signature="10498:10510" ph="..." />
-                <marker date="1481846637575" expanded="true" signature="10632:10644" ph="..." />
+                <element signature="e#19045#19901#0" expanded="false" />
+                <element signature="n#!!block;n#SetDestino#0" expanded="false" />
+                <element signature="e#20756#26486#0" expanded="false" />
+                <element signature="e#21061#21200#0" expanded="false" />
+                <element signature="e#21601#21691#0" expanded="false" />
+                <element signature="e#22776#22876#0" expanded="false" />
+                <element signature="e#22946#25801#0" expanded="false" />
+                <element signature="e#26488#26532#0" expanded="false" />
+                <marker date="1482289096078" expanded="true" signature="12084:12096" ph="..." />
+                <marker date="1482289096078" expanded="true" signature="12218:12230" ph="..." />
               </folding>
             </state>
           </provider>
@@ -184,14 +276,14 @@
         <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
         <option value="$PROJECT_DIR$/assets/js/views/entrada.js" />
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/traslados.js" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
         <option value="$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.js" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/traslados.js" />
+        <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
         <option value="$PROJECT_DIR$/assets/js/views/inventario.js" />
       </list>
@@ -205,10 +297,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1366" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -358,76 +448,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="models">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -659,18 +679,19 @@
       <workItem from="1481804105691" duration="22217000" />
       <workItem from="1481840402913" duration="14943000" />
       <workItem from="1481886709163" duration="4666000" />
-      <workItem from="1482235238027" duration="18067000" />
+      <workItem from="1482235238027" duration="31139000" />
+      <workItem from="1482400509807" duration="1239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548205000" />
+    <option name="totallyTimeSpent" value="562516000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2548148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -984,32 +1005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="500" column="0" selection-start-line="444" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="103" column="5" selection-start-line="87" selection-start-column="4" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="n#__construct#0;n#Traslados#0;n#!!top" expanded="false" />
-            <element signature="n#index#0;n#Traslados#0;n#!!top" expanded="false" />
-            <element signature="n#searchAllByWhere#0;n#Traslados#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="145" column="10" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="10" />
-          <folding>
-            <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
-            <element signature="n#getDataTable#0;n#Entrada#0;n#!!top" expanded="false" />
-            <element signature="n#searchAllById#0;n#Entrada#0;n#!!top" expanded="false" />
-            <element signature="n#searchAllByWhere#0;n#Entrada#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,94 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-          <folding>
-            <element signature="n#__construct#0;n#Productos_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAll#0;n#Productos_model#0;n#!!top" expanded="false" />
-            <element signature="n#getDataTable#0;n#Productos_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllById#0;n#Productos_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhere#0;n#Productos_model#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/views/traslados.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="303" column="30" selection-start-line="303" selection-start-column="30" selection-end-line="303" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#116#0" expanded="false" />
-            <element signature="e#147#1354#0" expanded="false" />
-            <element signature="e#187#226#0" expanded="false" />
-            <element signature="e#273#442#0" expanded="false" />
-            <element signature="e#499#640#0" expanded="false" />
-            <element signature="e#679#821#0" expanded="false" />
-            <element signature="e#885#1015#0" expanded="false" />
-            <element signature="e#1104#1350#0" expanded="false" />
-            <element signature="n#!!block;n#granel#0" expanded="false" />
-            <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
-            <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
-            <element signature="e#4244#4453#0" expanded="false" />
-            <element signature="n#!!block;n#loadTipo#0" expanded="false" />
-            <element signature="n#!!block;n#loadProducto#0" expanded="false" />
-            <element signature="n#!!block;n#suma#0" expanded="false" />
-            <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
-            <element signature="n#!!block;n#disponible#0" expanded="false" />
-            <element signature="n#!!block;n#AgregarCampos_lote#0" expanded="false" />
-            <element signature="e#10428#10674#0" expanded="false" />
-            <element signature="n#!!block;n#elimCamp#0" expanded="false" />
-            <element signature="n#!!block;n#AgregarCampos_serie#0" expanded="false" />
-            <element signature="e#12847#13093#0" expanded="false" />
-            <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
-            <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
-            <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
-            <element signature="e#15920#15941#0" expanded="false" />
-            <element signature="e#15991#16209#0" expanded="false" />
-            <element signature="e#16213#16234#0" expanded="false" />
-            <element signature="e#16286#16506#0" expanded="false" />
-            <element signature="e#16510#16531#0" expanded="false" />
-            <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
-            <element signature="e#16714#16934#0" expanded="false" />
-            <element signature="e#16938#16959#0" expanded="false" />
-            <element signature="e#17011#17227#0" expanded="false" />
-            <element signature="e#17231#17252#0" expanded="false" />
-            <element signature="e#17280#17487#0" expanded="false" />
-            <element signature="e#17491#17512#0" expanded="false" />
-            <element signature="e#17544#17764#0" expanded="false" />
-            <element signature="e#17813#18033#0" expanded="false" />
-            <element signature="e#18037#18555#0" expanded="false" />
-            <element signature="e#18115#18265#0" expanded="false" />
-            <element signature="e#18317#18516#0" expanded="false" />
-            <element signature="e#18520#18549#0" expanded="false" />
-            <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
-            <element signature="n#!!block;n#elimDoc#0" expanded="false" />
-            <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
-            <element signature="e#19229#20085#0" expanded="false" />
-            <element signature="n#!!block;n#SetDestino#0" expanded="false" />
-            <element signature="e#20940#26670#0" expanded="false" />
-            <element signature="e#21245#21384#0" expanded="false" />
-            <element signature="e#21785#21875#0" expanded="false" />
-            <element signature="e#22960#23060#0" expanded="false" />
-            <element signature="e#23130#25985#0" expanded="false" />
-            <element signature="e#26672#26716#0" expanded="false" />
-            <marker date="1481891117012" expanded="true" signature="12297:12309" ph="..." />
-            <marker date="1481891117012" expanded="true" signature="12431:12443" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7616">
-          <caret line="448" column="42" selection-start-line="448" selection-start-column="42" selection-end-line="448" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,52 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="143" column="105" selection-start-line="143" selection-start-column="101" selection-end-line="143" selection-end-column="105" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1482248615364" expanded="true" signature="27731:27756" ph="..." />
-            <marker date="1482248615364" expanded="true" signature="27868:27893" ph="..." />
-            <marker date="1482248615364" expanded="true" signature="78790:78798" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-          <folding>
-            <element signature="n#__construct#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAll#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllLast#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getLastCode#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllUbicacion#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllById#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhereTwo#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#create_details#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#create#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#createMultiple#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#editById#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#deleteById#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#deleteSelect#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#sumarPaletas#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#sumarTotal#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <element signature="n#editByIdWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
-            <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="102" column="10" selection-start-line="102" selection-start-column="10" selection-end-line="102" selection-end-column="10" />
-          <folding>
-            <element signature="n#getAllByWhere#0;n#Traslados_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhereTwo#0;n#Traslados_model#0;n#!!top" expanded="false" />
-            <element signature="n#create_details#0;n#Traslados_model#0;n#!!top" expanded="false" />
-            <marker date="1482242318994" expanded="true" signature="1705:1732" ph="SELECT * FRO... sys_ubicacion" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,39 +1090,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#__construct#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAll#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllLast#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getLastCode#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllUbicacion#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getDataTable#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllByWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllByWhereTwo#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#create_details#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#create#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#createMultiple#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#editById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#deleteById#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#deleteSelect#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarPaletas#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarTotal#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <element signature="n#editByIdWhere#0;n#Inventario_model#0;n#!!top" expanded="false" />
+            <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
+          <folding>
+            <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#getDataTable#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#searchAllById#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#searchAllByWhere#0;n#Entrada#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/traslados.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#147#1354#0" expanded="false" />
+            <element signature="e#187#226#0" expanded="false" />
+            <element signature="e#273#442#0" expanded="false" />
+            <element signature="e#499#640#0" expanded="false" />
+            <element signature="e#679#821#0" expanded="false" />
+            <element signature="e#885#1015#0" expanded="false" />
+            <element signature="e#1104#1350#0" expanded="false" />
+            <element signature="n#!!block;n#granel#0" expanded="false" />
+            <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+            <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+            <element signature="e#4031#4240#0" expanded="false" />
+            <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+            <element signature="n#!!block;n#loadProducto#0" expanded="false" />
+            <element signature="n#!!block;n#suma#0" expanded="false" />
+            <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
+            <element signature="n#!!block;n#disponible#0" expanded="false" />
+            <element signature="n#!!block;n#AgregarCampos_lote#0" expanded="false" />
+            <element signature="e#10215#10461#0" expanded="false" />
+            <element signature="n#!!block;n#elimCamp#0" expanded="false" />
+            <element signature="n#!!block;n#AgregarCampos_serie#0" expanded="false" />
+            <element signature="e#12634#12880#0" expanded="false" />
+            <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
+            <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
+            <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
+            <element signature="e#15736#15757#0" expanded="false" />
+            <element signature="e#15807#16025#0" expanded="false" />
+            <element signature="e#16029#16050#0" expanded="false" />
+            <element signature="e#16102#16322#0" expanded="false" />
+            <element signature="e#16326#16347#0" expanded="false" />
+            <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
+            <element signature="e#16530#16750#0" expanded="false" />
+            <element signature="e#16754#16775#0" expanded="false" />
+            <element signature="e#16827#17043#0" expanded="false" />
+            <element signature="e#17047#17068#0" expanded="false" />
+            <element signature="e#17096#17303#0" expanded="false" />
+            <element signature="e#17307#17328#0" expanded="false" />
+            <element signature="e#17360#17580#0" expanded="false" />
+            <element signature="e#17629#17849#0" expanded="false" />
+            <element signature="e#17853#18371#0" expanded="false" />
+            <element signature="e#17931#18081#0" expanded="false" />
+            <element signature="e#18133#18332#0" expanded="false" />
+            <element signature="e#18336#18365#0" expanded="false" />
+            <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
+            <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+            <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
+            <element signature="e#19045#19901#0" expanded="false" />
+            <element signature="n#!!block;n#SetDestino#0" expanded="false" />
+            <element signature="e#20756#26486#0" expanded="false" />
+            <element signature="e#21061#21200#0" expanded="false" />
+            <element signature="e#21601#21691#0" expanded="false" />
+            <element signature="e#22776#22876#0" expanded="false" />
+            <element signature="e#22946#25801#0" expanded="false" />
+            <element signature="e#26488#26532#0" expanded="false" />
+            <marker date="1482289096078" expanded="true" signature="12084:12096" ph="..." />
+            <marker date="1482289096078" expanded="true" signature="12218:12230" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="n#__construct#0;n#Traslados#0;n#!!top" expanded="false" />
+            <element signature="n#index#0;n#Traslados#0;n#!!top" expanded="false" />
+            <element signature="n#searchAllByWhere#0;n#Traslados#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3655">
+          <caret line="267" column="39" selection-start-line="267" selection-start-column="39" selection-end-line="267" selection-end-column="39" />
+          <folding>
+            <element signature="n#getAllByWhere#0;n#Traslados_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllByWhereTwo#0;n#Traslados_model#0;n#!!top" expanded="false" />
+            <marker date="1482322930619" expanded="true" signature="1744:1771" ph="SELECT * FRO... sys_ubicacion" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="196" column="57" selection-start-line="196" selection-start-column="57" selection-end-line="196" selection-end-column="57" />
-          <caret line="197" column="57" selection-start-line="197" selection-start-column="57" selection-end-line="197" selection-end-column="57" />
-          <caret line="198" column="57" selection-start-line="198" selection-start-column="57" selection-end-line="198" selection-end-column="57" />
-          <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
-          <caret line="200" column="57" selection-start-line="200" selection-start-column="57" selection-end-line="200" selection-end-column="57" />
-          <caret line="201" column="57" selection-start-line="201" selection-start-column="57" selection-end-line="201" selection-end-column="57" />
-          <caret line="202" column="57" selection-start-line="202" selection-start-column="57" selection-end-line="202" selection-end-column="57" />
-          <caret line="203" column="57" selection-start-line="203" selection-start-column="57" selection-end-line="203" selection-end-column="57" />
-          <caret line="204" column="57" selection-start-line="204" selection-start-column="57" selection-end-line="204" selection-end-column="57" />
-          <caret line="205" column="57" selection-start-line="205" selection-start-column="57" selection-end-line="205" selection-end-column="57" />
-          <caret line="206" column="57" selection-start-line="206" selection-start-column="57" selection-end-line="206" selection-end-column="57" />
-          <caret line="207" column="57" selection-start-line="207" selection-start-column="57" selection-end-line="207" selection-end-column="57" />
-          <caret line="208" column="57" selection-start-line="208" selection-start-column="57" selection-end-line="208" selection-end-column="57" />
-          <caret line="209" column="57" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
+        <state relative-caret-position="2397">
+          <caret line="141" column="59" selection-start-line="141" selection-start-column="59" selection-end-line="141" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="221" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/views/inventario.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2057">
-          <caret line="37" column="117" selection-start-line="37" selection-start-column="117" selection-end-line="37" selection-end-column="121" />
+        <state relative-caret-position="306">
+          <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
           <folding>
             <element signature="e#148#278#0" expanded="false" />
             <element signature="e#311#557#0" expanded="false" />
             <element signature="e#564#844#0" expanded="false" />
-            <element signature="e#2585#2649#0" expanded="false" />
-            <element signature="e#3407#3646#0" expanded="false" />
-            <element signature="e#3664#3919#0" expanded="false" />
-            <element signature="e#6173#6405#0" expanded="false" />
+            <element signature="e#2634#2698#0" expanded="false" />
+            <element signature="e#3456#3695#0" expanded="false" />
+            <element signature="e#3713#3968#0" expanded="false" />
+            <element signature="e#6082#6314#0" expanded="false" />
             <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
             <element signature="n#!!block;n#loadTipo#0" expanded="false" />
             <element signature="n#!!block;n#div_form_create#0" expanded="false" />
@@ -1274,8 +1266,8 @@
             <element signature="n#!!block;n#SetByIdDestino#0" expanded="false" />
             <element signature="n#!!block;n#SetSumaUnid#0" expanded="false" />
             <element signature="n#!!block;n#SetSumaPaletas#0" expanded="false" />
-            <marker date="1482264531711" expanded="false" signature="619:835" ph="{...}" />
-            <marker date="1482264531711" expanded="true" signature="17763:17889" ph="..." />
+            <marker date="1482331209792" expanded="false" signature="619:835" ph="{...}" />
+            <marker date="1482331209792" expanded="true" signature="17672:17798" ph="..." />
           </folding>
         </state>
       </provider>

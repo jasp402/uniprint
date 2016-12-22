@@ -125,7 +125,7 @@
                                     <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable"><?= $this->models->getAllLast()[0]->cod_inventario; ?></span>
+                                        <span class="editable"><?= $this->models->getAllLast()[0]->cod_traslado; ?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
@@ -189,30 +189,30 @@
                                     <div class="profile-info-name"> Cant. Paletas </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?= $this->models->sumarPaletas($this->models->getAllLast()[0]->cod_inventario)[0]->suma ?></span>
+                                        <span class="editable" id="login"><?= $this->models->sumarPaletas($this->models->getAllLast()[0]->cod_traslado)[0]->suma ?></span>
                                     </div>
                                     <div class="profile-info-name"> Total </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="about"><?=  number_format($this->models->sumarTotal($this->models->getAllLast()[0]->cod_inventario)[0]->suma,0,',','.'); ?></span>
+                                        <span class="editable" id="about"><?=  number_format($this->models->sumarTotal($this->models->getAllLast()[0]->cod_traslado)[0]->suma,0,',','.'); ?></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <div class="widget-box widget-color-green">
+                                <div class="widget-box widget-color-orange">
                                     <div class="widget-header">
-                                        <h5 class="widget-title bigger lighter">Etiquetas</h5>
+                                        <h5 class="widget-title bigger lighter">Nota de Acarreo</h5>
                                     </div>
 
                                     <div class="widget-body">
                                         <div class="widget-main align-center">
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank"><i class="fa fa-barcode bigger-300"></i>
-                                                <h6>Generar Etiqueta</h6>
+                                            <a href="#" class="light-orange" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')"><i class="fa fa-fw fa-file-o bigger-300"></i>
+                                                <h6>Generar Habladores</h6>
                                             </a>
                                         </div>
 
                                         <div>
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success">
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-warning no-border">
                                                 <i class="ace-icon fa fa-print bigger-110"></i>
                                                 <span>Imprimir</span>
                                             </a>
@@ -223,7 +223,7 @@
                             <div class="col-sm-2">
                                 <div class="widget-box widget-color-blue">
                                     <div class="widget-header">
-                                        <h5 class="widget-title bigger lighter">Habladores</h5>
+                                        <h5 class="widget-title bigger lighter">Hablador</h5>
                                     </div>
 
                                     <div class="widget-body">
@@ -234,7 +234,7 @@
                                         </div>
 
                                         <div>
-                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-primary">
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-primary no-border">
                                                 <i class="ace-icon fa fa-print bigger-110"></i>
                                                 <span>Imprimir</span>
                                             </a>
@@ -501,7 +501,7 @@
                                                     <div>
                                                         <ul class="list-unstyled spaced">
                                                             <li>
-                                                                <i class="ace-icon fa fa-caret-right blue"></i><span id="invoice_origenSelect" class="bolder"></span>, <spam id="invoice_origen"></spam>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i><span class="bolder">Origen</span>, <spam id="invoice_origenSelect"></spam>
                                                             </li>
 
                                                             <li>

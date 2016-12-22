@@ -11,7 +11,7 @@ class Traslados_model extends CI_Model
         parent::__construct();
         $this->tabla = 'sys_traslados';
         //$this->tabla_detalle = 'sys_inventario_detalle';
-        $this->primary_key = 'id_traslados';
+        $this->primary_key = 'id_traslado';
     }
 
     public function getAll()
@@ -34,6 +34,7 @@ class Traslados_model extends CI_Model
         $this->db->from($this->tabla);
        $this->db->order_by($this->primary_key,'DESC');
         $query = $this->db->get();
+        //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $items = array();
             foreach ($query->result() as $key) {
@@ -90,6 +91,8 @@ class Traslados_model extends CI_Model
         $this->db->SELECT('sys_inventario.total');
         $this->db->SELECT('sys_inventario.operacion');
         $this->db->SELECT('sys_inventario.id_producto');
+        $this->db->SELECT('sys_inventario.lfoh');
+        $this->db->SELECT('sys_inventario.id_producto');
         $this->db->FROM('sys_inventario');
         $this->db->JOIN('sys_ubicacion ',' sys_inventario.origen = sys_ubicacion.id_ubicacion');
         $this->db->JOIN('sys_productos ',' sys_inventario.id_producto = sys_productos.id_producto');
@@ -99,7 +102,7 @@ class Traslados_model extends CI_Model
         //$this->db->ORDER_BY('fecha', 'DESC');
 
         $query = $this->db->get();
-//        echo $this->db->last_query(); break;
+        //echo $this->db->last_query();
         $result = array(
             "draw"=>1,
             "recordsTotal"=> $query->num_rows(),
@@ -247,7 +250,7 @@ class Traslados_model extends CI_Model
     public function sumarPaletas($cod){
         $this->db->select('Sum(cant_lote) as suma');
         $this->db->from($this->tabla);
-        $this->db->where('cod_inventario', $cod);
+        $this->db->where('cod_traslado', $cod);
         $query = $this->db->get();
         //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
@@ -260,7 +263,7 @@ class Traslados_model extends CI_Model
     public function sumarTotal($cod){
         $this->db->select('Sum(total) as suma');
         $this->db->from($this->tabla);
-        $this->db->where('cod_inventario', $cod);
+        $this->db->where('cod_traslado', $cod);
         $query = $this->db->get();
         //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
