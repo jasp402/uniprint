@@ -109,6 +109,7 @@ class Entrada extends MX_Controller {
         $id_chofer      =$this->input->post('id_chofer');
         $id_vehiculo    =$this->input->post('id_vehiculo');
         $destino        =$this->input->post('destino');
+        $operacion        ='+';
         $lote           =$this->input->post('lote');
         $comentario     =$this->input->post('comentario');
         $documento      =$this->input->post('documento');
@@ -122,7 +123,8 @@ class Entrada extends MX_Controller {
             'documento' =>$documento,
             'fecha' =>$fecha->format('Y-m-d'),
             'comentario' => $comentario,
-            'lote' => $lote
+            'lote' => $lote,
+            'operacion ' =>$operacion
         );
 
         //Dinamic Date
