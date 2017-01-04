@@ -2,72 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/Times-Roman.afm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/dompdf/lib/fonts/log.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/parametros/models/parametros_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/produccion/views/lineas.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/almacenes/almacen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/parametros/vehiculos.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/produccion/lineas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/stock/entrada.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/stock/inventario.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/DB_active_rec.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/my_models.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/almacenes/models/almacen_model.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/parametros/models/proveedor_model.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/unidades.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/views/entrada.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/views/inventario.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/views/traslados.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SysUniprint.iml" afterPath="$PROJECT_DIR$/.idea/SysUniprint.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/global_function_helper.php" afterPath="$PROJECT_DIR$/application/helpers/global_function_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" afterPath="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/almacenes/views/almacen.php" afterPath="$PROJECT_DIR$/application/modules/almacenes/views/almacen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/models/global_model.php" afterPath="$PROJECT_DIR$/application/modules/global_views/models/global_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php" afterPath="$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/controllers/impresor.php" afterPath="$PROJECT_DIR$/application/modules/parametros/controllers/impresor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/controllers/proveedor.php" afterPath="$PROJECT_DIR$/application/modules/parametros/controllers/proveedor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/controllers/vehiculos.php" afterPath="$PROJECT_DIR$/application/modules/parametros/controllers/vehiculos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/views/choferes.php" afterPath="$PROJECT_DIR$/application/modules/parametros/views/choferes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/views/impresor.php" afterPath="$PROJECT_DIR$/application/modules/parametros/views/impresor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/views/proveedor.php" afterPath="$PROJECT_DIR$/application/modules/parametros/views/proveedor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/parametros/views/vehiculos.php" afterPath="$PROJECT_DIR$/application/modules/parametros/views/vehiculos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php" afterPath="$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" afterPath="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" afterPath="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/categorias.php" afterPath="$PROJECT_DIR$/application/modules/productos/controllers/categorias.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" afterPath="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/proyectos.php" afterPath="$PROJECT_DIR$/application/modules/productos/controllers/proyectos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" afterPath="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/models/productos_model.php" afterPath="$PROJECT_DIR$/application/modules/productos/models/productos_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/views/categorias.php" afterPath="$PROJECT_DIR$/application/modules/productos/views/categorias.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/views/productos.php" afterPath="$PROJECT_DIR$/application/modules/productos/views/productos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/views/proyectos.php" afterPath="$PROJECT_DIR$/application/modules/productos/views/proyectos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/views/tipos.php" afterPath="$PROJECT_DIR$/application/modules/productos/views/tipos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" afterPath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" afterPath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/entrada.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" afterPath="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/third_party/MX/Controller.php" afterPath="$PROJECT_DIR$/application/third_party/MX/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/CodeIgniter.php" afterPath="$PROJECT_DIR$/system/core/CodeIgniter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/stock/traslados.js" afterPath="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,10 +43,9 @@
       <file leaf-file-name="traslados.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/views/stock/traslados.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="79" column="28" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="28" />
+            <state relative-caret-position="180">
+              <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
               <folding>
-                <element signature="e#0#116#0" expanded="false" />
                 <element signature="e#147#1354#0" expanded="false" />
                 <element signature="e#187#226#0" expanded="false" />
                 <element signature="e#273#442#0" expanded="false" />
@@ -121,113 +64,64 @@
                 <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
                 <element signature="n#!!block;n#AgregarCampos_lote#0" expanded="false" />
                 <element signature="n#!!block;n#elimCamp#0" expanded="false" />
-                <element signature="e#12570#12816#0" expanded="false" />
+                <element signature="e#12334#12580#0" expanded="false" />
                 <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
                 <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
                 <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
                 <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
                 <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
                 <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+                <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
                 <element signature="n#!!block;n#SetDestino#0" expanded="false" />
-                <element signature="e#20706#26436#0" expanded="false" />
-                <marker date="1483534742705" expanded="true" signature="12020:12032" ph="..." />
-                <marker date="1483534742705" expanded="true" signature="12154:12166" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="traslados.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entrada.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding>
-                <element signature="n#load_setting_in_view#0;n#Entrada#0;n#!!top" expanded="false" />
-                <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
-                <element signature="n#search_documento#0;n#Entrada#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stock_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="344" column="20" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="20" />
-              <folding>
-                <element signature="n#getAllLast_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
-                <element signature="n#getAllLast_traslado#0;n#Stock_model#0;n#!!top" expanded="false" />
-                <element signature="n#getAllByWhere_documento_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
-                <element signature="n#getAllByWhereTwo#0;n#Stock_model#0;n#!!top" expanded="false" />
-                <marker date="1483534601880" expanded="true" signature="7614:7641" ph="select * fro... sys_ubicacion" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="traslados_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1615">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1483472367519" expanded="true" signature="1753:1780" ph="SELECT * FRO... sys_ubicacion" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entrada.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/views/stock/entrada.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="484" column="39" selection-start-line="484" selection-start-column="23" selection-end-line="484" selection-end-column="39" />
-              <folding>
-                <element signature="e#186#225#0" expanded="false" />
-                <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
-                <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
-                <element signature="n#!!block;n#loadTipo#0" expanded="false" />
-                <element signature="n#!!block;n#suma#0" expanded="false" />
-                <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
-                <element signature="e#9659#9732#0" expanded="false" />
-                <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
-                <element signature="e#21883#21983#0" expanded="false" />
-                <element signature="e#22053#24906#0" expanded="false" />
-                <marker date="1483533503225" expanded="true" signature="10852:10864" ph="..." />
-                <marker date="1483533503225" expanded="true" signature="10986:10998" ph="..." />
+                <element signature="e#20470#26200#0" expanded="false" />
+                <marker date="1483558970128" expanded="true" signature="11784:11796" ph="..." />
+                <marker date="1483558970128" expanded="true" signature="11918:11930" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="traslados.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="355">
+              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+              <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crud_model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="306" column="23" selection-start-line="306" selection-start-column="7" selection-end-line="306" selection-end-column="23" />
+              <folding>
+                <element signature="e#6195#6561#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CI_phpStorm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="122" column="14" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inventario_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
+              <folding>
+                <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/parametros/models/impresor_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/parametros/models/vehiculos_model.php" />
         <option value="$PROJECT_DIR$/application/modules/parametros/views/vehiculos.php" />
         <option value="$PROJECT_DIR$/application/modules/parametros/controllers/vehiculos.php" />
         <option value="$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php" />
@@ -290,13 +182,15 @@
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/temp.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
         <option value="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
         <option value="$PROJECT_DIR$/assets/js/views/stock/entrada.js" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
       </list>
     </option>
@@ -313,10 +207,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1366" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -507,6 +399,10 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -588,98 +484,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="almacenes">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="almacenes">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="models">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="almacenes">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="controllers">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="config">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -856,12 +660,12 @@
       <workItem from="1482400509807" duration="8055000" />
       <workItem from="1482813009049" duration="18062000" />
       <workItem from="1482932454184" duration="110878000" />
-      <workItem from="1483290149335" duration="73683000" />
+      <workItem from="1483290149335" duration="88577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="771955000" />
+    <option name="totallyTimeSpent" value="786849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,10 +678,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22128637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -919,7 +723,7 @@
           <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="222" />
+      <option name="time" value="227" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
@@ -928,9 +732,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/productos/models/proyectos_model.php" />
-    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/unidades.php" />
-    <entry file="file://$PROJECT_DIR$/application/modules/productos/models/unidades_model.php" />
     <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/impresor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1260,37 +1061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="127" column="56" selection-start-line="127" selection-start-column="47" selection-end-line="127" selection-end-column="56" />
-          <folding>
-            <element signature="e#6#43#0#PHP" expanded="true" />
-            <marker date="1483368619414" expanded="true" signature="13441:13521" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1300,26 +1074,6 @@
         <state relative-caret-position="194">
           <caret line="1702" column="4" selection-start-line="1702" selection-start-column="4" selection-end-line="1702" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="315" column="53" selection-start-line="315" selection-start-column="53" selection-end-line="315" selection-end-column="53" />
-          <folding>
-            <element signature="e#6195#6561#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="52" column="46" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
-          <folding>
-            <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,10 +1087,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/temp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="150" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="272" column="9" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/views/stock/entrada.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="484" column="39" selection-start-line="484" selection-start-column="23" selection-end-line="484" selection-end-column="39" />
+        <state relative-caret-position="525">
+          <caret line="479" column="25" selection-start-line="479" selection-start-column="9" selection-end-line="479" selection-end-column="25" />
           <folding>
             <element signature="e#186#225#0" expanded="false" />
             <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
@@ -1354,38 +1140,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="270" selection-end-column="6" />
           <folding>
-            <marker date="1483472367519" expanded="true" signature="1753:1780" ph="SELECT * FRO... sys_ubicacion" />
+            <element signature="e#6#43#0#PHP" expanded="true" />
+            <element signature="n#div#2;n#!!top" expanded="false" />
+            <marker date="1483368619414" expanded="true" signature="13441:13521" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/temp.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="150" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#2;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/inventario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1482410197092" expanded="true" signature="17678:17804" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="381" column="97" selection-start-line="381" selection-start-column="97" selection-end-line="381" selection-end-column="97" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="n#load_setting_in_model#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarPaletas#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarTotal#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllLast_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllByWhere_documento_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="n#create_details#0;n#Stock_model#0;n#!!top" expanded="false" />
+            <element signature="e#14517#17992#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="n#__construct#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#load_setting_in_view#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="n#search_documento#0;n#Entrada#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+          <folding>
+            <element signature="n#load_setting_in_view#0;n#Inventario#0;n#!!top" expanded="false" />
+            <element signature="n#index#0;n#Inventario#0;n#!!top" expanded="false" />
+            <element signature="n#getDataTable#0;n#Inventario#0;n#!!top" expanded="false" />
+            <element signature="n#searchAllByWhereTwo#0;n#Inventario#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <marker date="1482242408499" expanded="true" signature="1706:1733" ph="SELECT * FRO... sys_ubicacion" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/views/stock/traslados.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="79" column="28" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="28" />
+        <state relative-caret-position="180">
+          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
-            <element signature="e#0#116#0" expanded="false" />
             <element signature="e#147#1354#0" expanded="false" />
             <element signature="e#187#226#0" expanded="false" />
             <element signature="e#273#442#0" expanded="false" />
@@ -1404,60 +1259,46 @@
             <element signature="n#!!block;n#sumaTotales#0" expanded="false" />
             <element signature="n#!!block;n#AgregarCampos_lote#0" expanded="false" />
             <element signature="n#!!block;n#elimCamp#0" expanded="false" />
-            <element signature="e#12570#12816#0" expanded="false" />
+            <element signature="e#12334#12580#0" expanded="false" />
             <element signature="n#!!block;n#elimCamp_serie#0" expanded="false" />
             <element signature="n#!!block;n#loadInvoice#0" expanded="false" />
             <element signature="n#!!block;n#validateStep_1#0" expanded="false" />
             <element signature="n#!!block;n#validateStep_2#0" expanded="false" />
             <element signature="n#!!block;n#limpiarTabla#0" expanded="false" />
             <element signature="n#!!block;n#elimDoc#0" expanded="false" />
+            <element signature="n#!!block;n#validarDocumento#0" expanded="false" />
             <element signature="n#!!block;n#SetDestino#0" expanded="false" />
-            <element signature="e#20706#26436#0" expanded="false" />
-            <marker date="1483534742705" expanded="true" signature="12020:12032" ph="..." />
-            <marker date="1483534742705" expanded="true" signature="12154:12166" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="344" column="20" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="20" />
-          <folding>
-            <element signature="n#getAllLast_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllLast_traslado#0;n#Stock_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhere_documento_entrada#0;n#Stock_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhereTwo#0;n#Stock_model#0;n#!!top" expanded="false" />
-            <marker date="1483534601880" expanded="true" signature="7614:7641" ph="select * fro... sys_ubicacion" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding>
-            <element signature="n#load_setting_in_view#0;n#Entrada#0;n#!!top" expanded="false" />
-            <element signature="n#index#0;n#Entrada#0;n#!!top" expanded="false" />
-            <element signature="n#search_documento#0;n#Entrada#0;n#!!top" expanded="false" />
+            <element signature="e#20470#26200#0" expanded="false" />
+            <marker date="1483558970128" expanded="true" signature="11784:11796" ph="..." />
+            <marker date="1483558970128" expanded="true" signature="11918:11930" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="355">
+          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="122" column="14" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="306" column="23" selection-start-line="306" selection-start-column="7" selection-end-line="306" selection-end-column="23" />
+          <folding>
+            <element signature="e#6195#6561#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -328,7 +328,7 @@ class Crud_model extends CI_Model
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         foreach ($query->result() as $key => $value) {
-            $result[][$key] = $value;
+            $result[$key] = $value;
         }
         switch ($method) {
             case 'ajax':
