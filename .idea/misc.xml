@@ -10,4 +10,9 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/system/core/Controller.php" />
+    <file url="file://$PROJECT_DIR$/system/core/Model.php" />
+    <file url="file://$PROJECT_DIR$/system/database/DB_active_rec.php" />
+  </component>
 </project>
