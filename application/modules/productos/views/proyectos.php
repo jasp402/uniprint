@@ -40,6 +40,7 @@
             dataType: 'json',
             data: {id: id},
             success: function(data) {
+                console.log(data);
                 var r = data.result[0];
                 $.each(r, function(indice, valor) {
                     $("#"+indice).val(valor);
@@ -136,7 +137,7 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?= count($getAllProyectos);?></span>
+                <span class="infobox-data-number"><?= count($this->CRUD->__getAll($this->schema['table']));?></span>
                 <div class="infobox-content">
                     <a href="#modal-table" role="button" data-toggle="modal" onclick="javascript:div_agregar()";>
                         <i class="ace-icon fa fa fa-external-link"></i>
@@ -162,8 +163,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php if ($getAllProyectos): ?>
-                    <?php foreach ($getAllProyectos as $keyAll): ?>
+                <?php if ($this->CRUD->__getAll($this->schema['table'])): ?>
+                    <?php foreach ($this->CRUD->__getAll($this->schema['table']) as $keyAll): ?>
                         <tr>
                             <td><?= $keyAll->id_proyecto; ?></td>
                             <td><?= $keyAll->nombre; ?></td>

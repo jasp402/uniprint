@@ -103,7 +103,22 @@
                 echo json_encode($data);
                 break;
 
+            case 'null':
+                switch ($operacion){
+                    case 'ERROR':
+                        $msg =  '<i class=\'red ace-icon fa fa-warning\'></i> '.
+                                '<span class=\'bigger-110 red\'> Lo sentimo! pero algo ha salido mal'.
+                                '<br><small><cite>'.$query['mens_err'].'</cite></small> </span>';
+                        break;
+                    case 'EMPTY':
+                        $msg =  '<i class=\'ace-icon fa fa-random\'></i>'.
+                                '<span class=\'bigger-110 orange\'>No se encontraron resultados</span>';
+                        break;
+                }
+                echo '<script>message_box("'.$msg.'",0,true);</script>';
 
+
+                break;
             default:
                 $msg = '<span class=\'bigger-110 red\'><b>Error en MVC:</b> Consulte su administrador de sistema. <h6><b>'. $query['num_err'].'</b> - '.$query['mens_err']  .'</h6></span>';
                 $data = array('success' => $msg, 'times'=>0, 'closes'=>true);
@@ -128,4 +143,21 @@ function cambiaf_a_mysql($fecha){
     preg_match( "/([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4})/", $fecha, $mifecha);
    	$lafecha=$mifecha[3]."-".$mifecha[2]."-".$mifecha[1];
    	return $lafecha;
+}
+function pdf_create($html, $filename='', $stream=TRUE)
+{
+    require_once("dompdf/dompdf_config.inc.php");
+    // $this->load->helper('file');
+    // require_once(APPPATH.'third_party/dompdf/dompdf_config.inc.php');
+    $dompdf = new DOMPDF();
+    $dompdf->load_html($html);
+    $dompdf->set_paper("a4", "portrait" );
+    $dompdf->render();
+    // $dompdf->stream($filename . ".pdf");
+    if ($stream) {
+        $dompdf->stream($filename.".pdf");
+    } else {
+        // $dompdf->output();
+        $dompdf->stream($filename.".pdf",array('Attachment'=>0));
+    }
 }

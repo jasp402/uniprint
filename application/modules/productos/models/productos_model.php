@@ -1,32 +1,48 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * -------------------------------------------------------------------------------
+ * MODULO (productos) > productos | models
+ * -------------------------------------------------------------------------------
+ *
+ * Productos_model version 0.0.1
+ *
+ * Created by PhpStorm.
+ * User: Jasp402
+ * Date: 13/12/2016
+ * Time: 09:58 AM
+ *
+ * @category   Models
+ * @author     Jesús Pérez
+ * @copyright  2016-12 jasp402@gmail.com
+ * @version    0.0.1
+ *
+ **/
 class Productos_model extends CI_Model
 {
-    private $tabla;
-    private $primary_key;
-    //foraneas
-    private $foreign_cat;
-    private $foreign_tip;
 
     public function __construct()
     {
         parent::__construct();
-        $this->tabla = 'sys_productos';
-        $this->primary_key = 'id_producto';
-        //foraneas
-        $this->foreign_cat = 'id_categoria';
-        $this->foreign_tip = 'id_tipo';
     }
 
-    public function getAll()
+    public function load_setting_in_model($schema)
+    {
+        $this->schema =$schema;
+    }
+    /**
+     * -------------------------------------------------------------------------------
+     * MODULO (productos) > productos | models
+     * -------------------------------------------------------------------------------
+     **/
+    public function getAll_productos()
     {
         $this->db->select('sys_categorias.nombre as categoria');
         $this->db->select('sys_tipos.nombre as tipo');
         $this->db->select('sys_productos.*');
         $this->db->select('sys_proyecto.nombre as proyecto');
         $this->db->select('sys_unidades.nombre as unidad');
-        $this->db->from($this->tabla);
+        $this->db->from($this->schema['table']);
         $this->db->join('sys_tipos', 'sys_tipos.id_tipo = sys_productos.id_tipo');
         $this->db->join('sys_categorias', 'sys_categorias.id_categoria = sys_productos.id_categoria');
         $this->db->join('sys_proyecto', 'sys_proyecto.id_proyecto = sys_categorias.id_proyecto');
@@ -39,17 +55,19 @@ class Productos_model extends CI_Model
                 $items[] = $key;
             }
             return $items;
+        }else{
+            return FALSE;
         }
     }
 
-    public function getDataTable()
+    public function getDataTable_productos()
     {
         $this->db->select('sys_categorias.nombre as categoria');
         $this->db->select('sys_tipos.nombre as tipo');
         $this->db->select('sys_productos.*');
         $this->db->select('sys_proyecto.nombre as proyecto');
         $this->db->select('sys_unidades.nombre as unidad');
-        $this->db->from($this->tabla);
+        $this->db->from($this->schema['table']);
         $this->db->join('sys_tipos', 'sys_tipos.id_tipo = sys_productos.id_tipo');
         $this->db->join('sys_categorias', 'sys_categorias.id_categoria = sys_productos.id_categoria');
         $this->db->join('sys_proyecto', 'sys_proyecto.id_proyecto = sys_categorias.id_proyecto');
@@ -63,7 +81,7 @@ class Productos_model extends CI_Model
         echo json_encode($result);
     }
 
-    public function getAllById($id)
+    public function getAllById_productos($id)
     {
         $this->db->select('sys_categorias.nombre as categoria');
         $this->db->select('sys_tipos.nombre as tipo');
@@ -71,12 +89,12 @@ class Productos_model extends CI_Model
         $this->db->select('sys_proyecto.nombre as proyecto');
         $this->db->select('sys_proyecto.id_proyecto');
         $this->db->select('sys_unidades.nombre as unidad');
-        $this->db->from($this->tabla);
+        $this->db->from($this->schema['table']);
         $this->db->join('sys_tipos', 'sys_tipos.id_tipo = sys_productos.id_tipo');
         $this->db->join('sys_categorias', 'sys_categorias.id_categoria = sys_productos.id_categoria');
         $this->db->join('sys_proyecto', 'sys_proyecto.id_proyecto = sys_categorias.id_proyecto');
         $this->db->join('sys_unidades', 'sys_unidades.id_unidad = sys_productos.id_unidad');
-        $this->db->where($this->primary_key, $id);
+        $this->db->where($this->schema['pri_key'], $id);
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
             return $query->result();
@@ -85,52 +103,50 @@ class Productos_model extends CI_Model
         }
     }
 
-    public function getAllByWhere($id1, $field1,$id2,$field2)
+    /**
+     * -------------------------------------------------------------------------------
+     * MODULO (productos) > tipos | models
+     * -------------------------------------------------------------------------------
+     **/
+    public function getAll_tipos()
     {
-        $this->db->select('*');
-        $this->db->from($this->tabla);
-        $this->db->where($field1, $id1);
-        $this->db->where($field2, $id2);
+        $this->db->select('sys_tipos.*');
+        $this->db->select('sys_categorias.nombre as categoria');
+        $this->db->from($this->schema['table']);
+        $this->db->join('sys_categorias','sys_categorias.id_categoria = sys_tipos.id_categoria');
         $query = $this->db->get();
-        //echo $this->db->last_query(); break;
         if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
+            $items = array();
+            foreach ($query->result() as $key) {
+                $items[] = $key;
+            }
+            return $items;
+        }else{
             return FALSE;
         }
     }
 
-    public function create($data)
+    /**
+     * -------------------------------------------------------------------------------
+     * MODULO (productos) > tipos | models
+     * -------------------------------------------------------------------------------
+     **/
+    public function getAll_categorias()
     {
-        $this->db->insert($this->tabla, $data);
+        $this->db->select('sys_categorias.*');
+        $this->db->select('sys_proyecto.nombre as proyecto');
+        $this->db->from($this->schema['table']);
+        $this->db->join('sys_proyecto','sys_proyecto.id_proyecto = sys_categorias.id_proyecto');
+        $this->db->order_by($this->schema['pri_key']);
+        $query = $this->db->get();
         //echo $this->db->last_query(); break;
-        $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
-        detail_message($items, 'CREATE');
-    }
-
-    public function editById($data, $id){
-        $this->db->where($this->primary_key, $id);
-        $this->db->update($this->tabla, $data);
-        //echo $this->db->last_query();
-        $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
-        detail_message($items, 'UPDATE');
-    }
-
-    public function deleteById($id){
-        $this->db->where($this->primary_key, $id);
-        $this->db->delete($this->tabla);
-        $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
-        detail_message($items, 'DELETE');
-    }
-
-    public function deleteSelect($arrayId){
-        for ($i=0; $i<count($arrayId); $i++){
-            $this->db->where($this->primary_key, $arrayId[$i]);
-            $this->db->delete($this->tabla);
-            $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
+        if ($query->num_rows() > 0) {
+            $items = array();
+            foreach ($query->result() as $key) {
+                $items[] = $key;
+            }
+            return $items;
         }
-        detail_message($items, 'DELETE');
-
-
     }
+
 }

@@ -135,7 +135,7 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?= count($getAllCategorias);?></span>
+                <span class="infobox-data-number"><?= count($this->CRUD->__getAll($this->schema['table']));?></span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal" onclick="javascript:div_form_create('Agregar Categorias de Productos');">
                         <i class="ace-icon fa fa-external-link"></i>
@@ -160,8 +160,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php if ($getAllCategorias): ?>
-                    <?php foreach ($getAllCategorias as $keyAll): ?>
+                <?php if ($getAll->getAll_categorias()): ?>
+                    <?php foreach ($getAll->getAll_categorias() as $keyAll): ?>
                         <tr>
                             <td><?= $keyAll->proyecto; ?></td>
                             <td><?= $keyAll->nombre; ?></td>
@@ -239,7 +239,7 @@
                                 <label class="col-sm-4 control-label no-padding-right">Seleccione un proyecto: </label>
                                 <div class="col-sm-8">
                                     <select class="form-control" name="id_proyecto" id="selectlive_1" data-live-search="true">
-                                        <?php foreach ($getAllProyectos as $keyList): ?>
+                                        <?php foreach ($this->CRUD->__getAll('proyecto') as $keyList): ?>
                                             <option value="<?=$keyList->id_proyecto;?>"><?=$keyList->id_proyecto;?> - <?=$keyList->nombre;?></option>
                                         <?php endforeach ?>
                                     </select>

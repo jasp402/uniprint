@@ -1,88 +1,90 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * -------------------------------------------------------------------------------
+ * MODULO (productos) > categorias | Controllers
+ * -------------------------------------------------------------------------------
+ *
+ * Categorias_Controllers version 0.0.1
+ *
+ * Created by PhpStorm.
+ * User: Jasp402
+ * Date: 13/12/2016
+ * Time: 09:58 AM
+ *
+ * @category   Controllers
+ * @author     Jesús Pérez
+ * @copyright  2016-12 jasp402@gmail.com
+ * @version    0.0.1
+ *
+ *  @property Productos_model $models                   Carga todos los metodos de la entidad padre [MODULO (productos)]
+ *  @var  array $items                                  Load all models and set in view
+ **/
 class Categorias extends MX_Controller {
+
+    private $models;
+    private $items =array();
+
     public function __construct(){
         parent::__construct();
-        //Basic model Functions
-        $this->gbl_mdls = $this->load->model('global_views/global_model');
-        $this->idus = $this->encrypt->decode($this->session->userdata('codigo_usuario'));
+        $this->schema['module']          = 'SUB MODULO 1';
+        $this->schema['view']            = 'categorias';
+        $this->schema['table']           = 'sys_categorias';
+        $this->schema['pri_key']         = 'id_categoria';
 
-        //Local Models
-        $this->models = $this->load->model('categorias_model');
-        $this->modelsProyecto = $this->load->model('proyectos_model');
+        $this->models = $this->load->model('productos_model');
+        $this->items['getAll']=$this->models;
+
+        $this->models->load_setting_in_model($this->schema);
     }
 
-    public function index(){
-        if (tiene_logeo()) {
-            $xValQuery = $this->gbl_mdls->getCMenu_ByIdUser($this->idus);
-            $xValCi = "SUB MODULO 1";
-            $xValMeNu = array();
-            if ($xValQuery) {
-                foreach ($xValQuery as $key) {
-                    $xValMeNu[] = $key->MenTitulo;
-                }
-                if (in_array($xValCi, $xValMeNu)) {
-                    $items = array(
-                        'getAllCategorias'  => $this->models->getAll(),
-                        'getAllProyectos'  => $this->modelsProyecto->getAll(),
-                    );
-                    $this->load->view('categorias',$items);
-                }else{
-                    $this->load->view('global_views/acceso_restringido');
-                }
-            }else{
-                $this->load->view('global_views/404');
-            }
-        }else{
-            redirect(base_url());
-        }
+    public function load_setting_in_view()
+    {
+        echo json_encode($this->schema);
     }
 
-    public function searchAllById(){
-        $id    = $this->input->post('id');
-        $query =  $this->models->getAllById($id);
-        if ($query) {
-            foreach ($query as $key => $value) {
-                $result = array($key => $value);
-            }
-            $data = array('success' => true, 'result' => $result);
-            echo json_encode($data);
-        }else{
-            $data = array('success' => false);
-            echo json_encode($data);
-        }
+    public function index()
+    {
+        parent::__index($this->schema['module'], $this->schema['view'], $this->items);
     }
 
-    public function  searchAllByWhere(){
+    public function searchAllById()
+    {
         $id         = $this->input->post('id');
-        $field      = $this->input->post('field');
-        $query      =  $this->models->getAllByWhere($id,$field);
-        if ($query) {
-            foreach ($query as $key => $value) {
-                $result[] = array($key => $value);
-            }
-            $data = array('success' => true, 'result' => $result);
-            echo json_encode($data);
-        }else{
-            $data = array('success' => false);
-            echo json_encode($data);
-        }
-    }
-    public function save(){
-        $data = $this->input->post();
-        //$data = array_splice($data, 1);
-        $this->models->create($data);
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->read_id($this->schema['table'],$whereId,'ajax');
     }
 
-    public function edit(){
-        $id    = $this->input->post('id_categoria');
-        $data = ($this->input->post());
-        $data = array_splice($data, 1);
-        $this->models->editById($data,$id);
+    public function  searchAllByWhere()
+    {
+        $this->CRUD->read_where($this->schema['table'],$this->input->post(),'ajax');
+    }
+
+    public function save()
+    {
+        $data = $this->input->post();
+        $this->CRUD->create($this->schema['table'],$data);
+    }
+
+    public function edit()
+    {
+        $id         = $this->input->post($this->schema['pri_key']);
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $data       = ($this->input->post());
+        $data       = array_splice($data, 1);
+        $this->CRUD->edit($this->schema['table'], $data, $whereId);
     }
 
     public function delete(){
-        $id = $this->input->post('id');
-        $this->models->deleteById($id);
+        $id         = $this->input->post('id');
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->delete($this->schema['table'],$whereId);
+    }
+
+    public function deleteSelect()
+    {
+        $arrayId    = $this->input->post('id');
+        $fieldKey   = $this->schema['pri_key'];
+        $this->CRUD->delete_much($this->schema['table'],$arrayId,$fieldKey);
     }
 }

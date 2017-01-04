@@ -155,5 +155,5 @@ if (isset($_GET['labelBookIn'])):
 
     <?php
     endfor;
-    endif; ?>
-
+    endif;
+?>

@@ -2,11 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Global_model extends CI_Model {
 
-	public function __construct()
+    private $fecha_actual;
+    public function __construct()
 	{
 		parent::__construct();
 		
 	}
+
+	public function fecha(){
+        $this->fecha_actual = date('Y-m-d h:m:i');
+        return $this->fecha_actual;
+    }
 
 	public function getAll_byID($id){
 		$this->db->SELECT("usu.id_usuario, usu.DNI, usu.clave, usu.nombre, usu.correo, usu.ruta_foto, usu.id_perfil, usu_sett.skin, usu_sett.tipo_menu, usu_sett.tipo_menu_activo, usu_sett.tm_compact_hover",FALSE);

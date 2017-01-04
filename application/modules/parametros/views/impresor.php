@@ -143,7 +143,9 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($getAll)?></span>
+                <span class="infobox-data-number">
+                    <?=count($this->CRUD->__getAll($this->schema['table'],$this->schema['options']))?>
+                </span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal"
                        onclick="javascript:div_form_create('Agregar nueva Imprenta');">

@@ -10,7 +10,7 @@
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 <script src="<?= base_url() ?>assets/js/bootbox.js"></script>
 <script src="<?= base_url() ?>assets/js/fuelux/fuelux.tree.js"></script>
-<script src="<?= base_url(); ?>assets/js/views/inventario.js"></script>
+<script src="<?= base_url(); ?>assets/js/views/stock/inventario.js"></script>
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>

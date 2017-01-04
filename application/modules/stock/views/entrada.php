@@ -1,4 +1,8 @@
-<?php echo $this->load->view('global_views/header_dashboard'); ?>
+<?php
+/**
+ * @property Crud_model $CRUD
+**/
+echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/plugins/bootstrap-select-master/docs/docs/dist/css/bootstrap-select.css">
 <link rel="stylesheet" href="<?= base_url(); ?>assets/css/datepicker.css"/>
 
@@ -18,7 +22,7 @@
 <script src="<?= base_url(); ?>assets/js/date-time/bootstrap-datepicker.js"></script>
 <script src="<?= base_url(); ?>assets/js/date-time/bootstrap-datepicker.es.js"></script>
 <script src="<?= base_url(); ?>assets/js/ace/elements.aside.js"></script>
-<script src="<?= base_url(); ?>assets/js/views/entrada.js"></script>
+<script src="<?= base_url(); ?>assets/js/views/stock/entrada.js"></script>
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
@@ -120,12 +124,17 @@
                                     <div class="profile-info-name" style="width:150px"> Nota de Entrega </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable"><?= $this->models->getAllLast()[0]->documento; ?></span>
+                                        <span class="editable">
+                                            <?=$getAll->getAllLast_entrada()->documento; ?>
+                                        </span>
                                     </div>
                                     <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable"><?= $this->models->getAllLast()[0]->cod_inventario; ?></span>
+                                        <span class="editable">
+                                            <?=$getAll->getAllLast_entrada()->cod_inventario;?>
+
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
@@ -133,13 +142,17 @@
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-orange bigger-110"></i>
-                                        <span class="editable" id="country"><?= $getAllUbicacion[($this->models->getAllLast()[0]->origen)-1]->nombre; ?></span>
+                                        <span class="editable" id="country">
+                                            <?=$getAll->getAllLast_entrada()->nombre_origen ?>
+                                        </span>
                                     </div>
                                     <div class="profile-info-name"> Destino </div>
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-green bigger-110"></i>
-                                        <span class="editable" id="country"><?= $getAllUbicacion[($this->models->getAllLast()[0]->destino)-1]->nombre; ?></span>
+                                        <span class="editable" id="country">
+                                            <?=$getAll->getAllLast_entrada()->nombre_destino; ?>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
@@ -147,14 +160,16 @@
 
                                     <div class="profile-info-value">
                                     <span class="editable" id="age">
-                                      <?= $getAllChoferes->getAllById($this->models->getAllLast()[0]->id_chofer)[0]->nombre_apellido; ?> -
-                                        <?= number_format($getAllChoferes->getAllById($this->models->getAllLast()[0]->id_chofer)[0]->cedula,0,',','.'); ?>
+                                      <?= $getAll->getAllLast_entrada()->chofer?> -
+                                        <?= number_format($getAll->getAllLast_entrada()->cedula,0,',','.'); ?>
                                     </span>
                                     </div>
                                     <div class="profile-info-name"> Proyecto </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?=$getAllProductos[$this->models->getAllLast()[0]->id_producto]->proyecto?></span>
+                                        <span class="editable" id="login">
+                                            <?=$getAll->getAllLast_entrada()->proyecto?>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
@@ -162,39 +177,41 @@
 
                                     <div class="profile-info-value">
                                     <span class="editable" id="age">
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->marca; ?>
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->modelo;?> -
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->placa; ?>
+                                        <?= $getAll->getAllLast_entrada()->marca; ?>
+                                        <?= $getAll->getAllLast_entrada()->modelo;?> -
+                                        <?= $getAll->getAllLast_entrada()->placa; ?>
                                     </span>
                                     </div>
                                     <div class="profile-info-name"> Responsable </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?=$this->models->getAllLast()[0]->log_user?></span>
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->responsable?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Fecha </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="signup"><?=$this->models->getAllLast()[0]->fecha?></span>
+                                        <span class="editable" id="signup"><?=$getAll->getAllLast_entrada()->fecha?></span>
                                     </div>
                                     <div class="profile-info-name"> Registro </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?=$this->models->getAllLast()[0]->log_date?></span>
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->registro?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Cant. Paletas </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?= $this->models->sumarPaletas($this->models->getAllLast()[0]->cod_inventario)[0]->suma ?></span>
+                                        <span class="editable" id="login">
+                                            <?=$getAll->sumarPaletas($getAll->getAllLast_entrada()->cod_inventario)[0]->suma ?></span>
                                     </div>
                                     <div class="profile-info-name"> Total </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="about"><?=  number_format($this->models->sumarTotal($this->models->getAllLast()[0]->cod_inventario)[0]->suma,0,',','.'); ?></span>
+                                        <span class="editable" id="about">
+                                            <?=  number_format($getAll->sumarTotal($getAll->getAllLast_entrada()->cod_inventario)[0]->suma,0,',','.'); ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -206,13 +223,13 @@
 
                                     <div class="widget-body">
                                         <div class="widget-main align-center">
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank"><i class="fa fa-barcode bigger-300"></i>
+                                            <a href="../pdfs/pdfs?labelBookIn=<?=$getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank"><i class="fa fa-barcode bigger-300"></i>
                                                 <h6>Generar Etiqueta</h6>
                                             </a>
                                         </div>
 
                                         <div>
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success">
+                                            <a href="../pdfs/pdfs?labelBookIn=<?= $getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success">
                                                 <i class="ace-icon fa fa-print bigger-110"></i>
                                                 <span>Imprimir</span>
                                             </a>
@@ -324,7 +341,7 @@
                                 <span class="col-sm-7 pull-right no-padding-right"  id="select1" style="display:none">
 												<select class="form-control" name="origen" id="id_impresor"
                                                         data-live-search="true">
-                                                    <?php foreach ($getAllImpresores as $keyList): ?>
+                                                    <?php foreach ($this->CRUD->__getAll('ubicacion',array('tipo'=>'impresor')) as $keyList): ?>
                                                         <option value="<?= $keyList->id_ubicacion; ?>"><?= $keyList->nombre; ?></option>
                                                     <?php endforeach ?>
                                                 </select>
@@ -333,7 +350,7 @@
                                 <span class="col-sm-7 pull-right no-padding-right" id="select2" style="display:none">
 												<select class="form-control" name="origen" id="id_proveedor"
                                                         data-live-search="true" >
-                                                    <?php foreach ($getAllProveedores as $keyList): ?>
+                                                    <?php foreach ($this->CRUD->__getAll('ubicacion',array('tipo'=>'externo')) as $keyList): ?>
                                                         <option value="<?= $keyList->id_ubicacion; ?>"><?= $keyList->nombre; ?></option>
                                                     <?php endforeach ?>
                                                 </select>
@@ -348,7 +365,7 @@
 											<span class="block input-icon input-icon-right">
 												<select class="form-control" name="id_chofer" id="id_chofer"
                                                         data-live-search="true">
-                                                    <?php foreach ($getAllChoferes->getAll() as $keyList): ?>
+                                                    <?php foreach ($this->CRUD->__getAll('choferes') as $keyList): ?>
                                                         <option value="<?= $keyList->id_chofer; ?>"><?= number_format($keyList->cedula,0,',','.'); ?> - <?= $keyList->nombre_apellido; ?></option>
                                                     <?php endforeach ?>
                                                 </select>
@@ -365,8 +382,10 @@
 											<span class="block input-icon input-icon-right">
 												<select class="form-control" name="id_vehiculo" id="id_vehiculo"
                                                         data-live-search="true">
-                                                    <?php foreach ($getAllVehiculos->getAll() as $keyList): ?>
-                                                        <option value="<?= $keyList->id_vehiculo; ?>"><?= $keyList->placa;?> - <?= $keyList->marca;?> <?= $keyList->modelo;?></option>
+                                                    <?php foreach ($this->CRUD->__getAll('vehiculos') as $keyList): ?>
+                                                        <option value="<?= $keyList->id_vehiculo; ?>">
+                                                            <?= $keyList->placa;?> - <?= $keyList->marca;?> <?= $keyList->modelo;?>
+                                                        </option>
                                                     <?php endforeach ?>
                                                 </select>
 											</span>
@@ -411,7 +430,7 @@
                                         <label for="inputWarning" class="control-label no-padding-right pull-right">Almacén de Destino</label>
 												<select class="form-control" name="destino" id="destino"
                                                         data-live-search="true">
-                                                    <?php foreach ($getAllAlmacenes as $keyList): ?>
+                                                    <?php foreach ($this->CRUD->__getAll('ubicacion',array('tipo'=>'interno')) as $keyList): ?>
                                                         <option
                                                             value="<?= $keyList->id_ubicacion; ?>"><?= $keyList->nombre; ?></option>
                                                     <?php endforeach ?>
@@ -422,9 +441,10 @@
                                     <span>
                                         <label for="inputWarning" class="control-label no-padding-right pull-right">Proyecto</label>
 												  <select class="form-control" name="id_proyecto" id="id_proyecto"  data-live-search="true" onchange="loadAllSelect()">
-                                        <?php foreach ($getAllProyectos as $keyList): ?>
-                                            <option
-                                                value="<?= $keyList->id_proyecto; ?>"><?= $keyList->nombre; ?></option>
+                                        <?php foreach ($this->CRUD->__getAll('proyecto') as $keyList): ?>
+                                            <option value="<?= $keyList->id_proyecto; ?>">
+                                                <?= $keyList->nombre; ?>
+                                            </option>
                                         <?php endforeach ?>
                                     </select>
 											</span>
@@ -583,7 +603,7 @@
                                                             </li>
 
                                                             <li>
-                                                                <i class="ace-icon fa fa-caret-right green"></i><b>Responsable</b>, <?= $auditoria['log_user']; ?>
+                                                                <i class="ace-icon fa fa-caret-right green"></i><b>Responsable</b>, <?= $this->auditoria['log_user']; ?>
                                                             </li>
 
                                                             <li class="divider"></li>

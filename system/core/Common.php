@@ -113,9 +113,9 @@ if ( ! function_exists('is_really_writable'))
 * previously been instantiated the variable is returned.
 *
 * @access	public
-* @param	string	the class name being requested
-* @param	string	the directory where the class should be found
-* @param	string	the class name prefix
+* @param	string	'the class name being requested'
+* @param	string	'the directory where the class should be found'
+* @param	string	'the class name prefix'
 * @return	object
 */
 if ( ! function_exists('load_class'))

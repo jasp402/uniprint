@@ -4,6 +4,7 @@
  * var lote = SI => (Serie NO)
  *
  * **/
+
 $(document).ready(function (){
     $('form').submit(function (event) {
         event.preventDefault();
@@ -30,7 +31,7 @@ $(document).ready(function (){
         liveSearchPlaceholder: 'Escriba...',
         title: 'seleccionar Proveedores'
     });
-    $('#id_chofer, #id_vehiculo, #destino, #id_proyecto').selectpicker({
+    $('#id_chofer, #id_vehiculo, #id_proyecto').selectpicker({
         liveSearch: true,
         maxOptions: 1,
         liveSearchPlaceholder: 'Escriba...',
@@ -48,11 +49,13 @@ $(document).ready(function (){
         }
     });
 });
+
 var nextinput = 0;
 var lote='si';
+
 function granel(){
     //Aqui iniciamos el contador de celdas para ambas tablas
-     nextinput = 0;
+    nextinput = 0;
     $("#campos_lote").html('');
     $("#campos_serie").html('');
     if ($("#id-pills-stacked-granel:checked").val() == 1) {
@@ -69,37 +72,19 @@ function granel(){
         $("#thead_serie").hide();
     }
 }
-var origen;
-
 function Save(){
     var f = toDateString($("#fecha").val());
     var impresor = $("#id_impresor").find(":selected").val();
     var proveedor = $("#id_proveedor").find(":selected").val();
-    if(!impresor && !proveedor){
-        bootbox.alert('Falta cargar el campo de Origen');
-    }else{
-        if(impresor != ''){ origen = impresor; }else{ origen = proveedor; }
-    }
-        $.ajax({
-        url: 'entrada/save',
+    $.ajax({
+        url: 'traslados/save',
         type: 'POST',
         dataType: 'json',
-        data: $('#form').serialize()+'&origen='+origen+'&fecha='+f+'&lote='+lote,
+        data: $('#form').serialize()+'&fecha='+f+'&lote='+lote,
         success: function (data) {
             message_box(data.success, data.times, data.closes);
         }
     });
-}
-
-function show_form_select1(){
-    origen = 'Impresor';
-    $('#select1').show(300);
-    $('#select2').hide();
-}
-function show_form_select2(){
-    origen = 'Proveedor';
-    $('#select2').show(300);
-    $('#select1').hide();
 }
 
 function loadAllSelect() {
@@ -107,17 +92,17 @@ function loadAllSelect() {
     $.ajax({
         type: 'POST',
         url: '../productos/categorias/searchAllByWhere',
-        data: {'id': id, 'field': 'id_proyecto'},
+        data: {'id_proyecto': id},
         success: function (data) {
             var obj = jQuery.parseJSON(data);
             var c = obj.result;
             for (var i = 1; i <= nextinput; i++) {
-                $("#id_categoria" + i).empty();
-                $("#id_categoria" + i).append(
+                $("#id_categoria"+i).empty();
+                $("#id_categoria"+i).append(
                     $("<option></option>").attr("value", '').text('Seleccione...')
                 );
                 $.each(c, function (indice, valor) {
-                    $("#id_categoria" + i).append(
+                    $("#id_categoria"+i).append(
                         $("<option></option>").attr("value", valor[indice].id_categoria).text(valor[indice].nombre)
                     );
                 });
@@ -125,14 +110,13 @@ function loadAllSelect() {
         }
     });
 }
-
 function loadCategoria(i) {
     var id = $("#id_proyecto").find(":selected").val();
     if(id>0){
         $.ajax({
             type: 'POST',
             url: '../productos/categorias/searchAllByWhere',
-            data: {'id': id, 'field': 'id_proyecto'},
+            data: {'id_proyecto': id},
             success: function (data) {
                 var obj = jQuery.parseJSON(data);
                 var c = obj.result;
@@ -156,7 +140,7 @@ function loadTipo(index) {
         $.ajax({
             type: 'POST',
             url: '../productos/tipos/searchAllByWhere',
-            data: {'id': id, 'field': 'id_categoria'},
+            data: {'id_categoria': id},
             success: function (data) {
                 var obj = jQuery.parseJSON(data);
                 var r = obj.result;
@@ -184,19 +168,20 @@ function loadProducto(index) {
         $.ajax({
             type: 'POST',
             url: '../productos/productos/searchAllByWhere',
-            data: {'id1': cat, 'field1': 'id_categoria','id2':tip, 'field2':'id_tipo'},
+            data: {'id_categoria':cat,'id_tipo':tip},
             success: function (data) {
                 var obj = jQuery.parseJSON(data);
-                //console.log(obj)
                 var r = obj.result;
                 if(r.length >0){
                     $("#id_producto"+index).append(
                         $("<option></option>").attr("value", '').text('Seleccione...')
                     );
                     $.each(r, function (indice, valor) {
-                        console.log(valor[indice].nombre);
-                        $("#id_producto"+index).append(
-                            $("<option></option>").attr("value", valor[indice].id_producto).text(valor[indice].nombre)
+                        $("#id_producto" + index).append(
+                            $("<option></option>")
+                                .attr("title", valor[indice].detalle_1)
+                                .attr("value", valor[indice].id_producto)
+                                .text(valor[indice].nombre)
                         );
                     });
                 }else{
@@ -230,34 +215,79 @@ function sumaTotales() {
         $('#table_lote_total_serie').html(total.toLocaleString('es-ES'));
     }
 }
+
+
+//ToDo - $.ajax dañado en inventario - Revisar!
+function disponible(index) {
+    var pro = $("#id_producto" + index).find(":selected").val();
+    var des = $("#origen").find(":selected").val();
+    $.ajax({
+        type: 'POST',
+        url: 'traslados/unidades_disponible',
+        data: {'id_producto': pro, 'destino': des},
+        success: function (data) {
+            var obj = jQuery.parseJSON(data);
+            if(obj.success){
+                var r = obj.result;
+                if (r.length > 0) {
+                    var sumaProducto = 0;
+                    $.each(r, function (indice, valor) {
+                        sumaProducto = parseInt(valor[indice].saldo) + parseInt(sumaProducto);
+                    });
+                    $("#disponible" + index).val(sumaProducto);
+                    $('#disponible' + index).val(($('#disponible' + index).val() - $('#total' + index).val()));
+                    if($('#disponible' + index).val()<0){alert('Te volviste loco! no puedes enviar mas porque no tienes!')}
+                }
+            }else{
+                $("#disponible" + index).val(0);
+            }
+
+        }
+    });
+}
 //----------------------------------//
 function AgregarCampos_lote(){
     nextinput++;
-
     campo = '<tr id="campo'+nextinput+'">'+
         '<td  class="align-middle"><a href="#" onclick="elimCamp('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
         '<td  class="align-middle">'+nextinput+'</td>'+
         '<td>' +
-        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
+        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'" onchange="loadTipo('+nextinput+')">'+
         '<option value="">Seleccione un proyecto</option>'+
         '</select>' +
         '</td>'+
 
         '<td>'+
-        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
+        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'" onchange="loadProducto('+nextinput+')">'+
         '<option value="">Seleccione un proyecto</option>'+
         '</select>'+
         '</td>'+
         '<td>'+
-        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'" onchange="disponible('+nextinput+')">'+
         '</select>'+
         '</td>'+
-        '<td> <input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control" required> </td>'+
-        '<td> <input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onkeyup="suma();sumaTotales()"></td>'+
+        '<td>' +
+        '<span class="block input-icon input-icon-right">'+
+        '<input type="number" id="disponible'+nextinput+'" class="form-control" readonly>'+
+        '<i class="ace-icon fa fa-info-circle open-event2" title="Unides disponibles"></i>'+
+        '</span>'+
+        '</td>'+
+        '<td><input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control"></td>'+
+        '<td><input type="number" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" class="form-control" onchange="suma();sumaTotales();disponible('+nextinput+')"></td>'+
         '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control" readonly></td>' +
         '</tr>';
     $("#campos_lote").append(campo);
     loadCategoria(nextinput);
+    $(".open-event2").tooltip({
+        show: null,
+        position: {
+            my: "left top",
+            at: "left bottom"
+        },
+        open: function( event, ui ) {
+            ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+        }
+    });
 }  //
 function elimCamp(id) {
     bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
@@ -285,16 +315,32 @@ function AgregarCampos_serie(){
         '</select>'+
         '</td>'+
         '<td>'+
-        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'"  data-live-search="true">'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'" onchange="disponible('+nextinput+')">'+
         '</select>'+
+        '</td>'+
+        '<td>' +
+        '<span class="block input-icon input-icon-right">'+
+        '<input type="number" id="disponible'+nextinput+'" class="form-control" readonly>'+
+        '<i class="ace-icon fa fa-info-circle open-event2" title="Unides disponibles"></i>'+
+        '</span>'+
         '</td>'+
         '<td style="display:none"><input type="hidden" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" value="0"> </td>'+
         '<td style="display:none"><input type="hidden" name="cant_unidades[]'+nextinput+'" id="cant_unidades'+nextinput+'" value="0"></td>'+
-        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control" onkeyup="sumaTotales()"></td>' +
-
+        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" min="1" class="form-control" onkeyup="sumaTotales();disponible('+nextinput+')"></td>' +
         '</tr>';
     $("#campos_serie").append(campo_serie);
     loadCategoria(nextinput);
+    $(".open-event2").tooltip({
+        show: null,
+        position: {
+            my: "left top",
+            at: "left bottom"
+        },
+        open: function( event, ui ) {
+            ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+        }
+    });
+
 } //
 function elimCamp_serie(id) {
     bootbox.confirm('Seguro que desea eliminar este renglón?', function (r) {
@@ -304,6 +350,7 @@ function elimCamp_serie(id) {
     });
 }   //
 //----------------------------------//
+
 //invoice
 function loadInvoice() {
     $("#invoice_documento").empty(); //Nota de entrega
@@ -318,69 +365,49 @@ function loadInvoice() {
     $("#invoice_total").empty(); //cant Productos
     $("#invoice_comentario").empty(); //comentario
     //Asignacion de datos en Invoice
-    if (origen == 'Impresor') {
+    if(origen =='Impresor'){
         $("#invoice_origen").append($("#id_impresor option:selected").text());
-    } else {
+    }else{
         $("#invoice_origen").append($("#id_proveedor option:selected").text());
     }
     $("#invoice_documento").append($('#documento').val());
     $("#invoice_fecha").append($('#fecha').val());
-    $("#invoice_origenSelect").append(origen);
+    $("#invoice_origenSelect").append($("#origen option:selected").text());
     $("#invoice_chofer").append($("#id_chofer option:selected").text());
     $("#invoice_vehiculo").append($("#id_vehiculo option:selected").text());
     $("#invoice_destino").append($("#destino option:selected").text());
     $("#invoice_proyecto").append($("#id_proyecto option:selected").text());
-    if ($('#comentario').val() == '') {
+    if($('#comentario').val()==''){
         $("#invoice_comentario").html('NO TIENE COMENTARIOS...');
-    } else {
+    }else{
         $("#invoice_comentario").html($('#comentario').val());
     }
 
 
     //crear tabla Invoce
 
-    var j = 1;
+    var j=1;
     var total_global = 0;
-    if (nextinput > 0) {
-        if(lote=='si'){
-            for (j; j <= nextinput; j++) {
-                datos = '<tr>' +
-                    '<td class="center">' + j + '</td>' +
-                    '<td>' + $("#id_categoria" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#id_tipo" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#id_producto" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#cant_lote" + j).val() + '</td>' +
-                    '<td>' + $("#cant_unidades" + j).val() + '</td>' +
-                    '<td>' + $("#total" + j).val() + '</td>' +
-                    '</tr>';
-                $("#invoice_result").append(datos);
-                total_global = (Number($('#total' + j + '').val()) + Number(total_global));
-            }
-        }else{
-            $('#th_invoice_pltas').remove();
-            $('#th_invoice_unds').remove();
-            for (j; j <= nextinput; j++) {
-                datos = '<tr>' +
-                    '<td class="center">' + j + '</td>' +
-                    '<td>' + $("#id_categoria" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#id_tipo" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#id_producto" + j + " option:selected").text() + '</td>' +
-                    '<td>' + $("#total" + j).val() + '</td>' +
-                    '</tr>';
-                $("#invoice_result").append(datos);
-                total_global = (Number($('#total' + j + '').val()) + Number(total_global));
-            }
-        }
-
+    for(j; j<=nextinput;j++){
+        datos ='<tr>'+
+            '<td class="center">'+j+'</td>'+
+            '<td>'+$("#id_categoria"+j+" option:selected").text()+'</td>'+
+            '<td>'+$("#id_tipo"+j+" option:selected").text()+'</td>'+
+            '<td>'+$("#id_producto"+j+" option:selected").text()+'</td>'+
+            '<td>'+$("#cant_lote"+j).val()+'</td>'+
+            '<td>'+$("#cant_unidades"+j).val()+'</td>'+
+            '<td>'+$("#total"+j).val()+'</td>'+
+            '</tr>';
+        $("#invoice_result").append(datos);
+        total_global = (Number($('#total'+j+'').val())+Number(total_global));
     }
-
     number = parseInt(total_global);
     $('#invoice_total').text(number.toLocaleString('es-ES'));
 }
 function validateStep_1() {
     var tag = 0;
-    if(!$("#id_impresor").find(":selected").val() && !$("#id_proveedor").find(":selected").val()) {
-        bootbox.alert('<h4 class="widget-title lighter"><i class="ace-icon fa fa-exclamation-triangle orange" aria-hidden="true"></i> Falta cargar Origen del Producto <strong>(Proveedor / Impresor)</strong></h4>');
+    if(!$("#origen").find(":selected").val() && !$("#destino").find(":selected").val()) {
+        bootbox.alert('<h4 class="widget-title lighter"><i class="ace-icon fa fa-exclamation-triangle orange" aria-hidden="true"></i> Falta cargar <strong>(Origen / Destino)</strong></h4>');
         return false;
     }else{
         tag++
@@ -455,14 +482,13 @@ function limpiarTabla() {
 function elimDoc(){
     $("#documento").val('');
 }
-
 function validarDocumento() {
     id = $('#documento').val();
     $("#modal-doc").text(id);
-     $.ajax({
+    $.ajax({
         type: 'POST',
-        url: 'entrada/searchAllByWhere',
-        data: {'id': id, 'field': 'documento'},
+        url: 'traslados/search_documento',
+        data: {'documento': id},
         success:function (data) {
             var obj = jQuery.parseJSON(data);
             if(obj.success){
@@ -473,7 +499,7 @@ function validarDocumento() {
                 $.each(r, function (indice, valor) {
                     $("#example tbody tr:last").after('<tr>' +
                         '<td>' + (indice + 1) + '</td>' +
-                        '<td>' + valor[indice].cod_inventario + '</td>' +
+                        '<td>' + valor[indice].cod_traslado + '</td>' +
                         '<td>' + valor[indice].fecha + '</td>' +
                         '<td>' + valor[indice].origen + '</td>' +
                         '<td>' + valor[indice].documento + '</td>' +
@@ -492,21 +518,33 @@ function validarDocumento() {
         }
     });
 }
+function SetDestino(val) {
+    var id = val;
+    if(id>0){
+        $.ajax({
+            type: 'POST',
+            url: '../almacenes/almacen/LoadDestino',
+            success: function (data) {
+                $("#destino").empty();
+                var obj = jQuery.parseJSON(data);
+                var c = obj.result;
+                $.each(c, function (indice, valor) {
+                    if(valor[indice].id_ubicacion == val){
 
-function Contenedor(){
-    if ($("#id-pills-stacked:checked").val() == 1) {
-        $("#cod_contenedor").removeAttr("disabled");
+                    }else{
+                        $("#destino").append(
+                            $("<option></option>").attr("value", valor[indice].id_ubicacion).text(valor[indice].nombre)
+                        );
+                    }
+
+                });
+            }
+        });
     }
-    else {
-        $("#cod_contenedor").val('');
-        $("#cod_contenedor").attr('disabled', 'disabled');
-    }
+
 }
 
 
-
-
-//footer
 jQuery(function($) {
 
     $('[data-rel=tooltip]').tooltip();
@@ -698,6 +736,6 @@ jQuery(function($) {
     $('[data-rel=tooltip]').tooltip();
     $('[data-rel=popover]').popover({html:true});
 })
-/******
- * Created by Jasp402 on 07/12/2016.
- ******/
+/**
+ * Created by Jasp402 on 12/12/2016.
+ */

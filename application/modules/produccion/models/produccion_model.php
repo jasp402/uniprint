@@ -1,17 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Traslados_model extends CI_Model
+
+class Produccion_model extends CI_Model
 {
-    private $tabla;
-    private $primary_key;
+    public $tabla;
+    public $primary_key;
 
     public function __construct()
     {
         parent::__construct();
-        $this->tabla = 'sys_traslados';
-        //$this->tabla_detalle = 'sys_inventario_detalle';
-        $this->primary_key = 'id_traslado';
+        $this->tabla = 'sys_produccion';
+        $this->tabla_detalle = 'sys_produccion_detalle';
+        $this->primary_key = 'id_produccion';
+        $this->secundary_key = 'cod_produccion';
+    }
+
+    public function load_setting_in_model($schema)
+    {
+        $this->schema =$schema;
     }
 
     public function getAll()
@@ -28,13 +35,12 @@ class Traslados_model extends CI_Model
         }
     }
 
-    public function getAllLast_traslado()
+    public function getAllLast()
     {
         $this->db->select('*');
         $this->db->from($this->tabla);
-       $this->db->order_by($this->primary_key,'DESC');
+        $this->db->order_by($this->primary_key,'DESC');
         $query = $this->db->get();
-        //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $items = array();
             foreach ($query->result() as $key) {
@@ -75,34 +81,13 @@ class Traslados_model extends CI_Model
         }
     }
 
-    public function getDataTable()
+    // ToDo - Pasar a Global_View -> crear una funcion generica y unica!
+    public function getDataTable($tabla,$tipo)
     {
-        $this->db->SELECT('sys_inventario.id_inventario');
-        $this->db->SELECT('sys_inventario.cod_inventario');
-        $this->db->SELECT('sys_inventario.fecha');
-        $this->db->SELECT('sys_ubicacion.nombre AS origen');
-        $this->db->SELECT('sys_inventario.documento');
-        $this->db->SELECT('sys_proyecto.descripcion as proyecto');
-        $this->db->SELECT('sys_categorias.nombre AS categoria');
-        $this->db->SELECT('sys_tipos.nombre AS tipo');
-        $this->db->SELECT('sys_productos.nombre AS producto');
-        $this->db->SELECT('sys_inventario.cant_lote');
-        $this->db->SELECT('sys_inventario.cant_unidades');
-        $this->db->SELECT('sys_inventario.total');
-        $this->db->SELECT('sys_inventario.operacion');
-        $this->db->SELECT('sys_inventario.id_producto');
-        $this->db->SELECT('sys_inventario.lfoh');
-        $this->db->SELECT('sys_inventario.id_producto');
-        $this->db->FROM('sys_inventario');
-        $this->db->JOIN('sys_ubicacion ',' sys_inventario.origen = sys_ubicacion.id_ubicacion');
-        $this->db->JOIN('sys_productos ',' sys_inventario.id_producto = sys_productos.id_producto');
-        $this->db->JOIN('sys_tipos ',' sys_tipos.id_tipo = sys_productos.id_tipo');
-        $this->db->JOIN('sys_categorias ',' sys_productos.id_categoria = sys_categorias.id_categoria');
-        $this->db->JOIN('sys_proyecto ',' sys_categorias.id_proyecto = sys_proyecto.id_proyecto');
-        //$this->db->ORDER_BY('fecha', 'DESC');
-
+        $this->db->select('*');
+        $this->db->from($tabla);
+        $this->db->where(key($tipo),$tipo[key($tipo)]);
         $query = $this->db->get();
-        //echo $this->db->last_query();
         $result = array(
             "draw"=>1,
             "recordsTotal"=> $query->num_rows(),
@@ -172,14 +157,13 @@ class Traslados_model extends CI_Model
         $this->db->where($field1, $id1);
         $this->db->where($field2, $id2);
         $query = $this->db->get();
-        echo $this->db->last_query();
+        //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
             return FALSE;
         }
     }
-
 
     public function create_details($data){
         for($i=0,$c=count($data); $i<$c; $i++) {
@@ -250,7 +234,7 @@ class Traslados_model extends CI_Model
     public function sumarPaletas($cod){
         $this->db->select('Sum(cant_lote) as suma');
         $this->db->from($this->tabla);
-        $this->db->where('cod_traslado', $cod);
+        $this->db->where('cod_inventario', $cod);
         $query = $this->db->get();
         //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
@@ -263,7 +247,7 @@ class Traslados_model extends CI_Model
     public function sumarTotal($cod){
         $this->db->select('Sum(total) as suma');
         $this->db->from($this->tabla);
-        $this->db->where('cod_traslado', $cod);
+        $this->db->where('cod_inventario', $cod);
         $query = $this->db->get();
         //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
@@ -285,4 +269,5 @@ class Traslados_model extends CI_Model
         $items = array('num_err' => $this->db->_error_number(), 'mens_err' => $this->db->_error_message());
         detail_message($items, 'UPDATE');
     }
+
 }

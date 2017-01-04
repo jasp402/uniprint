@@ -7,132 +7,11 @@
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js"></script>
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 <script src="<?=base_url()?>assets/js/bootbox.js"></script>
-
+<script src="<?= base_url(); ?>assets/js/views/parametros/vehiculos.js"></script>
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
-<script>
-    $(document).ready(function () {
-        $('form').submit(function (event) {
-            event.preventDefault();
-        });
-        $( ".open-event" ).tooltip({
-            show: null,
-            position: {
-                my: "left top",
-                at: "left bottom"
-            },
-            open: function( event, ui ) {
-                ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
-            }
-        });
-    });
-    function div_form_create(text) {
-        $('#titulo_div').html(text);
-        $("#form")[0].reset();
-        $('#div_btn_edit').hide();
-        $('#div_btn_save').show();
-        $('#selectlive_1').selectpicker('refresh');
-    }
-    function div_form_edit(id,text,models) {
-        $('#titulo_div').html(text);
-        $('#div_btn_save').hide();
-        $('#div_btn_edit').show();
 
-        $.ajax({
-            url: models+'/searchAllById',
-            type: 'POST',
-            dataType: 'json',
-            data: {id: id},
-            success: function(data) {
-                var r = data.result[0];
-                $.each(r, function(indice, valor) {
-                    $("#"+indice).val(valor);
-                });
-                SelectAjaxRefresh(r.id_proyecto,'selectlive_1');
-            }
-        });
-    }
-    function Save() {
-        var cod = $('#marca').val().trim();
-        if (cod == "" ) {
-            bootbox.alert("complete todos campo");
-        } else {
-            $.ajax({
-                url: 'vehiculos/save',
-                type: 'POST',
-                dataType: 'json',
-                data: $('#form').serialize(),
-                beforeSend: function () {
-                    desactivar_inputs('form');
-                    mensaje_gbl('Procesando...', 'info', 'clock-o', 'mensaje_crud_apoderado');
-                },
-                success: function (data) {
-                    if (data) {
-                        mensaje_gbl('Completado', 'success', 'check', 'mensaje_crud_apoderado');
-                        message_box(data.success, data.times, data.closes);
-                    } else {
-                        activar_inputs('form');
-                        mensaje_gbl('Error', 'danger', 'times', 'mensaje_crud_apoderado');
-                    }
-                }
-            });
-        }
-    }
-    function Edit() {
-        $.ajax({
-            url: 'vehiculos/edit',
-            type: 'POST',
-            dataType: 'json',
-            data: $('#form').serialize(),
-            beforeSend: function () {
-                desactivar_inputs('form');
-                mensaje_gbl('Procesando...', 'info', 'clock-o', 'mensaje_crud_apoderado');
-            },
-            success: function (data) {
-                if (data) {
-                    mensaje_gbl('Completado', 'success', 'check', 'mensaje_crud_apoderado');
-                    message_box(data.success, data.times, data.closes);
-                } else {
-                    activar_inputs('form');
-                    mensaje_gbl('Error', 'danger', 'times', 'mensaje_crud_apoderado');
-                }
-            }
-        });
-    }
-    function Delete(id) {
-        $('#div_textbox').hide(500);
-        bootbox.confirm("Estas seguro que deseas eliminar este registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
-            if (result) {
-                $.ajax({
-                    url: 'vehiculos/delete',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id: id},
-                    success: function (data) {
-                        message_box(data.success, data.times, data.closes);
-                    }
-                });
-            }
-        });
-    }
-    function deleteMultipe(ids) {
-        bootbox.confirm("Estas seguro que deseas eliminar "+ ids.length+" registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
-            if (result) {
-                $.ajax({
-                    url: 'vehiculos/deleteSelect',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id: ids},
-                    success: function (data) {
-                        message_box(data.success, data.times, data.closes);
-                    }
-                });
-            }
-        });
-
-    }
-</script>
 <!-- CABECERA -->
 <div class="page-header">
     <h1>
@@ -161,7 +40,7 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($getAll)?></span>
+                <span class="infobox-data-number"><?=count($getAll->getAll_vehiculos())?></span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal"
                        onclick="javascript:div_form_create('Agregar Vehiculo');">
@@ -190,9 +69,9 @@
                 <div class="widget-main padding-16">
                     <div class="clearfix">
                         <div class="grid3 center">
-                            <span class="badge badge-success" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_success']?></span>
-                            <div class="center easy-pie-chart percentage" data-percent=" <?=$statisct['success']?>" data-color="#59A84B" style="height: 72px; width: 72px; line-height: 71px; color: rgb(89, 168, 75);">
-                                <span class="percent"> <?=$statisct['success'] ?></span>%
+                            <span class="badge badge-success" style="position: ABSOLUTE; z-index:999"><?=$getAll->graphic_vehiculos()['count_success']?></span>
+                            <div class="center easy-pie-chart percentage" data-percent=" <?=$getAll->graphic_vehiculos()['success']?>" data-color="#59A84B" style="height: 72px; width: 72px; line-height: 71px; color: rgb(89, 168, 75);">
+                                <span class="percent"> <?=$getAll->graphic_vehiculos()['success'] ?></span>%
                                 <canvas height="72" width="72"></canvas></div>
 
                             <div class="space-2"></div>
@@ -204,9 +83,9 @@
 
                         <div class="grid3 center">
                             <!-- #section:plugins/charts.easypiechart -->
-                            <span class="badge badge-info" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_regular']?></span>
-                            <div class="easy-pie-chart percentage" data-percent="<?=$statisct['regular']?>" data-color="#6BA2CA" style="height: 72px; width: 72px; line-height: 71px; color: rgb(107, 162, 202);">
-                                <span class="percent"><?=$statisct['regular']?></span>%
+                            <span class="badge badge-info" style="position: ABSOLUTE; z-index:999"><?=$getAll->graphic_vehiculos()['count_regular']?></span>
+                            <div class="easy-pie-chart percentage" data-percent="<?=$getAll->graphic_vehiculos()['regular']?>" data-color="#6BA2CA" style="height: 72px; width: 72px; line-height: 71px; color: rgb(107, 162, 202);">
+                                <span class="percent"><?=$getAll->graphic_vehiculos()['regular']?></span>%
                                 <canvas height="72" width="72"></canvas></div>
 
                             <!-- /section:plugins/charts.easypiechart -->
@@ -218,9 +97,9 @@
                         </div>
 
                         <div class="grid3 center">
-                            <span class="badge badge-danger" style="position: ABSOLUTE; z-index:999"><?=$statisct['count_fail']?></span>
-                            <div class="center easy-pie-chart percentage" data-percent="<?=$statisct['fail']?>" data-color="#CA5952" style="height: 72px; width: 72px; line-height: 71px; color: rgb(149, 133, 191);">
-                               <span class="percent"><?=$statisct['fail']?></span>%
+                            <span class="badge badge-danger" style="position: ABSOLUTE; z-index:999"><?=$getAll->graphic_vehiculos()['count_fail']?></span>
+                            <div class="center easy-pie-chart percentage" data-percent="<?=$getAll->graphic_vehiculos()['fail']?>" data-color="#CA5952" style="height: 72px; width: 72px; line-height: 71px; color: rgb(149, 133, 191);">
+                               <span class="percent"><?=$getAll->graphic_vehiculos()['fail']?></span>%
                                 <canvas height="72" width="72"></canvas></div>
                             <div class="space-2"></div>
                             Registros Incompletos
@@ -283,7 +162,7 @@
 
                     <div class="col-sm-12">
                         <?php echo form_open('', "id='form' class='form-horizontal' "); ?>
-                        <input type="hidden"  name="<?=$this->models->primary_key?>" id="<?=$this->models->primary_key?>">
+                        <input type="hidden"  name="<?=$this->schema['pri_key']?>" id="<?=$this->schema['pri_key']?>">
                         <div class="col-sm-12">
 
                             <div class="form-group">
@@ -394,6 +273,7 @@
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?=base_url();?>assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 </script>
+<!-- ToDo - tratar de migrar el DataTable a js/view/parametro/vehiculos.js -->
 <script type="text/javascript">
     var module = 'Modulo de Unidad';
     var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
@@ -413,7 +293,7 @@
                         {
                             "data": null,
                             render: function (data, type, row) {
-                                return '<input type=\"checkbox\" name=\"<?=$this->models->primary_key?>[]\" value='+data.<?=$this->models->primary_key?> +'>';
+                                return '<input type=\"checkbox\" name=\"<?=$this->schema['pri_key']?>[]\" value='+data.<?=$this->schema['pri_key']?> +'>';
                             }
                         },
                         {"data": "marca"},
@@ -426,12 +306,12 @@
                             "data": null,
                             render: function (data, type, row) {
                                 return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
-                                    '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.<?=$this->models->primary_key?> +', \'Editar Vehiculo\', \'vehiculos\')">' +
+                                    '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.<?=$this->schema['pri_key']?> +', \'Editar Vehiculo\', \'vehiculos\')">' +
                                     '<span class=\"green\">' +
                                     '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
                                     '</span>' +
                                     '</a>'+
-                                    '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.<?=$this->models->primary_key?> +')">' +
+                                    '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.<?=$this->schema['pri_key']?> +')">' +
                                     '<span class="red">' +
                                     '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
                                     '</span>' +
@@ -527,7 +407,7 @@
                     "sButtonClass": "btn btn-white btn-primary  btn-bold",
                     "fnClick": function (nButton, oConfig, oFlash) {
                         var checkboxValues =  new Array();
-                        $('input[name="<?=$this->models->primary_key?>[]"]:checked').each(function() {
+                        $('input[name="<?=$this->schema['pri_key']?>[]"]:checked').each(function() {
 //                            checkboxValues += $(this).val() + ",";
                             checkboxValues.push($(this).val());
                         });

@@ -1,110 +1,115 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * -------------------------------------------------------------------------------
+ * MODULO (productos) > productos | Controllers
+ * -------------------------------------------------------------------------------
+ *
+ * Productos_Controllers version 0.0.1
+ *
+ * Created by PhpStorm.
+ * User: Jasp402
+ * Date: 13/12/2016
+ * Time: 09:58 AM
+ *
+ * @category   Controllers
+ * @author     Jesús Pérez
+ * @copyright  2016-12 jasp402@gmail.com
+ * @version    0.0.1
+ *
+ *  @property Productos_model $models                   Carga todos los metodos de la entidad padre [MODULO (productos)]
+ *  @var  array $items                                  Load all models and set in view
+ **/
 class Productos extends MX_Controller {
+
+    private $models;
+    private $items =array();
+
     public function __construct(){
         parent::__construct();
-        //Basic model Functions
-        $this->gbl_mdls = $this->load->model('global_views/global_model');
-        $this->idus = $this->encrypt->decode($this->session->userdata('codigo_usuario'));
+        $this->schema['module']          = 'SUB MODULO 1';
+        $this->schema['view']            = 'productos';
+        $this->schema['table']           = 'sys_productos';
+        $this->schema['pri_key']         = 'id_producto';
 
-        //Local Models
         $this->models = $this->load->model('productos_model');
-        $this->modelsCat = $this->load->model('categorias_model');
-        $this->modelsTip = $this->load->model('tipos_model');
-        $this->modelsProy = $this->load->model('proyectos_model');
-        $this->modelsUnid = $this->load->model('unidades_model');
+        $this->items['getAll']=$this->models;
+
+        $this->models->load_setting_in_model($this->schema);
     }
 
-    public function index(){
-        if (tiene_logeo()) {
-            $xValQuery = $this->gbl_mdls->getCMenu_ByIdUser($this->idus);
-            $xValCi = "SUB MODULO 1"; // VALIDA CON LA BASE DE DATOS
-            $xValMeNu = array();
-            if ($xValQuery) {
-                foreach ($xValQuery as $key) {
-                    $xValMeNu[] = $key->MenTitulo;
-                }
-                if (in_array($xValCi, $xValMeNu)) {
-                    $items = array(
-                        'getAllProductos'   => $this->models->getAll(),
-                        'getAllTipos'       => $this->modelsTip->getAll(),
-                        'getAllCategorias'  => $this->modelsCat->getAll(),
-                        'getAllProyectos'  => $this->modelsProy->getAll(),
-                        'getAllUnidades'  => $this->modelsUnid->getAll()
-                    );
-                    $this->load->view('productos',$items);
-                }else{
-                    $this->load->view('global_views/acceso_restringido');
-                }
-            }else{
-                $this->load->view('global_views/404');
-            }
-        }else{
-            redirect(base_url());
-        }
+    public function load_setting_in_view()
+    {
+        echo json_encode($this->schema);
+    }
+
+    public function index()
+    {
+        parent::__index($this->schema['module'], $this->schema['view'], $this->items);
     }
 
     public function getDataTable()
     {
-        $this->models->getDataTable();
+        $this->models->getDataTable_productos();
     }
 
-    public function searchAllById(){
-        $id    = $this->input->post('id');
-        $query =  $this->models->getAllById($id);
+    public function searchAllById()
+    {
+        $id         = $this->input->post('id');
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->read_id($this->schema['table'],$whereId,'ajax');
+    }
+
+    public function  searchAllByWhere()
+    {
+        $this->CRUD->read_where($this->schema['table'],$this->input->post(),'ajax');
+    }
+
+    public function search_producto()
+    {
+        $result=array();
+        $id = $this->input->post('id');
+        $query = $this->models->getAllById_productos($id);
         if ($query) {
             foreach ($query as $key => $value) {
-                $result = array($key => $value);
+                $result[$key] = $value;
             }
             $data = array('success' => true, 'result' => $result);
             echo json_encode($data);
-        }else{
+        } else {
             $data = array('success' => false);
             echo json_encode($data);
         }
     }
 
-    public function searchAllByWhere(){
-        $id1         = $this->input->post('id1');
-        $field1      = $this->input->post('field1');
-        $id2         = $this->input->post('id2');
-        $field2      = $this->input->post('field2');
-        $query      =  $this->models->getAllByWhere($id1,$field1,$id2,$field2);
-        if ($query) {
-            foreach ($query as $key => $value) {
-                $result[] = array($key => $value);
-            }
-            $data = array('success' => true, 'result' => $result);
-            echo json_encode($data);
-        }else{
-            $data = array('success' => false);
-            echo json_encode($data);
-        }
-    }
 
-
-    public function save(){
-        $data = $this->input->post();
-        $data = array_splice($data, 1);
-        $data = array_splice($data, 1);
-        $this->models->create($data);
+    public function save()
+    {
+        $data       = $this->input->post();
+        $data       = array_splice($data, 1);
+        $data       = array_splice($data, 1);
+        $this->CRUD->create($this->schema['table'], $data);
     }
 
     public function edit(){
-        $id    = $this->input->post('id_producto');
-        $data = ($this->input->post());
-        $data = array_splice($data, 1);
-        $data = array_splice($data, 1);
-        $this->models->editById($data,$id);
+        $id         = $this->input->post($this->schema['pri_key']);
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $data       = ($this->input->post());
+        $data       = array_splice($data, 1);
+        $data       = array_splice($data, 1);
+        $this->CRUD->edit($this->schema['table'], $data, $whereId);
     }
 
     public function delete(){
-        $id = $this->input->post('id');
-        $this->models->deleteById($id);
+        $id         = $this->input->post('id');
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->delete($this->schema['table'],$whereId);
     }
 
-    public function deleteSelect(){
-        $ids = $this->input->post('id');
-        $this->models->deleteSelect($ids);
+    public function deleteSelect()
+    {
+        $arrayId    = $this->input->post('id');
+        $fieldKey   = $this->schema['pri_key'];
+        $this->CRUD->delete_much($this->schema['table'],$arrayId,$fieldKey);
     }
 }

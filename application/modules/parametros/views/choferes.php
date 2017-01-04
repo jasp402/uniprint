@@ -1,4 +1,11 @@
-<?php echo $this->load->view('global_views/header_dashboard'); ?>
+<?php
+/**
+ *
+ * @var object $getAll
+ * @property Parametros_model $getAll
+ *
+**/
+echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/plugins/bootstrap-select-master/docs/docs/dist/css/bootstrap-select.css">
 
 <script type="text/javascript" src='<?= base_url(); ?>assets/plugins/bootstrap-select-master/js/bootstrap-select.js'></script>
@@ -142,7 +149,7 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($getAll)?></span>
+                <span class="infobox-data-number"><?=count($this->CRUD->__getAll($this->schema['table']))?></span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal"
                        onclick="javascript:div_form_create('Agregar Chofer');">
@@ -278,7 +285,7 @@
                         {
                             "data": null,
                             render: function (data, type, row) {
-                                return '<input type=\"checkbox\" name=\"id_producto[]\" value='+data.id_producto +'>';
+                                return '<input type=\"checkbox\" name=\"id_chofer[]\" value='+data.id_chofer +'>';
                             }
                         },
                         {"data": "nombre_apellido"},
@@ -389,7 +396,7 @@
                     "sButtonClass": "btn btn-white btn-primary  btn-bold",
                     "fnClick": function (nButton, oConfig, oFlash) {
                         var checkboxValues =  new Array();
-                        $('input[name="id_tipo[]"]:checked').each(function() {
+                        $('input[name="id_chofer[]"]:checked').each(function() {
 //                            checkboxValues += $(this).val() + ",";
                             checkboxValues.push($(this).val());
                         });

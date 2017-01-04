@@ -15,19 +15,13 @@
         $('form').submit(function (event) {
             event.preventDefault();
         });
-        $('#proyecto').selectpicker({
-            liveSearch: true,
-            maxOptions: 1,
-            liveSearchPlaceholder: 'Escriba...',
-            title: 'seleccionar'
-        });
     });
     function div_form_create(text) {
         $('#titulo_div').html(text);
         $("#form")[0].reset();
         $('#div_btn_edit').hide();
         $('#div_btn_save').show();
-       // $('#id_categoria').selectpicker('refresh');
+        $('#selectlive_1').selectpicker('refresh');
     }
     function div_form_edit(id,text,models) {
         $('#titulo_div').html(text);
@@ -44,42 +38,21 @@
                 $.each(r, function(indice, valor) {
                     $("#"+indice).val(valor);
                 });
-                //SelectAjaxRefresh(r.id_categoria,'id_categoria');
             }
         });
     }
-    function loadCategoria() {
-        var id = $("#proyecto").find(":selected").val();
-        if (id > 0) {
-            $("#id_categoria").empty();
-            $.ajax({
-                type: 'POST',
-                url: 'categorias/searchAllByWhere',
-                data: {'id': id, 'field': 'id_proyecto'},
-                success: function (data) {
-                    var obj = jQuery.parseJSON(data);
-                    var r = obj.result;
-                    $.each(r, function (indice, valor) {
-                        $("#id_categoria").append(
-                            $("<option></option>").attr("value", valor[indice].id_categoria).text(valor[indice].nombre)
-                        );
-                    });
-                }
-            });
-        }
-    }
-    function Save_categoria() {
-        var cod1 = $('#id_categoria').val().trim();
-        var cod2 = $('#nombre').val().trim();
-        if (cod1 == "" || cod2 == "" ) {
-            alert("complete todos campo");
+
+
+    function Save() {
+        var cod = $('#nombre').val().trim();
+        if (cod == "" ) {
+            bootbox.alert("complete todos campo");
         } else {
             $.ajax({
-                url: 'tipos/save',
+                url: 'proveedor/save',
                 type: 'POST',
                 dataType: 'json',
-                data: $('#form').serialize(), // ToDo - Investigar por no funciona con el selectpicker()
-                //data: {'id_proyecto':cod1, 'nombre':cod2},
+                data: $('#form').serialize(),
                 beforeSend: function () {
                     desactivar_inputs('form');
                     mensaje_gbl('Procesando...', 'info', 'clock-o', 'mensaje_crud_apoderado');
@@ -96,9 +69,9 @@
             });
         }
     }
-    function Edit_categoria() {
+    function Edit() {
         $.ajax({
-            url: 'tipos/edit',
+            url: 'proveedor/edit',
             type: 'POST',
             dataType: 'json',
             data: $('#form').serialize(),
@@ -117,12 +90,12 @@
             }
         });
     }
-    function Delete_categoria(id) {
+    function Delete(id) {
         $('#div_textbox').hide(500);
         bootbox.confirm("Estas seguro que deseas eliminar este registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
             if (result) {
                 $.ajax({
-                    url: 'tipos/delete',
+                    url: 'proveedor/delete',
                     type: 'POST',
                     dataType: 'json',
                     data: {id: id},
@@ -137,7 +110,7 @@
         bootbox.confirm("Estas seguro que deseas eliminar "+ ids.length+" registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
             if (result) {
                 $.ajax({
-                    url: 'tipos/deleteSelect',
+                    url: 'proveedor/deleteSelect',
                     type: 'POST',
                     dataType: 'json',
                     data: {id: ids},
@@ -153,148 +126,110 @@
 <!-- CABECERA -->
 <div class="page-header">
     <h1>
-        <i class="fa fa-cube grey"></i>
-        Productos
+        <i class="fa fa-sliders grey"></i>
+        Parametros
         <small>
             <i class="fa fa-angle-double-right"></i>
-            Gestionar Tipos de Productos
+            Gestionar Proveedores
         </small>
     </h1>
 </div>
 
 <div class="row">
     <div class="col-sm-12">
-        <div class="infobox infobox-green2">
+
+        <div class="infobox infobox-blue">
             <div class="infobox-icon">
-                <i class="ace-icon fa fa-sitemap"></i>
+                <i class="ace-icon fa fa-handshake-o"></i>
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($this->CRUD->__getAll($this->schema['table']));?></span>
+                <span class="infobox-data-number"><?= count($getAll)?></span>
                 <div class="infobox-content">
-                    <a href="#modal-table_categoria" role="button" data-toggle="modal" onclick="javascript:div_form_create('Agregar Tipos de Productos')";>
+                    <a href="#modal-table_categoria" role="button" data-toggle="modal"
+                       onclick="javascript:div_form_create('Agregar nuevo Proveedor');">
                         <i class="ace-icon fa fa-external-link"></i>
-                        Agregar Tipos
+                        Registar Proveedor
                     </a>
                 </div>
             </div>
         </div>
+<!--
+        <div class="infobox infobox-blue">
+            <div class="infobox-icon">
+                <i class="ace-icon fa fa-book"></i>
+            </div>
 
+            <div class="infobox-data">
+                <span class="infobox-data-number"><?=count($getAllImpresor)?></span>
+                <div class="infobox-content">
+                    <a href="./impresor">
+                        <i class="ace-icon fa fa fa-external-link"></i>
+                        Impresores
+                    </a></div>
+            </div>
+        </div>
+-->
 
         <div class="space-6"></div>
 
-        <div class="clearfix">
-            <div class="pull-right tableTools-container"></div>
-        </div>
-        <div>
-            <table id="dynamic-table_3" class="table table-striped table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th>Categoria</th>
-                    <th>Tipo de Prodctos</th>
-                    <th>funciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php if ($getAll->getAll_tipos()): ?>
-                    <?php foreach ($getAll->getAll_tipos() as $keyAll): ?>
-                        <tr>
-
-                            <td><input type="checkbox" name="id_tipo[]" value="<?= $keyAll->id_tipo; ?>"></td>
-                            <td><?= $keyAll->categoria; ?></td>
-                            <td><?= $keyAll->nombre; ?></td>
-                            <td>
-                                <div class="hidden-sm hidden-xs action-buttons">
-                                    <a class="green"  href="#modal-table_categoria" role="button" data-toggle="modal" onclick="div_form_edit('<?= $keyAll->id_tipo?>','Editar Tipo de Producto', 'tipos');">
-                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
-                                    </a>
-
-                                    <a class="red" href="#" onclick="Delete_categoria('<?= $keyAll->id_tipo ?>');">
-                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
-                                    </a>
-                                </div>
-
-                                <div class="hidden-md hidden-lg">
-                                    <div class="inline pos-rel">
-                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown"
-                                                data-position="auto">
-                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-                                        </button>
-
-                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-                                            <li>
-                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-                                                    <span class="green">
-                                                        <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-                                                    </span>
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-                                                    <span class="red">
-                                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    <?php endforeach ?>
-                <?php else: ?>
-                <?php endif ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
+       <div class="clearfix">
+           <div class="pull-right tableTools-container"></div>
+       </div>
+       <div>
+           <table id="dynamic-table_3" class="table table-striped table-bordered table-hover">
+               <thead>
+               <tr>
+                   <th><input type="checkbox"></th>
+                   <th>Nombre</th>
+                   <th>RIF</th>
+                   <th>e-mail</th>
+                   <th>Telefono</th>
+                   <th>Dirección</th>
+                   <th>funciones</th>
+               </tr>
+               </thead>
+           </table>
+       </div>
+   </div>
 </div>
 
 <div id="modal-table_categoria" class="modal fade" tabindex="-3">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header no-padding">
-                <div class="table-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        <span class="white">&times;</span>
-                    </button>
-                    <span class="bigger-140" id="titulo_div"></span>
-                </div>
-            </div>
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header no-padding">
+               <div class="table-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                       <span class="white">&times;</span>
+                   </button>
+                   <span class="bigger-140" id="titulo_div"></span>
+               </div>
+           </div>
 
-            <div class="modal-body no-padding">
-                <!-- FORMULARIO DE CRUD -->
+           <div class="modal-body no-padding">
+               <!-- FORMULARIO DE CRUD -->
                 <div class="row" id="form_categorias">
                     <div id="mensaje_crud_apoderado"></div>
                     <div class="hr hr-18 dotted"></div>
 
                     <div class="col-sm-12">
                         <?php echo form_open('', "id='form' class='form-horizontal' "); ?>
-                        <input type="hidden"  name="id_tipo" id="id_tipo">
+                        <input type="hidden"  name="id_ubicacion" id="id_ubicacion">
                         <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Seleccione un Proyecto: </label>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="proyecto" data-live-search="true" onchange="loadCategoria()">
-                                        <?php foreach ($getAllProyectos as $keyList): ?>
-                                            <option value="<?=$keyList->id_proyecto;?>"><?=$keyList->id_proyecto;?> - <?=$keyList->nombre;?></option>
-                                        <?php endforeach ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Seleccione una Categoria: </label>
-                                <div class="col-sm-8">
-                                    <select class="form-control" name="id_categoria" id="id_categoria"
-                                            data-live-search="true">
-                                    </select>
 
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label no-padding-right">RIF: </label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
+                                        </span>
+                                        <input class="form-control" type="textbox" name="rif" id="rif" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">Tipo de producto: </label>
+                                <label class="col-sm-4 control-label no-padding-right">Nombre: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -304,6 +239,40 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label no-padding-right">e-Mail: </label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
+                                        </span>
+                                        <input class="form-control" type="email" name="email" id="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label no-padding-right">telefono: </label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
+                                        </span>
+                                        <input class="form-control" type="tel" name="telefono" id="telefono" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label no-padding-right">Dirección: </label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
+                                        </span>
+                                        <input class="form-control" type="textbox" name="direccion" id="direccion" required>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         </form>
                     </div>
@@ -315,13 +284,13 @@
                     Close
                 </button>
                 <div style="display: none;" id="div_btn_edit">
-                    <button class="btn btn-sm btn-warning" id="btn_edit" onclick="javascript:Edit_categoria();">
+                    <button class="btn btn-sm btn-warning" id="btn_edit" onclick="javascript:Edit();">
                         <i class="fa fa-pencil bigger-120"></i>
                         Editar
                     </button>
                 </div>
                 <div style="display: none;" id="div_btn_save">
-                    <button class="btn btn-sm btn-primary" id="btn_save" onclick="javascript:Save_categoria();">
+                    <button class="btn btn-sm btn-primary" id="btn_save" onclick="javascript:Save();">
                         <i class="fa fa-save bigger-120"></i>
                         Registrar
                     </button>
@@ -344,12 +313,51 @@
         var oTable1 =
             $('#dynamic-table_3')
                 .dataTable({
-                    bAutoWidth: true,
-                    "aoColumns": [
-                        {"bSortable": false},
-                        null,null,
-                        {"bSortable": false}
+                    bAutoWidth: false,
+                    "ajax": {
+                        "url": 'proveedor/getDataTable'
+                    },
+                    "columns": [
+                        {
+                            "data": null,
+                            render: function (data, type, row) {
+                                return '<input type=\"checkbox\" name=\"id_ubicacion[]\" value='+data.id_ubicacion +'>';
+                            }
+                        },
+                        {"data": "nombre"},
+                        {"data": "rif"},
+                        {"data": "email"},
+                        {"data": "telefono"},
+                        {"data": "direccion"},
+                        {
+                            "data": null,
+                            render: function (data, type, row) {
+                                return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
+                                    '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_ubicacion +', \'Editar Proveedor\', \'proveedor\')">' +
+                                    '<span class=\"green\">' +
+                                    '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
+                                    '</span>' +
+                                    '</a>'+
+                                    '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_ubicacion +')">' +
+                                    '<span class="red">' +
+                                    '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
+                                    '</span>' +
+                                    '</a>'+
+                                    '</div>'
+                            }
+                        }
                     ],
+                    "columnDefs": [
+                        {
+                            "targets": [-1],
+                            "visible": true,
+                            "searchable": false
+                        },
+                        {
+                            "targets": [2,3,4],
+                            "visible": false,
+                            "searchable": true
+                        }],
                     "aaSorting": []
                 });
 
@@ -431,7 +439,7 @@
                     "sButtonClass": "btn btn-white btn-primary  btn-bold",
                     "fnClick": function (nButton, oConfig, oFlash) {
                         var checkboxValues =  new Array();
-                        $('input[name="id_tipo[]"]:checked').each(function() {
+                        $('input[name="id_ubicacion[]"]:checked').each(function() {
 //                            checkboxValues += $(this).val() + ",";
                             checkboxValues.push($(this).val());
                         });

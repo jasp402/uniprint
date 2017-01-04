@@ -1,4 +1,9 @@
-<?php echo $this->load->view('global_views/header_dashboard'); ?>
+<?php
+/**
+ *
+ * @method static Crud_model __getAll(string $entity)                     Load models of CRUD for All
+**/
+echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css"
       href="<?= base_url(); ?>assets/plugins/bootstrap-select-master/docs/docs/dist/css/bootstrap-select.css">
 
@@ -33,7 +38,7 @@
             $("#id_tipo").empty();
             $.ajax({
                 type: 'POST',
-                url: 'categorias/searchAllByWhere',
+                url: 'categorias/searchAllById',
                 data: {'id': id, 'field': 'id_proyecto'},
                 success: function (data) {
                     var obj = jQuery.parseJSON(data);
@@ -61,7 +66,7 @@
             $("#id_tipo").empty();
             $.ajax({
                 type: 'POST',
-                url: 'tipos/searchAllByWhere',
+                url: 'tipos/searchAllById',
                 data: {'id': id, 'field': 'id_categoria'},
                 success: function (data) {
                     var obj = jQuery.parseJSON(data);
@@ -93,7 +98,7 @@
         $('#div_btn_edit').show();
 
         $.ajax({
-            url: models + '/searchAllById',
+            url: models + '/search_producto',
             type: 'POST',
             dataType: 'json',
             data: {id: id},
@@ -215,7 +220,7 @@
                 </div>
 
                 <div class="infobox-data">
-                    <span class="infobox-data-number"><?= count($getAllProductos);?></span>
+                    <span class="infobox-data-number"><?= count($getAll->getAll_productos());?></span>
                     <div class="infobox-content">
                         <a href="#modal-table_categoria" role="button" data-toggle="modal"
                            onclick="javascript:div_form_create('Registrar Productos');">
@@ -285,7 +290,7 @@
                                     <select class="form-control" name="id_proyecto" id="id_proyecto"
                                             data-live-search="true" onchange="loadCategoria()">
                                         <option value="">Seleccione...</option>
-                                        <?php foreach ($getAllProyectos as $keyList): ?>
+                                        <?php foreach ($this->CRUD->__getAll('proyecto') as $keyList): ?>
                                             <option value="<?= $keyList->id_proyecto; ?>"><?= $keyList->id_proyecto; ?>
                                                 - <?= $keyList->nombre; ?></option>
                                         <?php endforeach ?>
@@ -321,7 +326,7 @@
                                 <div class="col-sm-8">
                                     <select class="form-control" name="id_unidad" id="id_unidad"
                                             data-live-search="true">
-                                        <?php foreach ($getAllUnidades as $keyList): ?>
+                                        <?php foreach ($this->CRUD->__getAll('unidades') as $keyList): ?>
                                             <option
                                                 value="<?= $keyList->id_unidad; ?>"><?= $keyList->nombre; ?></option>
                                         <?php endforeach ?>

@@ -144,7 +144,9 @@
             </div>
 
             <div class="infobox-data">
-                <span class="infobox-data-number"><?= count($getAll)?></span>
+                <span class="infobox-data-number">
+                    <?= count($this->CRUD->__getAll($this->schema['table'],$this->schema['options']))?>
+                </span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal"
                        onclick="javascript:div_form_create('Agregar nuevo Proveedor');">
@@ -154,22 +156,6 @@
                 </div>
             </div>
         </div>
-<!--
-        <div class="infobox infobox-blue">
-            <div class="infobox-icon">
-                <i class="ace-icon fa fa-book"></i>
-            </div>
-
-            <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($getAllImpresor)?></span>
-                <div class="infobox-content">
-                    <a href="./impresor">
-                        <i class="ace-icon fa fa fa-external-link"></i>
-                        Impresores
-                    </a></div>
-            </div>
-        </div>
--->
 
         <div class="space-6"></div>
 

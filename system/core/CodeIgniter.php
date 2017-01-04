@@ -271,18 +271,18 @@
 	{
 		if ( ! empty($RTR->routes['404_override']))
 		{
-			$x = explode('/', $RTR->routes['404_override']);
-			$class = $x[0];
-			$method = (isset($x[1]) ? $x[1] : 'index');
-			if ( ! class_exists($class))
-			{
-				if ( ! file_exists(APPPATH.'controllers/'.$class.'.php'))
-				{
-					show_404("{$class}/{$method}");
-				}
+            $x = explode('/', $RTR->routes['404_override']);
+            $class = $x[0];
+            $method = (isset($x[1]) ? $x[1] : 'index');
+            if ( ! class_exists($class))
+            {
+                if ( ! file_exists(APPPATH.'controllers/'.$class.'.php'))
+                {
+                    show_404("{$class}/{$method}");
+                }
 
-				include_once(APPPATH.'controllers/'.$class.'.php');
-			}
+                include_once(APPPATH.'controllers/'.$class.'.php');
+            }
 		}
 		else
 		{
