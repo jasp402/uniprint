@@ -5,7 +5,11 @@ function pdf_create($html, $filename='', $stream=TRUE)
     // $this->load->helper('file');
 	// require_once(APPPATH.'third_party/dompdf/dompdf_config.inc.php');
     $dompdf = new DOMPDF();
-    $dompdf->load_html($html);
+
+    $dompdf->set_base_path(APPPATH.'assets/css/bootstrap.css');
+    $dompdf->set_base_path(APPPATH.'assets/css/font-awesome.css');
+    $dompdf->set_base_path(APPPATH.'assets/css/ace-fonts.css');
+    $dompdf->load_html(ob_get_clean());
     $dompdf->set_paper("a4", "portrait" );
     $dompdf->render();
     // $dompdf->stream($filename . ".pdf");

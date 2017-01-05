@@ -7,6 +7,7 @@
       <w>alerta</w>
       <w>almacen</w>
       <w>almacenes</w>
+      <w>apellido</w>
       <w>auditoria</w>
       <w>basepath</w>
       <w>busquedas</w>
@@ -38,6 +39,7 @@
       <w>desabilita</w>
       <w>desabilitado</w>
       <w>desabilitar</w>
+      <w>descripcion</w>
       <w>destino</w>
       <w>detalle</w>
       <w>dinamic</w>
@@ -55,6 +57,7 @@
       <w>eliminar</w>
       <w>entidad</w>
       <w>entrada</w>
+      <w>entradas</w>
       <w>entro</w>
       <w>estado</w>
       <w>este</w>
@@ -112,6 +115,7 @@
       <w>proceso</w>
       <w>produccion</w>
       <w>produccions</w>
+      <w>producción</w>
       <w>producto</w>
       <w>productos</w>
       <w>proveedor</w>
@@ -122,6 +126,7 @@
       <w>realiza</w>
       <w>registra</w>
       <w>registro</w>
+      <w>responsable</w>
       <w>restringido</w>
       <w>retorna</w>
       <w>saldo</w>
