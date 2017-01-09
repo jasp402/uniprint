@@ -1,4 +1,9 @@
-<?php echo $this->load->view('global_views/header_dashboard'); ?>
+<?php
+/**
+ * @method stock_model $getAllLast_entrada
+ *
+ **/
+echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css"
       href="<?= base_url(); ?>assets/plugins/bootstrap-select-master/docs/docs/dist/css/bootstrap-select.css">
 
@@ -26,18 +31,40 @@
         </small>
     </h1>
 </div>
+
+<!-- Ultimo registro de Traslado -->
 <div class="row">
     <div class="col-sm-12">
-        <div class="widget-box">
+        <div class="widget-box collapsed">
             <div class="widget-header widget-header-blue widget-header-flat">
-                <h4 class="widget-title lighter" id="widget-title">
-                    <i class="ace-icon fa fa-paperclip orange"></i>
-                    Ultima Entrada Registrada
+                <h4 class="widget-title lighter">
+                    <i class="ace-icon fa fa-mail-reply red"></i>
+                    Ultimo Salida
+                </h4>
+                <div class="widget-toolbar">
+                   <!--
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-down"></i>
+                    </a>
+                    -->
+                </div>
+            </div>
+        </div><!-- /.widget-box -->
+    </div><!-- /.col -->
+</div>
+<!-- ultima registro de entrada -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="widget-box collapsed">
+            <div class="widget-header widget-header-blue widget-header-flat">
+                <h4 class="widget-title lighter">
+                    <i class="ace-icon fa fa-mail-forward green"></i>
+                    Ultima Entrada
                 </h4>
 
                 <div class="widget-toolbar">
                     <a href="#" data-action="collapse">
-                        <i class="ace-icon fa fa-chevron-up"></i>
+                        <i class="ace-icon fa fa-chevron-down"></i>
                     </a>
                 </div>
             </div>
@@ -46,17 +73,23 @@
                     <div class="widget-main no-padding">
                         <div class="space-12"></div>
 
-                        <div id="_load"></div>
-                        <div class="profile-user-info profile-user-info-striped" id="_profile">
-                            <div class="col-sm-9">
+                        <div class="profile-user-info profile-user-info-striped">
+                            <div class="col-sm-8">
                                 <div class="profile-info-row" >
                                     <div class="profile-info-name" style="width:150px"> Nota de Entrega </div>
+
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_documento"><?= $this->models->getAllLast()[0]->documento; ?></span>
+                                        <span class="editable">
+                                            <?=$getAll->getAllLast_entrada()->documento; ?>
+                                        </span>
                                     </div>
                                     <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
+
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_cod_inventario"><?= $this->models->getAllLast()[0]->cod_inventario; ?></span>
+                                        <span class="editable">
+                                            <?=$getAll->getAllLast_entrada()->cod_inventario;?>
+
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
@@ -64,122 +97,124 @@
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-orange bigger-110"></i>
-                                        <span class="editable" id="_origen"><?= $getAllUbicacion[($this->models->getAllLast()[0]->origen)-1]->nombre; ?></span>
+                                        <span class="editable" id="country">
+                                            <?=$getAll->getAllLast_entrada()->nombre_origen ?>
+                                        </span>
                                     </div>
                                     <div class="profile-info-name"> Destino </div>
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-green bigger-110"></i>
-                                        <span class="editable" id="_destino"><?= $getAllUbicacion[($this->models->getAllLast()[0]->destino)-1]->nombre; ?></span>
+                                        <span class="editable" id="country">
+                                            <?=$getAll->getAllLast_entrada()->nombre_destino; ?>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Chofer </div>
 
                                     <div class="profile-info-value">
-                                    <span class="editable" id="_chofer">
-                                        <?= $getAllChoferes->getAllById($this->models->getAllLast()[0]->id_chofer)[0]->nombre_apellido; ?> -
-                                        <?= number_format($getAllChoferes->getAllById($this->models->getAllLast()[0]->id_chofer)[0]->cedula,0,',','.'); ?>
+                                    <span class="editable" id="age">
+                                      <?= $getAll->getAllLast_entrada()->chofer?> -
+                                        <?= number_format($getAll->getAllLast_entrada()->cedula,0,',','.'); ?>
                                     </span>
                                     </div>
                                     <div class="profile-info-name"> Proyecto </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_proyecto"><?=$getAllProductos[$this->models->getAllLast()[0]->id_producto]->proyecto?></span>
+                                        <span class="editable" id="login">
+                                            <?=$getAll->getAllLast_entrada()->proyecto?>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Vehiculo </div>
 
                                     <div class="profile-info-value">
-                                    <span class="editable" id="_vehiculo">
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->marca; ?>
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->modelo;?> -
-                                        <?= $getAllVehiculos->getAllById($this->models->getAllLast()[0]->id_vehiculo)[0]->placa; ?>
+                                    <span class="editable" id="age">
+                                        <?= $getAll->getAllLast_entrada()->marca; ?>
+                                        <?= $getAll->getAllLast_entrada()->modelo;?> -
+                                        <?= $getAll->getAllLast_entrada()->placa; ?>
                                     </span>
                                     </div>
                                     <div class="profile-info-name"> Responsable </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_loguser"><?=$this->models->getAllLast()[0]->log_user?></span>
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->responsable?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Fecha </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_fecha"><?=$this->models->getAllLast()[0]->fecha?></span>
+                                        <span class="editable" id="signup"><?=$getAll->getAllLast_entrada()->fecha?></span>
                                     </div>
                                     <div class="profile-info-name"> Registro </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_logdate"><?=$this->models->getAllLast()[0]->log_date?></span>
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->registro?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Cant. Paletas </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_pltas"><?= $this->models->sumarPaletas($this->models->getAllLast()[0]->cod_inventario)[0]->suma ?></span>
+                                        <span class="editable" id="login">
+                                            <?=$getAll->sumarPaletas($getAll->getAllLast_entrada()->cod_inventario)[0]->suma ?></span>
                                     </div>
                                     <div class="profile-info-name"> Total </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="_total"><?=  number_format($this->models->sumarTotal($this->models->getAllLast()[0]->cod_inventario)[0]->suma,0,',','.'); ?></span>
+                                        <span class="editable" id="about">
+                                            <?=  number_format($getAll->sumarTotal($getAll->getAllLast_entrada()->cod_inventario)[0]->suma,0,',','.'); ?></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="no-padding no-margin">
-                                <!-- #section:pages/dashboard.infobox -->
-                                <div class="infobox infobox-green">
-                                    <div class="infobox-icon">
-                                        <i class="ace-icon fa fa-qrcode"></i>
+                            <div class="col-sm-2">
+                                <div class="widget-box widget-color-green">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title bigger lighter">Etiquetas</h5>
                                     </div>
 
-                                    <div class="infobox-data">
-                                        <span class="infobox-text">Etiquetas</span>
-                                        <div class="infobox-content">
-                                            <a  class="grey" href="../pdfs/pdfs?labelBookIn=<?= $this->models->getAllLast()[0]->cod_inventario; ?>" target="_blank" id="_etiqueta">
-                                                <i class="ace-icon fa fa-print"></i>
+                                    <div class="widget-body">
+                                        <div class="widget-main align-center">
+                                            <a href="../pdfs/pdfs?labelBookIn=<?=$getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank"><i class="fa fa-barcode bigger-300"></i>
+                                                <h6>Generar Etiqueta</h6>
                                             </a>
-
-
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="infobox infobox-blue">
-                                    <div class="infobox-icon">
-                                        <i class="ace-icon fa fa-file-text-o"></i>
-                                    </div>
-
-                                    <div class="infobox-data">
-                                        <span class="infobox-text">Habladores</span>
-                                        <div class="infobox-content">
-                                            <i class="ace-icon fa fa-print"></i>
-                                            |
-                                            <i class="ace-icon fa fa-file-pdf-o"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="infobox infobox-orange">
-                                    <div class="infobox-icon">
-                                        <i class="ace-icon fa fa-file-text"></i>
-                                    </div>
-
-                                    <div class="infobox-data">
-                                        <span class="infobox-text">Documentos</span>
-                                        <div class="infobox-content">
-                                            <i class="ace-icon fa fa-print"></i>
-                                            |
-                                            <i class="ace-icon fa fa-file-pdf-o"></i>
-                                            |
-                                            <i class="ace-icon fa fa-envelope-o"></i>
+                                        <div>
+                                            <a href="../pdfs/pdfs?labelBookIn=<?= $getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success">
+                                                <i class="ace-icon fa fa-print bigger-110"></i>
+                                                <span>Imprimir</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-2">
+                                <div class="widget-box widget-color-blue">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title bigger lighter">Habladores</h5>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main align-center">
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')"><i class="fa fa-fw fa-file-o bigger-300"></i>
+                                                <h6>Generar Habladores</h6>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-primary">
+                                                <i class="ace-icon fa fa-print bigger-110"></i>
+                                                <span>Imprimir</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="space-12"><br></div>
@@ -189,6 +224,178 @@
         </div><!-- /.widget-box -->
     </div><!-- /.col -->
 </div>
+<!-- Ultimo registro de Traslado -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="widget-box collapsed">
+            <div class="widget-header widget-header-blue widget-header-flat">
+                <h4 class="widget-title lighter">
+                    <i class="ace-icon fa fa-random blue"></i>
+                    Ultimo Traslado
+                </h4>
+
+                <div class="widget-toolbar">
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+            <?php if($getAll->getAllLast_traslado()): ?>
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <div class="space-12"></div>
+
+                        <div class="profile-user-info profile-user-info-striped">
+                            <div class="col-sm-8">
+                                <div class="profile-info-row" >
+                                    <div class="profile-info-name" style="width:150px"> Nota de Entrega </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable"><?= $getAll->getAllLast_traslado()->documento; ?></span>
+                                    </div>
+                                    <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable"><?= $getAll->getAllLast_traslado()->cod_traslado; ?></span>
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Origen </div>
+
+                                    <div class="profile-info-value">
+                                        <i class="fa fa-map-marker light-orange bigger-110"></i>
+                                        <span class="editable" id="country"><?=$getAll->getAllLast_traslado()->nombre_origen; ?></span>
+                                    </div>
+                                    <div class="profile-info-name"> Destino </div>
+
+                                    <div class="profile-info-value">
+                                        <i class="fa fa-map-marker light-green bigger-110"></i>
+                                        <span class="editable" id="country"><?= $getAll->getAllLast_traslado()->nombre_destino; ?></span>
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Chofer </div>
+
+                                    <div class="profile-info-value">
+                                    <span class="editable" id="age">
+                                      <?= $getAll->getAllLast_traslado()->chofer; ?> -
+                                        <?= number_format($getAll->getAllLast_traslado()->cedula,0,',','.'); ?>
+                                    </span>
+                                    </div>
+                                    <div class="profile-info-name"> Proyecto </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_traslado()->proyecto?></span>
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Vehiculo </div>
+
+                                    <div class="profile-info-value">
+                                    <span class="editable" id="age">
+                                        <?= $getAll->getAllLast_traslado()->marca; ?>
+                                        <?= $getAll->getAllLast_traslado()->modelo;?> -
+                                        <?= $getAll->getAllLast_traslado()->placa; ?>
+                                    </span>
+                                    </div>
+                                    <div class="profile-info-name"> Responsable </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_traslado()->responsable?></span>
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Fecha </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="signup"><?=$getAll->getAllLast_traslado()->fecha?></span>
+                                    </div>
+                                    <div class="profile-info-name"> Registro </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="login"><?=$getAll->getAllLast_traslado()->registro?></span>
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name"> Cant. Paletas </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="login"><?= $getAll->sumarPaletas($getAll->getAllLast_traslado()->cod_traslado)[0]->suma ?></span>
+                                    </div>
+                                    <div class="profile-info-name"> Total </div>
+
+                                    <div class="profile-info-value">
+                                        <span class="editable" id="about"><?=  number_format($getAll->sumarTotal($getAll->getAllLast_traslado()->cod_traslado)[0]->suma,0,',','.'); ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="widget-box widget-color-orange">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title bigger lighter">Nota de Acarreo</h5>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main align-center">
+                                            <a href="#" class="light-orange" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')"><i class="fa fa-fw fa-file-o bigger-300"></i>
+                                                <h6>Generar Habladores</h6>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-warning no-border">
+                                                <i class="ace-icon fa fa-print bigger-110"></i>
+                                                <span>Imprimir</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="widget-box widget-color-blue">
+                                    <div class="widget-header">
+                                        <h5 class="widget-title bigger lighter">Hablador</h5>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main align-center">
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')"><i class="fa fa-fw fa-file-o bigger-300"></i>
+                                                <h6>Generar Habladores</h6>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" onclick="bootbox.alert('<b>Lo Sentimos!</b> Esta opcion aun no esta disponible \n Continuamos trabajando en ello...')" class="btn btn-block btn-primary no-border">
+                                                <i class="ace-icon fa fa-print bigger-110"></i>
+                                                <span>Imprimir</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="space-12"><br></div>
+                    </div><!-- /.widget-main -->
+                </div><!-- /.widget-body -->
+            <?php else:?>
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <div class="space-12"></div>
+                        <span class="red col-sm-offset-1">
+                            <i class="ace-icon fa fa-warning"></i> No hay registro de <b>traslado</b> en la Base de datos
+                        </span>
+
+                        <div class="space-12"><br></div>
+                    </div><!-- /.widget-main -->
+                </div>
+            <?php endif; ?>
+        </div><!-- /.widget-box -->
+    </div><!-- /.col -->
+</div>
+
+
 <div class="row">
     <div class="col-sm-12 align-left">
         <div class="clearfix">
@@ -319,8 +526,4 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
-<script type="text/javascript">
-    if ('ontouchstart' in document.documentElement) document.write("<script src='<?=base_url();?>assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
-</script>
-
 <?php $this->load->view('global_views/footer_dashboard'); ?>

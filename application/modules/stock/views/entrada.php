@@ -103,7 +103,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
         <div class="widget-box collapsed">
             <div class="widget-header widget-header-blue widget-header-flat">
                 <h4 class="widget-title lighter">
-                    <i class="ace-icon fa fa-paperclip orange"></i>
+                    <i class="ace-icon fa fa-mail-forward green"></i>
                     Ultima Entrada Registrada
                 </h4>
 
@@ -275,7 +275,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 <div class="widget-box">
     <div class="widget-header widget-header-blue widget-header-flat">
         <h4 class="widget-title lighter">
-            <i class="ace-icon fa fa-paperclip orange"></i>
+            <i class="ace-icon fa fa-terminal"></i>
             Procesar Entrada
         </h4>
     </div>

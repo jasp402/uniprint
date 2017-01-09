@@ -115,7 +115,7 @@ if (isset($_GET['labelBookIn'])):
                             <br>
                             <div class="col-xs-12 col-sm-12 pull-left align-left">
                                 <ul class="list-unstyled spaced inline bigger-110 margin-15">
-                                    <?php if(strlen($dataLabel[$i]->producto)>=24): ?>
+                                    <?php if(strlen($dataLabel[$i]->producto)>=22): ?>
                                     <li><h1 style="font-family: Impact; font-size: 28px;margin-top: -15px"><?=strtoupper($dataLabel[$i]->producto);?></h1>
                                     </li>
                                     <?php else: ?>

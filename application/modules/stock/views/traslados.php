@@ -99,7 +99,7 @@
         <div class="widget-box collapsed">
             <div class="widget-header widget-header-blue widget-header-flat">
                 <h4 class="widget-title lighter">
-                    <i class="ace-icon fa fa-paperclip orange"></i>
+                    <i class="ace-icon fa fa-random blue"></i>
                     Ultima Traslado Registrada
                 </h4>
 
@@ -257,7 +257,7 @@
 <div class="widget-box">
     <div class="widget-header widget-header-blue widget-header-flat">
         <h4 class="widget-title lighter">
-            <i class="ace-icon fa fa-paperclip orange"></i>
+            <i class="ace-icon fa fa-terminal"></i>
             Procesar Traslado
         </h4>
     </div>
