@@ -33,7 +33,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 <div class="row">
     <div class="form-group has-info">
         <div class="col-sm-6">
-            <div class="col-xs-4">
+            <div class="col-xs-12">
             <span>
                 <label for="destino" class="control-label no-padding-right pull-right">Linea de Producción</label>
                 <select class="form-control" name="linea" id="id_ubicacion">
@@ -44,7 +44,8 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 </select>
             </span>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
+                <div class="space-6"></div>
             <span>
                 <label for="id_proyecto" class="control-label no-padding-right pull-right">Categoria</label>
                 <select class="form-control" name="categorias" id="id_categoria" onchange="loadTipo()">
@@ -56,7 +57,8 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 </select>
             </span>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
+                <div class="space-6"></div>
             <span>
                 <label for="id_proyecto" class="control-label no-padding-right pull-right">Tipo</label>
                 <select class="form-control" name="tipos" id="id_tipo" onchange="loadLibros()">
@@ -66,17 +68,21 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 </select>
             </span>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 align-center">
                 <div class="space-12"></div>
-            <span>
-                <input class="input-lg" type="text" id="form-field-4" placeholder=".input-sm">
-            </span>
-            </div>
-            <div class="col-xs-6">
-                <div class="space-12"></div>
-            <span>
-               <input class="input-lg" type="text" id="form-field-4" placeholder=".input-sm">
-            </span>
+                                <span class="block input-icon input-icon-right">
+                                    <div class="input-daterange input-group">
+                                        <input type="text" placeholder="Paletas">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-close"></i>
+                                        </span>
+                                         <input type="text" placeholder="Cantidad x Paletas">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-exchange"></i>
+                                        </span>
+                                         <input type="text"  readonly style="width:127px">
+                                    </div>
+                                </span>
             </div>
         </div>
         <div class="col-sm-6">
@@ -93,9 +99,10 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                     </small>
                 </blockquote>
             </div>
+
         </div>
     </div>
-
+    <div class="col-sm-12"></div>
     <div class="col-sm-6">
         <div>
             <h3 class="header smaller lighter blue">
