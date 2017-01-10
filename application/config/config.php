@@ -17,7 +17,7 @@
 
 // $config['base_url']	= 'http://localhost/hmvci_TUTO/';
 //$config['base_url']	= 'http://192.168.0.200/uniprint/';
-$config['base_url']	= 'http://localhost/uniprint/';
+$config['base_url']	= '';
 // $config['base_url']	= 'http://localhost:8080/baciace/';
 
 
