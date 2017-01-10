@@ -476,7 +476,6 @@ function limpiarTabla() {
 function elimDoc(){
     $("#documento").val('');
 }
-
 function validarDocumento() {
     id = $('#documento').val();
     $("#modal-doc").text(id);
@@ -513,7 +512,6 @@ function validarDocumento() {
         }
     });
 }
-
 function Contenedor(){
     if ($("#id-pills-stacked:checked").val() == 1) {
         $("#cod_contenedor").removeAttr("disabled");
@@ -523,9 +521,6 @@ function Contenedor(){
         $("#cod_contenedor").attr('disabled', 'disabled');
     }
 }
-
-
-
 
 //footer
 jQuery(function($) {

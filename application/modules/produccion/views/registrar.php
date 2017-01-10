@@ -11,6 +11,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 <script src="<?= base_url() ?>assets/js/bootbox.js"></script>
 <script src="<?= base_url(); ?>assets/js/views/produccion/registrar.js"></script>
+<script src="<?= base_url(); ?>assets/js/views/produccion/registrar.js"></script>
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
@@ -48,7 +49,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <div class="space-6"></div>
             <span>
                 <label for="id_proyecto" class="control-label no-padding-right pull-right">Categoria</label>
-                <select class="form-control" name="categorias" id="id_categoria" onchange="loadTipo()">
+                <select class="form-control" name="categorias" id="id_categoria" onchange="loadGrado()">
                     <?php foreach ($this->CRUD->__getAll('categorias', array('id_proyecto' => '1')) as $keyList): ?>
                         <option value="<?= $keyList->id_categoria; ?>">
                             <?= $keyList->nombre; ?>
@@ -125,11 +126,6 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                     <th></th>
                 </tr>
                 </thead>
-
-                <tbody>
-
-
-                </tbody>
             </table>
         </div><!-- /.row -->
 
@@ -142,7 +138,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <i class="fa fa-scissors" aria-hidden="true"></i>
             Registro del Material Escolar
         </h3>
-        <table id="thead_lote" class="table table-striped table-bordered table-hover small">
+        <table id="thead_lote" class="table table-striped table-bordered table-hover small" style="display: none">
             <thead>
             <tr>
                 <th style="width:30px!important;">
@@ -154,8 +150,6 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <th>categoria</th>
                 <th>Tipo</th>
                 <th>Producto</th>
-                <th>Cant. paletas</th>
-                <th>Unidades x Paletas</th>
                 <th>Total de Unidades</th>
             </tr>
             </thead>
@@ -163,12 +157,11 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <!-- // function addfields() // -->
             </tbody>
             <tfoot class="text-mute">
-            <th colspan="7" style="width:30px!important;">
+            <th colspan="6" style="width:30px!important;">
                 <span id="footRows" role="button" onclick="AgregarCampos_lote()" style="cursor:pointer;">
                     <i class="fa fa-plus blue" aria-hidden="true"></i>
                 </span>
             </th>
-            <th id="table_lote_total">Total de Unidades</th>
             </tfoot>
         </table>
 
