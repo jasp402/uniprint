@@ -229,12 +229,8 @@ function disponible(index) {
             var obj = jQuery.parseJSON(data);
             if(obj.success){
                 var r = obj.result;
-                if (r.length > 0) {
-                    var sumaProducto = 0;
-                    $.each(r, function (indice, valor) {
-                        sumaProducto = parseInt(valor[indice].saldo) + parseInt(sumaProducto);
-                    });
-                    $("#disponible" + index).val(sumaProducto);
+                if (r > 0) {
+                    $("#disponible" + index).val(r);
                     $('#disponible' + index).val(($('#disponible' + index).val() - $('#total' + index).val()));
                     if($('#disponible' + index).val()<0){alert('Te volviste loco! no puedes enviar mas porque no tienes!')}
                 }
@@ -735,7 +731,7 @@ jQuery(function($) {
     });
     $('[data-rel=tooltip]').tooltip();
     $('[data-rel=popover]').popover({html:true});
-})
+});
 /**
  * Created by Jasp402 on 12/12/2016.
  */

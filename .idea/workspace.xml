@@ -4,14 +4,11 @@
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" afterPath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" afterPath="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" afterPath="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" afterPath="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" afterPath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" afterPath="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
@@ -19,12 +16,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/entrada.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" afterPath="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/third_party/MX/Lang.php" afterPath="$PROJECT_DIR$/application/third_party/MX/Lang.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" afterPath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/stock/inventario.js" afterPath="$PROJECT_DIR$/assets/js/views/stock/inventario.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/stock/traslados.js" afterPath="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Lang.php" afterPath="$PROJECT_DIR$/system/core/Lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +47,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="registrar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registrar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/registrar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -63,6 +57,16 @@
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productos.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,7 +106,6 @@
         <option value="$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php" />
         <option value="$PROJECT_DIR$/application/modules/productos/controllers/categorias.php" />
         <option value="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
         <option value="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" />
         <option value="$PROJECT_DIR$/application/modules/produccion/views/lineas.php" />
         <option value="$PROJECT_DIR$/assets/js/views/produccion/lineas.js" />
@@ -143,6 +146,7 @@
         <option value="$PROJECT_DIR$/assets/js/views/stock/entrada.js" />
         <option value="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
         <option value="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
       </list>
     </option>
   </component>
@@ -291,118 +295,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="assets">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="assets">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="produccion">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="assets">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -439,11 +331,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="produccion">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
+            <PATH_ELEMENT USER_OBJECT="productos">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -465,7 +353,11 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="produccion">
+            <PATH_ELEMENT USER_OBJECT="productos">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controllers">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -655,12 +547,12 @@
       <workItem from="1483582072853" duration="15788000" />
       <workItem from="1483730122545" duration="1801000" />
       <workItem from="1483876387694" duration="6133000" />
-      <workItem from="1484015903542" duration="2564000" />
+      <workItem from="1484015903542" duration="2779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="821854000" />
+    <option name="totallyTimeSpent" value="822069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -751,13 +643,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/traslados.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -1131,6 +1016,14 @@
             <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

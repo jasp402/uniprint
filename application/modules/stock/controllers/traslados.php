@@ -58,7 +58,7 @@ class Traslados extends MX_Controller {
     public function save(){
         $data = array();
         //Static Date
-        $cod_traslado = ($this->models->getLastCode('cod_traslado','sys_traslados')->cod_traslado) + 1;
+        $cod_traslado = ($this->models->getLastCode('cod_traslado','sys_traslados')->cod_traslado)+1;
         $origen         =$this->input->post('origen');
         $id_chofer      =$this->input->post('id_chofer');
         $id_vehiculo    =$this->input->post('id_vehiculo');
@@ -102,6 +102,16 @@ class Traslados extends MX_Controller {
     }
 
     public function unidades_disponible(){
-        $this->CRUD->read_field_table('sum(cant_unidades) as saldo','sys_inventario',$this->input->post(),'ajax');
+
+        $where = $this->input->post();
+        $where['origen'] = $this->input->post('destino');
+        unset($where['destino']);
+
+        $entrada    = $this->CRUD->read_field_table('sum(cant_unidades) as entro','sys_inventario',$this->input->post());
+        $traslado   = $this->CRUD->read_field_table('sum(cant_unidades) as salio','sys_traslados',$where);
+
+        $saldo = $entrada[0]->entro-$traslado[0]->salio;
+        $data = array('success' => true, 'result' => $saldo);
+        echo json_encode($data);
     }
 }

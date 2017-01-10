@@ -25,10 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * create_much          ----> Correr una array e insertar varios elementos
  * ---------------------------------------------------------------------------------------------------------------
  * read                 ----> <<getAll>> lee todos los elementos de una <<tabla>>
- * read_data_table      ----> Realiza un <<select>> <<donde|where>> retorna el valor en formato  (DataTable)
  * read_id              ----> <<getAllByID>> retorna todos los valores del ID pasado
  * read_field_table     ----> Retorna el campo solicitado ejemplo: << db->select('cod_key') >>
  * read_where           ----><<getAllByWhere>> retorna todos los valores de tabla <donde|where> sirve como un filtro
+ * ---------------------------------------------------------------------------------------------------------------
+ * read_data_table      ----> Realiza un <<select>> <<donde|where>> retorna el valor en formato  (DataTable)
  * ---------------------------------------------------------------------------------------------------------------
  * edit                 ----> Editar un elemento pasado el ID
  * edit_much            ----> Corre (2) array con todos los Id's a editar y otro con los dato a modificar por Id

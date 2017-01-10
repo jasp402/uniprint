@@ -24,7 +24,7 @@ class Entrada extends MX_Controller {
 
     private $models;
     private $items =array();
-//O.K.
+
     public function __construct(){
         parent::__construct();
         $this->schema['module']  =  'SUB MODULO 3';

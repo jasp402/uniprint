@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @copyright  2016-12 jasp402@gmail.com
  * @version    0.0.1
  *
- *  @property Produccion_model $models             Carga todos los metodos de la entidad padre [MODULO (productos)]
+ *  @property Produccion_model $models             Carga todos los metodos de la entidad padre [MODULO (Producción)]
  *  @var  array $items                             Load all models and set in view
 **/
 class Lineas extends MX_Controller

@@ -19,13 +19,6 @@ $(document).ready(function () {
             ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
         }
     });
-    /*
-    $('#dynamic-table_3 tfoot th').each(function () {
-        var i = $(this).index();
-        var title = $('#sample_3 thead th').eq($(this).index()).text();
-        $(this).html('<input type="text" placeholder="Buscar... ' + title + '"  class="input-mini"/>');
-    });
-    */
     // DataTable
     var table =  $('#dynamic-table_3').DataTable({
             "initComplete": function () {
@@ -141,147 +134,9 @@ $(document).ready(function () {
                 } );
             }
         });
-
-    // Apply the filter
-    /*
-    table.columns().eq(0).each(function (colIdx) {
-
-     $('input', table.column(colIdx).footer()).on('keyup change', function () {
-
-     table
-     .column(colIdx)
-     .search(this.value)
-     .draw();
-     });
-     });
-     */
-
-
-
 });
-
-function loadCategoria() {
-    var id = $("#id_proyecto").find(":selected").val();
-    if (id > 0) {
-        $("#id_categoria").empty();
-        $("#id_tipo").empty();
-        $.ajax({
-            type: 'POST',
-            url: 'categorias/searchAllByWhere',
-            data: {'id': id, 'field': 'id_proyecto'},
-            success: function (data) {
-                var obj = jQuery.parseJSON(data);
-                var r = obj.result;
-                $.each(r, function (indice, valor) {
-                    $("#id_categoria").append(
-                        $("<option></option>").attr("value", valor[indice].id_categoria).text(valor[indice].nombre)
-                    );
-                });
-            }
-        });
-        setTimeout(function () {
-            loadTipo();
-        }, 200);
-
-    } else {
-        if (id == 0) {
-            $("#id_categoria").empty()
-        }
-    }
-}
-function loadTipo() {
-    var id = $("#id_categoria").find(":selected").val();
-    if (id > 0) {
-        $("#id_tipo").empty();
-        $.ajax({
-            type: 'POST',
-            url: 'tipos/searchAllByWhere',
-            data: {'id': id, 'field': 'id_categoria'},
-            success: function (data) {
-                var obj = jQuery.parseJSON(data);
-                var r = obj.result;
-                $.each(r, function (indice, valor) {
-                    //console.log(valor[indice].nombre);
-                    $("#id_tipo").append(
-                        $("<option></option>").attr("value", valor[indice].id_tipo).text(valor[indice].nombre)
-                    );
-                });
-            }
-        });
-    } else {
-        if (id == 0) {
-            $("#id_tipo").empty()
-        }
-    }
-}
-function div_form_create(text) {
-    $('#titulo_div').html(text);
-    $("#form")[0].reset();
-    $('#div_btn_edit').hide();
-    $('#div_btn_save').show();
-    $('#selectlive_1').selectpicker('refresh');
-}
-
-function Save() {
-    $.ajax({
-        url: 'productos/save',
-        type: 'POST',
-        dataType: 'json',
-        data: $('#form').serialize(), //ToDo - Investigar por no funciona con el selectpicker()
-        //data: {'id_proyecto':cod1, 'nombre':cod2},
-        beforeSend: function () {
-            desactivar_inputs('form');
-            mensaje_gbl('Procesando...', 'info', 'clock-o', 'mensaje_crud_apoderado');
-        },
-        success: function (data) {
-            if (data) {
-                mensaje_gbl('Completado', 'success', 'check', 'mensaje_crud_apoderado');
-                message_box(data.success, data.times, data.closes);
-            } else {
-                activar_inputs('form');
-                mensaje_gbl('Error', 'danger', 'times', 'mensaje_crud_apoderado');
-            }
-        }
-    });
-
-}
-
-function Delete(id) {
-    $('#div_textbox').hide(500);
-    bootbox.confirm("Estas seguro que deseas eliminar este registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
-        if (result) {
-            $.ajax({
-                url: 'productos/delete',
-                type: 'POST',
-                dataType: 'json',
-                data: {id: id},
-                success: function (data) {
-                    message_box(data.success, data.times, data.closes);
-                }
-            });
-        }
-    });
-}
-function deleteMultipe(ids) {
-    bootbox.confirm("Estas seguro que deseas eliminar "+ ids.length+" registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
-        if (result) {
-            $.ajax({
-                url: 'productos/deleteSelect',
-                type: 'POST',
-                dataType: 'json',
-                data: {id: ids},
-                success: function (data) {
-                    message_box(data.success, data.times, data.closes);
-                }
-            });
-        }
-    });
-
-}
 // ---------------------
 function div_form_edit(id, text, models) {
-
-
     $('#titulo_div').html(text);
     $('#div_btn_save').hide();
     $('#div_btn_edit').show();
@@ -355,43 +210,6 @@ function loadInfo(id) {
         }
     });
 }
-function SetByIdDestino(id) {
-    $.ajax({
-        url: '../almacenes/almacen/searchAllById',
-        type: 'POST',
-        dataType: 'JSON',
-        data: {id: id},
-        success: function (data) {
-            $('#_destino').text(data.result[0].nombre);
-        }
-    });
-}
-function SetSumaUnid(id) {
-    $.ajax({
-        url: 'inventario/sumarTotal',
-        type: 'POST',
-        dataType: 'JSON',
-        data: {id: id},
-        success: function (data) {
-            number = parseInt(data[0].suma);
-            $('#_total').text(number.toLocaleString('es-ES'));
-        }
-    });
-}
-function SetSumaPaletas(id) {
-    $.ajax({
-        url: 'inventario/sumarPltas',
-        type: 'POST',
-        dataType: 'JSON',
-        data: {id: id},
-        success: function (data) {
-            console.log(data);
-            number = parseInt(data[0].suma);
-            $('#_pltas').text(number.toLocaleString('es-ES'));
-        }
-    });
-}
-
 
 var module = 'Registro de Inventario';
 var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
