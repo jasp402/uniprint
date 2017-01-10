@@ -280,25 +280,28 @@ class Crud_model extends CI_Model
         $this->db->from($table);
         $this->db->where($where);
         $query = $this->db->get();
+
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        foreach ($query->result() as $key => $value) {
-            $result[][$key] = $value;
-        }
-        switch ($method) {
-            case 'ajax':
-                if ($result) {
+
+        if ($items['num_err'] == 0) {
+            foreach ($query->result() as $key => $value) {
+                $result[][$key] = $value;
+            }
+            switch ($method) {
+                case 'ajax':
                     $data = array('success' => true, 'result' => $result);
                     echo json_encode($data);
-                } else {
-                    $data = array('success' => false);
-                    echo json_encode($data);
-                }
-                break;
-        }
-        if ($items['num_err'] == 0) {
+                    break;
+            }
             return $result;
-        } else {
+        }else{
+            switch ($method) {
+                case 'ajax':
+                    $items['num_err'] = 'null';
+                    detail_message($items, 'ERROR_AJAX');
+                    break;
+            }
             return FALSE;
         }
     }
@@ -311,6 +314,8 @@ class Crud_model extends CI_Model
      *
      * @param   string $table
      * @param   string $field
+     * @param   string $where
+     * @param   string $method
      *
      * @return  string
      **/

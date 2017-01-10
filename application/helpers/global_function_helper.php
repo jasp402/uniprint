@@ -109,15 +109,21 @@
                         $msg =  '<i class=\'red ace-icon fa fa-warning\'></i> '.
                                 '<span class=\'bigger-110 red\'> Lo sentimo! pero algo ha salido mal'.
                                 '<br><small><cite>'.$query['mens_err'].'</cite></small> </span>';
+                        echo    '<script>message_box("'.$msg.'",0,true);</script>';
                         break;
                     case 'EMPTY':
                         $msg =  '<i class=\'ace-icon fa fa-random\'></i>'.
                                 '<span class=\'bigger-110 orange\'>No se encontraron resultados</span>';
+                        echo    '<script>message_box("'.$msg.'",0,true);</script>';
+                        break;
+                    case 'ERROR_AJAX':
+                        $msg =  "<i class='red ace-icon fa fa-warning'></i>".
+                                "<span class='bigger-110 red'>  Lo sentimo! pero algo ha salido mal</span>".
+                                "<br><small><cite class='grey'>".$query['mens_err']."</cite></small></span>";
+                        $data = array('success' => $msg, 'times'=>0, 'closes'=>true);
+                        echo json_encode($data);
                         break;
                 }
-                echo '<script>message_box("'.$msg.'",0,true);</script>';
-
-
                 break;
             default:
                 $msg = '<span class=\'bigger-110 red\'><b>Error en MVC:</b> Consulte su administrador de sistema. <h6><b>'. $query['num_err'].'</b> - '.$query['mens_err']  .'</h6></span>';
