@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" afterPath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" afterPath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +36,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
               <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#input#2;n#div#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,15 +54,12 @@
       <file leaf-file-name="registrar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/registrar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="68">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
                 <element signature="e#94#361#0" expanded="false" />
-                <element signature="e#134#173#0" expanded="false" />
-                <element signature="e#227#357#0" expanded="false" />
                 <element signature="n#!!block;n#loadTipo#0" expanded="false" />
-                <element signature="e#1585#3062#0" expanded="false" />
-                <marker date="1484057347014" expanded="false" signature="1280:3227" ph="{...}" />
+                <element signature="n#!!block;n#loadLibros#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,69 +89,9 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/productos/views/productos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/tipos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/tipos_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/categorias_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/productos_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/categorias.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/models/lineas_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/categorias.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/views/lineas.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/produccion/lineas.js" />
-        <option value="$PROJECT_DIR$/application/modules/parametros/views/choferes.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/parametros/vehiculos.js" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/temp.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/inventario.js" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/views/header.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf/include/font_metrics.cls.php" />
-        <option value="$PROJECT_DIR$/application/helpers/global_function_helper.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf_helper.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf_7/autoload.inc.php" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" />
-        <option value="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
-        <option value="$PROJECT_DIR$/system/core/Lang.php" />
-        <option value="$PROJECT_DIR$/application/third_party/MX/Lang.php" />
-        <option value="$PROJECT_DIR$/system/core/Loader.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/system/database/DB_driver.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/entrada.js" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
         <option value="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
       </list>
     </option>
@@ -168,11 +101,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP_FROM_WAMP">
-    <include_path>
-      <path value="C:\wamp64\www\uniprint\phpStorm-CC-Helpers-master\CodeIgniter" />
-    </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="5" />
@@ -462,34 +390,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="copyright" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\uniprint\assets\js\views\produccion" />
-      <recent name="C:\wamp64\www\uniprint\assets\js\views\stock" />
-      <recent name="C:\wamp64\www\uniprint\assets\js\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\controllers" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\models" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\models" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\controllers" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\almacenes\controllers" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php">
-    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/uniprint/dompdf/www/index.php">
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -508,12 +411,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -536,74 +433,15 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="crud_model.php" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/uniprint/global_views/models/crud_model.php">
-      <method />
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.crud_model.php" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="" />
-      <created>1479217680764</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1479217680764</updated>
-      <workItem from="1479217682719" duration="395000" />
-      <workItem from="1479218129812" duration="1247000" />
-      <workItem from="1479329427531" duration="1618000" />
-      <workItem from="1479363313330" duration="8081000" />
-      <workItem from="1479428666795" duration="32817000" />
-      <workItem from="1479492118518" duration="7060000" />
-      <workItem from="1479514181612" duration="24824000" />
-      <workItem from="1479732928922" duration="15120000" />
-      <workItem from="1479769053943" duration="23193000" />
-      <workItem from="1479860862551" duration="19687000" />
-      <workItem from="1479945980629" duration="497000" />
-      <workItem from="1479946509019" duration="8737000" />
-      <workItem from="1480097600979" duration="1995000" />
-      <workItem from="1480176876606" duration="114000" />
-      <workItem from="1480177041157" duration="569000" />
-      <workItem from="1480192032600" duration="7702000" />
-      <workItem from="1480265533116" duration="17795000" />
-      <workItem from="1480384407034" duration="14198000" />
-      <workItem from="1480447996403" duration="42487000" />
-      <workItem from="1480582540006" duration="23327000" />
-      <workItem from="1480641489261" duration="13495000" />
-      <workItem from="1480769403545" duration="95793000" />
-      <workItem from="1481112486620" duration="60137000" />
-      <workItem from="1481378958675" duration="36364000" />
-      <workItem from="1481590131706" duration="5934000" />
-      <workItem from="1481631196867" duration="1772000" />
-      <workItem from="1481637119983" duration="13708000" />
-      <workItem from="1481723558117" duration="9646000" />
-      <workItem from="1481804105691" duration="22217000" />
-      <workItem from="1481840402913" duration="14943000" />
-      <workItem from="1481886709163" duration="4666000" />
-      <workItem from="1482235238027" duration="31139000" />
-      <workItem from="1482400509807" duration="8055000" />
-      <workItem from="1482813009049" duration="18062000" />
-      <workItem from="1482932454184" duration="110878000" />
-      <workItem from="1483290149335" duration="97296000" />
-      <workItem from="1483582072853" duration="15788000" />
-      <workItem from="1483730122545" duration="1801000" />
-      <workItem from="1483876387694" duration="6133000" />
-      <workItem from="1484015903542" duration="7088000" />
-    </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="826378000" />
+    <option name="totallyTimeSpent" value="59000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,6 +459,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23353294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263328" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -628,7 +467,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -673,9 +511,6 @@
       <collection />
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -685,7 +520,7 @@
           <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="260" />
+      <option name="time" value="261" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
@@ -1045,10 +880,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#input#2;n#div#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,15 +906,386 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/registrar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
             <element signature="e#94#361#0" expanded="false" />
-            <element signature="e#134#173#0" expanded="false" />
-            <element signature="e#227#357#0" expanded="false" />
             <element signature="n#!!block;n#loadTipo#0" expanded="false" />
-            <element signature="e#1585#3062#0" expanded="false" />
-            <marker date="1484057347014" expanded="false" signature="1280:3227" ph="{...}" />
+            <element signature="n#!!block;n#loadLibros#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="122" column="14" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="528" column="0" selection-start-line="528" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/inventario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="241" column="57" selection-start-line="241" selection-start-column="44" selection-end-line="241" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/movimientos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/stylesheet.cls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="1087" column="5" selection-start-line="1087" selection-start-column="5" selection-end-line="1087" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/dompdf.cls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="534" column="22" selection-start-line="534" selection-start-column="17" selection-end-line="534" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="282" column="21" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/footer_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="88" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/font_metrics.cls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="325" column="6" selection-start-line="325" selection-start-column="6" selection-end-line="325" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/examples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/demo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-801">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/jquery-1.4.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/global_function_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_7/tests/Dompdf/Tests/AutoloaderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_7/autoload.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#getAllLast#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllUbicacion#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllById#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#getAllByWhere#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#create_details#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#create#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#createMultiple#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarPaletas#0;n#Produccion_model#0;n#!!top" expanded="false" />
+            <element signature="n#sumarTotal#0;n#Produccion_model#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2424">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1294">
+          <caret line="318" column="45" selection-start-line="318" selection-start-column="12" selection-end-line="318" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="317" column="52" selection-start-line="317" selection-start-column="33" selection-end-line="317" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/DB_driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="492" column="24" selection-start-line="492" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/lineas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/lineas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/entrada.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="18" />
+          <folding>
+            <element signature="e#146#1364#0" expanded="false" />
+            <element signature="e#499#640#0" expanded="false" />
+            <element signature="e#679#821#0" expanded="false" />
+            <element signature="n#!!block;n#granel#0" expanded="false" />
+            <element signature="n#!!block;n#Save#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select1#0" expanded="false" />
+            <element signature="n#!!block;n#show_form_select2#0" expanded="false" />
+            <element signature="n#!!block;n#loadAllSelect#0" expanded="false" />
+            <element signature="n#!!block;n#loadCategoria#0" expanded="false" />
+            <element signature="n#!!block;n#loadTipo#0" expanded="false" />
+            <element signature="n#!!block;n#loadProducto#0" expanded="false" />
           </folding>
         </state>
       </provider>
