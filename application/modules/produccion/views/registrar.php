@@ -29,8 +29,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
         </small>
     </h1>
 </div>
-
-
+<?php echo form_open('', "id='form' class='form-horizontal' "); ?>
 <div class="row">
     <div class="form-group has-info">
         <div class="col-sm-6">
@@ -39,7 +38,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <label for="destino" class="control-label no-padding-right pull-right">Linea de Producción</label>
                 <select class="form-control" name="linea" id="id_ubicacion">
                     <?php foreach ($this->CRUD->__getAll('ubicacion', array('tipo' => 'linea')) as $keyList): ?>
-                        <option value="<?= $keyList->id_ubicacion; ?>"><?= $keyList->label; ?>
+                        <option value="<?= $keyList->label;?>-<?= $keyList->nombre; ?>"><?= $keyList->label; ?>
                             -<?= $keyList->nombre; ?></option>
                     <?php endforeach ?>
                 </select>
@@ -61,8 +60,8 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <div class="col-xs-6">
                 <div class="space-6"></div>
             <span>
-                <label for="id_proyecto" class="control-label no-padding-right pull-right">Tipo</label>
-                <select class="form-control" name="tipos" id="id_tipo" onchange="loadLibros()">
+                <label for="grado" class="control-label no-padding-right pull-right">Tipo</label>
+                <select class="form-control" name="grado" id="id_tipo" onchange="loadLibros()">
                     <option value="">
                             Elija Categoria
                         </option>
@@ -73,15 +72,15 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <div class="space-12"></div>
                                 <span class="block input-icon input-icon-right">
                                     <div class="input-daterange input-group">
-                                        <input type="text" placeholder="Paletas">
+                                        <input type="number" name="lote" id="lote" placeholder="Paletas" onchange="totalizar_Produccion()">
                                         <span class="input-group-addon">
                                             <i class="fa fa-close"></i>
                                         </span>
-                                         <input type="text" placeholder="Cantidad x Paletas">
+                                         <input type="number" name="cant_lote" id="cant_lote" placeholder="Cantidad x Paletas" onchange="totalizar_Produccion()">
                                         <span class="input-group-addon">
                                             <i class="fa fa-exchange"></i>
                                         </span>
-                                         <input type="text"  readonly style="width:127px">
+                                         <input type="text" name="total" id="total" readonly style="width:127px">
                                     </div>
                                 </span>
             </div>
@@ -116,7 +115,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <tr>
                     <th class="center">
                         <label class="pos-rel">
-                            <input type="checkbox" class="ace">
+                            <input type="checkbox" name="checked" class="ace">
                             <span class="lbl"></span>
                         </label>
                     </th>
@@ -142,9 +141,9 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <thead>
             <tr>
                 <th style="width:30px!important;">
-                                    <span href="#" role="button" onclick="AgregarCampos_lote()" style="cursor: pointer">
-                                        <i class="fa fa-plus blue" aria-hidden="true"></i>
-                                    </span>
+                    <span href="#" role="button" onclick="AgregarCampos_lote()" style="cursor: pointer">
+                        <i class="fa fa-plus blue" aria-hidden="true"></i>
+                    </span>
                 </th>
                 <th>#</th>
                 <th>categoria</th>
@@ -164,8 +163,23 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             </th>
             </tfoot>
         </table>
-
     </div><!-- /.col -->
-</div>
 
+    <div class="col-sm-12">
+        <div class="space-6"></div>
+        <textarea id="comentario" name="comentario" class="form-control" placeholder="Agregar comentario" style="width: 100%"></textarea>
+        <hr>
+        <div class="wizard-actions">
+            <!-- #section:plugins/fuelux.wizard.buttons -->
+
+            <button class="btn btn-success btn-next" onclick="Save()">
+                <i class="ace-icon fa fa-save icon-on-right"></i>
+                Guardar
+            </button>
+
+            <!-- /section:plugins/fuelux.wizard.buttons -->
+        </div>
+    </div>
+</div>
+<?php echo "</form>"; ?>
 <?php $this->load->view('global_views/footer_dashboard'); ?>

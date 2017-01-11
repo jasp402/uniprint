@@ -63,7 +63,7 @@ function loadLibros(){
                 }
             },
             "columns": [
-               
+
                  {
                      "data": null,
                      render: function (data, type, row) {
@@ -217,6 +217,7 @@ function loadProducto(index) {
     }
 }
 
+//agrega campos de productos para Utiles escolares
 function AgregarCampos_lote(){
     loadAllSelect();
     loadCategoria(nextinput);
@@ -241,4 +242,35 @@ function AgregarCampos_lote(){
         '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control"></td>' +
         '</tr>';
     $("#campos_lote").append(campo);
+}
+
+//multiplica la cantidad de morrales por paleta
+function totalizar_Produccion(){
+    var total;
+    paletas = $('#lote').val();
+    cantidad = $('#cant_lote').val();
+    if(paletas && cantidad){
+     total = paletas*cantidad;
+    $('#total').val(total);
+    }else{
+        $('#total').val(0);
+
+    }
+
+
+}
+
+function Save(){
+    var f = hoy();
+    //sync
+    $.ajax({
+        url: 'registrar/save',
+        type: 'POST',
+        dataType: 'json',
+        data: $('#form').serialize()+'&fecha='+f,
+        success: function (data) {
+            console.log(data);
+            message_box(data.success, data.times, data.closes);
+        }
+    });
 }

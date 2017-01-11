@@ -4,6 +4,8 @@
       <w>acceso</w>
       <w>acepta</w>
       <w>admite</w>
+      <w>agrega</w>
+      <w>agregar</w>
       <w>alerta</w>
       <w>almacen</w>
       <w>almacenes</w>
@@ -14,6 +16,7 @@
       <w>cada</w>
       <w>cambia</w>
       <w>campo</w>
+      <w>cantidad</w>
       <w>carga</w>
       <w>cargar</w>
       <w>caso</w>
@@ -59,6 +62,7 @@
       <w>entrada</w>
       <w>entradas</w>
       <w>entro</w>
+      <w>escolares</w>
       <w>estado</w>
       <w>este</w>
       <w>esto</w>
@@ -93,8 +97,10 @@
       <w>metodos</w>
       <w>modelo</w>
       <w>modificar</w>
+      <w>morrales</w>
       <w>multipe</w>
       <w>multipes</w>
+      <w>multiplica</w>
       <w>navegacion</w>
       <w>nextinput</w>
       <w>nombre</w>
@@ -104,6 +110,7 @@
       <w>origen</w>
       <w>otro</w>
       <w>pagina</w>
+      <w>paleta</w>
       <w>paletas</w>
       <w>paramatros</w>
       <w>parametros</w>
@@ -134,6 +141,7 @@
       <w>secundario</w>
       <w>secundary</w>
       <w>segun</w>
+      <w>según</w>
       <w>seleccione</w>
       <w>sirve</w>
       <w>solamente</w>
@@ -144,12 +152,14 @@
       <w>tipos</w>
       <w>titulo</w>
       <w>todos</w>
+      <w>totalizar</w>
       <w>traslado</w>
       <w>traslados</w>
       <w>ubicacion</w>
       <w>unidad</w>
       <w>unidades</w>
       <w>usuario</w>
+      <w>utiles</w>
       <w>valores</w>
       <w>varios</w>
       <w>vehiculo</w>
