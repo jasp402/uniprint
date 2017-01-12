@@ -107,10 +107,10 @@ class Traslados extends MX_Controller {
         $where['origen'] = $this->input->post('destino');
         unset($where['destino']);
 
-        $entrada    = $this->CRUD->read_field_table('sum(cant_unidades) as entro','sys_inventario',$this->input->post());
-        $traslado   = $this->CRUD->read_field_table('sum(cant_unidades) as salio','sys_traslados',$where);
+        $entrada    = $this->CRUD->read_field_table('sum(total) as entro','sys_inventario',$this->input->post());
+        $traslado   = $this->CRUD->read_field_table('sum(total) as salio','sys_traslados',$where);
 
-        $saldo = $entrada[0]->entro-$traslado[0]->salio;
+        $saldo = ($entrada[0]->entro)-$traslado[0]->salio;
         $data = array('success' => true, 'result' => $saldo);
         echo json_encode($data);
     }
