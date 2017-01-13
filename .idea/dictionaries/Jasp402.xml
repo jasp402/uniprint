@@ -3,15 +3,18 @@
     <words>
       <w>acceso</w>
       <w>acepta</w>
+      <w>adminte</w>
       <w>admite</w>
       <w>agrega</w>
       <w>agregar</w>
       <w>alerta</w>
+      <w>algunos</w>
       <w>almacen</w>
       <w>almacenes</w>
       <w>apellido</w>
       <w>auditoria</w>
       <w>basepath</w>
+      <w>bidimencional</w>
       <w>busquedas</w>
       <w>cada</w>
       <w>cambia</w>
@@ -28,6 +31,7 @@
       <w>codigo</w>
       <w>comentario</w>
       <w>complementaria</w>
+      <w>completar</w>
       <w>condicional</w>
       <w>condicionales</w>
       <w>consultar</w>
@@ -69,6 +73,8 @@
       <w>estos</w>
       <w>exitoso</w>
       <w>externo</w>
+      <w>falta</w>
+      <w>faltan</w>
       <w>fecha</w>
       <w>filtro</w>
       <w>forma</w>
@@ -80,6 +86,7 @@
       <w>impresor</w>
       <w>impresores</w>
       <w>inactivo</w>
+      <w>incluir</w>
       <w>incluye</w>
       <w>inserta</w>
       <w>insertar</w>
@@ -91,6 +98,8 @@
       <w>lineas</w>
       <w>lote</w>
       <w>marca</w>
+      <w>matiz</w>
+      <w>matriz</w>
       <w>mdls</w>
       <w>mediante</w>
       <w>mejorar</w>
@@ -163,6 +172,7 @@
       <w>unidades</w>
       <w>usuario</w>
       <w>utiles</w>
+      <w>validar</w>
       <w>valores</w>
       <w>varios</w>
       <w>vehiculo</w>

@@ -34,6 +34,7 @@
 		<script src="<?=base_url();?>assets/js/ace/elements.onpage-help.js"></script>
 		<script src="<?=base_url();?>assets/js/ace/ace.onpage-help.js"></script>
 		<script src="<?=base_url();?>assets/js/jquery.easypiechart.js"></script>
+		<script src="<?=base_url();?>assets/js/jquery.validate.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
