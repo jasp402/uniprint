@@ -46,7 +46,9 @@
       <w>desabilita</w>
       <w>desabilitado</w>
       <w>desabilitar</w>
+      <w>descontar</w>
       <w>descripcion</w>
+      <w>descuento</w>
       <w>destino</w>
       <w>detalle</w>
       <w>dinamic</w>
@@ -61,6 +63,7 @@
       <w>elenento</w>
       <w>elim</w>
       <w>elimina</w>
+      <w>eliminados</w>
       <w>eliminar</w>
       <w>entidad</w>
       <w>entrada</w>
@@ -131,6 +134,7 @@
       <w>pertenece</w>
       <w>placa</w>
       <w>preferencias</w>
+      <w>procesados</w>
       <w>proceso</w>
       <w>produccion</w>
       <w>produccions</w>
@@ -142,9 +146,12 @@
       <w>proyecto</w>
       <w>proyectos</w>
       <w>puede</w>
+      <w>pueden</w>
       <w>realiza</w>
+      <w>recuerde</w>
       <w>registra</w>
       <w>registro</w>
+      <w>registros</w>
       <w>responsable</w>
       <w>restringido</w>
       <w>retorna</w>
@@ -155,6 +162,7 @@
       <w>segun</w>
       <w>según</w>
       <w>seleccione</w>
+      <w>sido</w>
       <w>sirve</w>
       <w>solamente</w>
       <w>solicitado</w>

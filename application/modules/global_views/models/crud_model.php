@@ -109,7 +109,7 @@ class Crud_model extends CI_Model
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * create
+     * create  (version 1.2)
      * ---------------------------------------------------------------------------------------------------------------
      * Inserta un elementos en la base de datos << $this->db->insert() >>
      * retorna mensaje :: [TRUE]->registro exitoso | [FALSE]->_error_number & _error_message
@@ -123,7 +123,16 @@ class Crud_model extends CI_Model
     {
 
         $items = array();
-        $this->db->insert($table, $data);
+
+        if(count($data)>0){
+            for ($i=0;$i<count($data);$i++){
+                $this->db->insert($table, $data[$i]);
+            }
+        }else{
+            $this->db->insert($table, $data);
+        }
+        //echo $this->db->last_query();
+
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         if($items['num_err']==0){
@@ -469,20 +478,20 @@ class Crud_model extends CI_Model
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * delete
+     * delete (version 1.1)
      * ---------------------------------------------------------------------------------------------------------------
      * Elimina el elemento pasado el ID
      *
      * @param   string $table
-     * @param   array $whereId
+     * @param   array $where
      *
      * @return  void
      **/
     public function delete($table, $whereId)
     {
-
-        $this->db->where(key($whereId), $whereId[key($whereId)]);
         $this->db->delete($table);
+        $this->db->where(key($whereId), $whereId[key($whereId)]);
+        echo $this->db->last_query();
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         detail_message($items, 'DELETE');
