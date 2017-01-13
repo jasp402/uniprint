@@ -104,7 +104,7 @@ class Inventario extends MX_Controller {
             echo json_encode($data);
         }
     }
-
+/*
     public function save(){
         //Static Date
         $cod_inventario = ($this->models->getLastCode('cod_inventario','sys_inventario') + 1);
@@ -151,7 +151,7 @@ class Inventario extends MX_Controller {
         $this->models->createMultiple($data);
         $this->models->create_details($data);
     }
-
+*/
     public function edit(){
         $id    = $this->input->post('id');
         $data = ($this->input->post());
@@ -177,8 +177,10 @@ class Inventario extends MX_Controller {
     }
 
     public function delete(){
-        $id = $this->input->post('id');
-        $this->models->deleteById($id);
+        //Eliminar datos de ´sys_inventario_detalle´
+        $this->CRUD->delete($this->schema['table'],$this->input->post('cod_inventario'));
+        //Eliminar datos de ´sys_inventario´
+        $this->CRUD->delete($this->schema['table'],$this->input->post('id_inventario'));
     }
 
     public function deleteSelect(){

@@ -102,6 +102,10 @@ $(document).ready(function () {
                             '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
                             '</span>' +
                             '</a>'+
+                            '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_inventario+','+data.cod_inventario+')">' +
+                            '<span class="red">' +
+                            '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
+                            '</span>' +
                             '</div>'
                     }
                 }
@@ -176,6 +180,23 @@ function Edit() {
                 activar_inputs('form');
                 mensaje_gbl('Error', 'danger', 'times', 'mensaje_crud_apoderado');
             }
+        }
+    });
+}
+function Delete(id,cod) {
+    $('#div_textbox').hide(500);
+    bootbox.confirm("Estas seguro que deseas eliminar este registro?, No lo podr&aacute; recuperar. <br>" +
+        "<small class='red'><cite>¡Recuerde! si elimina los registros procesados en <b>producción <i class=\"fa fa-angle-double-right\"></i> Descontar Lote</b> podrian causar inconsistencia en los <b>Reportes</b></cite></small> ", function (result) {
+        if (result) {
+            $.ajax({
+                url: 'inventario/delete',
+                type: 'POST',
+                dataType: 'json',
+                data: {'id_inventario': id,'cod_inventario':cod},
+                success: function (data) {
+                    message_box(data.success, data.times, data.closes);
+                }
+            });
         }
     });
 }
