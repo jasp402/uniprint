@@ -178,7 +178,7 @@ class Inventario extends MX_Controller {
 
     public function delete(){
         //Eliminar datos de ´sys_inventario_detalle´
-        $this->CRUD->delete($this->schema['table'],$this->input->post('cod_inventario'));
+        $this->CRUD->delete($this->schema['detail'],$this->input->post('cod_inventario'));
         //Eliminar datos de ´sys_inventario´
         $this->CRUD->delete($this->schema['table'],$this->input->post('id_inventario'));
     }

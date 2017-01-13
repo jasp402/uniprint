@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" afterPath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" afterPath="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/stock/inventario.js" afterPath="$PROJECT_DIR$/assets/js/views/stock/inventario.js" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,13 +69,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inventario.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inventario.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
+            <state relative-caret-position="339">
+              <caret line="180" column="24" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
               <folding>
-                <marker date="1484294808476" expanded="false" signature="3482:5307" ph="..." />
+                <marker date="1484310382964" expanded="false" signature="3482:5307" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crud_model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="crud_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="489" column="43" selection-start-line="489" selection-start-column="43" selection-end-line="489" selection-end-column="43" />
+            <state relative-caret-position="434">
+              <caret line="497" column="5" selection-start-line="497" selection-start-column="5" selection-end-line="497" selection-end-column="5" />
               <folding>
                 <element signature="e#4070#4201#0#PHP" expanded="false" />
                 <element signature="e#4146#4201#0#PHP" expanded="false" />
@@ -309,6 +305,20 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="External Dependencies">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="C:">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="uniprint">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -475,13 +485,13 @@
       <option name="presentableId" value="Default" />
       <updated>1484139853545</updated>
       <workItem from="1484139877587" duration="19306000" />
-      <workItem from="1484222281118" duration="48397000" />
+      <workItem from="1484222281118" duration="49196000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78164000" />
+    <option name="totallyTimeSpent" value="78963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,6 +705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -974,23 +985,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="489" column="43" selection-start-line="489" selection-start-column="43" selection-end-line="489" selection-end-column="43" />
+        <state relative-caret-position="339">
+          <caret line="180" column="24" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
           <folding>
-            <element signature="e#4070#4201#0#PHP" expanded="false" />
-            <element signature="e#4146#4201#0#PHP" expanded="false" />
+            <marker date="1484310382964" expanded="false" signature="3482:5307" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
+        <state relative-caret-position="434">
+          <caret line="497" column="5" selection-start-line="497" selection-start-column="5" selection-end-line="497" selection-end-column="5" />
           <folding>
-            <marker date="1484294808476" expanded="false" signature="3482:5307" ph="..." />
+            <element signature="e#4070#4201#0#PHP" expanded="false" />
+            <element signature="e#4146#4201#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
