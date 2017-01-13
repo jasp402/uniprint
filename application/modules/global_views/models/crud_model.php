@@ -484,17 +484,34 @@ class Crud_model extends CI_Model
      *
      * @param   string $table
      * @param   array $whereId
+     * @param   string $method
      *
      * @return  void
      **/
-    public function delete($table, $whereId)
+    public function delete($table, $whereId, $method='')
     {
         $this->db->delete($table);
-        $this->db->where(key($whereId), $whereId[key($whereId)]);
+        $this->db->where($whereId);
         //echo $this->db->last_query();
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        detail_message($items, 'DELETE');
+
+        switch ($method) {
+            case 'ajax':
+                if ($items['num_err'] == 0) {
+                    detail_message($items, 'DELETE');
+                } else {
+                    detail_message($items, 'ERROR_AJAX');
+                }
+                break;
+            case '':
+                if ($items['num_err'] == 0) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
+                break;
+        }
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
