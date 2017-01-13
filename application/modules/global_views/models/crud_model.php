@@ -483,7 +483,7 @@ class Crud_model extends CI_Model
      * Elimina el elemento pasado el ID
      *
      * @param   string $table
-     * @param   array $where
+     * @param   array $whereId
      *
      * @return  void
      **/
@@ -491,11 +491,10 @@ class Crud_model extends CI_Model
     {
         $this->db->delete($table);
         $this->db->where(key($whereId), $whereId[key($whereId)]);
-        echo $this->db->last_query();
+        //echo $this->db->last_query();
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         detail_message($items, 'DELETE');
-
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
