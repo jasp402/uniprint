@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jasp402.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" afterPath="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" afterPath="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" afterPath="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" afterPath="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" afterPath="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
     </list>
     <ignored path="SysUniprint.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,8 +117,8 @@
       <file leaf-file-name="crud_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2494">
-              <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+            <state relative-caret-position="353">
+              <caret line="144" column="29" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
               <folding>
                 <element signature="e#4070#4201#0#PHP" expanded="false" />
                 <element signature="e#4146#4201#0#PHP" expanded="false" />
@@ -153,13 +147,13 @@
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
         <option value="$PROJECT_DIR$/application/modules/dashboard/views/ajustes.php" />
         <option value="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
         <option value="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
         <option value="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
         <option value="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
         <option value="$PROJECT_DIR$/application/helpers/global_function_helper.php" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
       </list>
     </option>
   </component>
@@ -503,13 +497,13 @@
       <option name="presentableId" value="Default" />
       <updated>1484139853545</updated>
       <workItem from="1484139877587" duration="19306000" />
-      <workItem from="1484222281118" duration="43657000" />
+      <workItem from="1484222281118" duration="44225000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73424000" />
+    <option name="totallyTimeSpent" value="73992000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,8 +996,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2494">
-          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+        <state relative-caret-position="353">
+          <caret line="144" column="29" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
           <folding>
             <element signature="e#4070#4201#0#PHP" expanded="false" />
             <element signature="e#4146#4201#0#PHP" expanded="false" />

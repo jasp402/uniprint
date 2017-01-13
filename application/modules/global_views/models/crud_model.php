@@ -28,6 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * read_id              ----> <<getAllByID>> retorna todos los valores del ID pasado
  * read_field_table     ----> Retorna el campo solicitado ejemplo: << db->select('cod_key') >>
  * read_where           ----><<getAllByWhere>> retorna todos los valores de tabla <donde|where> sirve como un filtro
+ * read_last            ----> Retorna el ultimo valor solicitado. ORDER_BY = DESC, LIMIT = 1
  * ---------------------------------------------------------------------------------------------------------------
  * read_data_table      ----> Realiza un <<select>> <<donde|where>> retorna el valor en formato  (DataTable)
  * ---------------------------------------------------------------------------------------------------------------
@@ -125,32 +126,68 @@ class Crud_model extends CI_Model
         $this->db->insert($table, $data);
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        detail_message($items, 'CREATE');
+        if($items['num_err']==0){
+            detail_message($items, 'CREATE');
+        }else{
+            $items['num_err'] = 'null';
+            detail_message($items, 'ERROR_AJAX');
+        }
+
 
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * create_much
+     * create_much (version 1.2)
      * ---------------------------------------------------------------------------------------------------------------
-     * Correr una array e insertar varios elementos
+     * Correr una array e insertar varios elementos [Solo admite Matriz]
+     * ToDo - falta validar en caso de que el array no sea una matriz bidimencional
      *
      * @param   string $table
      * @param   array $array
+     * @param   string $method
      *
      *
-     * @return    void
+     * @return    boolean
      **/
-    public function create_much($table, $array)
+    public function create_much($table, $array,$method='')
     {
-
         $items = array();
-        for ($i = 0, $c = count($array); $i < $c; $i++) {
-            $this->db->insert($table, $array[$i]);
+        $keys = array_keys($array);
+        $values = array_values($array[$keys[0]]);
+        $val = array();
+
+        for ($i = 0; $i < count($array); $i++){
+            for ($j = 0; $j < count($values); $j++) {
+                for ($z = 0; $z < count($keys); $z++) {
+                    $val[$j][$keys[$z]] = $array[$keys[$z]][$j];
+                }
+            }
+        }
+
+        for ($x = 0; $x < count($val); $x++) {
+            $this->db->insert($table, $val[$x]);
             $items['num_err'] = $this->db->_error_number();
             $items['mens_err'] = $this->db->_error_message();
+            //echo $this->db->last_query();
         }
-        detail_message($items, 'CREATE');
 
+        switch ($method) {
+            case 'ajax':
+                if ($items['num_err'] == 0) {
+                    detail_message($items, 'CREATE');
+                } else {
+                    detail_message($items, 'ERROR_AJAX');
+                }
+                break;
+            case '':
+                if ($items['num_err'] == 0) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
+                break;
+        }
+        return NULL;
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
@@ -164,7 +201,6 @@ class Crud_model extends CI_Model
      **/
     public function read($table)
     {
-
         $this->db->select('*');
         $this->db->from($table);
         $query = $this->db->get();
@@ -179,7 +215,6 @@ class Crud_model extends CI_Model
             detail_message($items, 'EMPTY');
             return FALSE;
         }
-
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
@@ -304,6 +339,47 @@ class Crud_model extends CI_Model
             }
             return FALSE;
         }
+    }
+
+
+    /**
+     * ---------------------------------------------------------------------------------------------------------------
+     * read_last
+     * ---------------------------------------------------------------------------------------------------------------
+     * Retorna el ultimo valor solicitado. ORDER_BY = DESC, LIMIT = 1 | AUTO_INCREMENT
+     *
+     * @param   string $field
+     * @param   string $table
+     * @param   string $where  | array
+     *
+     * @return  string
+     **/
+    public function read_last($field, $table, $where='')
+    {
+        $items = array();
+        $result = 0;
+        $this->db->select($field);
+        $this->db->from($table);
+        if (is_array($where)) {
+            $this->db->where($where);
+        }
+        $this->db->order_by($field, 'DESC');
+        $this->db->limit(1);
+        $query = $this->db->get();
+         $items['num_err'] = $this->db->_error_number();
+         $items['mens_err'] = $this->db->_error_message();
+
+        if ($items['num_err'] == 0) {
+            foreach ($query->result() as $key) {
+                $result =  $key;
+            }
+            if(isset($result->$field)){
+                $result = bcadd($result->$field,1);
+            }else{
+                $result= 1;
+            }
+        }
+        return $result;
     }
 
     /**
