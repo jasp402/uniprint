@@ -69,9 +69,6 @@ class Registrar extends MX_Controller
         $id     = $this->input->post('id');
         $query  = $this->models->getAllById($id);
 
-
-
-
         if ($query) {
             foreach ($query as $key => $value) {
                 $result = array($key => $value);
@@ -103,64 +100,34 @@ class Registrar extends MX_Controller
         }
     }
 
-    //ToDo - Esto se puede ejorar pasando solamente "$this->input->post()"
     public function save(){
-        foreach ($this->input->post() as $key=>$value) {
-            echo $key.' = '.$value;
-        };
-        //Static Date
-        //$data           = array();
-        //$cod_inventario = ($this->models->getLastCode('cod_inventario','sys_inventario')->cod_inventario)+1;
-        //$origen         =$this->input->post('origen');
-        //$id_chofer      =$this->input->post('id_chofer');
-        //$id_vehiculo    =$this->input->post('id_vehiculo');
-        //$destino        =$this->input->post('destino');
-        //$operacion      ='+';
-        //$lote           =$this->input->post('lote');
-        //$comentario     =$this->input->post('comentario');
-        //$documento      =$this->input->post('documento');
-        //$fecha          =new DateTime($this->input->post('fecha'));
 
-        //Dinamic Date
-        /*
-        $StaticDate[0]  = array(
-        'cod_inventario'=>$cod_inventario,
-        'origen'        =>$origen,
-        'id_chofer'     =>$id_chofer,
-        'id_vehiculo'   =>$id_vehiculo,
-        'destino'       =>$destino,
-        'documento'     =>$documento,
-        'fecha'         =>$fecha->format('Y-m-d'),
-        'comentario'    => $comentario,
-        'lote'          => $lote,
-        'operacion'     =>$operacion
-        );
-        */
+        $data = $this->input->post();
+        $data = array_merge($data,$this->auditoria);
+        $data[$this->schema['sec_key']] = $this->CRUD->read_last($this->schema['sec_key'], $this->schema['table']);
+            unset($data['id_producto'],$data['cant_lote']);
 
-        //Dinamic Date
-        /*
-            $items          = count($this->input->post('id_producto'));
+        //$this->CRUD->create($this->schema['table'], $data);
 
-            $id_producto    =$this->input->post('id_producto');
-            $cant_lote      =$this->input->post('cant_lote');
-            $cant_unidades  =$this->input->post('cant_unidades');
-            $total          =$this->input->post('total');
+        //-------------------------------------------------------------------------------
+        $data_detail['id_producto'] = $this->input->post('id_producto');
+        $data_detail['cant_lote'] = $this->input->post('cant_lote');
 
-        for($i=0;$i<$items; $i++){
-            $DinamicDate[$i]= array(
-                'id_producto'=>$id_producto[$i],
-                'cant_lote'=>$cant_lote[$i],
-                'cant_unidades'=>$cant_unidades[$i],
-                'total'=>$total[$i]
-            );
-            $data[$i] = array_merge($StaticDate[0], $DinamicDate[$i], $this->auditoria);
+        $a = count($data_detail['id_producto']);
+        $b = count($data_detail['cant_lote']);
+
+            if($a == $b){
+                for($i=0; $i<$a; $i++){
+                    $data_detail[$this->schema['sec_key']][$i]=$data[$this->schema['sec_key']];
+
+                }
+                $this->CRUD->create_much($this->schema['detail'],$data_detail);
+               print_r($data_detail);
+
+            }else{
+                return false;
+            }
         }
-
-
-        $this->CRUD->create_much($this->schema['table'],$data);
-        if($lote=='si'){$this->models->create_details($data);}
-*/
-    }
 
 
     public function edit()

@@ -3,16 +3,60 @@
  */
 var nextinput = 0;
 $(document).ready(function () {
-    $('form').submit(function (event) {
-        event.preventDefault();
-    });
     $('#id_ubicacion, #id_categoria, #id_producto').selectpicker({
         liveSearch: true,
         maxOptions: 1,
         liveSearchPlaceholder: 'Escriba...',
         title: 'seleccionar'
     });
+    $('form').submit(function (event) {
+        event.preventDefault();
+    });
 });
+function validar() {
+
+
+    $('form').validate({
+        errorElement: 'div',
+        errorClass: 'help-block',
+        focusInvalid: false,
+        ignore: "",
+        rules: {
+            unidades:{
+                required: true
+            }
+
+        },
+
+        messages: {
+            unidades: {
+                required: "Por favor complete todos los campos"
+            },
+        },
+
+
+        highlight: function (e) {
+            $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+        },
+
+        success: function (e) {
+            $(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
+            $(e).remove();
+        },
+
+        errorPlacement: function (error, element) {
+            error.insertAfter(element.parent());
+        },
+
+        submitHandler: function (form) {
+            Save();
+            // alert("asd");
+        },
+        invalidHandler: function (form) {
+            bootbox.alert('<h4 class="widget-title lighter"><i class="ace-icon fa fa-exclamation-triangle orange" aria-hidden="true"></i> Falta completar algunos campos</strong></h4>');
+        }
+    });
+}
 function loadGrado() {
     var id = $("#id_categoria").find(":selected").val();
     if (id > 0) {
@@ -68,12 +112,11 @@ function loadLibros(){
                      "data": null,
                      render: function (data, type, row) {
                          return  '<label class="pos-rel">'+
-                             '<input type="checkbox" name=\"id_producto[]\" class="ace" value='+data.id_producto+'>'+
+                             '<input type="checkbox" name="id_producto[]" id="checkbox'+data.id_producto+'" class="ace" onclick="enable_cant_libros('+data.id_producto+')" value="'+data.id_producto+'" >'+
                              '<span class="lbl"></span>'+
                              '</label>';
                      }
                  },
-
                 {"data": "nombre"},
                 {"data": "detalle_1"},
                 //ToDo - Calcular el saldo de material pasado a produccion
@@ -82,12 +125,12 @@ function loadLibros(){
                     "data": null,
                     render: function (data, type, row) {
                         return  '<label class="pos-rel">'+
-                            '<input type="textbox" name=\"id_producto[]\">'+
+                            '<input type="number" min="1" name=\"cant_lote[]\" id="cant_libros'+data.id_producto+'" disabled="disabled">'+
                             '<span class="lbl"></span>'+
                             '</label>';
                     }
                 }
-            ],
+            ]
         });
         $('#simple-table_wrapper').removeClass("dataTables_wrapper");
     } else {
@@ -97,6 +140,7 @@ function loadLibros(){
     }
     loadAllSelect();
 }
+
 //--------------------------
 
 
@@ -197,7 +241,7 @@ function loadProducto(index) {
                         $("<option></option>").attr("value", '').text('Seleccione...')
                     );
                     $.each(r, function (indice, valor) {
-                        $("#id_producto" + index).append(
+                        $("#id_producto"+index).append(
                             $("<option></option>")
                                 .attr("title", valor[indice].detalle_1)
                                 .attr("value", valor[indice].id_producto)
@@ -219,29 +263,29 @@ function loadProducto(index) {
 
 //agrega campos de productos para Utiles escolares
 function AgregarCampos_lote(){
-    loadAllSelect();
-    loadCategoria(nextinput);
+    //loadAllSelect();
     nextinput++;
     campo = '<tr id="campo'+nextinput+'">'+
         '<td  class="align-middle"><a href="#" onclick="elimCamp('+nextinput+')"><i class="ui-icon fa fa-trash red" aria-hidden="true"></i></a></td>'+
         '<td  class="align-middle">'+nextinput+'</td>'+
         '<td>' +
-        '<select class="form-control" name="id_categoria[]'+nextinput+'" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
+        '<select class="form-control" id="id_categoria'+nextinput+'"  data-live-search="true" onchange="loadTipo('+nextinput+')">'+
         '<option value="">Seleccione un proyecto</option>'+
         '</select>' +
         '</td>'+
         '<td>'+
-        '<select class="form-control" name="id_tipo[]'+nextinput+'" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
+        '<select class="form-control" id="id_tipo'+nextinput+'"  data-live-search="true" onchange="loadProducto('+nextinput+')">'+
         '<option value="">Seleccione un proyecto</option>'+
         '</select>'+
         '</td>'+
         '<td>'+
-        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'" data-live-search="true">'+
+        '<select class="form-control" name="id_producto[]'+nextinput+'" id="id_producto'+nextinput+'">'+
         '</select>'+
         '</td>'+
-        '<td><input type="number" name="total[]'+nextinput+'" id="total'+nextinput+'" class="form-control"></td>' +
+        '<td><input type="number" name="cant_lote[]'+nextinput+'" id="cant_lote'+nextinput+'" class="form-control"></td>' +
         '</tr>';
     $("#campos_lote").append(campo);
+    loadCategoria(nextinput);
 }
 
 //multiplica la cantidad de morrales por paleta
@@ -262,15 +306,45 @@ function totalizar_Produccion(){
 
 function Save(){
     var f = hoy();
-    //sync
-    $.ajax({
-        url: 'registrar/save',
-        type: 'POST',
-        dataType: 'json',
-        data: $('#form').serialize()+'&fecha='+f,
-        success: function (data) {
-            console.log(data);
-            message_box(data.success, data.times, data.closes);
+    var grado = $("#id_tipo option:selected").text();
+
+    if($("#id_tipo option:selected").val()=='' || $("#id_ubicacion option:selected").val()==''){
+        bootbox.alert('Falta completar algunos campos')
+    }else{
+        var i;
+        var chk = true;
+        for(i=1; i <= nextinput; i++){
+            //console.log($('#total'+i+'').val());
+            if($('#cant_lote'+i+'').val() == 0){
+                chk = false;
+            }
         }
-    });
+        //console.log(chk)
+        if(chk == false){
+            bootbox.alert('<h4 class="widget-title lighter"><i class="ace-icon fa fa-exclamation-triangle orange" aria-hidden="true"></i> Tienes campos <strong>Incompletos en Utilies Escolares</strong></h4>');
+        }
+        //sync
+        $.ajax({
+            url: 'registrar/save',
+            type: 'POST',
+            dataType: 'json',
+            data: $('#form').serialize()+'&fecha='+f+'&grado='+grado,
+            success: function (data) {
+                console.log(data);
+                message_box(data.success, data.times, data.closes);
+            }
+        });
+    }
+
+}
+
+function enable_cant_libros(id){
+    if ($("#checkbox"+id+":checked").val() == id) {
+        $("#cant_libros"+id).removeAttr("disabled");
+        $("#cant_libros"+id).val($("#cant_lote").val());
+    }
+    else {
+        $("#cant_libros"+id).val('');
+        $("#cant_libros"+id).attr('disabled', 'disabled');
+    }
 }

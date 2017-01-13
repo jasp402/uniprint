@@ -11,7 +11,6 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 <script src="<?= base_url() ?>assets/js/bootbox.js"></script>
 <script src="<?= base_url(); ?>assets/js/views/produccion/registrar.js"></script>
-<script src="<?= base_url(); ?>assets/js/views/produccion/registrar.js"></script>
 
 </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
@@ -29,8 +28,9 @@ echo $this->load->view('global_views/header_dashboard'); ?>
         </small>
     </h1>
 </div>
-<?php echo form_open('', "id='form' class='form-horizontal' "); ?>
-<div class="row">
+
+<div class="row" style="width: 100%">
+    <?php echo form_open('', "id='form' class='form-horizontal' "); ?>
     <div class="form-group has-info">
         <div class="col-sm-6">
             <div class="col-xs-12">
@@ -48,7 +48,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <div class="space-6"></div>
             <span>
                 <label for="id_proyecto" class="control-label no-padding-right pull-right">Categoria</label>
-                <select class="form-control" name="categorias" id="id_categoria" onchange="loadGrado()">
+                <select class="form-control" id="id_categoria" onchange="loadGrado()">
                     <?php foreach ($this->CRUD->__getAll('categorias', array('id_proyecto' => '1')) as $keyList): ?>
                         <option value="<?= $keyList->id_categoria; ?>">
                             <?= $keyList->nombre; ?>
@@ -61,7 +61,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <div class="space-6"></div>
             <span>
                 <label for="grado" class="control-label no-padding-right pull-right">Tipo</label>
-                <select class="form-control" name="grado" id="id_tipo" onchange="loadLibros()">
+                <select class="form-control" id="id_tipo" onchange="loadLibros()">
                     <option value="">
                             Elija Categoria
                         </option>
@@ -71,16 +71,16 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <div class="col-xs-12 align-center">
                 <div class="space-12"></div>
                                 <span class="block input-icon input-icon-right">
-                                    <div class="input-daterange input-group">
-                                        <input type="number" name="lote" id="lote" placeholder="Paletas" onchange="totalizar_Produccion()">
+                                    <div class="input-daterange input-group form-group">
+                                        <input type="number" min="0" name="lote" id="lote" placeholder="Paletas" onchange="totalizar_Produccion()">
                                         <span class="input-group-addon">
                                             <i class="fa fa-close"></i>
                                         </span>
-                                         <input type="number" name="cant_lote" id="cant_lote" placeholder="Cantidad x Paletas" onchange="totalizar_Produccion()">
+                                         <input type="number" min="0" name="unidades" id="cant_lote" placeholder="Cantidad x Paletas" onchange="totalizar_Produccion()">
                                         <span class="input-group-addon">
                                             <i class="fa fa-exchange"></i>
                                         </span>
-                                         <input type="text" name="total" id="total" readonly style="width:127px">
+                                         <input type="text" name="total" id="total" readonly>
                                     </div>
                                 </span>
             </div>
@@ -114,10 +114,12 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                 <thead>
                 <tr>
                     <th class="center">
+                        <!--
                         <label class="pos-rel">
-                            <input type="checkbox" name="checked" class="ace">
+                            <input type="checkbox" class="ace">
                             <span class="lbl"></span>
                         </label>
+                        -->
                     </th>
                     <th>Materia</th>
                     <th>Titulo</th>
@@ -172,7 +174,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
         <div class="wizard-actions">
             <!-- #section:plugins/fuelux.wizard.buttons -->
 
-            <button class="btn btn-success btn-next" onclick="Save()">
+            <button class="btn btn-success btn-next" onclick="validar()">
                 <i class="ace-icon fa fa-save icon-on-right"></i>
                 Guardar
             </button>
@@ -180,6 +182,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <!-- /section:plugins/fuelux.wizard.buttons -->
         </div>
     </div>
+    </form>
 </div>
-<?php echo "</form>"; ?>
+
 <?php $this->load->view('global_views/footer_dashboard'); ?>
