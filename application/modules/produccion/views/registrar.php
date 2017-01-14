@@ -21,7 +21,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 <div class="page-header">
     <h1>
         <i class="fa fa-product-hunt grey"></i>
-        Prodrucción
+        Producción
         <small>
             <i class="fa fa-angle-double-right"></i>
             Control y Registros material procesado, embalado o empaquetado
