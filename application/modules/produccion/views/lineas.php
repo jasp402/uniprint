@@ -15,8 +15,8 @@
 <!-- CABECERA -->
 <div class="page-header">
     <h1>
-        <i class="fa fa-product-hunt grey"></i>
-        Producción
+        <i class="fa fa-sliders grey"></i>
+        Lienas de Producción
         <small>
             <i class="fa fa-angle-double-right"></i>
             Gestionar responsables por lineas de embalaje

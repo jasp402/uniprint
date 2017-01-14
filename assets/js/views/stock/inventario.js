@@ -224,7 +224,6 @@ function loadInfo(id) {
             $('#_proyecto').text(data.result[0][0].nombre_proyecto);
             $('#_loguser').text(data.result[0][0].responsable);
             $('#_logdate').text(data.result[0][0].registro);
-            $('#_comentario').text(data.result[0][0].comentario);
             SetSumaUnid(data.result[0][0].cod_inventario);
             SetSumaPaletas(data.result[0][0].cod_inventario);
             $("#_etiqueta").attr("href", "../pdfs/pdfs?labelBookIn="+data.result[0][0].cod_inventario+"");
