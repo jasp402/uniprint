@@ -24,7 +24,7 @@ $(document).ready(function () {
             "initComplete": function () {
                 this.api().columns().every( function () {
                     var i = this.index();
-                    console.log(i);
+                    //console.log(i);
                     var column = this;
                         if(i!=10 && i!=9 &&  i!=8 && i!=12 && i!=0){
 
@@ -201,23 +201,24 @@ function Delete(id,cod) {
     });
 }
 function loadInfo(id) {
+    console.log(id);
     $.ajax({
-        url: 'inventario/searchAllByWhere',
+        url: 'inventario/search_entrada',
         type: 'POST',
         dataType: 'json',
-        data: {id: id, 'field':'cod_inventario'},
+        data: {'cod_inventario': id},
         beforeSend: function () {
             message_load('Procesando...', 'info', 'clock-o', '_load','_profile');
         },
         success: function (data) {
-            //console.log(data.result[0][0]);
-            $('#widget-title').text('Detalles del Documento #'+data.result[0][0].documento+'');
+            //console.log(data);
+            console.log(data.result[0][0]);
+            $('#widget-title').text('Documento de Entrada #'+data.result[0][0].documento+'');
             $('#_documento').text(data.result[0][0].documento);
             $('#_origen').text(data.result[0][0].origen);
             SetByIdDestino(data.result[0][0].destino);
             $('#_chofer').text(data.result[0][0].chofer+' - '+data.result[0][0].cedula);
-            $('#_vehiculo').text(data.result[0][0].marca+' '+data.result[0][0].modelo +
-                ' - '+data.result[0][0].placa);
+            $('#_vehiculo').text(data.result[0][0].marca+' '+data.result[0][0].modelo+' - '+data.result[0][0].placa);
             $('#_fecha').text(data.result[0][0].fecha);
             $('#_cod_inventario').text(data.result[0][0].cod_inventario);
             $('#_proyecto').text(data.result[0][0].nombre_proyecto);
@@ -228,6 +229,42 @@ function loadInfo(id) {
             $("#_etiqueta").attr("href", "../pdfs/pdfs?labelBookIn="+data.result[0][0].cod_inventario+"");
             $("#_etiquetaBtn").attr("href", "../pdfs/pdfs?labelBookIn="+data.result[0][0].cod_inventario+"");
             message_hide('_load','_profile');
+        }
+    });
+}
+function SetByIdDestino(id) {
+    $.ajax({
+        url: '../almacenes/almacen/searchAllById',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            $('#_destino').text(data.result[0].nombre);
+        }
+    });
+}
+function SetSumaUnid(id) {
+    $.ajax({
+        url: 'inventario/sumarTotal',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            number = parseInt(data[0].suma);
+            $('#_total').text(number.toLocaleString('es-ES'));
+        }
+    });
+}
+function SetSumaPaletas(id) {
+    $.ajax({
+        url: 'inventario/sumarPltas',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            console.log(data);
+            number = parseInt(data[0].suma);
+            $('#_pltas').text(number.toLocaleString('es-ES'));
         }
     });
 }
