@@ -214,6 +214,10 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-12">
+                                <div class="well well-sm" id="_comentario"> Sin comentario </div>
+                            </div>
+
 
                         </div>
 
