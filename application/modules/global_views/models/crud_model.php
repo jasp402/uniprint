@@ -486,7 +486,7 @@ class Crud_model extends CI_Model
      * @param   array $whereId
      * @param   string $method
      *
-     * @return  void
+     * @return  string
      **/
     public function delete($table, $whereId, $method='')
     {
@@ -512,12 +512,13 @@ class Crud_model extends CI_Model
                 }
                 break;
         }
+        return NULL;
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
      * delete_much
      * ---------------------------------------------------------------------------------------------------------------
-     * Elimina el elemento pasado el ID
+     * Elimina el elemento pasado el ID <<deleteSelect>>
      *
      * @param   string $table
      * @param   array $arrayId
