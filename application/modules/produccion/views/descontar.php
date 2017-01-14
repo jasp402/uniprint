@@ -19,49 +19,12 @@
         Producción
         <small>
             <i class="fa fa-angle-double-right"></i>
-            Gestionar responsables por lineas de embalaje
+            Descuentos de las paletas enviadas a producción
         </small>
     </h1>
 </div>
 
-<div class="row">
-    <div class="col-sm-12">
 
-        <div class="infobox infobox-red">
-            <div class="infobox-icon">
-                <i class="ace-icon fa fa-random"></i>
-            </div>
-
-            <div class="infobox-data">
-                <span class="infobox-data-number"><?=count($this->CRUD->__getAll($this->schema['table'],$this->schema['options']))?></span>
-                <div class="infobox-content">
-                    <a href="#modal-table_categoria" role="button" data-toggle="modal"
-                       onclick="javascript:div_form_create('Agregar nueva Imprenta');">
-                        <i class="ace-icon fa fa-external-link"></i>
-                        Registar Linea
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="space-6"></div>
-        <div class="clearfix">
-            <div class="pull-right tableTools-container"></div>
-        </div>
-        <div>
-            <table id="dynamic-table_3" class="table table-striped table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th width="15%" style="width: 20%!important;">Linea</th>
-                    <th width="15%" style="width: 20%!important;">Responsable</th>
-                    <th>Telefono</th>
-                    <th>funciones</th>
-                </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-</div>
 
 <div id="modal-table_categoria" class="modal fade" tabindex="-3">
     <div class="modal-dialog">
