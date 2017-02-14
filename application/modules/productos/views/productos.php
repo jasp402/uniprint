@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @method static Crud_model __getAll(string $entity)                     Load models of CRUD for All
+ * @method static crud_model __getAll(string $entity)                     Load models of CRUD for All
 **/
 echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css"

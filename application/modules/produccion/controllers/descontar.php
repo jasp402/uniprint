@@ -34,7 +34,6 @@ class Descontar extends MX_Controller
         $this->schema['sec_key']    =  'cod_inventario';
         $this->models = $this->load->model('produccion_model');
         $this->items['getAll'] = $this->models;
-        $this->models->load_setting_in_model($this->schema);
     }
     public function load_setting_in_view()
     {
@@ -43,5 +42,17 @@ class Descontar extends MX_Controller
     public function index()
     {
         parent::__index($this->schema['module'], $this->schema['view'], $this->items);
+    }
+
+    public function getDataTable()
+    {
+        $where = array('`sys_inventario_detalle`.`estado`'=>'i');
+        $this->models->dataTable_inventario_inactivo($this->schema['table'], $where);
+    }
+
+    public function descontar_lote()
+    {
+        $update = array('estado' => 'i');
+        $this->CRUD->disable($this->schema['detail'], $update, $this->input->post(), 'sync');
     }
 }

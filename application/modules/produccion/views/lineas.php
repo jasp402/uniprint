@@ -36,7 +36,7 @@
                 <span class="infobox-data-number"><?=count($this->CRUD->__getAll($this->schema['table'],$this->schema['options']))?></span>
                 <div class="infobox-content">
                     <a href="#modal-table_categoria" role="button" data-toggle="modal"
-                       onclick="javascript:div_form_create('Agregar nueva Imprenta');">
+                       onclick="javascript:div_form_create('Agregar nueva Linea');">
                         <i class="ace-icon fa fa-external-link"></i>
                         Registar Linea
                     </a>
@@ -54,7 +54,7 @@
                     <th><input type="checkbox"></th>
                     <th width="15%" style="width: 20%!important;">Linea</th>
                     <th width="15%" style="width: 20%!important;">Responsable</th>
-                    <th>Telefono</th>
+                    <th>Cedula</th>
                     <th>funciones</th>
                 </tr>
                 </thead>
@@ -108,13 +108,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label no-padding-right">telefono: </label>
+                                <label class="col-sm-4 control-label no-padding-right">Cedula: </label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
                                         </span>
-                                        <input class="form-control" type="tel" name="telefono" id="telefono" required>
+                                        <input class="form-control" type="number" name="telefono" id="telefono" required>
                                     </div>
                                 </div>
                             </div>

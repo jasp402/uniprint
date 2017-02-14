@@ -7,7 +7,8 @@
     <script src="<?= base_url() ?>assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js"></script>
     <script src="<?= base_url() ?>assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
     <script src="<?=base_url()?>assets/js/bootbox.js"></script>
-    <script src="<?= base_url(); ?>assets/js/views/produccion/lineas.js"></script>
+    <script src="<?=base_url();?>assets/js/jquery.gritter.js"></script>
+    <script src="<?= base_url(); ?>assets/js/views/produccion/descontar.js"></script>
 
     </head>
 <?php echo $this->load->view('global_views/contenedor'); ?>
@@ -19,92 +20,102 @@
             Producción
             <small>
                 <i class="fa fa-angle-double-right"></i>
-                Descontar lotes 
+                Descontar lotes
             </small>
         </h1>
     </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div>
+                <h3 class="header smaller lighter blue">
+                    <i class="fa fa-barcode" aria-hidden="true"></i>
+                    Codigo de Barra
+                    <small>(Lote)</small>
+                </h3>
+            </div>
+            <div class="clearfix">
+                <input name="descontar" id="descontar" type="number" style="width: 555px" autofocus
+                       onkeyup="myFunction(this,this.value)" maxlength="5" onfocus="this"/>
+            </div>
 
+        </div>
+        <div class="col-sm-6">
+            <div>
+                <h3 class="header smaller lighter green">
+                    <i class="fa fa-mail-forward" aria-hidden="true"></i>
+                    Ultimo lote Descontado del Stock
+                </h3>
+                <table id="dynamic-table" class="table table-striped table-bordered table-hover small">
+                    <thead class="table-condensed">
+                    <tr>
+                        <th>codigo</th>
+                        <th>N° Doc.</th>
+                        <th>Origen</th>
+                        <th>tipo</th>
+                        <th>producto</th>
+                        <th>Cantidad</th>
+                    </tr>
+                    </thead>
+                </table>
 
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div>
+                <h3 class="header smaller lighter grey">
+                    <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
+                    Registro de lotes procesados
+                </h3>
+                <div class="widget-main no-padding">
+                <table id="simple-table" class="table table-bordered table-striped table-responsive small">
+                    <thead class="thin-border-bottom">
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Tipo</th>
+                        <th>Producto</th>
+                        <th>Imprenta / Proveedor</th>
+                        <th>Cant. Entrada</th>
+                        <th>Cant. Producción</th>
 
-    <div id="modal-table_categoria" class="modal fade" tabindex="-3">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header no-padding">
-                    <div class="table-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                            <span class="white">&times;</span>
-                        </button>
-                        <span class="bigger-140" id="titulo_div"></span>
-                    </div>
-                </div>
+                        <th width="50%">
+                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                            Estadisticas
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody style="vertical-align: middle">
+                    <?php foreach ($getAll->inventario_activo($this->schema['detail']) as  $keyList): ?>
+                    <tr>
 
-                <div class="modal-body no-padding">
-                    <!-- FORMULARIO DE CRUD -->
-                    <div class="row" id="form_categorias">
-                        <div id="mensaje_crud_apoderado"></div>
-                        <div class="hr hr-18 dotted"></div>
+                        <td>
+                            <a href="#"><?=$keyList->categoria?></a>
+                        </td>
+                        <td width="10%"><?=$keyList->tipo?></td>
+                        <td width="15%"><?=$keyList->producto?></td>
+                        <td width="20%"><?=$keyList->origen_nombre?></td>
+                        <td width="10%"><?=$format_number = number_format($keyList->procesado, 0, ',', '.');?></td>
+                        <td width="10%">
+                            <?php if($keyList->estado == 'i'): ?>
 
-                        <div class="col-sm-12">
-                            <?php echo form_open('', "id='form' class='form-horizontal' "); ?>
-                            <input type="hidden"  name="id_ubicacion" id="id_ubicacion">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label no-padding-right">Linea: </label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                            <input class="form-control" type="textbox" name="label" id="label" placeholder="L1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label no-padding-right">Responsable: </label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                            <input class="form-control" type="textbox" name="nombre" id="nombre" placeholder="nombre & Apellido">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label no-padding-right">telefono: </label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-pencil-square-o grey bigger-110"></i>
-                                        </span>
-                                            <input class="form-control" type="tel" name="telefono" id="telefono" required>
-                                        </div>
-                                    </div>
-                                </div>
+                            <span class="label label-warning arrowed-in arrowed-right ">
+                                <?=$keyList->procesado?>
+                            </span>
+                        <?php endif; ?>
+                            </td>
+                        <td>
+                            <div class="progress pos-rel" data-percent="66%">
+                                <div class="progress-bar" style="width:66%;"></div>
                             </div>
-                            </form>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
                 </div>
-                <div class="modal-footer no-margin-top">
-                    <button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
-                        <i class="ace-icon fa fa-times"></i>
-                        Close
-                    </button>
-                    <div style="display: none;" id="div_btn_edit">
-                        <button class="btn btn-sm btn-warning" id="btn_edit" onclick="javascript:Edit();">
-                            <i class="fa fa-pencil bigger-120"></i>
-                            Editar
-                        </button>
-                    </div>
-                    <div style="display: none;" id="div_btn_save">
-                        <button class="btn btn-sm btn-primary" id="btn_save" onclick="javascript:Save();">
-                            <i class="fa fa-save bigger-120"></i>
-                            Registrar
-                        </button>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
+            </div>
+        </div>
     </div>
+
+
+
 <?php $this->load->view('global_views/footer_dashboard'); ?>

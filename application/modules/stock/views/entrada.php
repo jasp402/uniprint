@@ -1,6 +1,6 @@
 <?php
 /**
- * @property Crud_model $CRUD
+ * @property crud_model $CRUD
 **/
 echo $this->load->view('global_views/header_dashboard'); ?>
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/plugins/bootstrap-select-master/docs/docs/dist/css/bootstrap-select.css">

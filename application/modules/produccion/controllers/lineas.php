@@ -36,9 +36,6 @@ class Lineas extends MX_Controller
 
         $this->models = $this->load->model('produccion_model');
         $this->items['getAll'] = $this->models;
-        $this->models->load_setting_in_model($this->schema);
-
-
     }
 
     public function load_setting_in_view()
@@ -58,25 +55,9 @@ class Lineas extends MX_Controller
 
     public function searchAllById(){
 
-        /**
-         * @var array $result - (key & value)
-         **/
-        $id     = $this->input->post('id');
-        $query  = $this->models->getAllById($id);
-
-
-
-
-        if ($query) {
-            foreach ($query as $key => $value) {
-                $result = array($key => $value);
-            }
-            $data = array('success' => true, 'result' => $result);
-            echo json_encode($data);
-        } else {
-            $data = array('success' => false);
-            echo json_encode($data);
-        }
+        $id         = $this->input->post('id');
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->read_id($this->schema['table'], $whereId, 'ajax');
     }
 
     public function searchAllByWhere(){
@@ -108,22 +89,23 @@ class Lineas extends MX_Controller
 
     public function edit()
     {
-        $id   = $this->input->post($this->models->primary_key);
-        $data = ($this->input->post());
-        $data = array_splice($data, 1);
-        $this->models->editById($data, $id);
+        $id         = $this->input->post($this->schema['pri_key']);
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $data       = ($this->input->post());
+        $data       = array_splice($data, 1);
+        $this->CRUD->edit($this->schema['table'], $data, $whereId);
     }
 
-    public function delete()
-    {
-        $this->CRUD->delete($this->schema['table'],$this->input->post());
+    public function delete(){
+        $id         = $this->input->post('id');
+        $whereId    = array($this->schema['pri_key'] => $id);
+        $this->CRUD->delete($this->schema['table'],$whereId,'ajax');
     }
 
-
-    public function deleteSelect()
-    {
-        $ids = $this->input->post('id');
-        $this->CRUD->delete_much($this->schema['table'],$ids,$this->schema['pri_key']);
+    public function deleteSelect(){
+        $arrayId    = $this->input->post('id');
+        $fieldKey   = $this->schema['pri_key'];
+        $this->CRUD->delete_much($this->schema['table'],$arrayId,$fieldKey);
     }
 
 }

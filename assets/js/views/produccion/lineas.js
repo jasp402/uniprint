@@ -3,6 +3,7 @@ $(document).ready(function () {
         event.preventDefault();
     });
 });
+
 function div_form_create(text) {
     $('#titulo_div').html(text);
     $("#form")[0].reset();
@@ -10,6 +11,7 @@ function div_form_create(text) {
     $('#div_btn_save').show();
     $('#selectlive_1').selectpicker('refresh');
 }
+
 function div_form_edit(id,text,models) {
     $('#titulo_div').html(text);
     $('#div_btn_save').hide();
@@ -28,6 +30,7 @@ function div_form_edit(id,text,models) {
         }
     });
 }
+
 function Save() {
     var cod = $('#nombre').val().trim();
     if (cod == "") {
@@ -54,6 +57,7 @@ function Save() {
         });
     }
 }
+
 function Edit() {
     $.ajax({
         url: 'lineas/edit',
@@ -75,15 +79,16 @@ function Edit() {
         }
     });
 }
+
 function Delete(id) {
     $('#div_textbox').hide(500);
-    bootbox.confirm("Estas seguro que deseas eliminar este registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
+    bootbox.confirm("Estas seguro que deseas eliminar el registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
         if (result) {
             $.ajax({
                 url: 'lineas/delete',
                 type: 'POST',
                 dataType: 'json',
-                data: {'id_ubicacion': id},
+                data: {'id': id},
                 success: function (data) {
                     message_box(data.success, data.times, data.closes);
                 }
@@ -91,6 +96,7 @@ function Delete(id) {
         }
     });
 }
+
 function deleteMultipe(ids) {
     bootbox.confirm("Estas seguro que deseas eliminar "+ ids.length+" registro?, Recuerda que no se podr&aacute; recuperar.", function (result) {
         if (result) {
@@ -137,12 +143,12 @@ jQuery(function ($) {
                         "data": null,
                         render: function (data, type, row) {
                             return '<div class=\"hidden-sm hidden-xs action-buttons\">'+
-                                '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_ubicacion +', \'Editar Impresor\', \'impresor\')">' +
+                                '<a href="#modal-table_categoria" role="button" data-toggle="modal" data-rel="tooltip" title="Editar" onclick="div_form_edit('+data.id_ubicacion +', \'Editar Linea\', \'lineas\')">' +
                                 '<span class=\"green\">' +
                                 '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
                                 '</span>' +
                                 '</a>'+
-                                '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_ubicacion +')">' +
+                                '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_ubicacion+')">' +
                                 '<span class="red">' +
                                 '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
                                 '</span>' +

@@ -18,6 +18,8 @@
 		<!-- text fonts -->
 		<link rel="stylesheet" href="<?=base_url();?>assets/css/ace-fonts.css"/>
 		<!-- ace styles -->
+		<link rel="stylesheet" href="<?=base_url();?>assets/css/jquery.gritter.css" />
+
 		<link rel="stylesheet" href="<?=base_url();?>assets/css/ace.css" />
 		<link type="text/css" rel="stylesheet" id="ace-skins-stylesheet" href="<?=base_url();?>assets/css/ace-skins.css">
 		<!--[if lte IE 9]>

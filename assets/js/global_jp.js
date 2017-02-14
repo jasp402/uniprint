@@ -108,6 +108,17 @@ function message_box(data, time, options) {
 	}
 }
 
+function message_sync(title, text, image_url, time, class_name) {
+	$.gritter.add({
+		title: title,
+		text: text,
+		image: image_url,
+		sticky: false,
+		time: time,
+		class_name: class_name
+	});
+}
+
 
 function toDate(selector) {
 	var from = selector.split("/");

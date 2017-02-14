@@ -52,19 +52,36 @@
                 switch ($operacion){
                     case 'CREATE':
                         $msg = '<span class=\'bigger-110 green\'>registro exitoso</span>';
+                        $data = array('success' => $msg, 'times'=>2500, 'closes'=>false);
+                        echo json_encode($data);
                         break;
                     case 'UPDATE':
                         $msg = '<span class=\'bigger-110 green\'>actualización exitosa</span>';
+                        $data = array('success' => $msg, 'times'=>2500, 'closes'=>false);
+                        echo json_encode($data);
                         break;
                     case 'DELETE':
                         $msg = '<span class=\'bigger-110 red\'>Registro eliminado</span>';
+                        $data = array('success' => $msg, 'times'=>2500, 'closes'=>false);
+                        echo json_encode($data);
                         break;
                     case 'ARCHIVE':
                         $msg = '<span class=\'bigger-110 blue\'>Registro pasado a historico</span>';
+                        $data = array('success' => $msg, 'times'=>2500, 'closes'=>false);
+                        echo json_encode($data);
+                        break;
+
+                    //All style sync here!
+                    case 'UPDATE_SYNC':
+                        $title  = 'actualización';
+                        $text   = 'El registro se ha actualizado exitosamente.';
+                        $img    = '';
+                        $time   = '';
+                        $class   = 'gritter-success';
+                        $data = array('title'=>$title, 'text'=>$text, 'image_url'=>$img, 'time'=>$time, 'class_name'=>$class);
+                        echo json_encode($data);
                         break;
                 }
-                $data = array('success' => $msg, 'times'=>2500, 'closes'=>false);
-                echo json_encode($data);
                 break;
 
             case '1451':
