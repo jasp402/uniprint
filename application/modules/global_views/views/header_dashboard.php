@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 		<title>SysGiD - Uniprint S.A.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

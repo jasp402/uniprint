@@ -1,4 +1,5 @@
-<?php  die('This file is not really here!');
+<?php die('This file is not really here!');
+
 
 /**
  * ------------- DO NOT UPLOAD THIS FILE TO LIVE SERVER ---------------------

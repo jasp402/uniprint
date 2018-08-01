@@ -110,4 +110,8 @@
 		});
 
 	</script>
+
+<h1>Texto en el Dashboard
+</h1>
 	<?php $this->load->view('global_views/footer_dashboard');?>
+

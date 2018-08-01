@@ -20,6 +20,7 @@
 	    }else { 
 	    	return true; }
 	}
+
 	function EliminarAvatar($imagenName){
 	    $path = $_SERVER['DOCUMENT_ROOT'].'/hmvci_TUTO/images/upload/avatar/';
 	    $file = $path.$imagenName;
@@ -30,10 +31,12 @@
 		$encryPLUS = str_replace(array('+', '/', '='), array('-', '_', '~'), $encry);
 		return $encryPLUS;
 	}
+
 	function url_deco($encry){
 		$encryPLUS = str_replace(array('-', '_', '~'), array('+', '/', '='), $encry);
 		return $encryPLUS;
 	}
+
 	function generarCodigo($longitud) {
 		srand ((double) microtime( )*1000000);
 		$fecha_hoy = date('dHmiys');
@@ -149,44 +152,42 @@
                 break;
         }
     }
-
-
     //ToDo - Revisar  esto con '/'
-function invertDate($date,$elm='-') {  //Ej: invertDate('2011-07-11');
-    if($date == '') return NULL;
-    $date2 = explode($elm, $date);
-    return $date2[2].$elm.$date2[1].$elm.$date2[0];
-}
+    function invertDate($date,$elm='-') {  //Ej: invertDate('2011-07-11');
+        if($date == '') return NULL;
+        $date2 = explode($elm, $date);
+        return $date2[2].$elm.$date2[1].$elm.$date2[0];
+    }
 
-////////////////////////////////////////////////////
-//Convierte fecha de normal a mysql
-////////////////////////////////////////////////////
-//ToDO - Probar este codigo para cambiar el codigo
-function cambiaf_a_mysql($fecha){
+    ////////////////////////////////////////////////////
+    //Convierte fecha de normal a mysql
+    ////////////////////////////////////////////////////
+    //ToDO - Probar este codigo para cambiar el codigo
+    function cambiaf_a_mysql($fecha){
     preg_match( "/([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4})/", $fecha, $mifecha);
-   	$lafecha=$mifecha[3]."-".$mifecha[2]."-".$mifecha[1];
-   	return $lafecha;
+    $lafecha=$mifecha[3]."-".$mifecha[2]."-".$mifecha[1];
+    return $lafecha;
 }
-function pdf_create($html, $filename='', $stream=TRUE)
-{
+    function pdf_create($html, $filename='', $stream=TRUE)
+    {
 
-    require_once("dompdf/dompdf_config.inc.php");
-    // $this->load->helper('file');
-    // require_once(APPPATH.'third_party/dompdf/dompdf_config.inc.php');
-    $dompdf = new DOMPDF();
-    if($html==''){
-        $dompdf->load_html(ob_get_clean());
-    }else{
-        $dompdf->load_html($html);
-    }
+        require_once("dompdf/dompdf_config.inc.php");
+        // $this->load->helper('file');
+        // require_once(APPPATH.'third_party/dompdf/dompdf_config.inc.php');
+        $dompdf = new DOMPDF();
+        if($html==''){
+            $dompdf->load_html(ob_get_clean());
+        }else{
+            $dompdf->load_html($html);
+        }
 
-    $dompdf->set_paper("a4", "portrait" );
-    $dompdf->render();
-    // $dompdf->stream($filename . ".pdf");
-    if ($stream) {
-        $dompdf->stream($filename.".pdf");
-    } else {
-        // $dompdf->output();
-        $dompdf->stream($filename.".pdf",array('Attachment'=>0));
+        $dompdf->set_paper("a4", "portrait" );
+        $dompdf->render();
+        // $dompdf->stream($filename . ".pdf");
+        if ($stream) {
+            $dompdf->stream($filename.".pdf");
+        } else {
+            // $dompdf->output();
+            $dompdf->stream($filename.".pdf",array('Attachment'=>0));
+        }
     }
-}

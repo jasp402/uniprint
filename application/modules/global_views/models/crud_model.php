@@ -512,7 +512,6 @@ class crud_model extends CI_Model
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         detail_message($items, 'UPDATE');
-
     }
 
     public function edit_much()
