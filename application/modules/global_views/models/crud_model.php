@@ -162,8 +162,11 @@ class crud_model extends CI_Model
                 }
         }
         $query = $this->db->get();
-        $items['num_err'] = $this->db->_error_number();
-        $items['mens_err'] = $this->db->_error_message();
+        //echo display_errors();
+        
+        $error = $this->db->error();
+        $items['num_err'] = $error['code'];
+        $items['mens_err'] = $error['message'];
 
         return crud_model::__return($query, $items, $method);
 

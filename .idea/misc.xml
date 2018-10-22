@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/my_models.php" />
     <file url="file://$PROJECT_DIR$/system/core/Controller.php" />
     <file url="file://$PROJECT_DIR$/system/core/Model.php" />
-    <file url="file://$PROJECT_DIR$/system/database/DB_active_rec.php" />
+    <file url="file://$PROJECT_DIR$/system/database_/DB_active_rec.php" />
   </component>
 </project>

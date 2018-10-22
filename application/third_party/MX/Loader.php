@@ -99,10 +99,10 @@ class MX_Loader extends CI_Loader
 	}
 
 	/** Load a module helper **/
-	public function helper($helper) {
+	public function helper($helper = array()) {
 		
 		if (is_array($helper)) return $this->helpers($helper);
-		
+
 		if (isset($this->_ci_helpers[$helper]))	return;
 
 		list($path, $_helper) = Modules::find($helper.'_helper', $this->_module, 'helpers/');
@@ -114,12 +114,12 @@ class MX_Loader extends CI_Loader
 	}
 
 	/** Load an array of helpers **/
-	public function helpers($helpers) {
+	public function helpers($helpers = Array()) {
 		foreach ($helpers as $_helper) $this->helper($_helper);	
 	}
 
 	/** Load a module language file **/
-	public function language($langfile, $idiom = '', $return = FALSE, $add_suffix = TRUE, $alt_path = '') {
+	public function language($langfile=array(), $idiom = ”, $return = FALSE, $add_suffix = TRUE, $alt_path = ”) {
 		return CI::$APP->lang->load($langfile, $idiom, $return, $add_suffix, $alt_path, $this->_module);
 	}
 	
@@ -265,7 +265,7 @@ class MX_Loader extends CI_Loader
 
 	public function _ci_is_instance() {}
 
-	public function _ci_get_component($component) {
+	public function &_ci_get_component($component) {
 		return CI::$APP->$component;
 	} 
 

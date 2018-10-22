@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2cfbcfea-700b-4da4-acef-4d65f9d9ea82" name="https://jasp402.com" url="http://ftp.c1330975.ferozo.com">
+        <fileTransfer host="ftp.c1330975.ferozo.com" port="21" rootFolder="/public_html/_system_unprint">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
