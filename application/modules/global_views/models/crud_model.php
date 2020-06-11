@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Functions CRUD  - Create, Read, Edit, Disable, Enable and Delete
  * -------------------------------------------------------------------------------
  *
- * CRUD_MODEL version 0.0.1
+ * CRUD_MODEL version 1.0.1
  *
  * Created by PhpStorm.
  * User: Jasp402
@@ -25,10 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * create_much          ----> Correr una array e insertar varios elementos
  * ---------------------------------------------------------------------------------------------------------------
  * read                 ----> <<getAll>> lee todos los elementos de una <<tabla>>
- * read_data_table      ----> Realiza un <<select>> <<donde|where>> retorna el valor en formato  (DataTable)
  * read_id              ----> <<getAllByID>> retorna todos los valores del ID pasado
  * read_field_table     ----> Retorna el campo solicitado ejemplo: << db->select('cod_key') >>
  * read_where           ----><<getAllByWhere>> retorna todos los valores de tabla <donde|where> sirve como un filtro
+ * read_last            ----> Retorna el ultimo valor solicitado. ORDER_BY = DESC, LIMIT = 1
+ * ---------------------------------------------------------------------------------------------------------------
+ * read_data_table      ----> Realiza un <<select>> <<donde|where>> retorna el valor en formato  (DataTable)
  * ---------------------------------------------------------------------------------------------------------------
  * edit                 ----> Editar un elemento pasado el ID
  * edit_much            ----> Corre (2) array con todos los Id's a editar y otro con los dato a modificar por Id
@@ -47,12 +49,81 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * enable_much          ----> El proceso inverso de <<disable_much>>
  * enable_all_where     ----> El proceso inverso de <<disable_all_much>>
  *
+ * @method  crud_model $__return   |   Es un construct para los valores de retorno. segun las necesidades del sistema
  **/
-class Crud_model extends CI_Model
+class crud_model extends CI_Model
 {
     public function __construct()
     {
         parent::__construct();
+    }
+
+    /**
+     * ---------------------------------------------------------------------------------------------------------------
+     * __return
+     * ---------------------------------------------------------------------------------------------------------------
+     * Es un construct para los valores de retorno. segun las necesidades del sistema
+     *
+     * @param $query            | $query->db->result()
+     * @param $items            | _error_number() & _error_message()
+     * @param $method           | void, php, ajax, sync,
+     *
+     * @return string           |array ó JSON
+     */
+    private function __return($query, $items, $method)
+    {
+        //success | en caso de ejecutar se correctamente el query
+        if ($items['num_err'] == 0) {
+            switch ($method){
+                case '':
+                    $result = array();
+                    foreach ($query->result() as $key) {
+                        $result[] = $key;
+                    }
+                    break;
+                case 'php':
+
+
+
+                    break;
+                case 'ajax':
+
+
+
+                    break;
+                case 'sync':
+                    $result = detail_message($items, 'UPDATE_SYNC');
+
+
+                    break;
+            }
+
+
+            //error | en caso de que exista algún error en la consulta.
+        } else {
+            switch ($method){
+                case '':
+                    $items['num_err'] = 'null';
+                    $result = detail_message($items, 'ERROR');
+                    break;
+                case 'php':
+
+
+
+                    break;
+                case 'ajax':
+
+
+
+                    break;
+                case 'sync':
+
+
+
+                    break;
+            }
+        }
+        return $result;
     }
 
     /**
@@ -65,16 +136,16 @@ class Crud_model extends CI_Model
      *
      * @param   string $entity
      * @param   string $where Array();
+     * @param   string $method          "Tipo de retorno para esta función"
      *
-     * @return    string
+     * @return  string $__return
      **/
-    public function __getAll($entity, $where='')
+    public function __getAll($entity, $where='', $method='')
     {
+
         if(substr_count($entity, 'sys_')>0){
             $table = $entity;
-        }else {
-            $table = 'sys_' . $entity;
-        }
+        }else{  $table = 'sys_' . $entity; }
 
         $this->db->select('*');
         $this->db->from($table);
@@ -91,23 +162,18 @@ class Crud_model extends CI_Model
                 }
         }
         $query = $this->db->get();
-        $items['num_err'] = $this->db->_error_number();
-        $items['mens_err'] = $this->db->_error_message();
-        if ($items['num_err'] == 0) {
-            $items = array();
-            foreach ($query->result() as $key) {
-                $items[] = $key;
-            }
-            return $items;
-        }else{
-            $items['num_err'] = 'null';
-            detail_message($items, 'ERROR');
-            return FALSE;
-        }
+        //echo display_errors();
+        
+        $error = $this->db->error();
+        $items['num_err'] = $error['code'];
+        $items['mens_err'] = $error['message'];
+
+        return crud_model::__return($query, $items, $method);
+
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * create
+     * create  (version 1.1)
      * ---------------------------------------------------------------------------------------------------------------
      * Inserta un elementos en la base de datos << $this->db->insert() >>
      * retorna mensaje :: [TRUE]->registro exitoso | [FALSE]->_error_number & _error_message
@@ -119,37 +185,74 @@ class Crud_model extends CI_Model
      **/
     public function create($table, $data)
     {
-
         $items = array();
         $this->db->insert($table, $data);
+        //echo $this->db->last_query();
+
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        detail_message($items, 'CREATE');
+        if($items['num_err']==0){
+            detail_message($items, 'CREATE');
+        }else{
+            $items['num_err'] = 'null';
+            detail_message($items, 'ERROR_AJAX');
+        }
+
 
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * create_much
+     * create_much (version 1.2)
      * ---------------------------------------------------------------------------------------------------------------
-     * Correr una array e insertar varios elementos
+     * Correr una array e insertar varios elementos [Solo admite Matriz]
+     * ToDo - falta validar en caso de que el array no sea una matriz bidimencional
      *
      * @param   string $table
      * @param   array $array
+     * @param   string $method
      *
      *
-     * @return    void
+     * @return    boolean
      **/
-    public function create_much($table, $array)
+    public function create_much($table, $array,$method='')
     {
-
         $items = array();
-        for ($i = 0, $c = count($array); $i < $c; $i++) {
-            $this->db->insert($table, $array[$i]);
+        $keys = array_keys($array);
+        $values = array_values($array[$keys[0]]);
+        $val = array();
+
+        for ($i = 0; $i < count($array); $i++){
+            for ($j = 0; $j < count($values); $j++) {
+                for ($z = 0; $z < count($keys); $z++) {
+                    $val[$j][$keys[$z]] = $array[$keys[$z]][$j];
+                }
+            }
+        }
+
+        for ($x = 0; $x < count($val); $x++) {
+            $this->db->insert($table, $val[$x]);
             $items['num_err'] = $this->db->_error_number();
             $items['mens_err'] = $this->db->_error_message();
+            //echo $this->db->last_query();
         }
-        detail_message($items, 'CREATE');
 
+        switch ($method) {
+            case 'ajax':
+                if ($items['num_err'] == 0) {
+                    detail_message($items, 'CREATE');
+                } else {
+                    detail_message($items, 'ERROR_AJAX');
+                }
+                break;
+            case '':
+                if ($items['num_err'] == 0) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
+                break;
+        }
+        return NULL;
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
@@ -163,7 +266,6 @@ class Crud_model extends CI_Model
      **/
     public function read($table)
     {
-
         $this->db->select('*');
         $this->db->from($table);
         $query = $this->db->get();
@@ -178,7 +280,6 @@ class Crud_model extends CI_Model
             detail_message($items, 'EMPTY');
             return FALSE;
         }
-
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
@@ -279,27 +380,71 @@ class Crud_model extends CI_Model
         $this->db->from($table);
         $this->db->where($where);
         $query = $this->db->get();
+
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        foreach ($query->result() as $key => $value) {
-            $result[][$key] = $value;
-        }
-        switch ($method) {
-            case 'ajax':
-                if ($result) {
+
+        if ($items['num_err'] == 0) {
+            foreach ($query->result() as $key => $value) {
+                $result[][$key] = $value;
+            }
+            switch ($method) {
+                case 'ajax':
                     $data = array('success' => true, 'result' => $result);
                     echo json_encode($data);
-                } else {
-                    $data = array('success' => false);
-                    echo json_encode($data);
-                }
-                break;
-        }
-        if ($items['num_err'] == 0) {
+                    break;
+            }
             return $result;
-        } else {
+        }else{
+            switch ($method) {
+                case 'ajax':
+                    $items['num_err'] = 'null';
+                    detail_message($items, 'ERROR_AJAX');
+                    break;
+            }
             return FALSE;
         }
+    }
+
+
+    /**
+     * ---------------------------------------------------------------------------------------------------------------
+     * read_last
+     * ---------------------------------------------------------------------------------------------------------------
+     * Retorna el ultimo valor solicitado. ORDER_BY = DESC, LIMIT = 1 | AUTO_INCREMENT
+     *
+     * @param   string $field
+     * @param   string $table
+     * @param   string $where  | array
+     *
+     * @return  string
+     **/
+    public function read_last($field, $table, $where='')
+    {
+        $items = array();
+        $result = 0;
+        $this->db->select($field);
+        $this->db->from($table);
+        if (is_array($where)) {
+            $this->db->where($where);
+        }
+        $this->db->order_by($field, 'DESC');
+        $this->db->limit(1);
+        $query = $this->db->get();
+         $items['num_err'] = $this->db->_error_number();
+         $items['mens_err'] = $this->db->_error_message();
+
+        if ($items['num_err'] == 0) {
+            foreach ($query->result() as $key) {
+                $result =  $key;
+            }
+            if(isset($result->$field)){
+                $result = bcadd($result->$field,1);
+            }else{
+                $result= 1;
+            }
+        }
+        return $result;
     }
 
     /**
@@ -310,6 +455,8 @@ class Crud_model extends CI_Model
      *
      * @param   string $table
      * @param   string $field
+     * @param   string $where
+     * @param   string $method
      *
      * @return  string
      **/
@@ -368,7 +515,6 @@ class Crud_model extends CI_Model
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
         detail_message($items, 'UPDATE');
-
     }
 
     public function edit_much()
@@ -387,30 +533,48 @@ class Crud_model extends CI_Model
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
-     * delete
+     * delete (version 1.1)
      * ---------------------------------------------------------------------------------------------------------------
      * Elimina el elemento pasado el ID
      *
      * @param   string $table
      * @param   array $whereId
+     * @param   string $method
      *
-     * @return  void
+     * @return  string
      **/
-    public function delete($table, $whereId)
+    public function delete($table, $whereId, $method='')
     {
 
-        $this->db->where(key($whereId), $whereId[key($whereId)]);
+        $this->db->where($whereId);
         $this->db->delete($table);
+        //echo $this->db->last_query();
         $items['num_err'] = $this->db->_error_number();
         $items['mens_err'] = $this->db->_error_message();
-        detail_message($items, 'DELETE');
 
+        switch ($method) {
+            case 'ajax':
+                if ($items['num_err'] == 0) {
+                    detail_message($items, 'DELETE');
+                } else {
+                    detail_message($items, 'ERROR_AJAX');
+                }
+                break;
+            case '':
+                if ($items['num_err'] == 0) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
+                break;
+        }
+        return NULL;
     }
     /**
      * ---------------------------------------------------------------------------------------------------------------
      * delete_much
      * ---------------------------------------------------------------------------------------------------------------
-     * Elimina el elemento pasado el ID
+     * Elimina el elemento pasado el ID <<deleteSelect>>
      *
      * @param   string $table
      * @param   array $arrayId
@@ -436,9 +600,30 @@ class Crud_model extends CI_Model
 
     }
 
-    public function disable()
+    /**
+     * ---------------------------------------------------------------------------------------------------------------
+     * disable
+     * ---------------------------------------------------------------------------------------------------------------
+     * Cambia de 'estado' (i|inactivo)  a un elemento pasado el ID
+     *
+     * @param   string $table
+     * @param   array $where
+     * @param   string $method @options ajax,php,sync
+     *
+     * @return  string $__return
+     **/
+    public function disable($table,$update,$where,$method)
     {
 
+        $items = array();
+        $this->db->where($where);
+        $query = $this->db->update($table,$update);
+
+        //echo $this->db->last_query();
+
+        $items['num_err'] = $this->db->_error_number();
+        $items['mens_err'] = $this->db->_error_message();
+        return crud_model::__return($query, $items, $method);
     }
 
     public function disable_much()

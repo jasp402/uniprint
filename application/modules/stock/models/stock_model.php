@@ -93,6 +93,7 @@ class Stock_model extends CI_Model
         $this->db->select('sys_vehiculos.marca');
         $this->db->select('sys_vehiculos.modelo');
         $this->db->select('sys_vehiculos.placa');
+        $this->db->select('sys_inventario.comentario');
         $this->db->from($this->schema['table']);
         $this->db->join('sys_ubicacion ', ' sys_inventario.origen = sys_ubicacion.id_ubicacion');
         $this->db->join('sys_productos ', ' sys_inventario.id_producto = sys_productos.id_producto');
@@ -125,7 +126,7 @@ class Stock_model extends CI_Model
         }
     }
 
-    public function getAllByWhere_documento_entrada($where)
+    public function getAllByWhere_documento_entrada($table, $where)
     {
         $this->db->select('sys_inventario.cod_inventario');
         $this->db->select('sys_inventario.fecha');
@@ -148,7 +149,8 @@ class Stock_model extends CI_Model
         $this->db->select('sys_vehiculos.marca');
         $this->db->select('sys_vehiculos.modelo');
         $this->db->select('sys_vehiculos.placa');
-        $this->db->from($this->schema['table']);
+        $this->db->select('sys_inventario.comentario');
+        $this->db->from($table);
         $this->db->join('sys_ubicacion ',' sys_inventario.origen = sys_ubicacion.id_ubicacion');
         $this->db->join('sys_productos ',' sys_inventario.id_producto = sys_productos.id_producto');
         $this->db->join('sys_tipos ',' sys_tipos.id_tipo = sys_productos.id_tipo');
@@ -317,7 +319,7 @@ class Stock_model extends CI_Model
 
     /**
      * -------------------------------------------------------------------------------
-     * MODULO (Stock) > Traslados | functions
+     * MODULO (Stock) > Inventario | functions
      * -------------------------------------------------------------------------------
      **/
 

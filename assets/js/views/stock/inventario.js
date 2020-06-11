@@ -24,7 +24,7 @@ $(document).ready(function () {
             "initComplete": function () {
                 this.api().columns().every( function () {
                     var i = this.index();
-                    console.log(i);
+                    //console.log(i);
                     var column = this;
                         if(i!=10 && i!=9 &&  i!=8 && i!=12 && i!=0){
 
@@ -102,6 +102,10 @@ $(document).ready(function () {
                             '<i class="ace-icon fa fa-pencil bigger-120"></i>' +
                             '</span>' +
                             '</a>'+
+                            '<a href="#" class="tooltip-error" data-rel="tooltip" title="Eliminar" onclick="Delete('+data.id_inventario+','+data.cod_inventario+')">' +
+                            '<span class="red">' +
+                            '<i class="ace-icon fa fa-trash-o bigger-120"></i>' +
+                            '</span>' +
                             '</div>'
                     }
                 }
@@ -179,34 +183,89 @@ function Edit() {
         }
     });
 }
+function Delete(id,cod) {
+    $('#div_textbox').hide(500);
+    bootbox.confirm("Estas seguro que deseas eliminar este registro?, No lo podr&aacute; recuperar. <br>" +
+        "<small class='red'><cite>¡Recuerde! si elimina los registros procesados en <b>producción <i class=\"fa fa-angle-double-right\"></i> Descontar Lote</b> podrian causar inconsistencia en los <b>Reportes</b></cite></small> ", function (result) {
+        if (result) {
+            $.ajax({
+                url: 'inventario/delete',
+                type: 'POST',
+                dataType: 'json',
+                data: {'id_inventario': id,'cod_inventario':cod},
+                success: function (data) {
+                    message_box(data.success, data.times, data.closes);
+                }
+            });
+        }
+    });
+}
 function loadInfo(id) {
+    console.log(id);
     $.ajax({
-        url: 'inventario/searchAllByWhere',
+        url: 'inventario/search_entrada',
         type: 'POST',
         dataType: 'json',
-        data: {id: id, 'field':'cod_inventario'},
+        data: {'cod_inventario': id},
         beforeSend: function () {
             message_load('Procesando...', 'info', 'clock-o', '_load','_profile');
         },
         success: function (data) {
-            //console.log(data.result[0][0]);
-            $('#widget-title').text('Detalles del Documento #'+data.result[0][0].documento+'');
+            //console.log(data);
+            console.log(data.result[0][0]);
+            $('#widget-title').text('Documento de Entrada #'+data.result[0][0].documento+'');
             $('#_documento').text(data.result[0][0].documento);
             $('#_origen').text(data.result[0][0].origen);
             SetByIdDestino(data.result[0][0].destino);
             $('#_chofer').text(data.result[0][0].chofer+' - '+data.result[0][0].cedula);
-            $('#_vehiculo').text(data.result[0][0].marca+' '+data.result[0][0].modelo +
-                ' - '+data.result[0][0].placa);
+            $('#_vehiculo').text(data.result[0][0].marca+' '+data.result[0][0].modelo+' - '+data.result[0][0].placa);
             $('#_fecha').text(data.result[0][0].fecha);
             $('#_cod_inventario').text(data.result[0][0].cod_inventario);
             $('#_proyecto').text(data.result[0][0].nombre_proyecto);
             $('#_loguser').text(data.result[0][0].responsable);
             $('#_logdate').text(data.result[0][0].registro);
+            $('#_comentario').text(data.result[0][0].comentario);
             SetSumaUnid(data.result[0][0].cod_inventario);
             SetSumaPaletas(data.result[0][0].cod_inventario);
             $("#_etiqueta").attr("href", "../pdfs/pdfs?labelBookIn="+data.result[0][0].cod_inventario+"");
             $("#_etiquetaBtn").attr("href", "../pdfs/pdfs?labelBookIn="+data.result[0][0].cod_inventario+"");
             message_hide('_load','_profile');
+        }
+    });
+}
+function SetByIdDestino(id) {
+    $.ajax({
+        url: '../almacenes/almacen/searchAllById',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            $('#_destino').text(data.result[0].nombre);
+        }
+    });
+}
+function SetSumaUnid(id) {
+    $.ajax({
+        url: 'inventario/sumarTotal',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            number = parseInt(data[0].suma);
+            $('#_total').text(number.toLocaleString('es-ES'));
+        }
+    });
+}
+function SetSumaPaletas(id) {
+    $.ajax({
+        url: 'inventario/sumarPltas',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {id: id},
+        success: function (data) {
+            console.log(data);
+            number = parseInt(data[0].suma);
+            $('#_pltas').text(number.toLocaleString('es-ES'));
         }
     });
 }

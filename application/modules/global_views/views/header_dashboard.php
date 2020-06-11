@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 		<title>SysGiD - Uniprint S.A.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,6 +18,8 @@
 		<!-- text fonts -->
 		<link rel="stylesheet" href="<?=base_url();?>assets/css/ace-fonts.css"/>
 		<!-- ace styles -->
+		<link rel="stylesheet" href="<?=base_url();?>assets/css/jquery.gritter.css" />
+
 		<link rel="stylesheet" href="<?=base_url();?>assets/css/ace.css" />
 		<link type="text/css" rel="stylesheet" id="ace-skins-stylesheet" href="<?=base_url();?>assets/css/ace-skins.css">
 		<!--[if lte IE 9]>
@@ -34,6 +36,7 @@
 		<script src="<?=base_url();?>assets/js/ace/elements.onpage-help.js"></script>
 		<script src="<?=base_url();?>assets/js/ace/ace.onpage-help.js"></script>
 		<script src="<?=base_url();?>assets/js/jquery.easypiechart.js"></script>
+		<script src="<?=base_url();?>assets/js/jquery.validate.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());

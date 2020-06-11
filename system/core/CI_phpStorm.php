@@ -122,6 +122,7 @@ class CI_Controller extends my_models
  */
 class CI_Model extends my_models
 {
+    //ToDo - se debe eliminar el $schema del model para forzar a utilizar el $schema del controllers y las funciones del model deben llevar parametros
     public $schema = array(
         'module'  => '',
         'view'    => '',

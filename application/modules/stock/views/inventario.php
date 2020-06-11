@@ -59,7 +59,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
             <div class="widget-header widget-header-blue widget-header-flat">
                 <h4 class="widget-title lighter">
                     <i class="ace-icon fa fa-mail-forward green"></i>
-                    Ultima Entrada
+                    <span id="widget-title">Ultima Entrada</span>
                 </h4>
 
                 <div class="widget-toolbar">
@@ -79,14 +79,14 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     <div class="profile-info-name" style="width:150px"> Nota de Entrega </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable">
+                                        <span class="editable" id="_documento">
                                             <?=$getAll->getAllLast_entrada()->documento; ?>
                                         </span>
                                     </div>
                                     <div class="profile-info-name" style="width:150px"> Codigo Inventario </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable">
+                                        <span class="editable" id="_cod_inventario">
                                             <?=$getAll->getAllLast_entrada()->cod_inventario;?>
 
                                         </span>
@@ -97,7 +97,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-orange bigger-110"></i>
-                                        <span class="editable" id="country">
+                                        <span class="editable" id="_origen">
                                             <?=$getAll->getAllLast_entrada()->nombre_origen ?>
                                         </span>
                                     </div>
@@ -105,7 +105,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 
                                     <div class="profile-info-value">
                                         <i class="fa fa-map-marker light-green bigger-110"></i>
-                                        <span class="editable" id="country">
+                                        <span class="editable" id="_destino">
                                             <?=$getAll->getAllLast_entrada()->nombre_destino; ?>
                                         </span>
                                     </div>
@@ -114,7 +114,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     <div class="profile-info-name"> Chofer </div>
 
                                     <div class="profile-info-value">
-                                    <span class="editable" id="age">
+                                    <span class="editable" id="_chofer">
                                       <?= $getAll->getAllLast_entrada()->chofer?> -
                                         <?= number_format($getAll->getAllLast_entrada()->cedula,0,',','.'); ?>
                                     </span>
@@ -122,7 +122,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     <div class="profile-info-name"> Proyecto </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login">
+                                        <span class="editable" id="_proyecto">
                                             <?=$getAll->getAllLast_entrada()->proyecto?>
                                         </span>
                                     </div>
@@ -131,7 +131,7 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     <div class="profile-info-name"> Vehiculo </div>
 
                                     <div class="profile-info-value">
-                                    <span class="editable" id="age">
+                                    <span class="editable" id="_vehiculo">
                                         <?= $getAll->getAllLast_entrada()->marca; ?>
                                         <?= $getAll->getAllLast_entrada()->modelo;?> -
                                         <?= $getAll->getAllLast_entrada()->placa; ?>
@@ -140,32 +140,32 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     <div class="profile-info-name"> Responsable </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->responsable?></span>
+                                        <span class="editable" id="_loguser"><?=$getAll->getAllLast_entrada()->responsable?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Fecha </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="signup"><?=$getAll->getAllLast_entrada()->fecha?></span>
+                                        <span class="editable" id="_fecha"><?=$getAll->getAllLast_entrada()->fecha?></span>
                                     </div>
                                     <div class="profile-info-name"> Registro </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login"><?=$getAll->getAllLast_entrada()->registro?></span>
+                                        <span class="editable" id="_logdate"><?=$getAll->getAllLast_entrada()->registro?></span>
                                     </div>
                                 </div>
                                 <div class="profile-info-row">
                                     <div class="profile-info-name"> Cant. Paletas </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="login">
+                                        <span class="editable" id="_pltas">
                                             <?=$getAll->sumarPaletas($getAll->getAllLast_entrada()->cod_inventario)[0]->suma ?></span>
                                     </div>
                                     <div class="profile-info-name"> Total </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="about">
+                                        <span class="editable" id="_total">
                                             <?=  number_format($getAll->sumarTotal($getAll->getAllLast_entrada()->cod_inventario)[0]->suma,0,',','.'); ?></span>
                                     </div>
                                 </div>
@@ -178,13 +178,13 @@ echo $this->load->view('global_views/header_dashboard'); ?>
 
                                     <div class="widget-body">
                                         <div class="widget-main align-center">
-                                            <a href="../pdfs/pdfs?labelBookIn=<?=$getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank"><i class="fa fa-barcode bigger-300"></i>
+                                            <a href="../pdfs/pdfs?labelBookIn=<?=$getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank" id="_etiqueta"><i class="fa fa-barcode bigger-300"></i>
                                                 <h6>Generar Etiqueta</h6>
                                             </a>
                                         </div>
 
                                         <div>
-                                            <a href="../pdfs/pdfs?labelBookIn=<?= $getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success">
+                                            <a href="../pdfs/pdfs?labelBookIn=<?= $getAll->getAllLast_entrada()->cod_inventario; ?>" target="_blank" class="btn btn-block btn-success" id="_etiquetaBtn">
                                                 <i class="ace-icon fa fa-print bigger-110"></i>
                                                 <span>Imprimir</span>
                                             </a>
@@ -214,6 +214,10 @@ echo $this->load->view('global_views/header_dashboard'); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-12">
+                                <div class="well well-sm" id="_comentario"> Sin comentario </div>
+                            </div>
+
 
                         </div>
 

@@ -100,7 +100,7 @@ class Entrada extends MX_Controller {
             );
             $data[$i] = array_merge($StaticDate[0], $DinamicDate[$i], $this->auditoria);
         }
-        $this->CRUD->create_much($this->schema['table'],$data);
+        $this->CRUD->create($this->schema['table'],$data);
         if($lote=='si'){$this->models->create_details($data);}
 
     }

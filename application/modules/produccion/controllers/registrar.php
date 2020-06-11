@@ -56,6 +56,10 @@ class Registrar extends MX_Controller
     {
         $this->CRUD->read_data_table($this->schema['table'], $this->schema['options']);
     }
+    public function getDataTable_libros()
+    {
+        $this->CRUD->read_data_table('sys_productos', $this->input->get());
+    }
 
     public function searchAllById(){
 
@@ -64,9 +68,6 @@ class Registrar extends MX_Controller
          **/
         $id     = $this->input->post('id');
         $query  = $this->models->getAllById($id);
-
-
-
 
         if ($query) {
             foreach ($query as $key => $value) {
@@ -99,13 +100,35 @@ class Registrar extends MX_Controller
         }
     }
 
-    public function save()
-    {
+    public function save(){
+
         $data = $this->input->post();
-        $data = array_merge($data, $this->schema['options']);
-        $data = array_splice($data, 1);
-        $this->CRUD->create($this->schema['table'],$data);
-    }
+        $data = array_merge($data,$this->auditoria);
+        $data[$this->schema['sec_key']] = $this->CRUD->read_last($this->schema['sec_key'], $this->schema['table']);
+            unset($data['id_producto'],$data['cant_lote']);
+
+        //$this->CRUD->create($this->schema['table'], $data);
+
+        //-------------------------------------------------------------------------------
+        $data_detail['id_producto'] = $this->input->post('id_producto');
+        $data_detail['cant_lote'] = $this->input->post('cant_lote');
+
+        $a = count($data_detail['id_producto']);
+        $b = count($data_detail['cant_lote']);
+
+            if($a == $b){
+                for($i=0; $i<$a; $i++){
+                    $data_detail[$this->schema['sec_key']][$i]=$data[$this->schema['sec_key']];
+
+                }
+                $this->CRUD->create_much($this->schema['detail'],$data_detail);
+               print_r($data_detail);
+
+            }else{
+                return false;
+            }
+        }
+
 
     public function edit()
     {

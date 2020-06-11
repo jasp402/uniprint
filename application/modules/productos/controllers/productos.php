@@ -53,11 +53,6 @@ class Productos extends MX_Controller {
         $this->models->getDataTable_productos();
     }
 
-    public function getDataTableWhere()
-    {
-        $this->models->getDataTableWhere_productos($this->schema['table'],$this->input->post());
-    }
-
     public function searchAllById()
     {
         $id         = $this->input->post('id');

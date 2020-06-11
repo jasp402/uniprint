@@ -1,18 +1,8 @@
 <?php echo $this->load->view('global_views/header_dashboard'); ?>
-		
 	</head>
 	<?php echo $this->load->view('global_views/contenedor');?>
 	
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 widget-container-col">
-			<!-- #section:custom/widget-box -->
-			INICIO
-
-			<!-- /section:custom/widget-box -->
-		</div>
-
-	</div>
 	<div class="space-24"></div>
 	<hr>
 	<script type="text/javascript">
@@ -20,107 +10,108 @@
 	</script>
 	<script src="<?=base_url();?>assets/js/jquery-ui.custom.js"></script>
 	<script src="<?=base_url();?>assets/js/jquery.ui.touch-punch.js"></script>
+	<script src="<?=base_url();?>assets/js/jquery.gritter.js"></script>
 	<!-- inline scripts related to this page -->
 	<script type="text/javascript">
-			jQuery(function($) {
-			
-				$('#simple-colorpicker-1').ace_colorpicker({pull_right:true}).on('change', function(){
-					var color_class = $(this).find('option:selected').data('class');
-					var new_class = 'widget-box';
-					if(color_class != 'default')  new_class += ' widget-color-'+color_class;
-					$(this).closest('.widget-box').attr('class', new_class);
-				});
-			
-			
-				// scrollables
-				$('.scrollable').each(function () {
-					var $this = $(this);
-					$(this).ace_scroll({
-						size: $this.attr('data-size') || 100,
-						//styleClass: 'scroll-left scroll-margin scroll-thin scroll-dark scroll-light no-track scroll-visible'
-					});
-				});
-				$('.scrollable-horizontal').each(function () {
-					var $this = $(this);
-					$(this).ace_scroll(
-					  {
-						horizontal: true,
-						styleClass: 'scroll-top',//show the scrollbars on top(default is bottom)
-						size: $this.attr('data-size') || 500,
-						mouseWheelLock: true
-					  }
-					).css({'padding-top': 12});
-				});
-				
-				$(window).on('resize.scroll_reset', function() {
-					$('.scrollable-horizontal').ace_scroll('reset');
-				});
-			
-				
-				$('#id-checkbox-vertical').prop('checked', false).on('click', function() {
-					$('#widget-toolbox-1').toggleClass('toolbox-vertical')
-					.find('.btn-group').toggleClass('btn-group-vertical')
-					.filter(':first').toggleClass('hidden')
-					.parent().toggleClass('btn-toolbar')
-				});
-			
-				/**
-				//or use slimScroll plugin
-				$('.slim-scrollable').each(function () {
-					var $this = $(this);
-					$this.slimScroll({
-						height: $this.data('height') || 100,
-						railVisible:true
-					});
-				});
-				*/
-				
-			
-				/**$('.widget-box').on('setting.ace.widget' , function(e) {
-					e.preventDefault();
-				});*/
-			
-				/**
-				$('.widget-box').on('show.ace.widget', function(e) {
-					//e.preventDefault();
-					//this = the widget-box
-				});
-				$('.widget-box').on('reload.ace.widget', function(e) {
-					//this = the widget-box
-				});
-				*/
-			
-				//$('#my-widget-box').widget_box('hide');
-			
-				
-			
-				// widget boxes
-				// widget box drag & drop example
-			    $('.widget-container-col').sortable({
-			        connectWith: '.widget-container-col',
-					items:'> .widget-box',
-					handle: ace.vars['touch'] ? '.widget-header' : false,
-					cancel: '.fullscreen',
-					opacity:0.8,
-					revert:true,
-					forceHelperSize:true,
-					placeholder: 'widget-placeholder',
-					forcePlaceholderSize:true,
-					tolerance:'pointer',
-					start: function(event, ui) {
-						//when an element is moved, it's parent becomes empty with almost zero height.
-						//we set a min-height for it to be large enough so that later we can easily drop elements back onto it
-						ui.item.parent().css({'min-height':ui.item.height()})
-						//ui.sender.css({'min-height':ui.item.height() , 'background-color' : '#F5F5F5'})
-					},
-					update: function(event, ui) {
-						ui.item.parent({'min-height':''})
-						//p.style.removeProperty('background-color');
-					}
-			    });
-				
-			
-			
+
+		$.gritter.add({
+			title: 'This is a regular notice!',
+			text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+			image: '../assets/avatars/avatar1.png', //in Ace demo ../assets will be replaced by correct assets path
+			sticky: false,
+			time: '',
+			//class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+		});
+
+
+		$('#gritter-regular').on(ace.click_event, function(){
+			$.gritter.add({
+				title: 'This is a regular notice!',
+				text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+				image: '../assets/avatars/avatar1.png', //in Ace demo ../assets will be replaced by correct assets path
+				sticky: false,
+				time: '',
+				//class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
 			});
+
+			return false;
+		});
+
+		$('#gritter-sticky').on(ace.click_event, function(){
+			var unique_id = $.gritter.add({
+				title: 'This is a sticky notice!',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+				image: '../assets/avatars/avatar.png',
+				sticky: true,
+				time: '',
+				class_name: 'gritter-info'
+			});
+
+			return false;
+		});
+
+
+		$('#gritter-without-image').on(ace.click_event, function(){
+			$.gritter.add({
+				// (string | mandatory) the heading of the notification
+				title: 'This is a notice without an image!',
+				// (string | mandatory) the text inside the notification
+				text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+				class_name: 'gritter-success'
+			});
+
+			return false;
+		});
+
+
+		$('#gritter-max3').on(ace.click_event, function(){
+			$.gritter.add({
+				title: 'This is a notice with a max of 3 on screen at one time!',
+				text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+				image: '../assets/avatars/avatar3.png', //in Ace demo ../assets will be replaced by correct assets path
+				sticky: false,
+				before_open: function(){
+					if($('.gritter-item-wrapper').length >= 3)
+					{
+						return false;
+					}
+				},
+				class_name: 'gritter-warning'
+			});
+
+			return false;
+		});
+
+
+		$('#gritter-center').on(ace.click_event, function(){
+			$.gritter.add({
+				title: 'This is a centered notification',
+				text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+				class_name: 'gritter-info gritter-center'
+			});
+
+			return false;
+		});
+
+		$('#gritter-error').on(ace.click_event, function(){
+			$.gritter.add({
+				title: 'This is a warning notification',
+				text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+				class_name: 'gritter-error'
+			});
+
+			return false;
+		});
+
+
+		$("#gritter-remove").on(ace.click_event, function(){
+			$.gritter.removeAll();
+			return false;
+		});
+
 	</script>
+
+<h1>Texto en el Dashboard
+</h1>
 	<?php $this->load->view('global_views/footer_dashboard');?>
+

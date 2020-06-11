@@ -81,28 +81,6 @@ class Productos_model extends CI_Model
         echo json_encode($result);
     }
 
-    public function getDataTableWhere_productos($table, $where)
-    {
-        $this->db->select('sys_categorias.nombre as categoria');
-        $this->db->select('sys_tipos.nombre as tipo');
-        $this->db->select('sys_productos.*');
-        $this->db->select('sys_proyecto.nombre as proyecto');
-        $this->db->select('sys_unidades.nombre as unidad');
-        $this->db->from($table);
-        $this->db->join('sys_tipos', 'sys_tipos.id_tipo = sys_productos.id_tipo');
-        $this->db->join('sys_categorias', 'sys_categorias.id_categoria = sys_productos.id_categoria');
-        $this->db->join('sys_proyecto', 'sys_proyecto.id_proyecto = sys_categorias.id_proyecto');
-        $this->db->join('sys_unidades', 'sys_unidades.id_unidad = sys_productos.id_unidad');
-        $this->db->where($where);
-        $query = $this->db->get();
-        $result = array(
-        "draw"=>1,
-        "recordsTotal"=> $query->num_rows(),
-        "recordsFiltered"=> $query->num_rows(),
-        'data'	=> $query->result());
-        echo json_encode($result);
-    }
-
     public function getAllById_productos($id)
     {
         $this->db->select('sys_categorias.nombre as categoria');

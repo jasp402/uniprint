@@ -71,20 +71,9 @@ class Inventario extends MX_Controller {
         }
     }
 
-    public function searchAllByWhere(){
-        $id         = $this->input->post('id');
-        $field      = $this->input->post('field');
-        $query      =  $this->models->getAllByWhere($id,$field);
-        if ($query) {
-            foreach ($query as $key => $value) {
-                $result[] = array($key => $value);
-            }
-            $data = array('success' => true, 'result' => $result);
-            echo json_encode($data);
-        }else{
-            $data = array('success' => false);
-            echo json_encode($data);
-        }
+    public function search_entrada()
+    {
+        $this->models->getAllByWhere_documento_entrada($this->schema['table'],$this->input->post());
     }
 
     public function searchAllByWhereTwo(){
@@ -104,7 +93,7 @@ class Inventario extends MX_Controller {
             echo json_encode($data);
         }
     }
-
+/*
     public function save(){
         //Static Date
         $cod_inventario = ($this->models->getLastCode('cod_inventario','sys_inventario') + 1);
@@ -151,7 +140,7 @@ class Inventario extends MX_Controller {
         $this->models->createMultiple($data);
         $this->models->create_details($data);
     }
-
+*/
     public function edit(){
         $id    = $this->input->post('id');
         $data = ($this->input->post());
@@ -177,8 +166,15 @@ class Inventario extends MX_Controller {
     }
 
     public function delete(){
-        $id = $this->input->post('id');
-        $this->models->deleteById($id);
+
+        //Eliminar datos de ´sys_inventario_detalle´
+        $where = $this->input->post();
+        unset($where['id_inventario']);
+        $this->CRUD->delete($this->schema['detail'],$this->input->post());
+
+        //Eliminar datos de ´sys_inventario´
+        $this->CRUD->delete($this->schema['table'],$this->input->post(),'ajax');
+
     }
 
     public function deleteSelect(){

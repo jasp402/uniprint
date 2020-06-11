@@ -1,19 +1,32 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Jasp402">
     <words>
+      <w>acarreo</w>
       <w>acceso</w>
       <w>acepta</w>
+      <w>addon</w>
+      <w>adminte</w>
       <w>admite</w>
+      <w>agrega</w>
+      <w>agregar</w>
       <w>alerta</w>
+      <w>algunos</w>
+      <w>algún</w>
       <w>almacen</w>
       <w>almacenes</w>
       <w>apellido</w>
+      <w>apoderado</w>
       <w>auditoria</w>
+      <w>barra</w>
       <w>basepath</w>
+      <w>bidimencional</w>
+      <w>bootbox</w>
       <w>busquedas</w>
+      <w>cabecera</w>
       <w>cada</w>
       <w>cambia</w>
       <w>campo</w>
+      <w>cantidad</w>
       <w>carga</w>
       <w>cargar</w>
       <w>caso</w>
@@ -22,16 +35,20 @@
       <w>cedula</w>
       <w>chofer</w>
       <w>choferes</w>
+      <w>clearfix</w>
       <w>codigo</w>
       <w>comentario</w>
       <w>complementaria</w>
+      <w>completar</w>
       <w>condicional</w>
       <w>condicionales</w>
+      <w>consulta</w>
       <w>consultar</w>
       <w>consultas</w>
       <w>contenedor</w>
       <w>controlador</w>
       <w>corre</w>
+      <w>correctamente</w>
       <w>correr</w>
       <w>dato</w>
       <w>datos</w>
@@ -39,7 +56,10 @@
       <w>desabilita</w>
       <w>desabilitado</w>
       <w>desabilitar</w>
+      <w>descontado</w>
+      <w>descontar</w>
       <w>descripcion</w>
+      <w>descuento</w>
       <w>destino</w>
       <w>detalle</w>
       <w>dinamic</w>
@@ -47,6 +67,7 @@
       <w>documento</w>
       <w>donde</w>
       <w>editar</w>
+      <w>ejecutar</w>
       <w>ejemplo</w>
       <w>ejorar</w>
       <w>elemento</w>
@@ -54,26 +75,44 @@
       <w>elenento</w>
       <w>elim</w>
       <w>elimina</w>
+      <w>eliminados</w>
       <w>eliminar</w>
       <w>entidad</w>
       <w>entrada</w>
       <w>entradas</w>
       <w>entro</w>
+      <w>escolares</w>
       <w>estado</w>
       <w>este</w>
       <w>esto</w>
+      <w>estos</w>
+      <w>etiqueta</w>
+      <w>etiquetas</w>
+      <w>exista</w>
       <w>exitoso</w>
       <w>externo</w>
+      <w>falta</w>
+      <w>faltan</w>
       <w>fecha</w>
       <w>filtro</w>
+      <w>forma</w>
       <w>formato</w>
+      <w>formulario</w>
+      <w>fuelux</w>
+      <w>funciones</w>
+      <w>función</w>
       <w>generalmente</w>
+      <w>generar</w>
       <w>gestiona</w>
       <w>habilita</w>
+      <w>hablador</w>
+      <w>habladores</w>
       <w>igniter</w>
       <w>impresor</w>
       <w>impresores</w>
+      <w>imprimir</w>
       <w>inactivo</w>
+      <w>incluir</w>
       <w>incluye</w>
       <w>inserta</w>
       <w>insertar</w>
@@ -83,8 +122,12 @@
       <w>jasp</w>
       <w>linas</w>
       <w>lineas</w>
+      <w>logdate</w>
+      <w>loguser</w>
       <w>lote</w>
       <w>marca</w>
+      <w>matiz</w>
+      <w>matriz</w>
       <w>mdls</w>
       <w>mediante</w>
       <w>mejorar</w>
@@ -93,25 +136,35 @@
       <w>metodos</w>
       <w>modelo</w>
       <w>modificar</w>
+      <w>morrales</w>
+      <w>movimientos</w>
       <w>multipe</w>
       <w>multipes</w>
+      <w>multiplica</w>
       <w>navegacion</w>
+      <w>necesidades</w>
       <w>nextinput</w>
       <w>nombre</w>
+      <w>nota</w>
       <w>nuevo</w>
       <w>opciones</w>
       <w>operacion</w>
+      <w>ordenado</w>
       <w>origen</w>
       <w>otro</w>
       <w>pagina</w>
+      <w>paleta</w>
       <w>paletas</w>
       <w>paramatros</w>
       <w>parametros</w>
       <w>pasado</w>
       <w>pasando</w>
+      <w>pdfs</w>
       <w>pertenece</w>
       <w>placa</w>
+      <w>pltas</w>
       <w>preferencias</w>
+      <w>procesados</w>
       <w>proceso</w>
       <w>produccion</w>
       <w>produccions</w>
@@ -123,19 +176,29 @@
       <w>proyecto</w>
       <w>proyectos</w>
       <w>puede</w>
+      <w>pueden</w>
       <w>realiza</w>
+      <w>recuerde</w>
       <w>registra</w>
       <w>registro</w>
+      <w>registros</w>
       <w>responsable</w>
       <w>restringido</w>
       <w>retorna</w>
+      <w>retorno</w>
       <w>saldo</w>
+      <w>salida</w>
       <w>salio</w>
       <w>secundario</w>
       <w>secundary</w>
       <w>segun</w>
+      <w>según</w>
       <w>seleccione</w>
+      <w>sentimos</w>
+      <w>sido</w>
+      <w>signup</w>
       <w>sirve</w>
+      <w>sistema</w>
       <w>solamente</w>
       <w>solicitado</w>
       <w>suma</w>
@@ -144,12 +207,16 @@
       <w>tipos</w>
       <w>titulo</w>
       <w>todos</w>
+      <w>totalizar</w>
       <w>traslado</w>
       <w>traslados</w>
       <w>ubicacion</w>
+      <w>ultima</w>
       <w>unidad</w>
       <w>unidades</w>
       <w>usuario</w>
+      <w>utiles</w>
+      <w>validar</w>
       <w>valores</w>
       <w>varios</w>
       <w>vehiculo</w>

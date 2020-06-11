@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="" />
-    <ignored path="SysUniprint.iws" />
+    <list default="true" id="35302ef1-6484-4882-9f6e-28b89bc27c63" name="Colocar nuevas opciones para el ingreso de Entradas / Salidas de Stock #4 " comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/system/libraries/Encrypt.php" afterPath="$PROJECT_DIR$/system/libraries/Encrypt.php" />
+    </list>
+    <list id="4e8ce0e7-a4df-420a-8daf-67d13ac0fae7" name="Default" comment="" />
+    <ignored path="uniprint.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,93 +19,11 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="SysUniprint" />
+    <favorites_list name="uniprint" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registrar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/registrar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="48" column="89" selection-start-line="48" selection-start-column="81" selection-end-line="48" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registrar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/registrar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
-              <folding>
-                <element signature="e#75#342#0" expanded="false" />
-                <element signature="n#!!block;n#div_form_create#0" expanded="false" />
-                <element signature="n#!!block;n#div_form_edit#0" expanded="false" />
-                <element signature="n#!!block;n#Save#0" expanded="false" />
-                <element signature="n#!!block;n#Edit#0" expanded="false" />
-                <element signature="n#!!block;n#Delete#0" expanded="false" />
-                <element signature="n#!!block;n#deleteMultipe#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="55" column="37" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productos_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/productos/models/productos_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="83" column="47" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inventario.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/views/stock/inventario.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="17" />
-              <folding>
-                <element signature="e#626#5765#0" expanded="false" />
-                <element signature="e#668#2221#0" expanded="false" />
-                <marker date="1483561930000" expanded="true" signature="12378:12504" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,63 +32,69 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Session_check</find>
+      <find>MX_Lang::load</find>
+      <find>Encrypt'</find>
+      <find>Encrypt</find>
+      <find>$encrypt</find>
+      <find>encrypt</find>
+      <find>set_userdata</find>
+      <find>nombre_usuario</find>
+      <find>codigo_usuario</find>
+      <find>mcrypt_decrypt</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\uniprint</dir>
+      <dir>D:\xampp\htdocs\uniprint</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/parametros/views/impresor.php" />
-        <option value="$PROJECT_DIR$/application/modules/parametros/views/proveedor.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/proyectos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/proyectos_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/proyectos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/unidades.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/productos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/tipos.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/tipos_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/categorias_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/views/categorias.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/models/lineas_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/categorias.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/tipos.php" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/views/lineas.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/produccion/lineas.js" />
-        <option value="$PROJECT_DIR$/application/modules/parametros/views/choferes.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/parametros/vehiculos.js" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/temp.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/traslados_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/entrada.js" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/entrada.php" />
-        <option value="$PROJECT_DIR$/assets/js/views/stock/traslados.js" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/traslados.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/traslados.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
         <option value="$PROJECT_DIR$/assets/js/views/stock/inventario.js" />
-        <option value="$PROJECT_DIR$/application/modules/stock/controllers/inventario.php" />
-        <option value="$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
         <option value="$PROJECT_DIR$/application/modules/stock/models/stock_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
-        <option value="$PROJECT_DIR$/application/modules/global_views/views/header.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf/include/font_metrics.cls.php" />
-        <option value="$PROJECT_DIR$/application/helpers/global_function_helper.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" />
-        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf_helper.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dompdf_7/autoload.inc.php" />
-        <option value="$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/models/productos_model.php" />
-        <option value="$PROJECT_DIR$/application/modules/productos/controllers/productos.php" />
         <option value="$PROJECT_DIR$/application/modules/produccion/views/registrar.php" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/inventario.php" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php" />
+        <option value="$PROJECT_DIR$/application/modules/parametros/views/proveedor.php" />
         <option value="$PROJECT_DIR$/assets/js/views/produccion/registrar.js" />
+        <option value="$PROJECT_DIR$/application/modules/stock/views/entrada.php" />
+        <option value="$PROJECT_DIR$/application/modules/productos/views/productos.php" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php" />
+        <option value="$PROJECT_DIR$/application/modules/dashboard/views/dashboard.php" />
+        <option value="$PROJECT_DIR$/assets/js/global_jp.js" />
+        <option value="$PROJECT_DIR$/application/helpers/global_function_helper.php" />
+        <option value="$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.js" />
+        <option value="$PROJECT_DIR$/assets/js/views/produccion/descontar.js" />
+        <option value="$PROJECT_DIR$/system/database/DB_active_rec.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/views/descontar.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/descontar.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/views/lineas.php" />
+        <option value="$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php" />
+        <option value="$PROJECT_DIR$/assets/js/views/produccion/lineas.js" />
+        <option value="$PROJECT_DIR$/application/third_party/MX/Lang.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/third_party/MX/Loader.php" />
+        <option value="$PROJECT_DIR$/application/modules/global_views/models/crud_model.php" />
+        <option value="&lt;2cfbcfea-700b-4da4-acef-4d65f9d9ea82&gt;/application/config/database.php" />
+        <option value="$PROJECT_DIR$/system/libraries/Session.php" />
+        <option value="&lt;2cfbcfea-700b-4da4-acef-4d65f9d9ea82&gt;/system/libraries/Session.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="&lt;2cfbcfea-700b-4da4-acef-4d65f9d9ea82&gt;/system/libraries/Encrypt.php" />
+        <option value="&lt;2cfbcfea-700b-4da4-acef-4d65f9d9ea82&gt;/application/config/autoload.php" />
+        <option value="&lt;2cfbcfea-700b-4da4-acef-4d65f9d9ea82&gt;/application/modules/login/controllers/home.php" />
       </list>
     </option>
   </component>
@@ -176,26 +104,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP_FROM_WAMP">
-    <include_path>
-      <path value="C:\wamp64\www\uniprint\phpStorm-CC-Helpers-master\CodeIgniter" />
-    </include_path>
+  <component name="PhpServers">
+    <servers />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -212,359 +129,56 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="global_views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="application">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="global_views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="uniprint">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stock" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="produccion" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="productos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniprint" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="productos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="uniprint" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uniprint" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="C:/wamp/www/sistema_uniprint" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hmvci_TUTO" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\models" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\models" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\produccion\controllers" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\almacenes\controllers" />
+      <recent name="C:\xampp\htdocs\uniprint\system" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\uniprint\assets\js\views\produccion" />
-      <recent name="C:\wamp64\www\uniprint\assets\js\views\stock" />
-      <recent name="C:\wamp64\www\uniprint\assets\js\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\views" />
-      <recent name="C:\wamp64\www\uniprint\application\modules\stock\controllers" />
+      <recent name="C:\wamp64\www\uniprint\system\database" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php">
-    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/uniprint/dompdf/www/index.php">
-      <method />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="uniprint" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -581,15 +195,6 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -612,73 +217,68 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="crud_model.php" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/uniprint/global_views/models/crud_model.php">
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.crud_model.php" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
-    </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.uniprint" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="9dc06d76-ca96-472e-96b0-8706feedc438" name="Default" comment="" />
-      <created>1479217680764</created>
+    <task id="Default" summary="Default task">
+      <branch name="master" repository="C:\wamp64\www\uniprint" original="true" />
+      <changelist id="4e8ce0e7-a4df-420a-8daf-67d13ac0fae7" name="Default" comment="" />
+      <created>1484403158594</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1479217680764</updated>
-      <workItem from="1479217682719" duration="395000" />
-      <workItem from="1479218129812" duration="1247000" />
-      <workItem from="1479329427531" duration="1618000" />
-      <workItem from="1479363313330" duration="8081000" />
-      <workItem from="1479428666795" duration="32817000" />
-      <workItem from="1479492118518" duration="7060000" />
-      <workItem from="1479514181612" duration="24824000" />
-      <workItem from="1479732928922" duration="15120000" />
-      <workItem from="1479769053943" duration="23193000" />
-      <workItem from="1479860862551" duration="19687000" />
-      <workItem from="1479945980629" duration="497000" />
-      <workItem from="1479946509019" duration="8737000" />
-      <workItem from="1480097600979" duration="1995000" />
-      <workItem from="1480176876606" duration="114000" />
-      <workItem from="1480177041157" duration="569000" />
-      <workItem from="1480192032600" duration="7702000" />
-      <workItem from="1480265533116" duration="17795000" />
-      <workItem from="1480384407034" duration="14198000" />
-      <workItem from="1480447996403" duration="42487000" />
-      <workItem from="1480582540006" duration="23327000" />
-      <workItem from="1480641489261" duration="13495000" />
-      <workItem from="1480769403545" duration="95793000" />
-      <workItem from="1481112486620" duration="60137000" />
-      <workItem from="1481378958675" duration="36364000" />
-      <workItem from="1481590131706" duration="5934000" />
-      <workItem from="1481631196867" duration="1772000" />
-      <workItem from="1481637119983" duration="13708000" />
-      <workItem from="1481723558117" duration="9646000" />
-      <workItem from="1481804105691" duration="22217000" />
-      <workItem from="1481840402913" duration="14943000" />
-      <workItem from="1481886709163" duration="4666000" />
-      <workItem from="1482235238027" duration="31139000" />
-      <workItem from="1482400509807" duration="8055000" />
-      <workItem from="1482813009049" duration="18062000" />
-      <workItem from="1482932454184" duration="110878000" />
-      <workItem from="1483290149335" duration="97296000" />
-      <workItem from="1483582072853" duration="9239000" />
-      <workItem from="1483653244295" duration="58000" />
-      <workItem from="1483965925047" duration="3227000" />
+      <updated>1484409743029</updated>
+      <workItem from="1484403169031" duration="2395000" />
     </task>
+    <task active="true" id="LOCAL-00001">
+      <branch name="master" repository="C:\wamp64\www\uniprint" />
+      <changelist id="35302ef1-6484-4882-9f6e-28b89bc27c63" name="Colocar nuevas opciones para el ingreso de Entradas / Salidas de Stock #4 " comment="" />
+      <created>1484409699961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1484409744017</updated>
+      <workItem from="1484409744150" duration="2658000" />
+      <workItem from="1484441628851" duration="16143000" />
+      <workItem from="1484514696640" duration="17044000" />
+      <workItem from="1484615942401" duration="12800000" />
+      <workItem from="1485787091538" duration="605000" />
+      <workItem from="1486044130419" duration="1244000" />
+      <workItem from="1486127654444" duration="1030000" />
+      <workItem from="1486247136287" duration="1011000" />
+      <workItem from="1486689935073" duration="23000" />
+      <workItem from="1486936794230" duration="597000" />
+      <workItem from="1487083712905" duration="963000" />
+      <workItem from="1487084686762" duration="3378000" />
+      <workItem from="1540012184466" duration="5405000" />
+      <workItem from="1540055106769" duration="2144000" />
+      <workItem from="1540057289584" duration="211000" />
+      <workItem from="1540231295740" duration="2073000" />
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <option name="createBranch" value="false" />
+    <option name="useBranch" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="808092000" />
+    <option name="totallyTimeSpent" value="72744000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -687,59 +287,78 @@
     <todo-panel id="all">
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
-      <is-preview-enabled value="true" />
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22181553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38957056" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.4914842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.50851583" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22511485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38957056" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2306003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29425114" sideWeight="0.4914842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.50851583" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -754,14 +373,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php</url>
-          <line>208</line>
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="253" />
+      <option name="time" value="275" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
@@ -770,376 +382,329 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/parametros/views/vehiculos.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/inventario.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="241" column="94" selection-start-line="241" selection-start-column="89" selection-end-line="241" selection-end-column="94" />
+        <state relative-caret-position="211">
+          <caret line="226" column="65" lean-forward="false" selection-start-line="226" selection-start-column="65" selection-end-line="226" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../uniprint.sysgid_1.0.8/pages/module/reportes/reportes.php" />
-    <entry file="file://$PROJECT_DIR$/system/helpers/url_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8119">
-          <caret line="530" column="13" selection-start-line="530" selection-start-column="13" selection-end-line="530" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="1702" column="4" selection-start-line="1702" selection-start-column="4" selection-end-line="1702" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="139" column="34" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/temp.php" />
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/traslados_model.old.php" />
-    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/entrada.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="479" column="25" selection-start-line="479" selection-start-column="9" selection-end-line="479" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/traslados.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/traslados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
-          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="122" column="14" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/traslados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/stock/views/inventario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="528" column="0" selection-start-line="528" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="277" column="45" selection-start-line="277" selection-start-column="34" selection-end-line="277" selection-end-column="45" />
+        <state relative-caret-position="-7728">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/inventario.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/attribute_translator.cls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="127">
+          <caret line="347" column="9" lean-forward="false" selection-start-line="347" selection-start-column="9" selection-end-line="347" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/inventario_model.php" />
-    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/absolute_positioner.cls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="241" column="57" selection-start-line="241" selection-start-column="44" selection-end-line="241" selection-end-column="57" />
+        <state relative-caret-position="119">
+          <caret line="77" column="17" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/movimientos.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/controllers/entrada.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="174">
+          <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/views/proveedor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="134">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/almacenes/controllers/almacen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/stylesheet.cls.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="1087" column="5" selection-start-line="1087" selection-start-column="5" selection-end-line="1087" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/dompdf.cls.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="534" column="22" selection-start-line="534" selection-start-column="17" selection-end-line="534" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="282" column="21" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/footer_dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/controllers/pdfs.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-560">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/models/pdfs_model.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/registrar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="185">
+          <caret line="134" column="69" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/views/entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/productos/views/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header_dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="88" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/include/font_metrics.cls.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/dashboard/views/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="325" column="6" selection-start-line="325" selection-start-column="6" selection-end-line="325" selection-end-column="6" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/examples.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/dataTables/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="143" column="624" lean-forward="false" selection-start-line="143" selection-start-column="624" selection-end-line="143" selection-end-column="624" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/demo.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/views/movimientos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-801">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf/www/jquery-1.4.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-3872">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/global_function_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="81" column="48" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="81" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/global_jp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="185">
+          <caret line="110" column="62" lean-forward="false" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/global_views/views/header.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/entrada.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="77" />
+        <state relative-caret-position="-7821">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_7/tests/Dompdf/Tests/AutoloaderTest.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/reportes/views/ventas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="211">
+          <caret line="179" column="35" lean-forward="false" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_7/autoload.inc.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/stock/models/stock_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        <state relative-caret-position="2839">
+          <caret line="167" column="13" lean-forward="false" selection-start-line="163" selection-start-column="8" selection-end-line="167" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/my_models.php" />
+    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/CI_phpStorm.php" />
+    <entry file="file://$PROJECT_DIR$/system/database_/DB_active_rec.php" />
+    <entry file="file://$PROJECT_DIR$/system/database_/drivers/mysqli/mysqli_driver.php" />
+    <entry file="file://$PROJECT_DIR$/phpStorm-CC-Helpers-master/CodeIgniter/DB_active_rec.php" />
+    <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/descontar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/descontar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/descontar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/almacenes/models/almacenes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/produccion/models/produccion_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#getAllLast#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllUbicacion#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllById#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#getAllByWhere#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#create_details#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#create#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#createMultiple#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#sumarPaletas#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <element signature="n#sumarTotal#0;n#Produccion_model#0;n#!!top" expanded="false" />
-            <marker date="1483300722000" expanded="true" signature="1851:1878" ph="SELECT * FRO... sys_ubicacion" />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/registrar.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/choferes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="262">
+          <caret line="60" column="71" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="60" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dompdf_helper.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/views/choferes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="-595">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/pdfs/views/pdfs.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/models/parametros_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2424">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="-1924">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/productos/controllers/productos.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/parametros/controllers/proveedor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="92" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/lineas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_types.php" />
+    <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/lineas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/produccion/controllers/lineas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="101" column="26" lean-forward="false" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database_/drivers/pdo/subdrivers/index.html" />
+    <entry file="file://$PROJECT_DIR$/system/database/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="2323">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/views/stock/inventario.js">
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Loader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#626#5765#0" expanded="false" />
-            <element signature="e#668#2221#0" expanded="false" />
-            <marker date="1483561930000" expanded="true" signature="12378:12504" ph="..." />
-          </folding>
+        <state relative-caret-position="6141">
+          <caret line="267" column="38" lean-forward="false" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/productos/models/productos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/global_views/models/crud_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="23">
+          <caret line="167" column="36" lean-forward="false" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/views/produccion/registrar.js">
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
-          <folding>
-            <element signature="e#75#342#0" expanded="false" />
-            <element signature="n#!!block;n#div_form_create#0" expanded="false" />
-            <element signature="n#!!block;n#div_form_edit#0" expanded="false" />
-            <element signature="n#!!block;n#Save#0" expanded="false" />
-            <element signature="n#!!block;n#Edit#0" expanded="false" />
-            <element signature="n#!!block;n#Delete#0" expanded="false" />
-            <element signature="n#!!block;n#deleteMultipe#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="2806">
+          <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/produccion/views/registrar.php">
+    <entry file="file://$PROJECT_DIR$/system/libraries/Session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="48" column="89" selection-start-line="48" selection-start-column="81" selection-end-line="48" selection-end-column="89" />
-          <folding />
+        <state relative-caret-position="123">
+          <caret line="80" column="45" lean-forward="false" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="54" column="78" lean-forward="false" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="78" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ScopeChooserConfigurable.UI">
+      <state key="Copyright.UI">
         <settings>
-          <last-edited>create</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
